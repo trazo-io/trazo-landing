@@ -1,0 +1,711 @@
+import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Trazo - Agricultural Transparency Platform",
+  description:
+    "How Trazo collects, uses, and protects your personal information.",
+}
+
+export default function PrivacyPolicyPage() {
+  return (
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <main className="pt-24 pb-20">
+        <article className="mx-auto max-w-3xl px-6">
+          <header className="mb-12 text-center">
+            <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+              Privacy Policy
+            </h1>
+            <p className="mt-4 text-lg text-muted-foreground">
+              How Trazo collects, uses, and protects your personal information.
+            </p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Last updated: March 2, 2026
+            </p>
+          </header>
+
+          <div className="prose-custom space-y-10 text-foreground/80">
+            {/* 1 */}
+            <section>
+              <h3 className="text-xl font-bold text-foreground">
+                1. Introduction
+              </h3>
+              <p className="mt-3 leading-[1.8]">
+                {
+                  'Trazo ("we," "us," or "our") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our agricultural transparency platform.'
+                }
+              </p>
+              <p className="mt-3 leading-[1.8]">
+                This policy applies to our website, mobile applications, QR code
+                scanning services, and all related software and services
+                (collectively, the &quot;Platform&quot;).
+              </p>
+            </section>
+
+            {/* 2 */}
+            <section>
+              <h3 className="text-xl font-bold text-foreground">
+                2. Information We Collect
+              </h3>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                2.1 Personal Information
+              </h4>
+              <p className="mt-2 leading-[1.8]">
+                We collect personal information that you provide directly to us:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>Account Information:</strong> Email address, first and
+                  last name, phone number (optional)
+                </li>
+                <li>
+                  <strong>Profile Data:</strong> Profile images, user
+                  preferences, notification settings
+                </li>
+                <li>
+                  <strong>Authentication Data:</strong> Email verification
+                  status, password (encrypted), social login IDs
+                </li>
+              </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                2.2 Business Information (Producer Accounts)
+              </h4>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>Company Details:</strong> Business name, trade name,
+                  description, industry classification
+                </li>
+                <li>
+                  <strong>Business Address:</strong> Street address, city, state,
+                  country, postal code
+                </li>
+                <li>
+                  <strong>Tax Information:</strong> Tax ID, EIN, RUT, or other
+                  fiscal identification numbers
+                </li>
+                <li>
+                  <strong>Contact Information:</strong> Business email, phone,
+                  website, social media profiles
+                </li>
+                <li>
+                  <strong>Business Metadata:</strong> Employee count,
+                  certifications, sustainability practices
+                </li>
+              </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                2.3 Agricultural Production Data
+              </h4>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>Farm Information:</strong> Establishment names,
+                  locations, geospatial coordinates
+                </li>
+                <li>
+                  <strong>Crop Data:</strong> Crop types, production methods,
+                  agricultural practices
+                </li>
+                <li>
+                  <strong>Transparency & Carbon Data:</strong> Transparency
+                  scores, emission factors, carbon footprint estimates
+                </li>
+                <li>
+                  <strong>Production Events:</strong> Agricultural timelines,
+                  equipment usage, chemical applications
+                </li>
+                <li>
+                  <strong>Environmental Data:</strong> Weather conditions, soil
+                  data, irrigation information
+                </li>
+              </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                2.4 Usage and Analytics Data
+              </h4>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>Platform Usage:</strong> Feature utilization, session
+                  duration, user interactions
+                </li>
+                <li>
+                  <strong>QR Code Analytics:</strong> Scan counts, geographic
+                  data, consumer engagement metrics
+                </li>
+                <li>
+                  <strong>Device Information:</strong> Browser type, device
+                  model, operating system, IP address
+                </li>
+                <li>
+                  <strong>Educational Engagement:</strong> Content viewed, time
+                  spent, quiz scores, course progress
+                </li>
+              </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                2.5 Payment and Subscription Data
+              </h4>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>Billing Information:</strong> Subscription plans,
+                  billing cycles, payment history
+                </li>
+                <li>
+                  <strong>Usage Metrics:</strong> Storage used, QR scans,
+                  productions tracked for billing
+                </li>
+                <li>
+                  <strong>Payment Processing:</strong> Payment methods handled
+                  securely by Stripe (we do not store credit card numbers)
+                </li>
+              </ul>
+            </section>
+
+            {/* 3 */}
+            <section>
+              <h3 className="text-xl font-bold text-foreground">
+                3. How We Use Your Information
+              </h3>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                3.1 Platform Services
+              </h4>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  Provide transparency scores and carbon footprint estimates
+                  using published EPA/USDA emission factors
+                </li>
+                <li>
+                  Generate and manage QR codes for consumer transparency access
+                </li>
+                <li>
+                  Store and verify carbon records on the Polygon blockchain
+                </li>
+                <li>
+                  Track agricultural production events and sustainability metrics
+                </li>
+              </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                3.2 Account Management
+              </h4>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  Create and maintain user accounts with role-based access
+                  control
+                </li>
+                <li>
+                  Process subscription payments and manage billing cycles
+                </li>
+                <li>
+                  Send service-related notifications and account updates
+                </li>
+                <li>Provide customer support and technical assistance</li>
+              </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                3.3 Platform Improvement and Research
+              </h4>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  Analyze usage patterns to improve Platform functionality
+                </li>
+                <li>
+                  Create aggregated, anonymized datasets for agricultural
+                  research
+                </li>
+                <li>
+                  Develop new features and carbon calculation methodologies
+                </li>
+                <li>Monitor Platform performance and security</li>
+              </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                3.4 Legal Compliance
+              </h4>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  Comply with USDA agricultural reporting requirements
+                </li>
+                <li>
+                  Meet carbon verification and certification standards
+                </li>
+                <li>Respond to legal requests and prevent fraud</li>
+                <li>Maintain audit trails for regulatory compliance</li>
+              </ul>
+            </section>
+
+            {/* 4 */}
+            <section>
+              <h3 className="text-xl font-bold text-foreground">
+                4. How We Share Your Information
+              </h3>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                4.1 Third-Party Service Providers
+              </h4>
+              <p className="mt-2 leading-[1.8]">
+                We share information with trusted service providers who assist in
+                operating our Platform:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>USDA APIs</strong> — Crop types, production methods for
+                  emission factor validation and compliance
+                </li>
+                <li>
+                  <strong>Stripe</strong> — Billing information, usage metrics
+                  for payment processing and subscription management
+                </li>
+                <li>
+                  <strong>AWS</strong> — All platform data for cloud hosting,
+                  storage, and infrastructure
+                </li>
+                <li>
+                  <strong>Polygon Network</strong> — Carbon verification records
+                  for immutable blockchain storage
+                </li>
+                <li>
+                  <strong>OpenAI</strong> — Voice recordings, text data for
+                  AI-powered data processing and insights
+                </li>
+              </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                4.2 Consumer Transparency Sharing
+              </h4>
+              <p className="mt-2 leading-[1.8]">
+                As directed by Producer users, we share specific carbon and
+                sustainability data with consumers through:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  QR code scanning providing transparency scores and farming
+                  practice summaries
+                </li>
+                <li>Public sustainability metrics and certification status</li>
+                <li>
+                  Agricultural practice information for transparency
+                </li>
+                <li>
+                  Farm location and establishment information as authorized
+                </li>
+              </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                4.3 Legal Requirements
+              </h4>
+              <p className="mt-2 leading-[1.8]">
+                We may disclose information when required by law or to: comply
+                with legal process or government requests; protect against fraud
+                or security threats; enforce our Terms of Service; protect the
+                rights, property, or safety of Trazo, users, or the public.
+              </p>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                4.4 Aggregated Data
+              </h4>
+              <p className="mt-2 leading-[1.8]">
+                We may share aggregated, anonymized data that cannot identify
+                individual users or businesses for research, industry reports,
+                and platform improvement purposes.
+              </p>
+            </section>
+
+            {/* 5 */}
+            <section>
+              <h3 className="text-xl font-bold text-foreground">
+                5. Data Storage and Security
+              </h3>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                5.1 Data Storage Locations
+              </h4>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>Primary Database:</strong> PostgreSQL hosted on AWS
+                  with Redis caching
+                </li>
+                <li>
+                  <strong>File Storage:</strong> AWS S3 for images, documents,
+                  and QR codes
+                </li>
+                <li>
+                  <strong>Blockchain Records:</strong> Polygon network (global,
+                  immutable storage)
+                </li>
+                <li>
+                  <strong>Security Logs:</strong> Rotating log files with 10MB
+                  size limits and 5 backup retention
+                </li>
+              </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                5.2 Security Measures
+              </h4>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>Authentication:</strong> JWT tokens with 20-minute
+                  access and 1-day refresh periods
+                </li>
+                <li>
+                  <strong>Access Control:</strong> Role-based permissions with
+                  granular user roles
+                </li>
+                <li>
+                  <strong>Rate Limiting:</strong> 100 requests/hour for anonymous
+                  users, 1000/hour for authenticated users
+                </li>
+                <li>
+                  <strong>Encryption:</strong> HTTPS for all data transmission,
+                  secure cookie handling
+                </li>
+                <li>
+                  <strong>Input Validation:</strong> Comprehensive validation,
+                  especially for carbon calculation data
+                </li>
+              </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                5.3 International Data Transfers
+              </h4>
+              <p className="mt-2 leading-[1.8]">
+                Your data may be transferred to and processed in countries other
+                than your own, including the United States where our primary
+                servers are located. For these transfers, we implement:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>EU-US Data Privacy Framework:</strong> Compliance with
+                  adequacy decisions where applicable
+                </li>
+                <li>
+                  <strong>Standard Contractual Clauses (SCCs):</strong>{" "}
+                  EU Commission-approved transfer mechanisms
+                </li>
+                <li>
+                  <strong>Technical Safeguards:</strong> Encryption, access
+                  controls, and monitoring systems
+                </li>
+                <li>
+                  <strong>Contractual Protections:</strong> Data processing
+                  agreements with all third-party processors
+                </li>
+              </ul>
+              <p className="mt-3 leading-[1.8]">
+                EU residents can request details about specific transfer
+                mechanisms and safeguards applicable to their data.
+              </p>
+            </section>
+
+            {/* 6 */}
+            <section>
+              <h3 className="text-xl font-bold text-foreground">
+                6. Data Retention
+              </h3>
+              <p className="mt-3 leading-[1.8]">
+                We retain your information for different periods depending on the
+                type of data and legal requirements:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>Account Information:</strong> Until account deletion +
+                  90 days
+                </li>
+                <li>
+                  <strong>Agricultural Data:</strong> 7 years or until deletion
+                  request
+                </li>
+                <li>
+                  <strong>Blockchain Records:</strong> Permanent (immutable by
+                  design)
+                </li>
+                <li>
+                  <strong>Payment Records:</strong> 7 years (tax and financial
+                  compliance)
+                </li>
+                <li>
+                  <strong>Usage Analytics:</strong> 2 years
+                </li>
+                <li>
+                  <strong>Security Logs:</strong> 1 year
+                </li>
+              </ul>
+            </section>
+
+            {/* 7 */}
+            <section>
+              <h3 className="text-xl font-bold text-foreground">
+                7. Your Privacy Rights
+              </h3>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                7.1 Access and Control
+              </h4>
+              <p className="mt-2 leading-[1.8]">
+                You have the following rights regarding your personal
+                information:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>Access:</strong> Request a copy of your personal
+                  information
+                </li>
+                <li>
+                  <strong>Correction:</strong> Update or correct inaccurate
+                  information
+                </li>
+                <li>
+                  <strong>Deletion:</strong> Request deletion of your personal
+                  information (subject to limitations)
+                </li>
+                <li>
+                  <strong>Portability:</strong> Receive your data in a portable
+                  format
+                </li>
+                <li>
+                  <strong>Restriction:</strong> Limit how we process your
+                  information
+                </li>
+              </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                7.2 California Consumer Privacy Act (CCPA) Rights
+              </h4>
+              <p className="mt-2 leading-[1.8]">
+                California residents have additional rights under the CCPA:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  Right to know what personal information is collected and how
+                  it&apos;s used
+                </li>
+                <li>
+                  Right to delete personal information (with certain exceptions)
+                </li>
+                <li>
+                  Right to opt out of the sale of personal information (we do not
+                  sell personal information)
+                </li>
+                <li>
+                  Right to non-discrimination for exercising CCPA rights
+                </li>
+              </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                7.3 European Union GDPR Rights
+              </h4>
+              <p className="mt-2 leading-[1.8]">
+                EU residents have rights under the General Data Protection
+                Regulation (GDPR):
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  Legal basis for processing (legitimate interest, consent,
+                  contract performance)
+                </li>
+                <li>
+                  Right to withdraw consent where processing is based on consent
+                </li>
+                <li>
+                  Right to object to processing based on legitimate interests
+                </li>
+                <li>Right to file complaints with supervisory authorities</li>
+              </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                7.4 Limitations on Rights and GDPR Compliance
+              </h4>
+              <p className="mt-2 leading-[1.8]">
+                Some privacy rights may be limited by technical and legal
+                constraints:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>Blockchain Immutability:</strong> Verification hashes
+                  stored on blockchain cannot be deleted due to technical
+                  impossibility
+                </li>
+                <li>
+                  <strong>Legal Requirements:</strong> Data required for
+                  compliance with agricultural regulations and audit trails
+                </li>
+                <li>
+                  <strong>Aggregated Data:</strong> Information that has been
+                  anonymized and cannot identify individuals
+                </li>
+                <li>
+                  <strong>Active Legal Proceedings:</strong> Data subject to
+                  litigation hold or investigation requirements
+                </li>
+              </ul>
+              <p className="mt-3 leading-[1.8]">
+                <strong>Important:</strong> While blockchain records are
+                immutable, we only store cryptographic hashes and verification
+                status on-chain, not personal information. Personal data
+                associated with these records can still be deleted from our
+                traditional databases. We will provide detailed explanations of
+                any limitations when processing your requests.
+              </p>
+            </section>
+
+            {/* 8 */}
+            <section>
+              <h3 className="text-xl font-bold text-foreground">
+                8. Cookies and Tracking Technologies
+              </h3>
+              <p className="mt-3 leading-[1.8]">
+                We use cookies and similar technologies to enhance your
+                experience and analyze Platform usage:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>Essential Cookies:</strong> Required for Platform
+                  functionality and security
+                </li>
+                <li>
+                  <strong>Performance Cookies:</strong> Help us understand how
+                  the Platform is used
+                </li>
+                <li>
+                  <strong>Functional Cookies:</strong> Remember your preferences
+                  and settings
+                </li>
+              </ul>
+              <p className="mt-3 leading-[1.8]">
+                You can control cookie settings through your browser preferences,
+                though disabling certain cookies may affect Platform
+                functionality.
+              </p>
+            </section>
+
+            {/* 9 */}
+            <section>
+              <h3 className="text-xl font-bold text-foreground">
+                9. Data Breach Notification
+              </h3>
+              <p className="mt-3 leading-[1.8]">
+                In the event of a data breach that may affect your personal
+                information, we will:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>Authority Notification:</strong> Report to supervisory
+                  authorities within 72 hours when required by law
+                </li>
+                <li>
+                  <strong>Individual Notification:</strong> Notify affected users
+                  within 30 days if high risk to rights and freedoms
+                </li>
+                <li>
+                  <strong>Remedial Actions:</strong> Implement immediate
+                  containment and recovery measures
+                </li>
+                <li>
+                  <strong>Documentation:</strong> Maintain records of breach
+                  assessment and response actions
+                </li>
+              </ul>
+            </section>
+
+            {/* 10 */}
+            <section>
+              <h3 className="text-xl font-bold text-foreground">
+                10. Children&apos;s Privacy and Age Verification
+              </h3>
+              <p className="mt-3 leading-[1.8]">
+                Our Platform is not intended for children under 18. We implement
+                age verification during registration and do not knowingly collect
+                personal information from children under 18.
+              </p>
+              <p className="mt-3 leading-[1.8]">
+                If we become aware that we have collected information from a
+                child under 18, we will delete it promptly. Parents or guardians
+                who believe their child has provided information to us should
+                contact us immediately at{" "}
+                <a
+                  href="mailto:privacy@trazo.io"
+                  className="text-primary hover:underline"
+                >
+                  privacy@trazo.io
+                </a>
+                .
+              </p>
+            </section>
+
+            {/* 11 */}
+            <section>
+              <h3 className="text-xl font-bold text-foreground">
+                11. Changes to This Privacy Policy
+              </h3>
+              <p className="mt-3 leading-[1.8]">
+                We may update this Privacy Policy from time to time to reflect
+                changes in our practices or applicable laws. We will notify you
+                of material changes by:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>Email notification to your registered email address</li>
+                <li>Prominent notice on our Platform</li>
+                <li>
+                  Updated &quot;Last modified&quot; date at the top of this
+                  policy
+                </li>
+              </ul>
+              <p className="mt-3 leading-[1.8]">
+                Continued use of the Platform after changes constitutes
+                acceptance of the updated Privacy Policy.
+              </p>
+            </section>
+
+            {/* 12 */}
+            <section>
+              <h3 className="text-xl font-bold text-foreground">
+                12. Contact Us
+              </h3>
+              <p className="mt-3 leading-[1.8]">
+                If you have questions about this Privacy Policy or want to
+                exercise your privacy rights, please contact us:
+              </p>
+              <div className="mt-4 rounded-xl border border-border bg-secondary/30 p-6">
+                <p className="font-semibold text-foreground">
+                  Privacy Inquiries
+                </p>
+                <p className="mt-1 leading-[1.8]">
+                  Email:{" "}
+                  <a
+                    href="mailto:privacy@trazo.io"
+                    className="text-primary hover:underline"
+                  >
+                    privacy@trazo.io
+                  </a>
+                </p>
+                <p className="leading-[1.8]">Subject: Privacy Rights Request</p>
+              </div>
+              <div className="mt-4 rounded-xl border border-border bg-secondary/30 p-6">
+                <p className="font-semibold text-foreground">General Contact</p>
+                <p className="mt-1 leading-[1.8]">
+                  Email:{" "}
+                  <a
+                    href="mailto:support@trazo.io"
+                    className="text-primary hover:underline"
+                  >
+                    support@trazo.io
+                  </a>
+                </p>
+              </div>
+              <p className="mt-4 leading-[1.8]">
+                We will respond to your privacy requests within 30 days (or as
+                required by applicable law). For verification purposes, we may
+                need to confirm your identity before processing certain requests.
+              </p>
+            </section>
+          </div>
+        </article>
+      </main>
+      <Footer />
+    </div>
+  )
+}

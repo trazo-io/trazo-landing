@@ -1,0 +1,135 @@
+"use client"
+
+import { useState } from "react"
+import { FileText, ShieldCheck, QrCode, BarChart3, ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+
+const features = [
+  {
+    id: "document",
+    tag: "DOCUMENT",
+    icon: FileText,
+    title: "Log Every Practice in Under 2 Minutes",
+    description:
+      "Voice recording, photo capture, and smart forms let you document farming events quickly — even in the field with poor connectivity. Seven event types cover everything from planting to harvest.",
+  },
+  {
+    id: "verify",
+    tag: "VERIFY",
+    icon: ShieldCheck,
+    title: "Blockchain-Recorded, Tamper-Proof Records",
+    description:
+      "When you finish a production, Trazo creates a cryptographic fingerprint of the entire record and writes it to the Polygon blockchain. Nobody can alter it after that point. Buyers see immutable proof that your claims are real — not just marketing. Available as an add-on ($15/month).",
+  },
+  {
+    id: "connect",
+    tag: "CONNECT",
+    icon: QrCode,
+    title: "Let Consumers See How Their Food Was Grown",
+    description:
+      "Generate QR codes for every production. When consumers scan, they see your complete farming journey — building the trust that drives purchasing decisions.",
+  },
+  {
+    id: "grow",
+    tag: "GROW",
+    icon: BarChart3,
+    title: "Understand Your Market with Real-Time Analytics",
+    description:
+      "Track QR scans, consumer engagement, and reviews from a single dashboard. See which practices resonate with buyers and refine your transparency story over time.",
+  },
+]
+
+export function PlatformFeatures() {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const activeFeature = features[activeIndex]
+
+  return (
+    <section id="features" className="relative border-y border-border bg-secondary/30 py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6">
+        {/* Section Header */}
+        <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
+              Platform
+            </p>
+            <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
+              Everything you need to build
+              <br className="hidden lg:block" /> consumer trust
+            </h2>
+          </div>
+          <Button className="gap-2 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+            <a href="https://app.trazo.io">
+              Start Free Trial
+              <ArrowRight size={16} />
+            </a>
+          </Button>
+        </div>
+
+        {/* Features Grid */}
+        <div className="mt-14 grid gap-6 lg:grid-cols-5 lg:gap-8">
+          {/* Tabs */}
+          <div className="flex flex-row gap-2 overflow-x-auto lg:col-span-2 lg:flex-col lg:gap-2" role="tablist">
+            {features.map((feature, i) => (
+              <button
+                key={feature.id}
+                role="tab"
+                aria-selected={i === activeIndex}
+                onClick={() => setActiveIndex(i)}
+                className={cn(
+                  "flex shrink-0 items-center gap-3 rounded-xl border px-5 py-4 text-left transition-all duration-200",
+                  i === activeIndex
+                    ? "border-primary/30 bg-card text-foreground shadow-sm"
+                    : "border-transparent text-muted-foreground hover:bg-card/60"
+                )}
+              >
+                <feature.icon
+                  size={20}
+                  className={cn(
+                    "shrink-0",
+                    i === activeIndex ? "text-primary" : "text-muted-foreground"
+                  )}
+                />
+                <div>
+                  <p className={cn(
+                    "text-xs font-bold uppercase tracking-wider",
+                    i === activeIndex ? "text-primary" : "text-muted-foreground/70"
+                  )}>
+                    {feature.tag}
+                  </p>
+                  <p className="mt-0.5 text-sm font-medium">{feature.title}</p>
+                </div>
+              </button>
+            ))}
+          </div>
+
+          {/* Active Feature Detail */}
+          <div className="lg:col-span-3">
+            <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+              {/* Visual area */}
+              <div className="flex aspect-video items-center justify-center bg-secondary/60 p-12">
+                <div className="flex flex-col items-center gap-4 text-center">
+                  <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-primary/10">
+                    <activeFeature.icon size={40} className="text-primary" />
+                  </div>
+                  <p className="text-sm font-bold uppercase tracking-wider text-primary">
+                    {activeFeature.tag}
+                  </p>
+                </div>
+              </div>
+              {/* Description */}
+              <div className="p-8">
+                <h3 className="text-xl font-bold text-foreground">
+                  {activeFeature.title}
+                </h3>
+                <p className="mt-3 leading-relaxed text-muted-foreground">
+                  {activeFeature.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
