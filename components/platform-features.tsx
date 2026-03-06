@@ -74,7 +74,7 @@ export function PlatformFeatures() {
         {/* Features Grid */}
         <div className="mt-14 grid gap-6 lg:grid-cols-5 lg:gap-8">
           {/* Tabs */}
-          <div className="flex flex-row gap-2 overflow-x-auto lg:col-span-2 lg:flex-col lg:gap-2" role="tablist">
+          <div className="-mx-6 flex flex-row gap-2 overflow-x-auto px-6 pb-2 lg:mx-0 lg:col-span-2 lg:flex-col lg:gap-2 lg:overflow-x-visible lg:px-0 lg:pb-0" role="tablist">
             {features.map((feature, i) => (
               <button
                 key={feature.id}
@@ -82,7 +82,7 @@ export function PlatformFeatures() {
                 aria-selected={i === activeIndex}
                 onClick={() => setActiveIndex(i)}
                 className={cn(
-                  "flex shrink-0 items-center gap-3 rounded-xl border px-5 py-4 text-left transition-all duration-200",
+                  "flex min-w-[160px] shrink-0 items-center gap-3 rounded-xl border px-4 py-3 text-left transition-all duration-200 lg:min-w-0 lg:px-5 lg:py-4",
                   i === activeIndex
                     ? "border-primary/30 bg-card text-foreground shadow-sm"
                     : "border-transparent text-muted-foreground hover:bg-card/60"
