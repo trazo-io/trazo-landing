@@ -11,38 +11,52 @@ const faqs = [
   {
     question: "How does Trazo help me earn premium prices?",
     answer:
-      "Trazo documents every farming practice and creates a transparency score that verifies your claims. When buyers and consumers can see blockchain-verified proof of your sustainable practices, they're willing to pay premium prices. Your documented practices become your competitive advantage — turning trust into real revenue.",
+      "Trazo creates verified transparency pages for your products that consumers access via QR codes. When buyers can see exactly how their food was grown, with blockchain-verified proof, they're willing to pay premium prices. Research shows consumers actively seek and prefer products with verified farming transparency.",
   },
   {
     question: "What if I'm not tech-savvy?",
     answer:
-      "Trazo is designed for farmers, not tech companies. You can log events with voice recording, quick photo capture, or simple forms — all in under 2 minutes. No training required. If you can use a smartphone, you can use Trazo.",
+      "Trazo runs in any web browser on your phone or computer — no downloads needed. The interface uses simple forms, voice recording, and photo uploads. The interface is designed for field conditions — most users are comfortable from day one.",
   },
   {
     question: "Will consumers actually scan my QR codes?",
     answer:
-      "Yes. Studies show that transparency drives purchasing decisions — especially for premium products. When consumers scan your QR code, they see your complete farming journey, building the trust that converts interest into sales. Our analytics dashboard tracks every scan so you can see the engagement.",
+      "Transparency pages are designed for mobile-first quick loading. Consumers actively seek transparency — Trazo makes it easy to provide and easy to verify. Our analytics dashboard tracks every scan so you can see the engagement.",
   },
   {
     question: "How does blockchain verification work?",
     answer:
-      "When you finish a production, Trazo creates a cryptographic fingerprint (hash) of the entire record and writes it to the Polygon blockchain. This creates a tamper-proof timestamp that proves your records haven't been altered. It's like a digital notary for your farming practices. Available as an add-on for $15/month.",
+      "When you finish a production (after harvest), Trazo generates a cryptographic fingerprint of the entire production record and writes it to the Polygon blockchain. All events become permanently locked — nobody can alter them after that point. Blockchain verification is available as an add-on ($15/month) for any plan. You don't manage it — it works automatically.",
   },
   {
     question: "How accurate are the carbon calculations?",
     answer:
-      "All carbon calculations use government-verified emission factors from EPA (40 CFR Part 98) and USDA sources. Unlike other platforms that use estimates, Trazo's calculations are audit-ready from day one. The more events you log, the more accurate your footprint becomes.",
+      "Trazo calculates Direct Operational Emissions — the emissions farmers actually control: fuel combustion, fertilizer application, and equipment operation. This is not a full lifecycle assessment. All emission factors are sourced from EPA (40 CFR Part 98) and USDA government-published data.",
   },
   {
     question: "Can I cancel anytime?",
     answer:
-      "Absolutely. No contracts, no lock-in. Start with a 14-day free trial, and upgrade only when you're ready. If you decide Trazo isn't for you, cancel with one click. Your data is always yours — you can export everything at any time.",
+      "Yes. No long-term contracts. Cancel anytime from your dashboard. You'll retain access until the end of your billing period. Your data is always yours.",
   },
 ]
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+}
+
 export function FaqSection() {
   return (
-    <section id="faq" className="relative border-t border-border bg-secondary/30 py-24 lg:py-32">
+    <section id="faq" className="relative border-t border-border bg-secondary/30 py-16 lg:py-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <div className="mx-auto max-w-3xl px-6">
         <div className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">

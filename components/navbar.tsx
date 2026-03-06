@@ -24,9 +24,9 @@ export function Navbar() {
           <Image
             src="/images/logo-green.png"
             alt="Trazo"
-            width={120}
-            height={40}
-            className="h-8 w-auto"
+            width={689}
+            height={230}
+            className="h-12 w-auto"
             priority
           />
         </Link>
@@ -47,10 +47,10 @@ export function Navbar() {
         {/* Desktop Actions */}
         <div className="hidden items-center gap-3 md:flex">
           <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground" asChild>
-            <a href="https://app.trazo.io">Log In</a>
+            <a href="https://app.trazo.io/auth/signin">Log In</a>
           </Button>
           <Button size="sm" className="gap-1.5 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-            <a href="https://app.trazo.io">
+            <a href="https://app.trazo.io/auth/signup">
               Start Free Trial
               <ArrowRight size={14} />
             </a>
@@ -83,10 +83,10 @@ export function Navbar() {
             ))}
             <div className="flex flex-col gap-3 border-t border-border pt-4">
               <Button variant="ghost" size="sm" className="w-full justify-center text-muted-foreground" asChild>
-                <a href="https://app.trazo.io">Log In</a>
+                <a href="https://app.trazo.io/auth/signin">Log In</a>
               </Button>
               <Button size="sm" className="w-full gap-1.5 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-                <a href="https://app.trazo.io">
+                <a href="https://app.trazo.io/auth/signup">
                   Start Free Trial
                   <ArrowRight size={14} />
                 </a>

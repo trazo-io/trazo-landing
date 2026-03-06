@@ -20,10 +20,10 @@ const plans = [
     monthly: 0,
     yearly: 0,
     priceLabel: "Free",
-    priceNote: "14-day trial",
+    priceNote: "Free forever",
     highlight: false,
     cta: "Start Free Trial",
-    ctaLink: "https://app.trazo.io",
+    ctaLink: "https://app.trazo.io/auth/signup",
     includesLabel: "Includes",
     features: [
       "Carbon calculations (EPA/USDA)",
@@ -43,7 +43,7 @@ const plans = [
     priceNote: null,
     highlight: false,
     cta: "Start Free Trial",
-    ctaLink: "https://app.trazo.io",
+    ctaLink: "https://app.trazo.io/auth/signup",
     includesLabel: "Everything in Starter, plus",
     features: [
       "48-hour email support",
@@ -63,7 +63,7 @@ const plans = [
     priceNote: null,
     highlight: true,
     cta: "Start Free Trial",
-    ctaLink: "https://app.trazo.io",
+    ctaLink: "https://app.trazo.io/auth/signup",
     includesLabel: "Everything in Basic, plus",
     features: [
       "24-hour email support",
@@ -82,7 +82,7 @@ const plans = [
     priceNote: null,
     highlight: false,
     cta: "Start Free Trial",
-    ctaLink: "https://app.trazo.io",
+    ctaLink: "https://app.trazo.io/auth/signup",
     includesLabel: "Everything in Standard, plus",
     features: [
       "12-hour priority support",
@@ -101,7 +101,7 @@ const plans = [
     priceNote: null,
     highlight: false,
     cta: "Contact Sales",
-    ctaLink: "mailto:hello@trazo.io",
+    ctaLink: "mailto:info@trazo.io",
     includesLabel: "Everything in Corporate, plus",
     features: [
       "Onboarding & training support",
@@ -114,7 +114,7 @@ const plans = [
 ]
 
 const comparisonFeatures = [
-  { label: "Monthly price", values: ["Free (14 days)", "$69", "$119", "$149", "$299"] },
+  { label: "Monthly price", values: ["Free", "$69", "$119", "$149", "$299"] },
   { label: "Annual price", values: ["\u2014", "$690/yr", "$1,190/yr", "$1,490/yr", "$2,990/yr"] },
   { label: "Farms / Parcels per farm", values: ["1 / 1", "1 / 2", "2 / 2", "4 / 4", "Unlimited"] },
   { label: "Productions / year", values: ["1", "3", "4", "6", "Unlimited"] },
@@ -158,7 +158,7 @@ const pricingFaqs = [
   },
   {
     q: "Discounts for cooperatives or large groups?",
-    a: "Yes. For large organizations, our Enterprise plan offers unlimited farms, parcels, and productions with dedicated support. Contact us at hello@trazo.io for custom needs.",
+    a: "Yes. For large organizations, our Enterprise plan offers unlimited farms, parcels, and productions with dedicated support. Contact us at info@trazo.io for custom needs.",
   },
   {
     q: "What payment methods do you accept?",
@@ -418,7 +418,7 @@ export default function PricingPage() {
                   className="gap-2 bg-primary-foreground px-10 text-base text-primary hover:bg-primary-foreground/90"
                   asChild
                 >
-                  <a href="https://app.trazo.io">
+                  <a href="https://app.trazo.io/auth/signup">
                     Start Free Trial
                     <ArrowRight size={18} />
                   </a>
@@ -429,7 +429,7 @@ export default function PricingPage() {
                   className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
                   asChild
                 >
-                  <a href="mailto:hello@trazo.io">
+                  <a href="mailto:info@trazo.io">
                     Have questions? Contact us directly
                   </a>
                 </Button>

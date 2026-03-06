@@ -12,7 +12,7 @@ const stats = [
 
 export function StatsBar() {
   return (
-    <section className="relative py-24 lg:py-32">
+    <section className="relative py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <ScrollReveal>
         <div className="mx-auto max-w-2xl text-center">
@@ -34,7 +34,6 @@ export function StatsBar() {
           {stats.map((stat, i) => (
             <ScrollReveal key={stat.label} delay={i * 100}>
             <div
-              key={stat.label}
               className="flex flex-col items-center rounded-2xl border border-border bg-card p-6 text-center shadow-sm transition-shadow hover:shadow-md"
             >
               <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/8">

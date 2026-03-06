@@ -10,7 +10,7 @@ const problems = [
     title: "Only 20% of consumers believe sustainability claims",
     description:
       "Trust is broken. Your buyers need documented proof, not marketing promises. Without verification, your practices are just words on a label.",
-    source: "Blue Yonder, 2025 - survey of 5,000+ consumers",
+    source: "Blue Yonder, 2025 — survey of 5,000+ consumers",
   },
   {
     icon: FileX,
@@ -32,7 +32,7 @@ const problems = [
 
 export function ProblemSection() {
   return (
-    <section className="relative py-24 lg:py-32">
+    <section className="relative py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Header */}
         <ScrollReveal>

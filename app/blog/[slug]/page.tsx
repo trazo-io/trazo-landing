@@ -38,8 +38,28 @@ export default async function BlogDetailPage({
   const currentIdx = posts.findIndex((p) => p.slug === slug)
   const relatedPosts = posts.filter((_, i) => i !== currentIdx).slice(0, 3)
 
+  const blogJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    image: `https://www.trazo.io${post.image}`,
+    datePublished: post.date,
+    author: { '@type': 'Organization', name: 'Trazo' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Trazo',
+      logo: { '@type': 'ImageObject', url: 'https://www.trazo.io/images/logo-green.png' },
+    },
+    url: `https://www.trazo.io/blog/${post.slug}`,
+  }
+
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+      />
       <Navbar />
       <main className="pb-20">
         {/* Hero */}
@@ -92,7 +112,7 @@ export default async function BlogDetailPage({
         </div>
 
         {/* Content */}
-        <article className="mx-auto mt-40 max-w-3xl px-6 md:mt-48">
+        <article className="mx-auto mt-60 max-w-3xl px-6 md:mt-64">
           <div className="prose-custom">
             {post.content.map((paragraph, i) => (
               <p
@@ -113,7 +133,7 @@ export default async function BlogDetailPage({
               Start documenting your farming practices and earn consumer trust with Trazo.
             </p>
             <a
-              href="https://app.trazo.io"
+              href="https://app.trazo.io/auth/signup"
               className="mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Start Free Trial

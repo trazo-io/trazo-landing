@@ -20,8 +20,16 @@ export function ScrollReveal({
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
 
   useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
+    setPrefersReducedMotion(mq.matches)
+    if (mq.matches) {
+      setIsVisible(true)
+      return
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -57,7 +65,7 @@ export function ScrollReveal({
           : `opacity-0 ${directionStyles[direction]}`,
         className
       )}
-      style={{
+      style={prefersReducedMotion ? undefined : {
         transitionDuration: `${duration}ms`,
         transitionDelay: `${delay}ms`,
       }}
@@ -84,8 +92,16 @@ export function StaggerChildren({
 }: StaggerChildrenProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
 
   useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
+    setPrefersReducedMotion(mq.matches)
+    if (mq.matches) {
+      setIsVisible(true)
+      return
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -123,7 +139,7 @@ export function StaggerChildren({
                   ? "translate-x-0 translate-y-0 opacity-100"
                   : `opacity-0 ${directionStyles[direction]}`
               )}
-              style={{
+              style={prefersReducedMotion ? undefined : {
                 transitionDuration: `${duration}ms`,
                 transitionDelay: `${i * staggerDelay}ms`,
               }}

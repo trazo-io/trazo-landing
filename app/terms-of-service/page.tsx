@@ -330,10 +330,10 @@ export default function TermsOfServicePage() {
                 <p className="mt-1 leading-[1.8]">
                   Email:{" "}
                   <a
-                    href="mailto:hello@trazo.io"
+                    href="mailto:info@trazo.io"
                     className="text-primary hover:underline"
                   >
-                    hello@trazo.io
+                    info@trazo.io
                   </a>
                 </p>
               </div>

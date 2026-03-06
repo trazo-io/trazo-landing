@@ -37,7 +37,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative border-y border-border bg-secondary/30 py-24 lg:py-32">
+    <section id="how-it-works" className="relative border-y border-border bg-secondary/30 py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Header */}
         <ScrollReveal>
@@ -52,7 +52,7 @@ export function HowItWorks() {
             </h2>
           </div>
           <Button className="gap-2 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-            <a href="https://app.trazo.io">
+            <a href="https://app.trazo.io/auth/signup">
               Start Free Trial
               <ArrowRight size={16} />
             </a>
@@ -65,7 +65,6 @@ export function HowItWorks() {
           {steps.map((step, i) => (
             <ScrollReveal key={step.number} delay={i * 150}>
             <div
-              key={step.number}
               className={`group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm ${
                 i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
               }`}
@@ -95,6 +94,7 @@ export function HowItWorks() {
                 </p>
               </div>
             </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

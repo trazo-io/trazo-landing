@@ -32,7 +32,7 @@ const fieldFeatures = [
 
 export function FieldFeatures() {
   return (
-    <section className="relative py-24 lg:py-32">
+    <section className="relative py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <ScrollReveal>
         <div className="mx-auto max-w-2xl text-center">
@@ -49,7 +49,6 @@ export function FieldFeatures() {
           {fieldFeatures.map((feature, i) => (
             <ScrollReveal key={feature.title} delay={i * 100}>
             <div
-              key={feature.title}
               className="group flex gap-5 rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
             >
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/8">

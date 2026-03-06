@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 
 export function CtaBanner() {
   return (
-    <section className="relative py-24 lg:py-32">
+    <section className="relative py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-6">
         <div className="relative overflow-hidden rounded-3xl bg-primary px-8 py-20 text-center lg:py-28">
           {/* Decorative circles */}
@@ -25,7 +25,7 @@ export function CtaBanner() {
                 className="gap-2 bg-primary-foreground px-10 text-base text-primary hover:bg-primary-foreground/90"
                 asChild
               >
-                <a href="https://app.trazo.io">
+                <a href="https://app.trazo.io/auth/signup">
                   Start Free Trial
                   <ArrowRight size={18} />
                 </a>
@@ -33,7 +33,7 @@ export function CtaBanner() {
               <Button
                 variant="outline"
                 size="lg"
-                className="gap-2 border-primary-foreground/30 px-8 text-base text-primary-foreground hover:bg-primary-foreground/10"
+                className="gap-2 border-primary-foreground/30 bg-transparent px-8 text-base !text-primary-foreground hover:bg-primary-foreground/10"
                 asChild
               >
                 <Link href="/pricing">

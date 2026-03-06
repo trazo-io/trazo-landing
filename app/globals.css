@@ -10,7 +10,7 @@
   --card-foreground: oklch(0.18 0.02 155);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.18 0.02 155);
-  --primary: oklch(0.45 0.12 155);
+  --primary: oklch(0.59 0.14 148);
   --primary-foreground: oklch(0.99 0.002 120);
   --secondary: oklch(0.96 0.01 150);
   --secondary-foreground: oklch(0.30 0.04 155);
@@ -22,8 +22,8 @@
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: oklch(0.91 0.01 150);
   --input: oklch(0.91 0.01 150);
-  --ring: oklch(0.45 0.12 155);
-  --chart-1: oklch(0.45 0.12 155);
+  --ring: oklch(0.59 0.14 148);
+  --chart-1: oklch(0.59 0.14 148);
   --chart-2: oklch(0.60 0.10 155);
   --chart-3: oklch(0.55 0.08 200);
   --chart-4: oklch(0.70 0.10 140);
@@ -31,12 +31,12 @@
   --radius: 0.75rem;
   --sidebar: oklch(0.97 0.005 150);
   --sidebar-foreground: oklch(0.18 0.02 155);
-  --sidebar-primary: oklch(0.45 0.12 155);
+  --sidebar-primary: oklch(0.59 0.14 148);
   --sidebar-primary-foreground: oklch(0.99 0.002 120);
   --sidebar-accent: oklch(0.94 0.02 150);
   --sidebar-accent-foreground: oklch(0.18 0.02 155);
   --sidebar-border: oklch(0.91 0.01 150);
-  --sidebar-ring: oklch(0.45 0.12 155);
+  --sidebar-ring: oklch(0.59 0.14 148);
 }
 
 @theme inline {
@@ -81,10 +81,16 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+  }
+  button, [role="button"], a {
+    cursor: pointer;
   }
 }

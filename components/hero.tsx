@@ -55,7 +55,7 @@ export function Hero() {
               className="gap-2 bg-primary px-8 text-base text-primary-foreground hover:bg-primary/90"
               asChild
             >
-              <a href="https://app.trazo.io">
+              <a href="https://app.trazo.io/auth/signup">
                 Start Free Trial
                 <ArrowRight size={18} />
               </a>
@@ -77,7 +77,7 @@ export function Hero() {
           {/* Pricing note */}
           <ScrollReveal delay={400}>
           <p className="mt-4 text-sm text-muted-foreground">
-            Plans from $69/month &middot; Cancel anytime
+            Try free for 14 days &middot; Plans from $69/month &middot; Cancel anytime
           </p>
           </ScrollReveal>
 

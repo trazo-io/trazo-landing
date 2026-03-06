@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { FileText, ShieldCheck, QrCode, BarChart3, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -13,6 +14,7 @@ const features = [
     title: "Log Every Practice in Under 2 Minutes",
     description:
       "Voice recording, photo capture, and smart forms let you document farming events quickly — even in the field with poor connectivity. Seven event types cover everything from planting to harvest.",
+    image: "/images/app-screenshot.png",
   },
   {
     id: "verify",
@@ -21,6 +23,7 @@ const features = [
     title: "Blockchain-Recorded, Tamper-Proof Records",
     description:
       "When you finish a production, Trazo creates a cryptographic fingerprint of the entire record and writes it to the Polygon blockchain. Nobody can alter it after that point. Buyers see immutable proof that your claims are real — not just marketing. Available as an add-on ($15/month).",
+    image: "/images/consumer-transparency.png",
   },
   {
     id: "connect",
@@ -29,6 +32,7 @@ const features = [
     title: "Let Consumers See How Their Food Was Grown",
     description:
       "Generate QR codes for every production. When consumers scan, they see your complete farming journey — building the trust that drives purchasing decisions.",
+    image: "/images/consumer-journey.png",
   },
   {
     id: "grow",
@@ -37,6 +41,7 @@ const features = [
     title: "Understand Your Market with Real-Time Analytics",
     description:
       "Track QR scans, consumer engagement, and reviews from a single dashboard. See which practices resonate with buyers and refine your transparency story over time.",
+    image: "/images/app-screenshot.png",
   },
 ]
 
@@ -45,7 +50,7 @@ export function PlatformFeatures() {
   const activeFeature = features[activeIndex]
 
   return (
-    <section id="features" className="relative border-y border-border bg-secondary/30 py-24 lg:py-32">
+    <section id="features" className="relative border-y border-border bg-secondary/30 py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Header */}
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
@@ -59,7 +64,7 @@ export function PlatformFeatures() {
             </h2>
           </div>
           <Button className="gap-2 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-            <a href="https://app.trazo.io">
+            <a href="https://app.trazo.io/auth/signup">
               Start Free Trial
               <ArrowRight size={16} />
             </a>
@@ -107,15 +112,13 @@ export function PlatformFeatures() {
           <div className="lg:col-span-3">
             <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
               {/* Visual area */}
-              <div className="flex aspect-video items-center justify-center bg-secondary/60 p-12">
-                <div className="flex flex-col items-center gap-4 text-center">
-                  <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-primary/10">
-                    <activeFeature.icon size={40} className="text-primary" />
-                  </div>
-                  <p className="text-sm font-bold uppercase tracking-wider text-primary">
-                    {activeFeature.tag}
-                  </p>
-                </div>
+              <div className="relative aspect-video overflow-hidden bg-secondary/60">
+                <Image
+                  src={activeFeature.image}
+                  alt={`${activeFeature.tag} - ${activeFeature.title}`}
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
               {/* Description */}
               <div className="p-8">

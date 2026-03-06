@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 
 export function ProductShowcase() {
   return (
-    <section className="relative overflow-hidden border-y border-border bg-secondary/30 py-24 lg:py-32">
+    <section className="relative overflow-hidden border-y border-border bg-secondary/30 py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Header */}
         <ScrollReveal>
@@ -44,7 +44,7 @@ export function ProductShowcase() {
               <div className="text-center">
                 <h3 className="text-lg font-bold text-foreground">Transparency Score</h3>
                 <p className="mt-1 max-w-[260px] text-sm text-muted-foreground">
-                  Product ratings, farm badges, and verified blockchain scores at a glance
+                  Product ratings, farm badges, and blockchain-recorded scores at a glance
                 </p>
               </div>
             </div>
@@ -55,7 +55,7 @@ export function ProductShowcase() {
                 <div className="overflow-hidden rounded-[2.5rem] border-[8px] border-foreground/10 bg-card shadow-2xl shadow-primary/10">
                   <Image
                     src="/images/consumer-journey.png"
-                    alt="Trazo Production Journey view showing 19 farming events, 12.7t CO2e, and detailed soil analysis documentation"
+                    alt="Trazo Production Journey view showing 19 documented farming events with detailed soil analysis and timeline"
                     width={300}
                     height={640}
                     className="h-auto w-[260px] md:w-[280px]"
@@ -76,7 +76,7 @@ export function ProductShowcase() {
         {/* Feature Highlights */}
         <div className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-6 md:grid-cols-4">
           {[
-            { icon: Shield, label: "Blockchain Verified", desc: "Tamper-proof records" },
+            { icon: Shield, label: "Blockchain Recorded", desc: "Tamper-proof records (add-on)" },
             { icon: Star, label: "Transparency Score", desc: "0-100 rating system" },
             { icon: LineChart, label: "Full Timeline", desc: "Seed to harvest" },
             { icon: Smartphone, label: "QR Code Access", desc: "Scan to discover" },

@@ -4,11 +4,19 @@ import { ArrowRight, ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { posts } from "@/lib/blog-data"
 
-const displayPosts = posts.slice(0, 4)
+const homepageSlugs = [
+  "consumers-dont-trust-food-labels",
+  "perverse-incentive-problem",
+  "blockchain-verification-agriculture",
+  "qr-codes-farm-to-consumer-trust",
+]
+const displayPosts = homepageSlugs
+  .map((slug) => posts.find((p) => p.slug === slug))
+  .filter(Boolean) as typeof posts
 
 export function BlogSection() {
   return (
-    <section className="relative py-24 lg:py-32">
+    <section className="relative py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Header */}
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
