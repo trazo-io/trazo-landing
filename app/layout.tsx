@@ -25,11 +25,13 @@ export const metadata: Metadata = {
     siteName: 'Trazo',
     type: 'website',
     locale: 'en_US',
+    images: [{ url: '/images/og-image.jpg', width: 1200, height: 630, alt: 'Trazo agricultural transparency platform dashboard' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Trazo - Agricultural Transparency Platform',
     description: 'Prove your practices. Earn premium prices. The transparency platform for specialty crop farms.',
+    images: ['/images/og-image.jpg'],
   },
 }
 

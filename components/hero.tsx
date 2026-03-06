@@ -87,7 +87,7 @@ export function Hero() {
             <div className="absolute -inset-4 rounded-3xl bg-primary/5 blur-2xl" aria-hidden="true" />
             <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-xl shadow-foreground/5">
               <Image
-                src="/images/app-screenshot.png"
+                src="/images/app-screenshot.jpg"
                 alt="Trazo agricultural dashboard showing farm management, production tracking, transparency scores, and satellite mapping for Coastal Valleys Farm"
                 width={1400}
                 height={900}
