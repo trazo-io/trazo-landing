@@ -39,7 +39,7 @@ export function StatsBar() {
               <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/8">
                 <stat.icon size={22} className="text-primary" />
               </div>
-              <p className="text-3xl font-bold text-foreground lg:text-4xl">
+              <p className="text-xl font-bold text-foreground sm:text-3xl lg:text-4xl">
                 {stat.value}
               </p>
               <p className="mt-1.5 text-sm text-muted-foreground">

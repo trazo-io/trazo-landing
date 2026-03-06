@@ -75,9 +75,9 @@ export default async function BlogDetailPage({
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
           </div>
 
-          <div className="absolute inset-x-0 bottom-0 translate-y-1/2">
+          <div className="relative md:absolute md:inset-x-0 md:bottom-0 md:translate-y-1/2">
             <div className="mx-auto max-w-3xl px-6">
-              <div className="rounded-2xl border border-border bg-card p-8 shadow-lg md:p-12">
+              <div className="rounded-2xl border border-border bg-card p-6 shadow-lg md:p-12">
                 <Link
                   href="/blog"
                   className="mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
@@ -112,16 +112,9 @@ export default async function BlogDetailPage({
         </div>
 
         {/* Content */}
-        <article className="mx-auto mt-60 max-w-3xl px-6 md:mt-64">
+        <article className="mx-auto mt-10 max-w-3xl px-6 md:mt-64">
           <div className="prose-custom">
-            {post.content.map((paragraph, i) => (
-              <p
-                key={i}
-                className="mb-6 text-base leading-[1.8] text-foreground/80 md:text-lg md:leading-[1.85]"
-              >
-                {paragraph}
-              </p>
-            ))}
+            <article dangerouslySetInnerHTML={{ __html: post.content }} />
           </div>
 
           {/* CTA */}

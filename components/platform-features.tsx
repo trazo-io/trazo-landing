@@ -14,7 +14,7 @@ const features = [
     title: "Log Every Practice in Under 2 Minutes",
     description:
       "Voice recording, photo capture, and smart forms let you document farming events quickly — even in the field with poor connectivity. Seven event types cover everything from planting to harvest.",
-    image: "/images/app-screenshot.png",
+    image: "/images/feature-document.avif",
   },
   {
     id: "verify",
@@ -23,7 +23,7 @@ const features = [
     title: "Blockchain-Recorded, Tamper-Proof Records",
     description:
       "When you finish a production, Trazo creates a cryptographic fingerprint of the entire record and writes it to the Polygon blockchain. Nobody can alter it after that point. Buyers see immutable proof that your claims are real — not just marketing. Available as an add-on ($15/month).",
-    image: "/images/consumer-transparency.png",
+    image: "/images/feature-verify.avif",
   },
   {
     id: "connect",
@@ -32,7 +32,7 @@ const features = [
     title: "Let Consumers See How Their Food Was Grown",
     description:
       "Generate QR codes for every production. When consumers scan, they see your complete farming journey — building the trust that drives purchasing decisions.",
-    image: "/images/consumer-journey.png",
+    image: "/images/feature-connect.avif",
   },
   {
     id: "grow",
@@ -41,7 +41,7 @@ const features = [
     title: "Understand Your Market with Real-Time Analytics",
     description:
       "Track QR scans, consumer engagement, and reviews from a single dashboard. See which practices resonate with buyers and refine your transparency story over time.",
-    image: "/images/app-screenshot.png",
+    image: "/images/feature-grow.avif",
   },
 ]
 

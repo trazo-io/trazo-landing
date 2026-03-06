@@ -27,19 +27,16 @@ export function ProductShowcase() {
         {/* Phone Mockups */}
         <ScrollReveal delay={200} duration={800}>
         <div className="relative mt-16">
-          <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-12 lg:gap-20">
+          <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:items-start md:gap-12 lg:gap-20">
             {/* Phone 1 - Transparency Score */}
             <div className="flex flex-col items-center gap-6">
-              <div className="relative">
-                <div className="overflow-hidden rounded-[2.5rem] border-[8px] border-foreground/10 bg-card shadow-2xl shadow-primary/10">
-                  <Image
-                    src="/images/consumer-transparency.png"
-                    alt="Trazo consumer view showing Avocado product with 100/100 Transparency Score by Coastal Valleys Farm"
-                    width={300}
-                    height={640}
-                    className="h-auto w-[260px] md:w-[280px]"
-                  />
-                </div>
+              <div className="relative h-[520px] w-[260px] overflow-hidden rounded-[2.5rem] border-[8px] border-foreground/10 bg-card shadow-2xl shadow-primary/10 md:h-[560px] md:w-[280px]">
+                <Image
+                  src="/images/consumer-transparency.png"
+                  alt="Trazo consumer view showing Avocado product with 100/100 Transparency Score by Coastal Valleys Farm"
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
               <div className="text-center">
                 <h3 className="text-lg font-bold text-foreground">Transparency Score</h3>
@@ -51,16 +48,13 @@ export function ProductShowcase() {
 
             {/* Phone 2 - Production Journey */}
             <div className="flex flex-col items-center gap-6">
-              <div className="relative">
-                <div className="overflow-hidden rounded-[2.5rem] border-[8px] border-foreground/10 bg-card shadow-2xl shadow-primary/10">
-                  <Image
-                    src="/images/consumer-journey.png"
-                    alt="Trazo Production Journey view showing 19 documented farming events with detailed soil analysis and timeline"
-                    width={300}
-                    height={640}
-                    className="h-auto w-[260px] md:w-[280px]"
-                  />
-                </div>
+              <div className="relative h-[520px] w-[260px] overflow-hidden rounded-[2.5rem] border-[8px] border-foreground/10 bg-card shadow-2xl shadow-primary/10 md:h-[560px] md:w-[280px]">
+                <Image
+                  src="/images/consumer-journey.png"
+                  alt="Trazo Production Journey view showing 19 documented farming events with detailed soil analysis and timeline"
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
               <div className="text-center">
                 <h3 className="text-lg font-bold text-foreground">Production Journey</h3>

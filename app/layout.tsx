@@ -14,7 +14,7 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Trazo\u2122 - Agricultural Transparency Platform | Prove Your Practices',
+  title: 'Trazo - Agricultural Transparency Platform | Prove Your Practices',
   description: 'Document every farming practice, verify it on blockchain, and share your story with consumers through QR codes. The transparency platform that turns honest farming into a competitive advantage.',
   keywords: ['agriculture', 'transparency', 'blockchain', 'farming', 'QR codes', 'premium pricing', 'food traceability'],
   metadataBase: new URL('https://www.trazo.io'),
