@@ -82,7 +82,7 @@ export function PlatformFeatures() {
                 aria-selected={i === activeIndex}
                 onClick={() => setActiveIndex(i)}
                 className={cn(
-                  "flex min-w-[160px] shrink-0 items-center gap-3 rounded-xl border px-4 py-3 text-left transition-all duration-200 lg:min-w-0 lg:px-5 lg:py-4",
+                  "flex w-[75%] shrink-0 items-center gap-3 rounded-xl border px-4 py-3 text-left transition-all duration-200 sm:w-auto lg:px-5 lg:py-4",
                   i === activeIndex
                     ? "border-primary/30 bg-card text-foreground shadow-sm"
                     : "border-transparent text-muted-foreground hover:bg-card/60"
