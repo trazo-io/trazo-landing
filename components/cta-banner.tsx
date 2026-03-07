@@ -13,11 +13,11 @@ export function CtaBanner() {
 
           <div className="relative">
             <h2 className="text-balance text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl lg:text-5xl">
-              Ready to prove your practices?
+              Stop competing on price.
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-primary-foreground/80">
-              Start your 14-day free trial today. Plans from $69/month. Cancel
-              anytime.
+              Start documenting your farm in under 15 minutes. 14-day free trial.
+              Cancel anytime.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button

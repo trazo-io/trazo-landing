@@ -20,7 +20,7 @@ export function StatsBar() {
             Why Trazo
           </p>
           <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            The simplest way to prove what you grow
+            Simple enough for the field. Strong enough for the buyer.
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
             Trazo turns every farming practice into a transparency-scored

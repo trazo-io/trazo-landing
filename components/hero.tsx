@@ -33,17 +33,16 @@ export function Hero() {
           {/* Heading */}
           <ScrollReveal delay={100}>
           <h1 className="max-w-4xl text-balance text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
-            Prove Your Practices.{" "}
-            <span className="text-primary">Earn Premium Prices.</span>
+            If buyers can&apos;t verify it,{" "}
+            <span className="text-primary">they won&apos;t pay for it.</span>
           </h1>
           </ScrollReveal>
 
           {/* Subheading */}
           <ScrollReveal delay={200}>
           <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            Document every farming practice, verify it on blockchain, and share
-            your story with consumers through QR codes. The transparency
-            platform that turns honest farming into a competitive advantage.
+            Trazo turns your farming practices into verified proof — so you
+            can sell your products for what they&apos;re worth.
           </p>
           </ScrollReveal>
 

@@ -44,8 +44,8 @@ export function ProblemSection() {
             Why farms lose premium positioning
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-            Premium buyers want proof. Without documented practices, even the
-            best farms compete on price alone.
+            Without documented proof, even the best farms get commodity prices.
+            Premium buyers won&apos;t pay more for claims they can&apos;t verify.
           </p>
         </div>
         </ScrollReveal>

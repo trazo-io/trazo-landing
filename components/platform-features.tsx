@@ -11,7 +11,7 @@ const features = [
     id: "document",
     tag: "DOCUMENT",
     icon: FileText,
-    title: "Document all farming practices in less than 2 minutes",
+    title: "Prove what you grow — in under 2 minutes",
     description:
       "Smart forms and Voice recording and photo capture let you document most of your farming activities quickly (even in poor connectivity). We provide a list of Seven event types to cover everything from planting to harvest.",
     image: "/images/feature-document.avif",
@@ -20,7 +20,7 @@ const features = [
     id: "verify",
     tag: "VERIFY",
     icon: ShieldCheck,
-    title: "Your production records are Blockchain-Recorded, tamper-proof",
+    title: "Records nobody can alter or deny",
     description:
       "When you complete a production, Trazo creates a cryptographic fingerprint of your entire record and writes it to the Polygon blockchain. No one can change this after that point. Your buyers will get immutable proof of your claims - not just marketing. Available as an add-on ($15/month).",
     image: "/images/feature-verify.avif",
@@ -29,7 +29,7 @@ const features = [
     id: "connect",
     tag: "CONNECT",
     icon: QrCode,
-    title: "Allow your customers to view how their Food was grown",
+    title: "Every scan builds buyer confidence",
     description:
       "Trazo allows you to generate a qr code for each production. When your customer scans the qr code, they will see your full farming journey - building the trust to drive buying decisions.",
     image: "/images/feature-connect.avif",
@@ -38,7 +38,7 @@ const features = [
     id: "grow",
     tag: "GROW",
     icon: BarChart3,
-    title: "Understand who your Market is by using real-Time analysis",
+    title: "Know exactly who is scanning your products",
     description:
       "You will be able to track qr code scans, consumer engagement and reviews through our single dashboard. You will know which farming practices resonate with your buyers and you will be able to refine your transparency story over time.",
     image: "/images/feature-grow.avif",

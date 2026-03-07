@@ -346,7 +346,7 @@ export const posts: BlogPost[] = [
 <p>A local grower of specialty avocados prints QR codes on each crate and provides them to consumers. Once a consumer scans the QR code, they will see the full growing history — 14 documented events over eight months — of the avocado, including the application of organic fertilizers, irrigation records, and photos of the harvest. The transparency score of 92%, indicates to the consumer, this grower has nothing to hide.</p>
 
 <h3>In Specialized Retail</h3>
-<p>A coffee producer prints QR codes on their packaging and once scanned, consumers will see the elevation, soil preparation, harvest methodology, and processing details for that particular lot of coffee. Each record is blockchain verified. The retail partner utilizes the QR code as a premium positioning element.</p>
+<p>A coffee producer prints QR codes on their packaging and once scanned, consumers will see the elevation, soil preparation, harvest methodology, and processing details for that particular lot of coffee. With blockchain verification enabled (available as an add-on), each record becomes tamper-proof. The retail partner utilizes the QR code as a premium positioning element.</p>
 
 <h3>Direct-to-Consumer</h3>
 <p>An organic vegetable farm prints QR codes on the containers sent out with their CSA program. Once the subscriber scans the QR code, they can see exactly what occurred in the field that week — which events occurred, what conditions the vegetables were subjected to, and photos of the harvest. In doing so, the farm transforms a transaction into a relationship.</p>
@@ -505,9 +505,9 @@ export const posts: BlogPost[] = [
 
 <p>Trustworthy produce is always worth paying more money for by consumers. In fact, the data is strong:</p>
 
-<p>USDA Economic Research Service data finds that, depending upon the produce type, organic produce can receive premium prices anywhere from 20% to over 100%. Organic specialty produce (berries, avocado, etc.) and heritage varieties tend to see the greatest premiums.</p>
+<p>USDA Economic Research Service data shows that organic produce commands significant premiums — with specialty crops often seeing the highest. But it is the trustworthiness associated with the organic label that generates the premium, not the label itself.</p>
 
-<p>However, it is the trustworthiness associated with the organic label that generates the premium price. As consumers become increasingly skeptical of labels, it is the trustworthiness aspect that presents an opportunity.</p>
+<p>As consumers become increasingly skeptical of labels, verified transparency — not just certification — is what creates the opportunity for premium pricing.</p>
 
 <h2>Why Are Consumers Willing to Pay More?</h2>
 
@@ -538,15 +538,15 @@ export const posts: BlogPost[] = [
 
 <h3>Farmers Markets</h3>
 <p>Selling produce directly to consumers via farmers markets provides the most transparent environment for creating a connection with consumers. At farmers markets, consumers are typically searching for a connection with the people who produce their food. Providing a QR code on each stand that allows consumers to view the entire process of how the produce being sold was grown, will convert a casual shopper into a loyal customer.</p>
-<p>Potential Premium Price: 30-60% above conventional grocery store prices.</p>
+<p>Premium potential: High — direct relationship means buyers pay for trust, not just product.</p>
 
 <h3>Direct Sales to Consumers (online and/or CSA)</h3>
 <p>Subscription-based boxes, direct online sales and Community Supported Agriculture (CSA) programs are ideal for building a relationship with consumers. When consumers can scan a QR code on their weekly delivery to determine precisely what took place on the farm that week, consumer retention will improve. Consumers purchase a relationship with the producer, rather than just purchasing the produce.</p>
-<p>Potential Premium Price: 25-50% above conventional.</p>
+<p>Premium potential: Strong — transparency drives retention and justifies subscription pricing.</p>
 
 <h3>Specialty Retailers</h3>
 <p>Natural food stores, gourmet stores and specialty retailers are always looking for unique and different products to sell to their customers. Verifiable sustainability stories, such as those found with certified organic farms, provide the differentiation required to sell products to specialty retailers.</p>
-<p>Potential Premium Price: 20-40% above conventional.</p>
+<p>Premium potential: Moderate to high — verified documentation is increasingly a buyer requirement for shelf placement.</p>
 
 <h3>Restaurant Partnerships</h3>
 <p>Restaurants that utilize a farm-to-table concept are always interested in verifying the origin of the produce they use in their kitchens. When a farmer provides detailed documentation of the farming practices used to produce the ingredients, it serves as both a marketing tool and a means of providing confidence to the chef that the produce meets his standards.</p>
