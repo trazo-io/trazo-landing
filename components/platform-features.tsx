@@ -11,36 +11,36 @@ const features = [
     id: "document",
     tag: "DOCUMENT",
     icon: FileText,
-    title: "Log Every Practice in Under 2 Minutes",
+    title: "Document all farming practices in less than 2 minutes",
     description:
-      "Voice recording, photo capture, and smart forms let you document farming events quickly — even in the field with poor connectivity. Seven event types cover everything from planting to harvest.",
+      "Smart forms and Voice recording and photo capture let you document most of your farming activities quickly (even in poor connectivity). We provide a list of Seven event types to cover everything from planting to harvest.",
     image: "/images/feature-document.avif",
   },
   {
     id: "verify",
     tag: "VERIFY",
     icon: ShieldCheck,
-    title: "Blockchain-Recorded, Tamper-Proof Records",
+    title: "Your production records are Blockchain-Recorded, tamper-proof",
     description:
-      "When you finish a production, Trazo creates a cryptographic fingerprint of the entire record and writes it to the Polygon blockchain. Nobody can alter it after that point. Buyers see immutable proof that your claims are real — not just marketing. Available as an add-on ($15/month).",
+      "When you complete a production, Trazo creates a cryptographic fingerprint of your entire record and writes it to the Polygon blockchain. No one can change this after that point. Your buyers will get immutable proof of your claims - not just marketing. Available as an add-on ($15/month).",
     image: "/images/feature-verify.avif",
   },
   {
     id: "connect",
     tag: "CONNECT",
     icon: QrCode,
-    title: "Let Consumers See How Their Food Was Grown",
+    title: "Allow your customers to view how their Food was grown",
     description:
-      "Generate QR codes for every production. When consumers scan, they see your complete farming journey — building the trust that drives purchasing decisions.",
+      "Trazo allows you to generate a qr code for each production. When your customer scans the qr code, they will see your full farming journey - building the trust to drive buying decisions.",
     image: "/images/feature-connect.avif",
   },
   {
     id: "grow",
     tag: "GROW",
     icon: BarChart3,
-    title: "Understand Your Market with Real-Time Analytics",
+    title: "Understand who your Market is by using real-Time analysis",
     description:
-      "Track QR scans, consumer engagement, and reviews from a single dashboard. See which practices resonate with buyers and refine your transparency story over time.",
+      "You will be able to track qr code scans, consumer engagement and reviews through our single dashboard. You will know which farming practices resonate with your buyers and you will be able to refine your transparency story over time.",
     image: "/images/feature-grow.avif",
   },
 ]

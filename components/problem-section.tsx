@@ -17,7 +17,7 @@ const problems = [
     label: "Documentation",
     title: "No documentation means no premium prices",
     description:
-      "Premium retailers, co-ops, and food brands demand verified farming records before paying premium prices. Without them, you compete on price alone.",
+      "Premium retailers, co-ops, and brands want verified farming data before they pay you more money for your products. If you don't have it, you'll be price competing with others.",
     source: null,
   },
   {
@@ -25,7 +25,7 @@ const problems = [
     label: "Broken Incentives",
     title: "Carbon-first platforms punish transparency",
     description:
-      "Other tools penalize you for logging more events — more data means a worse carbon score. Trazo flips it: more events = higher transparency score = more trust.",
+      "There are other tools that penalize you for recording more events - the more data you record, the worse your carbon score will be. Trazo flips this on its head: the more events you record, the higher your transparency score will be; the more trust you will earn.",
     source: null,
   },
 ]

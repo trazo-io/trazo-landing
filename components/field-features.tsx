@@ -6,27 +6,27 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 const fieldFeatures = [
   {
     icon: Monitor,
-    title: "Works on Any Device",
+    title: "Works On All Devices",
     description:
-      "Phone, tablet, or computer — Trazo works in any web browser. Designed for field conditions with simple interfaces that work even with limited connectivity.",
+      "Trazo can be used on any device with a web browser whether it's a phone, tablet, or computer; we've designed our system to allow for simple interfaces which are functional even in areas of limited internet access.",
   },
   {
     icon: Mic,
     title: "No Training Required",
     description:
-      "Voice recording and smart forms mean anyone can document practices from day one. Simple enough for the field, detailed enough for verification.",
+      "Our voice recording technology and smart form capabilities will allow your team to document their daily practices immediately without requiring training. The system is simple enough to use by anyone in the field while still providing the detail needed for verification.",
   },
   {
     icon: FileCheck,
-    title: "EPA & USDA-Sourced Data",
+    title: "Data From Government Sources",
     description:
-      "All carbon calculations use government-verified emission factors from EPA (40 CFR Part 98) and USDA sources. Audit-ready from day one.",
+      "All emissions calculations using Trazo utilize government-sourced emission factors from both EPA (40 CFR Part 98) and USDA. Therefore, all of your documentation is audit-ready from the first day.",
   },
   {
     icon: DoorOpen,
-    title: "Cancel Anytime",
+    title: "Cancellation Is Available At Any Time",
     description:
-      "No contracts, no lock-in. Start with a 14-day free trial and upgrade only when you're ready. Your data is always yours.",
+      "We have no contract or lock-in requirements. We offer a 14-day free trial. Upgrade to paid at any time after the trial ends and your data remains yours regardless of your status with us.",
   },
 ]
 
