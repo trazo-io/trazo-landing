@@ -13,9 +13,9 @@ export const posts: BlogPost[] = [
   {
     slug: "consumers-dont-trust-food-labels",
     category: "Industry Insights",
-    date: "February 2026",
+    date: "February 3, 2026",
     readTime: "5 min read",
-    title: "Why 91% of Consumers Don't Trust Food Labels (And What Farmers Can Do About It)",
+    title: "Why 9 in 10 Consumers Don't Trust Food Labels (And What Farmers Can Do About It)",
     excerpt: "Consumer trust in food labeling has hit an all-time low. Discover why traditional labels are failing and how direct farmer transparency is the solution.",
     image: "/images/blog-food-labels.jpg",
     content: `
@@ -56,7 +56,7 @@ export const posts: BlogPost[] = [
 <p>Instead of adding more labels to food products, the answer lies in providing consumers with a way to verify information provided by producers. Imagine a consumer shopping at a farmer's market. The consumer picks up an avocado and scans a QR code with their mobile device. Instead of receiving a marketing message, the consumer receives a list of information including:</p>
 
 <ul>
-<li>A transparency score indicating how many of the 13 farming practices were recorded;</li>
+<li>A transparency score indicating how thoroughly the farming practices were documented;</li>
 <li>A timeline of all of the events from planting to harvest;</li>
 <li>Photos from the field taken by the farmer during actual farming activities;</li>
 <li>Blockchain-based verification demonstrating that the information has not been altered.</li>
@@ -84,7 +84,7 @@ export const posts: BlogPost[] = [
   {
     slug: "perverse-incentive-problem",
     category: "Technology",
-    date: "February 2026",
+    date: "February 10, 2026",
     readTime: "7 min read",
     title: "The Perverse Incentive Problem: Why Carbon-First Platforms Penalize Honest Farmers",
     excerpt: "Carbon-first platforms create a paradox where the most transparent farmers get the lowest scores. Learn why transparency-first approaches produce better outcomes for honest operations.",
@@ -96,7 +96,7 @@ export const posts: BlogPost[] = [
 
 <h2>Carbon-Based Tracking Systems</h2>
 
-<p>Most traditional carbon-tracking systems measure a farm's environmental footprint by calculating the number of activities that the farmer documents in order to determine the farm's overall carbon footprint. The more activities that a farmer documents -- fuel usage, fertilizer applications, equipment operations -- the lower the farm's overall carbon footprint.</p>
+<p>Most traditional carbon-tracking systems measure a farm's environmental footprint by calculating the number of activities that the farmer documents in order to determine the farm's overall carbon footprint. The more activities that a farmer documents — fuel usage, fertilizer applications, equipment operations — the lower the farm's overall carbon footprint.</p>
 
 <p>From the surface level, this appears to be a very logical method for determining a farm's environmental footprint, and therefore, the farm's carbon footprint: document all of the activities that occur on the farm, calculate the total carbon footprint, and then generate a carbon score.</p>
 
@@ -104,11 +104,11 @@ export const posts: BlogPost[] = [
 
 <h2>Broken Logic</h2>
 
-<p>Consider two farmers that are both growing the same crop. Farmer A documents five events during the production cycle. As a result, his calculated carbon footprint is relatively low -- not due to the fact that he is using cleaner methods, but simply because there is less data recorded.</p>
+<p>Consider two farmers that are both growing the same crop. Farmer A documents five events during the production cycle. As a result, his calculated carbon footprint is relatively low — not due to the fact that he is using cleaner methods, but simply because there is less data recorded.</p>
 
-<p>On the other hand, Farmer B documents fifteen events during the same time frame. He documents every irrigation event, every chemical application, and every piece of equipment that is operated during the production cycle. His calculated carbon footprint is significantly higher -- not because he is farming worse, but simply because he is providing more documentation.</p>
+<p>On the other hand, Farmer B documents fifteen events during the same time frame. He documents every irrigation event, every chemical application, and every piece of equipment that is operated during the production cycle. His calculated carbon footprint is significantly higher — not because he is farming worse, but simply because he is providing more documentation.</p>
 
-<p>As a result of this, Farmer A is viewed as having a lower carbon footprint than Farmer B -- even though Farmer B may actually be farming using cleaner methods. In a carbon-based system, Farmer A is rewarded for being less transparent than Farmer B.</p>
+<p>As a result of this, Farmer A is viewed as having a lower carbon footprint than Farmer B — even though Farmer B may actually be farming using cleaner methods. In a carbon-based system, Farmer A is rewarded for being less transparent than Farmer B.</p>
 
 <p>This is not merely a hypothetical scenario. There have been studies published in peer-reviewed climate policy journals that show farmers have actual concerns regarding the creation of perverse incentives within carbon-based market programs. Additionally, early adopters of conservation practices are especially concerned that existing requirements can create disincentives for them as they have already implemented many beneficial farming practices.</p>
 
@@ -135,17 +135,17 @@ export const posts: BlogPost[] = [
 
 <p>The solution is not to discontinue tracking altogether, but to reverse the incentive of the tracking system.</p>
 
-<p>A transparency-based approach tracks something fundamentally different than the amount of carbon generated by the farm's activities -- namely, how completely and thoroughly the farmer documents their activities.</p>
+<p>A transparency-based approach tracks something fundamentally different than the amount of carbon generated by the farm's activities — namely, how completely and thoroughly the farmer documents their activities.</p>
 
 <p>In a transparency-based system:</p>
 
 <ul>
-<li><strong>Documenting more events = Higher transparency score</strong>. You are rewarded for your comprehensive documentation efforts -- not penalized.</li>
-<li><strong>Carbon calculations still take place</strong> -- they just serve as supporting documentation -- rather than the sole focus of the tracking system.</li>
+<li><strong>Documenting more events = Higher transparency score</strong>. You are rewarded for your comprehensive documentation efforts — not penalized.</li>
+<li><strong>Carbon calculations still take place</strong> — they just serve as supporting documentation — rather than the sole focus of the tracking system.</li>
 <li><strong>Consumers use the documentation completeness</strong> of a farm as a trust indicator, thereby aligning the incentives of farmers with the interests of consumers.</li>
 </ul>
 
-<p>Therefore, Farmer B -- who documented 15 events -- would likely receive a significantly higher transparency-based score than Farmer A -- who only documented 5 events. The system provides incentives for exactly the type of behavior that consumers, regulators, and the environment desire: Complete and Honest Documentation.</p>
+<p>Therefore, Farmer B — who documented 15 events — would likely receive a significantly higher transparency-based score than Farmer A — who only documented 5 events. The system provides incentives for exactly the type of behavior that consumers, regulators, and the environment desire: Complete and Honest Documentation.</p>
 
 <h2>Repositioning Carbon Data</h2>
 
@@ -158,7 +158,7 @@ export const posts: BlogPost[] = [
 <li>Carbon Credit Programs Where Applicable</li>
 </ul>
 
-<p>The difference lies in the primary incentive of the tracking system. When transparency-based scoring drives farmer behavior as opposed to minimizing carbon emissions, you get better data across the board -- including more accurate carbon calculations, since farmers are documenting everything, rather than selectively excluding certain activities.</p>
+<p>The difference lies in the primary incentive of the tracking system. When transparency-based scoring drives farmer behavior as opposed to minimizing carbon emissions, you get better data across the board — including more accurate carbon calculations, since farmers are documenting everything, rather than selectively excluding certain activities.</p>
 
 <h2>Transitioning to a New System</h2>
 
@@ -166,8 +166,8 @@ export const posts: BlogPost[] = [
 
 <ol>
 <li><strong>Does it reward you for documenting more events?</strong> A good transparency-based tracking system should reward you for documenting as many events as possible.</li>
-<li><strong>Is carbon data present -- but secondary?</strong> Good transparency-based tracking systems should allow you to view carbon calculations as supporting evidence for your claim -- rather than punishing you for your thoroughness.</li>
-<li><strong>Will consumers be able to view your documentation completeness?</strong> Transparency-based tracking systems should provide consumers with a clear indication of whether or not you are providing complete documentation -- as well as provide you with the ability to clearly demonstrate your commitment to transparency.</li>
+<li><strong>Is carbon data present — but secondary?</strong> Good transparency-based tracking systems should allow you to view carbon calculations as supporting evidence for your claim — rather than punishing you for your thoroughness.</li>
+<li><strong>Will consumers be able to view your documentation completeness?</strong> Transparency-based tracking systems should provide consumers with a clear indication of whether or not you are providing complete documentation — as well as provide you with the ability to clearly demonstrate your commitment to transparency.</li>
 <li><strong>Are Emission Factors Based on Verified Sources?</strong> Look for data that is based upon verified sources such as the EPA, USDA, or other government agencies. Avoid data that is based upon proprietary "black boxes".</li>
 </ol>
 
@@ -180,7 +180,7 @@ export const posts: BlogPost[] = [
   {
     slug: "blockchain-verification-agriculture",
     category: "Technology",
-    date: "February 2026",
+    date: "February 17, 2026",
     readTime: "8 min read",
     title: "Blockchain Verification in Agriculture: A Simple Explanation for Farmers",
     excerpt: "Blockchain sounds complex, but the concept is simple: create a permanent, tamper-proof record of your farming practices that anyone can verify.",
@@ -296,7 +296,7 @@ export const posts: BlogPost[] = [
   {
     slug: "qr-codes-farm-to-consumer-trust",
     category: "Transparency",
-    date: "February 2026",
+    date: "February 24, 2026",
     readTime: "6 min read",
     title: "How QR Codes Are Changing Farm-to-Consumer Trust",
     excerpt: "QR codes on produce are bridging the gap between farmers and consumers, giving buyers instant access to the story behind their food.",
@@ -392,7 +392,7 @@ export const posts: BlogPost[] = [
   {
     slug: "planting-to-harvest-documentation",
     category: "Guides",
-    date: "February 2026",
+    date: "March 3, 2026",
     readTime: "10 min read",
     title: "From Planting to Harvest: A Complete Guide to Agricultural Event Documentation",
     excerpt: "A step-by-step guide to documenting every farming event from soil preparation through harvest, building a complete transparency record.",
@@ -416,49 +416,41 @@ export const posts: BlogPost[] = [
 
 <p><strong>Decision-Making</strong>: A history of event documentation allows farmers to improve upon their farming practices through time. For example, when did you plant last year? How much water did you use to irrigate? What was your yield? Documentation provides the ability to turn the experience of a farmer into usable data.</p>
 
-<h2>The Seven Event Types That Every Farmer Should Be Tracking</h2>
+<h2>The Seven Event Categories That Every Farmer Should Be Tracking</h2>
 
-<h3>1. Production Events (Planting, Pruning, Preparing for Harvest)</h3>
-<p><strong>Document</strong>: Date, Crop Variety, Method of Planting (Direct Seed, Transplant), Density/Spacing, Seed Source. If you are growing a perennial crop, then document any pruning activities, growth management, and maintenance.</p>
-<p><strong>Why</strong>: Establishes the beginning of your production cycle and documents your continuous management of the crop. Your variety, method of planting, and maintenance will determine your success throughout the entire production cycle.</p>
+<h3>1. Production Events</h3>
+<p><strong>Document</strong>: Planting, irrigation, pruning, harvest, transplanting, cultivation, thinning, pollination, and post-harvest processing. Include date, crop variety, method, and quantities.</p>
+<p><strong>Why</strong>: Production events are the backbone of your transparency record. They document everything from planting through harvest — the complete story of how your crop was grown.</p>
 <p><strong>Document Time</strong>: ~90 Seconds</p>
 
-<h3>2. Irrigation</h3>
-<p><strong>Document</strong>: Date, Amount of Water Applied (Gallons/Liters), Type of Irrigation System Used (Drip, Sprinkler, Flood), Duration of Application, Source of Water (Well, Municipal, Rainwater).</p>
-<p><strong>Why</strong>: Water Management is one of the most scrutinized aspects of Agricultural Sustainability. To calculate your environmental impact accurately, it is critical that you document your irrigation practices.</p>
-<p><strong>Document Time</strong>: ~60 Seconds</p>
-
-<h3>3. Chemical Applications</h3>
-<p><strong>Document</strong>: Date, Type of Chemical (Fertilizer, Pesticide, Herbicide, Fungicide), Specific Product Name, Amount of Chemical Applied, Method of Application, Target Pest/Condition.</p>
-<p><strong>Why</strong>: Documentation of Chemical Use is the most heavily regulated of all types of documentation. In addition to regulatory reasons, many consumers are interested in knowing which chemicals were used in the production of their food. Complete and accurate documentation of chemical use builds credibility and trust.</p>
-<p><strong>Subcategories</strong>:</p>
-<ul>
-<li>Record the NPK ratio of your fertilizers. Also, note whether they are organic or synthetic.</li>
-<li>Record the active ingredient(s) of your pesticides. Note the target pest and concentration of the solution.</li>
-<li>Record the product used and the timing of your herbicides. Was it pre or post emergence?</li>
-<li>Record the type of product (synthetic, copper based, sulfur, biological).</li>
-</ul>
+<h3>2. Chemical Applications</h3>
+<p><strong>Document</strong>: Date, type of chemical (fertilizer, pesticide, herbicide, fungicide), specific product name, amount applied, method of application, target pest or condition, and NPK ratios for fertilizers.</p>
+<p><strong>Why</strong>: Chemical documentation is the most heavily regulated category and the one consumers care about most. Complete and accurate records build credibility and trust.</p>
 <p><strong>Document Time</strong>: ~2 Minutes</p>
 
-<h3>4. Weather Events</h3>
-<p><strong>Document</strong>: Date, Type of Event (Frost, Drought, Hail Storm, High Temperature, Tropical Storm, High Winds, Humidity Extremes), Severity of Event, Impact of Event on your Crops, Response Taken.</p>
-<p><strong>Why</strong>: Weather events will help explain why there were fluctuations in your yields. Weather events may also provide justification for using certain chemicals. Finally, weather events demonstrate to consumers that you are managing a variable environment.</p>
-<p><strong>Examples of weather events tracked</strong>: Frost, drought, hail storm, high temperature, tropical storm, high winds, high humidity, low humidity.</p>
+<h3>3. Soil Management</h3>
+<p><strong>Document</strong>: Date, activity type (tillage, amendment, cover cropping, testing), results of any soil tests, amendments applied, equipment used.</p>
+<p><strong>Why</strong>: Demonstrates your long-term commitment to land stewardship. The health of your soil is the foundation of all your practices.</p>
+<p><strong>Document Time</strong>: ~90 Seconds</p>
+
+<h3>4. Pest Management</h3>
+<p><strong>Document</strong>: Date, pest type identified, severity, scouting observations, integrated pest management (IPM) actions taken, biological controls deployed.</p>
+<p><strong>Why</strong>: Shows consumers you are actively monitoring and managing pests — especially important for organic operations where chemical options are limited.</p>
+<p><strong>Document Time</strong>: ~90 Seconds</p>
+
+<h3>5. Weather Events</h3>
+<p><strong>Document</strong>: Date, type of event (frost, drought, hail, high temperature, storm, high winds), severity, impact on crops, response taken.</p>
+<p><strong>Why</strong>: Weather events explain yield fluctuations and demonstrate to consumers that you are managing a variable environment. They also justify certain interventions.</p>
 <p><strong>Document Time</strong>: ~60 Seconds</p>
 
-<h3>5. Harvest</h3>
-<p><strong>Document</strong>: Date, Area Harvested, Estimated Yield, Harvest Method, Quality Notes, Destination of Harvested Crops (Direct Sale, Processor, Storage).</p>
-<p><strong>Why</strong>: Documents the close of your production cycle. Your yield data, combined with your input records, will allow you to measure your efficiencies. Many consumers enjoy seeing harvest events because it provides them with a connection to the final product.</p>
-<p><strong>Document Time</strong>: ~90 Seconds</p>
+<h3>6. Business Events</h3>
+<p><strong>Document</strong>: Certifications obtained or renewed, inspections completed, labor practices, equipment investments, sustainability initiatives.</p>
+<p><strong>Why</strong>: Business events show the operational commitment behind your farming practices — the investments you make in equipment, certifications, and your team.</p>
+<p><strong>Document Time</strong>: ~60 Seconds</p>
 
-<h3>6. Soil Preparation</h3>
-<p><strong>Document</strong>: Date, Activity Type (Tillage, Amendment, Testing), Results of Any Soil Tests Conducted, Amendments Applied, Equipment Used.</p>
-<p><strong>Why</strong>: Demonstrates your long term commitment to Land Stewardship. The Health of Your Soil Is The Foundation Of All Your Practices.</p>
-<p><strong>Document Time</strong>: ~90 Seconds</p>
-
-<h3>7. Miscellaneous</h3>
-<p><strong>Document</strong>: Date, Observation Text, Photos, Voice Notes.</p>
-<p><strong>Why</strong>: There are some things that don't fit into categories. Miscellaneous observations will capture those details that make your farming story unique – a sunrise over the fields, unusual wildlife sightings, crew celebration during harvest.</p>
+<h3>7. General Observations</h3>
+<p><strong>Document</strong>: Date, observation text, photos, voice notes.</p>
+<p><strong>Why</strong>: Some things don't fit into categories. General observations capture the details that make your farming story unique — wildlife sightings, field conditions, crew milestones.</p>
 <p><strong>Document Time</strong>: ~30 Seconds</p>
 
 <h2>Documenting Your Practices Effectively</h2>
@@ -479,7 +471,7 @@ export const posts: BlogPost[] = [
 
 <h2>How Your Documenting Leads to Transparency</h2>
 
-<p>With each entry you make documenting your production process, your transparency score will increase -- a 0-100 score reflecting how well you've documented your production process. The more entries you make, the higher your transparency score.</p>
+<p>With each entry you make documenting your production process, your transparency score will increase — a 0-100 score reflecting how well you've documented your production process. The more entries you make, the higher your transparency score.</p>
 
 <p>A consumer who scans your QR code will be able to see your transparency score before they even look at your information about your farm and/or products. If a consumer sees a transparency score of 90+, this is telling them, "This farmer has documented almost all of what went on with this crop." That's a strong trust indicator.</p>
 
@@ -493,7 +485,7 @@ export const posts: BlogPost[] = [
   {
     slug: "premium-pricing-transparency",
     category: "Industry Insights",
-    date: "February 2026",
+    date: "March 10, 2026",
     readTime: "8 min read",
     title: "Premium Pricing Through Transparency: What the Research Shows",
     excerpt: "Research confirms that consumers are willing to pay more for products with verified transparency. Here's how to position your farm for premium pricing.",

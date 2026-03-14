@@ -6,7 +6,7 @@ import Image from "next/image"
 import { ArrowUpRight } from "lucide-react"
 import type { BlogPost } from "@/lib/blog-data"
 
-const categories = ["All", "Technology", "Agriculture", "Best Practices", "Industry Insights"]
+const categories = ["All", "Industry Insights", "Technology", "Transparency", "Guides"]
 
 export function BlogFilter({ posts }: { posts: BlogPost[] }) {
   const [active, setActive] = useState("All")
