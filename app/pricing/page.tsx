@@ -13,6 +13,26 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
+const pricingJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Trazo Pricing — Agricultural Transparency Platform',
+  description: 'Simple, transparent pricing for specialty crop farms. Free tier available. Plans from $69/month with 14-day free trial.',
+  url: 'https://www.trazo.io/pricing',
+  mainEntity: {
+    '@type': 'SoftwareApplication',
+    name: 'Trazo',
+    applicationCategory: 'BusinessApplication',
+    offers: [
+      { '@type': 'Offer', name: 'Starter', price: '0', priceCurrency: 'USD', description: 'Free forever — 1 farm, 1 parcel, 1 production, 2 GB storage' },
+      { '@type': 'Offer', name: 'Basic', price: '69', priceCurrency: 'USD', billingDuration: 'P1M', description: '1 farm, 2 parcels, 3 productions/year, 10 GB, voice recording' },
+      { '@type': 'Offer', name: 'Standard', price: '119', priceCurrency: 'USD', billingDuration: 'P1M', description: '2 farms, 2 parcels, 4 productions/year, 25 GB, 24hr support' },
+      { '@type': 'Offer', name: 'Corporate', price: '149', priceCurrency: 'USD', billingDuration: 'P1M', description: '4 farms, 4 parcels, 6 productions/year, 50 GB, priority support' },
+      { '@type': 'Offer', name: 'Enterprise', price: '299', priceCurrency: 'USD', billingDuration: 'P1M', description: 'Unlimited farms, parcels, productions, storage, dedicated support' },
+    ],
+  },
+}
+
 const plans = [
   {
     name: "Starter",
@@ -179,6 +199,10 @@ export default function PricingPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingJsonLd) }}
+      />
       <Navbar />
       <main className="pt-24 pb-20">
         {/* Header */}

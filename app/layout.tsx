@@ -47,11 +47,45 @@ const jsonLd = {
   name: 'Trazo',
   url: 'https://www.trazo.io',
   logo: 'https://www.trazo.io/images/logo-green.png',
-  description: 'Agricultural transparency platform that turns honest farming into a competitive advantage.',
+  description: 'Agricultural transparency platform that documents farming practices, verifies them on blockchain, and shares verified proof with consumers via QR codes. Uses EPA and USDA emission factors for carbon calculations.',
+  foundingDate: '2025',
+  founder: {
+    '@type': 'Person',
+    name: 'Oscar Munoz',
+    jobTitle: 'Founder & CEO',
+  },
+  areaServed: 'US',
+  industry: 'Agricultural Technology',
+  knowsAbout: [
+    'Agricultural Transparency',
+    'Farm Traceability',
+    'Blockchain Verification',
+    'Carbon Footprint Calculation',
+    'EPA Emission Factors',
+    'USDA Crop Data',
+    'QR Code Traceability',
+    'Specialty Crop Farming',
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'info@trazo.io',
+    contactType: 'customer support',
+    availableLanguage: ['English', 'Spanish'],
+  },
   sameAs: [
     'https://linkedin.com/company/trazo-io',
     'https://instagram.com/trazo.io',
   ],
+}
+
+const webSiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Trazo',
+  url: 'https://www.trazo.io',
+  description: 'Agricultural transparency platform for specialty crop farms. Document farming practices, verify on blockchain, share with consumers via QR codes.',
+  publisher: { '@type': 'Organization', name: 'Trazo' },
+  inLanguage: ['en', 'es'],
 }
 
 export default function RootLayout({
@@ -65,6 +99,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }}
         />
       </head>
       <body className="font-sans antialiased">

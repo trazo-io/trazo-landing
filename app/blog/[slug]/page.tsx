@@ -45,13 +45,34 @@ export default async function BlogDetailPage({
     description: post.excerpt,
     image: `https://www.trazo.io${post.image}`,
     datePublished: post.date,
-    author: { '@type': 'Organization', name: 'Trazo' },
+    dateModified: post.date,
+    author: {
+      '@type': 'Person',
+      name: 'Oscar Munoz',
+      jobTitle: 'Founder & CEO',
+      url: 'https://www.linkedin.com/in/oscarmunoz',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Trazo',
+        url: 'https://www.trazo.io',
+      },
+    },
     publisher: {
       '@type': 'Organization',
       name: 'Trazo',
+      url: 'https://www.trazo.io',
       logo: { '@type': 'ImageObject', url: 'https://www.trazo.io/images/logo-green.png' },
     },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://www.trazo.io/blog/${post.slug}`,
+    },
     url: `https://www.trazo.io/blog/${post.slug}`,
+    isPartOf: {
+      '@type': 'Blog',
+      name: 'Trazo Blog',
+      url: 'https://www.trazo.io/blog',
+    },
   }
 
   return (

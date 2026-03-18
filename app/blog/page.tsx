@@ -3,10 +3,42 @@ import { Footer } from "@/components/footer"
 import { NewsletterForm } from "@/components/newsletter-form"
 import { BlogFilter } from "@/components/blog-filter"
 import { posts } from "@/lib/blog-data"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: 'Blog — Agricultural Transparency Insights | Trazo',
+  description: 'Guides, insights, and best practices for agricultural transparency, blockchain verification, carbon calculations, and premium market positioning for specialty crop farms.',
+}
+
+const blogListJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Trazo Blog — Agricultural Transparency Insights',
+  description: 'Guides, insights, and best practices for agricultural transparency and premium market positioning.',
+  url: 'https://www.trazo.io/blog',
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Trazo',
+    url: 'https://www.trazo.io',
+  },
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: posts.map((post, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `https://www.trazo.io/blog/${post.slug}`,
+      name: post.title,
+    })),
+  },
+}
 
 export default function BlogPage() {
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListJsonLd) }}
+      />
       <Navbar />
       <main className="pt-24 pb-20">
         {/* Header */}

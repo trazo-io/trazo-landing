@@ -10,7 +10,8 @@ const problems = [
     title: "Only 20% of consumers believe sustainability claims",
     description:
       "Trust is broken. Your buyers need documented proof, not marketing promises. Without verification, your practices are just words on a label.",
-    source: "Blue Yonder, 2025 — survey of 5,000+ consumers",
+    source: "Blue Yonder, 2025 Consumer Sustainability Survey",
+    sourceUrl: "https://blueyonder.com/knowledge-center/collateral/survey-consumer-sustainability",
   },
   {
     icon: FileX,
@@ -18,15 +19,17 @@ const problems = [
     title: "No documentation means no premium prices",
     description:
       "Premium retailers, co-ops, and brands want verified farming data before they pay you more money for your products. If you don't have it, you'll be price competing with others.",
-    source: null,
+    source: "USDA Economic Research Service — Traceability in the U.S. Food Supply",
+    sourceUrl: "https://www.ers.usda.gov/publications/pub-details/?pubid=41632",
   },
   {
     icon: TrendingDown,
     label: "Broken Incentives",
     title: "Carbon-first platforms punish transparency",
     description:
-      "There are other tools that penalize you for recording more events - the more data you record, the worse your carbon score will be. Trazo flips this on its head: the more events you record, the higher your transparency score will be; the more trust you will earn.",
-    source: null,
+      "There are other tools that penalize you for recording more events — the more data you record, the worse your carbon score will be. Trazo flips this on its head: the more events you record, the higher your transparency score will be; the more trust you will earn.",
+    source: "EPA GHG Emission Factors Hub — 40 CFR Part 98",
+    sourceUrl: "https://www.epa.gov/climateleadership/ghg-emission-factors-hub",
   },
 ]
 
@@ -71,7 +74,13 @@ export function ProblemSection() {
               </p>
               {problem.source && (
                 <p className="mt-4 text-xs italic text-muted-foreground/70">
-                  {problem.source}
+                  {problem.sourceUrl ? (
+                    <a href={problem.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline decoration-dotted hover:text-primary">
+                      {problem.source}
+                    </a>
+                  ) : (
+                    problem.source
+                  )}
                 </p>
               )}
             </div>
