@@ -11,7 +11,7 @@ const problems = [
     description:
       "Trust is broken. Your buyers need documented proof, not marketing promises. Without verification, your practices are just words on a label.",
     source: "Blue Yonder, 2025 Consumer Sustainability Survey",
-    sourceUrl: "https://blueyonder.com/knowledge-center/collateral/survey-consumer-sustainability",
+    sourceUrl: "https://blueyonder.com/resources/consumer-sustainability-survey",
   },
   {
     icon: FileX,
