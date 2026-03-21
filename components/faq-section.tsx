@@ -34,6 +34,11 @@ const faqs = [
       "Trazo calculates Direct Operational Emissions — the emissions farmers actually control: fuel combustion, fertilizer application, and equipment operation. This is not a full lifecycle assessment. All emission factors are sourced from EPA (40 CFR Part 98) and USDA government-published data.",
   },
   {
+    question: "Does Trazo verify organic certifications?",
+    answer:
+      "Yes. USDA Organic certifications are automatically verified against the USDA Organic Integrity Database, which includes over 36,000 certified operations. Consumers see a green \u2018Verified\u2019 badge for farms found in the government database. Other certifications (GlobalG.A.P., Fair Trade, etc.) are displayed as \u2018Reported by Producer\u2019 with plans to add more verification sources.",
+  },
+  {
     question: "Can I cancel anytime?",
     answer:
       "Yes. No long-term contracts. Cancel anytime from your dashboard. You'll retain access until the end of your billing period. Your data is always yours.",

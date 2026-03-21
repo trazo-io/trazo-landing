@@ -144,6 +144,7 @@ const comparisonFeatures = [
   { label: "Transparency score", values: [true, true, true, true, true] },
   { label: "QR code generation", values: [true, true, true, true, true] },
   { label: "Carbon calculations (EPA/USDA)", values: [true, true, true, true, true] },
+  { label: "Certification verification (USDA Organic)", values: [true, true, true, true, true] },
   { label: "Photo documentation", values: [true, true, true, true, true] },
   { label: "Voice recording", values: [false, true, true, true, true] },
   { label: "Blockchain verification", values: ["Add-on", "Add-on", "Add-on", "Add-on", "Add-on"] },

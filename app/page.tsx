@@ -34,6 +34,7 @@ const softwareAppJsonLd = {
     'Blockchain verification on Polygon network',
     'QR code generation for consumer-facing transparency pages',
     'Voice recording and photo documentation',
+    'Certification verification via USDA Organic Integrity Database',
     'Commercial analytics dashboard',
     'English and Spanish language support',
   ],

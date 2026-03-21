@@ -22,7 +22,7 @@ const features = [
     icon: ShieldCheck,
     title: "Records nobody can alter or deny",
     description:
-      "When you complete a production, Trazo creates a cryptographic fingerprint of your entire record and writes it to the Polygon blockchain. No one can change this after that point. Your buyers will get immutable proof of your claims - not just marketing. Available as an add-on ($15/month).",
+      "When you complete a production, Trazo creates a cryptographic fingerprint of your entire record and writes it to the Polygon blockchain. No one can change this after that point. Your buyers will get immutable proof of your claims - not just marketing. Available as an add-on ($15/month). USDA Organic certifications are also verified automatically against the USDA Organic Integrity Database (36,000+ certified operations) — consumers see a \u2018Verified\u2019 badge for farms found in the government database.",
     image: "/images/feature-verify.avif",
   },
   {
