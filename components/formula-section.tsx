@@ -17,12 +17,12 @@ const steps = [
   {
     icon: Users,
     label: "More Consumer Trust",
-    description: "Verified proof via QR",
+    description: "Documented proof via QR",
   },
   {
     icon: Award,
     label: "Premium Positioning",
-    description: "Command better prices",
+    description: "Stand out to premium buyers",
   },
 ]
 
@@ -36,7 +36,7 @@ export function FormulaSection() {
             The Trazo Formula
           </p>
           <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            From documentation to premium prices
+            From documentation to premium positioning
           </h2>
         </div>
         </ScrollReveal>
@@ -66,6 +66,13 @@ export function FormulaSection() {
             </ScrollReveal>
           ))}
         </div>
+
+        {/* Methodology note */}
+        <ScrollReveal delay={600}>
+        <p className="mt-10 text-center text-xs text-muted-foreground/60">
+          Transparency score based on farmer-reported documentation completeness. Methodology details available in-app.
+        </p>
+        </ScrollReveal>
       </div>
     </section>
   )

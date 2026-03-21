@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
+import { CookieConsent, ConditionalAnalytics } from '@/components/cookie-consent'
 import './globals.css'
 
 const inter = Inter({
@@ -15,12 +15,12 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: 'Trazo - Agricultural Transparency Platform | Prove Your Practices',
-  description: 'Document every farming practice, verify it on blockchain, and share your story with consumers through QR codes. The transparency platform that turns honest farming into a competitive advantage.',
-  keywords: ['agriculture', 'transparency', 'blockchain', 'farming', 'QR codes', 'premium pricing', 'food traceability'],
+  description: 'Document every farming practice and share your story with consumers through QR codes. The transparency platform that turns honest farming into a competitive advantage.',
+  keywords: ['agriculture', 'transparency', 'blockchain', 'farming', 'QR codes', 'food traceability', 'specialty crop farms'],
   metadataBase: new URL('https://www.trazo.io'),
   openGraph: {
     title: 'Trazo - Agricultural Transparency Platform',
-    description: 'Prove your practices. Earn premium prices. Document every farming event, verify on blockchain, share with consumers via QR codes.',
+    description: 'Prove your practices. Build buyer confidence. Document every farming event and share with consumers via QR codes.',
     url: 'https://www.trazo.io',
     siteName: 'Trazo',
     type: 'website',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Trazo - Agricultural Transparency Platform',
-    description: 'Prove your practices. Earn premium prices. The transparency platform for specialty crop farms.',
+    description: 'Prove your practices. Build buyer confidence. The transparency platform for specialty crop farms.',
     images: ['/images/og-image.jpg'],
   },
 }
@@ -47,7 +47,7 @@ const jsonLd = {
   name: 'Trazo',
   url: 'https://www.trazo.io',
   logo: 'https://www.trazo.io/images/logo-green.png',
-  description: 'Agricultural transparency platform that documents farming practices, verifies them on blockchain, and shares verified proof with consumers via QR codes. Uses EPA and USDA emission factors for carbon calculations.',
+  description: 'Agricultural transparency platform that documents farming practices and shares them with consumers via QR codes. Uses EPA and USDA emission factors for carbon calculations. Optional blockchain recording available.',
   foundingDate: '2025',
   founder: {
     '@type': 'Person',
@@ -83,7 +83,7 @@ const webSiteJsonLd = {
   '@type': 'WebSite',
   name: 'Trazo',
   url: 'https://www.trazo.io',
-  description: 'Agricultural transparency platform for specialty crop farms. Document farming practices, verify on blockchain, share with consumers via QR codes.',
+  description: 'Agricultural transparency platform for specialty crop farms. Document farming practices, share with consumers via QR codes. Optional blockchain recording available.',
   publisher: { '@type': 'Organization', name: 'Trazo' },
   inLanguage: ['en', 'es'],
 }
@@ -107,7 +107,8 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased">
         {children}
-        <Analytics />
+        <CookieConsent />
+        <ConditionalAnalytics />
       </body>
     </html>
   )

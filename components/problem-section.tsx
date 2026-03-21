@@ -16,11 +16,11 @@ const problems = [
   {
     icon: FileX,
     label: "Documentation",
-    title: "No documentation means no premium prices",
+    title: "No documentation means no premium positioning",
     description:
-      "Premium retailers, co-ops, and brands want verified farming data before they pay you more money for your products. If you don't have it, you'll be price competing with others.",
-    source: "USDA Economic Research Service — Traceability in the U.S. Food Supply",
-    sourceUrl: "https://www.ers.usda.gov/publications/pub-details/?pubid=41632",
+      "Premium retailers, co-ops, and brands want documented farming practices before they pay more for your products. If you don't have it, you'll be price competing with farms that do.",
+    source: "Industry analysis — documented practices increasingly required by premium buyers",
+    sourceUrl: null,
   },
   {
     icon: TrendingDown,
@@ -28,8 +28,8 @@ const problems = [
     title: "Carbon-first platforms punish transparency",
     description:
       "There are other tools that penalize you for recording more events — the more data you record, the worse your carbon score will be. Trazo flips this on its head: the more events you record, the higher your transparency score will be; the more trust you will earn.",
-    source: "EPA GHG Emission Factors Hub — 40 CFR Part 98",
-    sourceUrl: "https://www.epa.gov/climateleadership/ghg-emission-factors-hub",
+    source: "Trazo analysis of carbon-first scoring incentive structures",
+    sourceUrl: null,
   },
 ]
 

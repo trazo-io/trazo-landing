@@ -25,8 +25,8 @@ export function BlogSection() {
               Resources & Insights
             </p>
             <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              Learn How Transparency Drives
-              <br className="hidden md:block" /> Premium Pricing
+              Learn How Transparency Builds
+              <br className="hidden md:block" /> Buyer Confidence
             </h2>
           </div>
           <Button

@@ -20,9 +20,9 @@ const features = [
     id: "verify",
     tag: "VERIFY",
     icon: ShieldCheck,
-    title: "Records nobody can alter or deny",
+    title: "Records with tamper-proof data integrity",
     description:
-      "When you complete a production, Trazo creates a cryptographic fingerprint of your entire record and writes it to the Polygon blockchain. No one can change this after that point. Your buyers will get immutable proof of your claims - not just marketing. Available as an add-on ($15/month). USDA Organic certifications are also verified automatically against the USDA Organic Integrity Database (36,000+ certified operations) — consumers see a \u2018Verified\u2019 badge for farms found in the government database.",
+      "When you complete a production, Trazo creates a cryptographic fingerprint of your entire record and writes it to the Polygon blockchain. No one can change this after that point — proving your documentation was not altered after submission. Available as an optional add-on ($15/month). USDA Organic certifications are cross-referenced against the USDA Organic Integrity Database (36,000+ certified operations) — consumers see a \u2018Verified\u2019 badge for farms found in the government database.",
     image: "/images/feature-verify.avif",
   },
   {

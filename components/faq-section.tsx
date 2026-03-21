@@ -9,9 +9,9 @@ import {
 
 const faqs = [
   {
-    question: "How does Trazo help me earn premium prices?",
+    question: "How does Trazo help me compete for premium buyers?",
     answer:
-      "Trazo creates verified transparency pages for your products that consumers access via QR codes. When buyers can see exactly how their food was grown — with documented practices, photos, and blockchain-recorded proof — they gain the confidence to choose your product over undocumented alternatives. Specialty retailers increasingly require this kind of documentation — Trazo makes it easy to provide.",
+      "Trazo creates transparency pages for your products that consumers access via QR codes. When buyers can see exactly how their food was grown — with documented practices, photos, and tamper-proof records — they gain the confidence to choose your product over undocumented alternatives. Specialty retailers increasingly require this kind of documentation — Trazo makes it easy to provide.",
   },
   {
     question: "What if I'm not tech-savvy?",

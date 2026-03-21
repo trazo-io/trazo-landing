@@ -41,7 +41,7 @@ export function ProductShowcase() {
               <div className="text-center">
                 <h3 className="text-lg font-bold text-foreground">Transparency Score</h3>
                 <p className="mt-1 max-w-[260px] text-sm text-muted-foreground">
-                  Product ratings, farm badges, and blockchain-recorded scores at a glance
+                  Product ratings, farm badges, and transparency scores at a glance
                 </p>
               </div>
             </div>
@@ -59,7 +59,7 @@ export function ProductShowcase() {
               <div className="text-center">
                 <h3 className="text-lg font-bold text-foreground">Production Journey</h3>
                 <p className="mt-1 max-w-[260px] text-sm text-muted-foreground">
-                  Detailed farming events, field notes, and blockchain-secured data logs
+                  Detailed farming events, field notes, and tamper-proof data logs (blockchain optional)
                 </p>
               </div>
             </div>

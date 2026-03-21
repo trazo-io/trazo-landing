@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { NewsletterForm } from "@/components/newsletter-form"
@@ -16,6 +18,7 @@ const footerLinks = {
   legal: [
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Terms of Service", href: "/terms-of-service" },
+    { label: "Cookie Policy", href: "/cookie-policy" },
   ],
 }
 
@@ -142,6 +145,17 @@ export function Footer() {
             >
               Terms and Conditions
             </Link>
+            <button
+              type="button"
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.dispatchEvent(new CustomEvent("cookie-consent-reopen"))
+                }
+              }}
+              className="text-xs text-muted-foreground transition-colors hover:text-primary"
+            >
+              Cookie Preferences
+            </button>
           </div>
         </div>
       </div>

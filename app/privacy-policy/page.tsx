@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
               How Trazo collects, uses, and protects your personal information.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Last updated: March 2, 2026
+              Last updated: March 21, 2026
             </p>
           </header>
 
@@ -182,7 +182,8 @@ export default function PrivacyPolicyPage() {
                   Generate and manage QR codes for consumer transparency access
                 </li>
                 <li>
-                  Store and verify carbon records on the Polygon blockchain
+                  Blockchain-record production verification hashes on the
+                  Polygon network (optional add-on)
                 </li>
                 <li>
                   Track agricultural production events and sustainability metrics
@@ -228,14 +229,121 @@ export default function PrivacyPolicyPage() {
               </h4>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
-                  Comply with USDA agricultural reporting requirements
+                  Comply with applicable tax, financial, and regulatory
+                  record-keeping requirements
                 </li>
                 <li>
-                  Meet carbon verification and certification standards
+                  Maintain agricultural data integrity for certification and
+                  audit purposes
                 </li>
                 <li>Respond to legal requests and prevent fraud</li>
                 <li>Maintain audit trails for regulatory compliance</li>
               </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                3.5 Legal Basis for Processing (GDPR Art. 6)
+              </h4>
+              <p className="mt-2 leading-[1.8]">
+                For users in the European Economic Area (EEA) and United
+                Kingdom, we process your personal data under the following legal
+                bases:
+              </p>
+              <div className="mt-3 overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-border text-left">
+                      <th className="pb-2 pr-4 font-semibold text-foreground">
+                        Processing Activity
+                      </th>
+                      <th className="pb-2 font-semibold text-foreground">
+                        Legal Basis
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-border">
+                    <tr>
+                      <td className="py-2 pr-4">
+                        Account creation, authentication, subscription billing
+                      </td>
+                      <td className="py-2">
+                        Contract performance (Art. 6(1)(b))
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4">
+                        Transparency scores, carbon calculations, QR codes,
+                        production event tracking
+                      </td>
+                      <td className="py-2">
+                        Contract performance (Art. 6(1)(b))
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4">
+                        Blockchain recording of production hashes
+                      </td>
+                      <td className="py-2">
+                        Consent (Art. 6(1)(a)) — you explicitly activate this
+                        add-on
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4">
+                        Voice recording processing via OpenAI
+                      </td>
+                      <td className="py-2">
+                        Consent (Art. 6(1)(a)) — you initiate each recording
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4">
+                        Analytics cookies (Vercel Analytics)
+                      </td>
+                      <td className="py-2">
+                        Consent (Art. 6(1)(a)) — via cookie banner
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4">
+                        Platform improvement, aggregated research
+                      </td>
+                      <td className="py-2">
+                        Legitimate interest (Art. 6(1)(f)) — improving service
+                        quality
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4">
+                        Security monitoring, fraud prevention
+                      </td>
+                      <td className="py-2">
+                        Legitimate interest (Art. 6(1)(f)) — protecting users
+                        and platform
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4">
+                        Tax records, financial compliance, legal requests
+                      </td>
+                      <td className="py-2">
+                        Legal obligation (Art. 6(1)(c))
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-3 leading-[1.8]">
+                Where processing is based on consent, you may withdraw consent
+                at any time without affecting the lawfulness of processing
+                performed before withdrawal. To withdraw consent, contact{" "}
+                <a
+                  href="mailto:privacy@trazo.io"
+                  className="text-primary hover:underline"
+                >
+                  privacy@trazo.io
+                </a>
+                .
+              </p>
             </section>
 
             {/* 4 */}
@@ -261,16 +369,26 @@ export default function PrivacyPolicyPage() {
                   for payment processing and subscription management
                 </li>
                 <li>
-                  <strong>AWS</strong> — All platform data for cloud hosting,
-                  storage, and infrastructure
+                  <strong>DigitalOcean</strong> — Application hosting and
+                  managed database services
                 </li>
                 <li>
-                  <strong>Polygon Network</strong> — Carbon verification records
-                  for immutable blockchain storage
+                  <strong>AWS</strong> — Media file storage (S3) for images,
+                  documents, and QR codes
+                </li>
+                <li>
+                  <strong>Polygon Network</strong> — Production verification
+                  hashes blockchain-recorded for tamper-proof data integrity
+                  (optional add-on)
                 </li>
                 <li>
                   <strong>OpenAI</strong> — Voice recordings, text data for
-                  AI-powered data processing and insights
+                  AI-powered data processing (Trazo has opted out of model
+                  training; your data is not used to train OpenAI models)
+                </li>
+                <li>
+                  <strong>Vercel Analytics</strong> — Anonymized page view and
+                  performance data for platform improvement (no PII collected)
                 </li>
               </ul>
 
@@ -326,8 +444,8 @@ export default function PrivacyPolicyPage() {
               </h4>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
-                  <strong>Primary Database:</strong> PostgreSQL hosted on AWS
-                  with Redis caching
+                  <strong>Primary Database:</strong> PostgreSQL hosted on
+                  DigitalOcean Managed Database
                 </li>
                 <li>
                   <strong>File Storage:</strong> AWS S3 for images, documents,
@@ -338,8 +456,8 @@ export default function PrivacyPolicyPage() {
                   immutable storage)
                 </li>
                 <li>
-                  <strong>Security Logs:</strong> Rotating log files with 10MB
-                  size limits and 5 backup retention
+                  <strong>Security Logs:</strong> Rotating log files with
+                  limited retention
                 </li>
               </ul>
 
@@ -348,8 +466,9 @@ export default function PrivacyPolicyPage() {
               </h4>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
-                  <strong>Authentication:</strong> JWT tokens with 20-minute
-                  access and 1-day refresh periods
+                  <strong>Authentication:</strong> JWT tokens with 15-minute
+                  access and 7-day refresh periods (30 days with Remember
+                  Me)
                 </li>
                 <li>
                   <strong>Access Control:</strong> Role-based permissions with
@@ -526,8 +645,8 @@ export default function PrivacyPolicyPage() {
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
                   <strong>Blockchain Immutability:</strong> Verification hashes
-                  stored on blockchain cannot be deleted due to technical
-                  impossibility
+                  blockchain-recorded on the Polygon network cannot be deleted
+                  due to the immutable nature of blockchain technology
                 </li>
                 <li>
                   <strong>Legal Requirements:</strong> Data required for
@@ -567,8 +686,8 @@ export default function PrivacyPolicyPage() {
                   functionality and security
                 </li>
                 <li>
-                  <strong>Performance Cookies:</strong> Help us understand how
-                  the Platform is used
+                  <strong>Analytics Cookies:</strong> Help us understand how
+                  the Platform is used (opt-in only)
                 </li>
                 <li>
                   <strong>Functional Cookies:</strong> Remember your preferences
@@ -576,9 +695,17 @@ export default function PrivacyPolicyPage() {
                 </li>
               </ul>
               <p className="mt-3 leading-[1.8]">
-                You can control cookie settings through your browser preferences,
-                though disabling certain cookies may affect Platform
-                functionality.
+                You can control cookie settings through the cookie consent
+                banner displayed on your first visit, or through your browser
+                preferences. For detailed information about specific cookies,
+                see our{" "}
+                <a
+                  href="/cookie-policy"
+                  className="text-primary hover:underline"
+                >
+                  Cookie Policy
+                </a>
+                .
               </p>
             </section>
 
@@ -597,8 +724,9 @@ export default function PrivacyPolicyPage() {
                   authorities within 72 hours when required by law
                 </li>
                 <li>
-                  <strong>Individual Notification:</strong> Notify affected users
-                  within 30 days if high risk to rights and freedoms
+                  <strong>Individual Notification:</strong> Notify affected
+                  users without unreasonable delay if high risk to rights and
+                  freedoms
                 </li>
                 <li>
                   <strong>Remedial Actions:</strong> Implement immediate
@@ -655,8 +783,11 @@ export default function PrivacyPolicyPage() {
                 </li>
               </ul>
               <p className="mt-3 leading-[1.8]">
-                Continued use of the Platform after changes constitutes
-                acceptance of the updated Privacy Policy.
+                For changes that affect consent-based processing (such as
+                analytics or voice recording), we will seek your affirmative
+                consent before applying the new terms. For other changes,
+                continued use of the Platform after the notice period
+                constitutes acceptance of the updated Privacy Policy.
               </p>
             </section>
 

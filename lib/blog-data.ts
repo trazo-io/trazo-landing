@@ -68,13 +68,13 @@ export const posts: BlogPost[] = [
 
 <p>For farmers who actually follow best practices for growing crops, the current crisis of trust is not a bad thing. When most of your competitors are hiding behind vague and unsubstantiated claims, verifiable transparency is a competitive advantage.</p>
 
-<p>According to research conducted by the <a href="https://www.ers.usda.gov/publications/pub-details/?pubid=41632" target="_blank" rel="noopener noreferrer">United States Department of Agriculture (USDA)</a>, the use of traceability technology consistently results in higher price points than non-traceable products, with some organic products commanding a premium of over 100 percent above the price of comparable non-organic products. However, the key to capturing higher price premiums is not to simply claim that you are producing a product in a sustainable manner. You must also demonstrate to the consumer that the product is indeed sustainable through a transparent verification process.</p>
+<p>Research on organic market pricing shows that certified organic specialty crops can command significantly higher prices than conventional equivalents — in some categories, over 100 percent above comparable non-organic products. However, as certification alone becomes less differentiating in crowded markets, verified transparency in farming practices is emerging as the next layer of trust consumers and buyers require. The key is not simply claiming sustainability — it is demonstrating it through a verifiable, documented record.</p>
 
 <p>Farmers who document their practices and connect directly with consumers are positioned to capture premium pricing based on verifiable sustainability standards. This includes documenting the following:</p>
 
 <ul>
 <li>Your practices - including planting, irrigation, chemical applications and harvesting;</li>
-<li>Verifying your documentation - including the creation of tamper-evident time-stamped blockchain evidence;</li>
+<li>Verifying your documentation - including timestamped records and optionally, tamper-evident blockchain recording for an additional layer of trust;</li>
 <li>Sharing your story - including the ability to allow consumers to access your documentation through QR codes.</li>
 </ul>
 
@@ -84,7 +84,7 @@ export const posts: BlogPost[] = [
 <ul>
 <li><a href="https://piconext.com/article/digital-product-passport-global-sustainability-study/" target="_blank" rel="noopener noreferrer">PicoNext — Digital Product Passport Global Sustainability Study (2024)</a></li>
 <li><a href="https://environment.ec.europa.eu/topics/circular-economy-topics/green-claims_en" target="_blank" rel="noopener noreferrer">European Commission — Green Claims Directive</a></li>
-<li><a href="https://www.ers.usda.gov/publications/pub-details/?pubid=41632" target="_blank" rel="noopener noreferrer">USDA ERS — Traceability in the U.S. Food Supply</a></li>
+<li><a href="https://blueyonder.com/blog/2025/2025-survey-results-only-20-of-consumers-believe-brand-sustainability-claims" target="_blank" rel="noopener noreferrer">Blue Yonder — 2025 Consumer Sustainability Survey (5,000+ respondents)</a></li>
 </ul>
     `,
   },
@@ -245,13 +245,13 @@ export const posts: BlogPost[] = [
 
 <p><strong>Step 2: Generate a Record.</strong> Trazo saves the event details into Trazo's database with all of the information you entered.</p>
 
-<p><strong>Step 3: Close the Production.</strong> When you finalize a production (at the conclusion of harvest), Trazo automatically generates a cryptographic "fingerprint" (known as a hash) of the entire production record — all events, all details — and submits it to the Polygon blockchain network. The hash is similar to a digital seal — if anyone had modified even a single character of the original data, the resulting fingerprint would not match.</p>
+<p><strong>Step 3: Close the Production.</strong> When you finalize a production (at the conclusion of harvest) and have the blockchain add-on active ($15/month), Trazo automatically generates a cryptographic "fingerprint" (known as a hash) of the entire production record — all events, all details — and submits it to the Polygon blockchain network. The hash is similar to a digital seal — if anyone had modified even a single character of the original data, the resulting fingerprint would not match.</p>
 
 <p><strong>Step 4: The Transaction is Confirmed.</strong> Polygon's validators confirm the transaction. This usually occurs in a matter of seconds. Upon confirmation, the record becomes permanent and publicly available. All of the events in the production become forever locked.</p>
 
 <p><strong>Step 5: Your Customers See Verification.</strong> When someone scans your QR code and views your history of farming practices, your customer will see a verification badge confirming that the production record has an immutable blockchain record. If your customer wants to dig further, he/she can view the actual transaction on Polygonscan — a public blockchain explorer.</p>
 
-<p>As a result, everything is automatic. You simply finalize the production, and the verification is taken care of.</p>
+<p>With the blockchain add-on active, everything is automatic. You simply finalize the production, and the recording is handled in the background.</p>
 
 <h2>Why Polygon?</h2>
 
@@ -304,7 +304,7 @@ export const posts: BlogPost[] = [
 
 <p>All you have to do is document your practices as completely and as consistently as possible, and the blockchain will take care of the validation for you.</p>
 
-<p><strong>Use blockchain validation for your farm.</strong> When you close a production, your entire documentation of the farming process is automatically validated and saved to the Polygon blockchain.</p>
+<p><strong>Add blockchain recording to your farm documentation.</strong> When you close a production with the blockchain add-on active, your entire documentation is automatically fingerprinted and recorded to the Polygon blockchain — no technical setup required on your end.</p>
 
 <h2>Sources</h2>
 <ul>
@@ -339,7 +339,7 @@ export const posts: BlogPost[] = [
 <li>All documented farming events from planting to harvest</li>
 <li>Photos of the actual farming process</li>
 <li>A transparency score representing how complete the documentation is</li>
-<li>Blockchain verification proving that records cannot be modified</li>
+<li>Blockchain recording (optional add-on) proving that records cannot be modified</li>
 <li>Reviews from other customers that purchased the product</li>
 </ul>
 
@@ -525,7 +525,7 @@ export const posts: BlogPost[] = [
 
 <p>Numerous studies have identified why consumers are willing to pay more for their produce:</p>
 
-<p><strong>Traceability</strong>: Where did the produce come from? How was it grown? Research demonstrates time and again that consumers are willing to pay significantly more for produce that provides detailed information about its origin compared to produce with generic or vague claims regarding origin. USDA Economic Research Service data indicates that increasing numbers of consumers are using traceability as a primary factor in determining their willingness to pay.</p>
+<p><strong>Traceability</strong>: Where did the produce come from? How was it grown? Research demonstrates that consumers are more willing to pay for produce that provides detailed information about its origin compared to produce with generic or vague claims. Premium buyers — from specialty retailers to co-ops — increasingly require traceability documentation as part of their procurement standards.</p>
 
 <p><strong>Verifiable Claims</strong>: Independent third-party verification of the farming practices utilized during production greatly outweighs claims made by producers regarding their own production practices. As consumers have become increasingly aware of the tendency of manufacturers to misrepresent themselves, independent verification of claims has become increasingly important. Consumers reward producers that demonstrate their ability to support their claims through independent verification.</p>
 

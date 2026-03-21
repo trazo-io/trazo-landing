@@ -19,7 +19,7 @@ const softwareAppJsonLd = {
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Web',
   url: 'https://www.trazo.io',
-  description: 'Agricultural transparency platform that documents farming practices, calculates carbon emissions using EPA/USDA emission factors, and generates blockchain-verified QR codes for consumer trust.',
+  description: 'Agricultural transparency platform that documents farming practices, calculates carbon emissions using EPA/USDA emission factors, and generates QR codes for consumer-facing transparency pages.',
   offers: {
     '@type': 'AggregateOffer',
     lowPrice: '0',
@@ -28,10 +28,10 @@ const softwareAppJsonLd = {
     offerCount: 5,
   },
   featureList: [
-    '22 US crop templates with USDA-verified timing',
+    '22 US crop templates with USDA-sourced crop timing data',
     'Transparency scoring (0-100) based on documented farming events',
     'Carbon calculations using EPA 40 CFR Part 98 emission factors',
-    'Blockchain verification on Polygon network',
+    'Optional blockchain recording on Polygon network (add-on)',
     'QR code generation for consumer-facing transparency pages',
     'Voice recording and photo documentation',
     'Certification verification via USDA Organic Integrity Database',
