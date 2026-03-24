@@ -13,6 +13,7 @@ const footerLinks = {
   ],
   essentials: [
     { label: "Blog", href: "/blog" },
+    { label: "Methodology", href: "/methodology" },
     { label: "Contact Us", href: "/contact" },
   ],
   legal: [

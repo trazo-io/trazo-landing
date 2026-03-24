@@ -70,7 +70,8 @@ export function FormulaSection() {
         {/* Methodology note */}
         <ScrollReveal delay={600}>
         <p className="mt-10 text-center text-xs text-muted-foreground/60">
-          Transparency score based on farmer-reported documentation completeness. Methodology details available in-app.
+          Transparency score based on farmer-reported documentation completeness.{" "}
+          <a href="/methodology" className="text-primary hover:underline">Read our full methodology</a>.
         </p>
         </ScrollReveal>
       </div>
