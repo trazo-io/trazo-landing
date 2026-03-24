@@ -17,7 +17,7 @@ export default function MethodologyPage() {
         <article className="mx-auto max-w-3xl px-6">
           <header className="mb-12 text-center">
             <p className="text-sm font-medium tracking-widest text-primary uppercase">
-              Open Methodology
+              Published Methodology
             </p>
             <h1 className="mt-3 text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl">
               Transparency Scoring Methodology
@@ -45,12 +45,15 @@ export default function MethodologyPage() {
                 {"Trazo's"} transparency-first model rewards farmers for
                 logging more events. Carbon data is calculated simultaneously
                 using government-sourced emission factors and remains available
-                for B2B sustainability reporting.
+                for B2B sustainability reporting. Scores are calculated from
+                farmer-reported documentation and have not been independently
+                audited.
               </p>
               <p className="mt-3 leading-[1.8]">
-                This methodology is published openly to invite scrutiny,
+                This methodology is published to invite scrutiny,
                 encourage reproducibility, and advance the broader conversation
-                around agricultural transparency standards.
+                around agricultural transparency standards. It was developed by
+                Trazo and has not yet undergone external peer review.
               </p>
             </section>
 
@@ -232,6 +235,14 @@ export default function MethodologyPage() {
                   </tbody>
                 </table>
               </div>
+              <p className="mt-3 text-xs text-muted-foreground">
+                Category weights were determined by the Trazo team based on
+                consumer concern analysis and documentation impact assessment.
+                Production activities receive the highest weight (30%) as they
+                represent core farming practices. Weights have not been
+                externally validated and may be adjusted in future versions
+                based on peer feedback.
+              </p>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
                 Formula
@@ -289,6 +300,11 @@ export default function MethodologyPage() {
                   </div>
                 </div>
               </div>
+              <p className="mt-3 text-xs text-muted-foreground">
+                Grades are calculated by Trazo based on farmer-reported
+                documentation completeness. They do not represent an independent
+                assessment or third-party certification.
+              </p>
             </section>
 
             {/* 3. Anti-Gaming */}
@@ -397,8 +413,9 @@ export default function MethodologyPage() {
                 Trazo calculates{" "}
                 <strong>Direct Operational Emissions</strong> — emissions from
                 activities that farmers directly control during the production
-                cycle. This is deliberately narrower than a full Life Cycle
-                Assessment (LCA).
+                cycle. This is not a full Life Cycle Assessment (LCA). It covers
+                only emissions under direct farmer control and excludes supply
+                chain, transportation, retail, and end-of-life emissions.
               </p>
 
               <div className="mt-4 overflow-x-auto">
@@ -727,8 +744,13 @@ export default function MethodologyPage() {
             {/* 8. Regulatory Alignment */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                8. Regulatory Alignment
+                8. Regulatory Context
               </h3>
+              <p className="mt-3 leading-[1.8]">
+                This methodology was developed with reference to the following
+                standards and regulations. Trazo has not undergone formal
+                conformity assessment against these standards.
+              </p>
               <ul className="mt-3 list-disc space-y-3 pl-6 leading-[1.8]">
                 <li>
                   <strong>FTC Green Guides (16 CFR Part 260):</strong> No implied
@@ -904,9 +926,49 @@ export default function MethodologyPage() {
                 .
               </p>
               <p className="mt-3 leading-[1.8]">
-                We are actively seeking academic reviewers and advisors to
-                strengthen this methodology through independent review.
+                We invite academic and industry review of this methodology.
+                Contact us to discuss collaboration opportunities.
               </p>
+              <div className="mt-4 border-t border-border pt-4">
+                <p className="text-sm font-semibold text-foreground">
+                  Update Schedule
+                </p>
+                <p className="mt-1 text-sm leading-[1.8]">
+                  Emission factors are reviewed annually against updated
+                  EPA/USDA publications. Scoring methodology undergoes review
+                  on a semi-annual basis. All updates are documented in the
+                  version history below.
+                </p>
+              </div>
+              <div className="mt-4 border-t border-border pt-4">
+                <p className="text-sm font-semibold text-foreground">
+                  Version History
+                </p>
+                <div className="mt-2 overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b border-border">
+                        <th className="py-1 pr-4 text-left font-semibold">
+                          Version
+                        </th>
+                        <th className="py-1 pr-4 text-left font-semibold">
+                          Date
+                        </th>
+                        <th className="py-1 text-left font-semibold">
+                          Changes
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="py-1 pr-4">1.0</td>
+                        <td className="py-1 pr-4">March 2026</td>
+                        <td className="py-1">Initial publication</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </section>
           </div>
         </article>
