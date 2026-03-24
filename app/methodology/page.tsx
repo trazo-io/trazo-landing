@@ -37,7 +37,7 @@ export default function MethodologyPage() {
               <h3 className="text-xl font-bold text-foreground">Abstract</h3>
               <p className="mt-3 leading-[1.8]">
                 This document describes the methodology behind{" "}
-                {"Trazo's"} agricultural transparency scoring system — a
+                {"Trazo's"} agricultural transparency scoring system, a
                 consumer-facing metric (0–100) that measures how completely a
                 farmer has documented their farming practices for a given
                 production cycle. Unlike carbon-first approaches, which
@@ -112,7 +112,7 @@ export default function MethodologyPage() {
                 <strong>The core problem:</strong> Carbon calculators treat
                 &quot;more data&quot; as &quot;more emissions&quot; rather than
                 &quot;more transparency.&quot; This incentivizes farms to
-                document less — the exact opposite of what consumers, regulators,
+                document less. The exact opposite of what consumers, regulators,
                 and the agricultural industry need.
               </p>
 
@@ -122,13 +122,13 @@ export default function MethodologyPage() {
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
                   <strong>Only 20% of consumers</strong> believe brand
-                  sustainability claims (Blue Yonder, 2025 — 5,000+ consumer
+                  sustainability claims (Blue Yonder, 2025. 5,000+ consumer
                   survey)
                 </li>
                 <li>
                   <strong>91% of consumers</strong> are actively worried about
-                  greenwashing (PicoNext, 2025 — 1,000+ US/EU consumers
-                  surveyed)
+                  greenwashing (WhatTheyThink, 2025. Global consumer
+                  survey)
                 </li>
               </ul>
               <p className="mt-3 leading-[1.8]">
@@ -138,7 +138,7 @@ export default function MethodologyPage() {
                   trust
                 </strong>
                 . Carbon data is calculated automatically and remains available
-                for B2B reporting — but the consumer-facing primary metric is
+                for B2B reporting, but the consumer-facing primary metric is
                 transparency, not carbon.
               </p>
             </section>
@@ -150,7 +150,7 @@ export default function MethodologyPage() {
               </h3>
               <p className="mt-3 leading-[1.8]">
                 The transparency score measures{" "}
-                <strong>documentation completeness</strong> — what percentage of
+                <strong>documentation completeness</strong>: what percentage of
                 expected farming practices have been recorded for a given
                 production cycle, adjusted for documentation quality (photo
                 evidence).
@@ -411,7 +411,7 @@ export default function MethodologyPage() {
               </h3>
               <p className="mt-3 leading-[1.8]">
                 Trazo calculates{" "}
-                <strong>Direct Operational Emissions</strong> — emissions from
+                <strong>Direct Operational Emissions</strong>, meaning emissions from
                 activities that farmers directly control during the production
                 cycle. This is not a full Life Cycle Assessment (LCA). It covers
                 only emissions under direct farmer control and excludes supply
@@ -753,7 +753,17 @@ export default function MethodologyPage() {
               </p>
               <ul className="mt-3 list-disc space-y-3 pl-6 leading-[1.8]">
                 <li>
-                  <strong>FTC Green Guides (16 CFR Part 260):</strong> No implied
+                  <strong>
+                    <a
+                      href="https://www.law.cornell.edu/cfr/text/16/part-260"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      FTC Green Guides (16 CFR Part 260)
+                    </a>
+                    :
+                  </strong>{" "}No implied
                   third-party endorsement. All emission factors cite specific
                   government publications. Blockchain described as
                   &quot;blockchain-recorded&quot; (immutability), never
@@ -766,7 +776,7 @@ export default function MethodologyPage() {
                 </li>
                 <li>
                   <strong>ISO 22005:2007</strong> (Food Traceability): Production
-                  event tracking follows traceability design principles — each
+                  event tracking follows traceability design principles: each
                   event records who, what, when, where, and how.
                 </li>
                 <li>
@@ -816,18 +826,49 @@ export default function MethodologyPage() {
                   </a>
                 </li>
                 <li>
+                  U.S. Energy Information Administration. (2023).{" "}
+                  <em>
+                    How much carbon dioxide is produced per kilowatthour of
+                    U.S. electricity generation?
+                  </em>{" "}
+                  <a
+                    href="https://www.eia.gov/tools/faqs/faq.php?id=74&t=11"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    eia.gov
+                  </a>
+                </li>
+                <li>
                   IPCC. (2006/2019).{" "}
                   <em>
                     Guidelines for National Greenhouse Gas Inventories
                   </em>
-                  . N&#8322;O emission factors (EF1=1%, GWP=265).
+                  . N&#8322;O emission factors (EF1=1%, GWP=265).{" "}
+                  <a
+                    href="https://www.ipcc-nggip.iges.or.jp/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    ipcc-nggip.iges.or.jp
+                  </a>
                 </li>
                 <li>
                   USDA Natural Resources Conservation Service.{" "}
                   <em>
                     National Engineering Handbook, Chapter 8: Irrigation
                   </em>
-                  .
+                  .{" "}
+                  <a
+                    href="https://www.nrcs.usda.gov/wps/portal/wcc/home/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    nrcs.usda.gov
+                  </a>
                 </li>
                 <li>
                   USDA Agricultural Marketing Service.{" "}
@@ -879,11 +920,28 @@ export default function MethodologyPage() {
               >
                 <li>
                   Blue Yonder. (2025).{" "}
-                  <em>Consumer Sustainability Survey</em>. 5,000+ respondents.
+                  <em>Consumer Sustainability Survey</em>. 5,000+ respondents.{" "}
+                  <a
+                    href="https://blueyonder.com/blog/2025/2025-survey-results-only-20-of-consumers-believe-brand-sustainability-claims"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    blueyonder.com
+                  </a>
                 </li>
                 <li>
-                  PicoNext. (2025). <em>Greenwashing Concerns Study</em>.
-                  1,000+ US/EU consumers.
+                  WhatTheyThink / Adopter.net. (2025).{" "}
+                  <em>Greenwashing Statistics Report</em>.
+                  Global consumer survey, 91% greenwashing concern.{" "}
+                  <a
+                    href="https://www.adopter.net/knowledge-hub/45-greenwashing-statistics-you-need-to-know-in-2026"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    adopter.net
+                  </a>
                 </li>
               </ol>
             </section>
@@ -907,7 +965,7 @@ export default function MethodologyPage() {
                   <strong>Format:</strong> Markdown (machine-readable)
                 </li>
                 <li>
-                  <strong>License:</strong> CC BY 4.0 — free to share and adapt
+                  <strong>License:</strong> CC BY 4.0, free to share and adapt
                   with attribution
                 </li>
                 <li>
