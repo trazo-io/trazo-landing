@@ -7,6 +7,7 @@ import { PlatformFeatures } from "@/components/platform-features"
 import { FieldFeatures } from "@/components/field-features"
 import { ProductShowcase } from "@/components/product-showcase"
 import { HowItWorks } from "@/components/how-it-works"
+import { OrganicFeatures } from "@/components/organic-features"
 import { CtaBanner } from "@/components/cta-banner"
 import { BlogSection } from "@/components/blog-section"
 import { FaqSection } from "@/components/faq-section"
@@ -63,6 +64,7 @@ export default function Home() {
         <PlatformFeatures />
         <ProductShowcase />
         <FieldFeatures />
+        <OrganicFeatures />
         <CtaBanner />
         <BlogSection />
         <FaqSection />

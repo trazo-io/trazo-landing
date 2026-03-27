@@ -39,6 +39,16 @@ const faqs = [
       "Yes. USDA Organic certifications are automatically verified against the USDA Organic Integrity Database, which includes over 36,000 certified operations. Consumers see a green \u2018Verified\u2019 badge for farms found in the government database. Other certifications (GlobalG.A.P., Fair Trade, etc.) are displayed as \u2018Reported by Producer\u2019 with plans to add more verification sources.",
   },
   {
+    question: "Can Trazo help with organic record-keeping?",
+    answer:
+      "Trazo tracks the inputs and practices organic farms already document \u2014 OMRI-listed materials, soil amendments, composting events, cover crops, equipment cleaning, and seed sourcing. Every event is timestamped with optional photo evidence. You can export organic-filtered audit reports (PDF or CSV) at any time. While Trazo does not replace your certifier\u2019s paperwork, it provides a structured, digital record of your organic practices that supports the documentation requirements of NOP 7 CFR 205.103.",
+  },
+  {
+    question: "Does Trazo work for farms transitioning to organic?",
+    answer:
+      "Yes. Chemical events include a \u2018Transitional\u2019 status for farms in the certification process. You can set your production method to Organic from day one and begin building your documentation record. Trazo\u2019s transparency score rewards thorough documentation regardless of certification status \u2014 so transitional farms benefit from the same system as fully certified operations.",
+  },
+  {
     question: "Can I cancel anytime?",
     answer:
       "Yes. No long-term contracts. Cancel anytime from your dashboard. You'll retain access until the end of your billing period. Your data is always yours.",
