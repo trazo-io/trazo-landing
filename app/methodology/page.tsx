@@ -27,7 +27,7 @@ export default function MethodologyPage() {
               published openly for scrutiny and reproducibility.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Version 1.0 &middot; March 2026 &middot; License: CC BY 4.0
+              Version 1.1 &middot; April 2026 &middot; License: CC BY 4.0
             </p>
           </header>
 
@@ -505,6 +505,76 @@ export default function MethodologyPage() {
                   </p>
                 </div>
               </div>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                Method-Aware Accuracy for Manual Labor
+              </h4>
+              <p className="mt-3 leading-[1.8]">
+                USDA per-hectare fuel factors (Section 6) assume mechanical
+                equipment. When a farmer documents a manual method — for example,
+                &quot;Hand thinning with pruning shears&quot; — applying a
+                mechanical fuel average would overstate emissions by 10–100x.
+              </p>
+              <p className="mt-3 leading-[1.8]">
+                Trazo detects manual operations from the farmer{"'"}s free-text
+                method field and routes to a <strong>manual labor estimate
+                (0.1 kg CO&#8322;e per acre)</strong>, representing hand-tool
+                wear and worker logistics. Mechanical keywords (tractor,
+                harvester, sprayer) take precedence on ambiguous descriptions.
+              </p>
+              <div className="mt-4 rounded-lg border border-border bg-secondary/30 p-4">
+                <p className="font-semibold text-foreground">
+                  Example: Hand Thinning (20 ha orange orchard, 12 workers, 4 days)
+                </p>
+                <div className="mt-3 overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b border-border">
+                        <th className="py-2 pr-4 text-left font-semibold text-foreground">
+                          Approach
+                        </th>
+                        <th className="py-2 pr-4 text-left font-semibold text-foreground">
+                          Factor Used
+                        </th>
+                        <th className="py-2 text-left font-semibold text-foreground">
+                          Result
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-border/50">
+                        <td className="py-2 pr-4">
+                          USDA mechanical average
+                        </td>
+                        <td className="py-2 pr-4">0.75 gal/ha diesel</td>
+                        <td className="py-2">153.2 kg CO&#8322;e</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 pr-4 font-medium text-green-600">
+                          Method-aware (hand labor documented)
+                        </td>
+                        <td className="py-2 pr-4 font-medium text-green-600">
+                          0.1 kg CO&#8322;e/acre
+                        </td>
+                        <td className="py-2 font-medium text-green-600">
+                          4.94 kg CO&#8322;e
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  Only the method-aware result reflects actual farm reality:
+                  zero fuel combustion, zero powered equipment.
+                </p>
+              </div>
+              <p className="mt-3 leading-[1.8]">
+                This ensures that farmers who document more receive{" "}
+                <strong>more accurate</strong> carbon values — not blanket
+                averages. When a farmer explicitly reports zero fuel consumption,
+                the calculator respects that value rather than falling back to
+                USDA estimates.
+              </p>
             </section>
 
             {/* 6. Emission Factors */}
@@ -691,6 +761,73 @@ export default function MethodologyPage() {
                 </a>
                 .
               </p>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                Equipment Operations (USDA ARS)
+              </h4>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Per-hectare fuel factors for mechanical operations. When a farmer
+                documents manual methods, the manual labor factor (0.1 kg
+                CO&#8322;e/acre) is used instead (see Section 5).
+              </p>
+              <div className="mt-3 overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-border">
+                      <th className="py-2 pr-4 text-left font-semibold text-foreground">
+                        Operation
+                      </th>
+                      <th className="py-2 pr-4 text-left font-semibold text-foreground">
+                        Factor
+                      </th>
+                      <th className="py-2 text-left font-semibold text-foreground">
+                        Confidence
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-border/50">
+                      <td className="py-2 pr-4">Planting (diesel)</td>
+                      <td className="py-2 pr-4">1.8 gal/hectare</td>
+                      <td className="py-2">85%</td>
+                    </tr>
+                    <tr className="border-b border-border/50">
+                      <td className="py-2 pr-4">Harvesting (diesel)</td>
+                      <td className="py-2 pr-4">0.7 gal/hectare</td>
+                      <td className="py-2">85%</td>
+                    </tr>
+                    <tr className="border-b border-border/50">
+                      <td className="py-2 pr-4">Transplanting (diesel)</td>
+                      <td className="py-2 pr-4">2.4 gal/hectare</td>
+                      <td className="py-2">85%</td>
+                    </tr>
+                    <tr className="border-b border-border/50">
+                      <td className="py-2 pr-4">Cultivation (diesel)</td>
+                      <td className="py-2 pr-4">3.2 gal/hectare</td>
+                      <td className="py-2">85%</td>
+                    </tr>
+                    <tr className="border-b border-border/50">
+                      <td className="py-2 pr-4">Thinning (mechanical)</td>
+                      <td className="py-2 pr-4">0.75 gal/hectare</td>
+                      <td className="py-2">85%</td>
+                    </tr>
+                    <tr className="border-b border-border/50">
+                      <td className="py-2 pr-4">General crop production</td>
+                      <td className="py-2 pr-4">2.5 gal/hectare</td>
+                      <td className="py-2">85%</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 font-medium text-green-600">
+                        Manual operation (any type)
+                      </td>
+                      <td className="py-2 pr-4 font-medium text-green-600">
+                        0.1 kg CO&#8322;e/acre
+                      </td>
+                      <td className="py-2 text-green-600">75%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
 
             {/* 7. Known Limitations */}
@@ -969,7 +1106,7 @@ export default function MethodologyPage() {
                   with attribution
                 </li>
                 <li>
-                  <strong>Version:</strong> 1.0 (March 2026)
+                  <strong>Version:</strong> 1.1 (April 2026)
                 </li>
               </ul>
               <p className="mt-4 leading-[1.8]">
@@ -1018,6 +1155,15 @@ export default function MethodologyPage() {
                       </tr>
                     </thead>
                     <tbody>
+                      <tr className="border-b border-border/50">
+                        <td className="py-1 pr-4">1.1</td>
+                        <td className="py-1 pr-4">April 2026</td>
+                        <td className="py-1">
+                          Added method-aware calculation for manual labor,
+                          equipment operations factor table, explicit zero-fuel
+                          respect
+                        </td>
+                      </tr>
                       <tr>
                         <td className="py-1 pr-4">1.0</td>
                         <td className="py-1 pr-4">March 2026</td>

@@ -13,7 +13,7 @@ const features = [
     icon: FileText,
     title: "Prove what you grow — in under 2 minutes",
     description:
-      "Smart forms and Voice recording and photo capture let you document most of your farming activities quickly (even in poor connectivity). We provide a list of Seven event types to cover everything from planting to harvest.",
+      "Smart forms, voice recording, and photo capture let you document farming activities quickly (even in poor connectivity). Seven event types cover everything from planting to harvest. Designed to meet NOP recordkeeping requirements (7 CFR 205.103) \u2014 the same events that build consumer trust also generate audit-ready documentation.",
     image: "/images/feature-document.avif",
   },
   {
