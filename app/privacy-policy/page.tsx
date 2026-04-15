@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
               How Trazo collects, uses, and protects your personal information.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Last updated: March 21, 2026
+              Last updated: April 14, 2026
             </p>
           </header>
 
@@ -160,6 +160,46 @@ export default function PrivacyPolicyPage() {
                 <li>
                   <strong>Payment Processing:</strong> Payment methods handled
                   securely by Stripe (we do not store credit card numbers)
+                </li>
+              </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                2.6 NOP Audit Documentation Data
+              </h4>
+              <p className="mt-2 leading-[1.8]">
+                When you generate a NOP Audit PDF for an organic certifier, the
+                Platform compiles the following information into the export:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>Photo Metadata:</strong> Field photos you have uploaded
+                  may carry EXIF metadata including GPS coordinates, camera model,
+                  and capture timestamp. This metadata is embedded in the audit
+                  PDF as part of tamper-evidence captions. You can disable GPS on
+                  your camera or strip EXIF before upload if you prefer not to
+                  share precise location data with your certifier.
+                </li>
+                <li>
+                  <strong>Record Change History:</strong> Every edit to a
+                  production record is logged with timestamp and the responsible
+                  user (farmer, field manager, or automated system). Change logs
+                  are retained for 5 years and included in audit PDFs you share
+                  with certifiers.
+                </li>
+                <li>
+                  <strong>Drift Detector Findings:</strong> Chemical and soil
+                  amendment inputs you log are automatically matched against the
+                  OMRI Listed Products database and the USDA National List of
+                  Allowed and Prohibited Substances. Mismatches and unresolved
+                  inputs are surfaced in the audit PDF as drift findings. These
+                  matches use fuzzy text comparison and may produce false
+                  positives or false negatives.
+                </li>
+                <li>
+                  <strong>Compliance Snapshot:</strong> The page-1 snapshot
+                  derives PASS / REVIEW / FAIL outcomes from the data you have
+                  entered. It is generated automatically; Trazo does not
+                  independently verify the underlying records.
                 </li>
               </ul>
             </section>
@@ -329,6 +369,25 @@ export default function PrivacyPolicyPage() {
                         Legal obligation (Art. 6(1)(c))
                       </td>
                     </tr>
+                    <tr>
+                      <td className="py-2 pr-4">
+                        NOP Audit PDF generation and certifier sharing (you
+                        choose when to export and to whom you send it)
+                      </td>
+                      <td className="py-2">
+                        Contract performance (Art. 6(1)(b))
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4">
+                        Drift detection and compliance snapshot (automatic
+                        checks against OMRI / National List on event save)
+                      </td>
+                      <td className="py-2">
+                        Contract performance (Art. 6(1)(b)) — part of the
+                        organic documentation feature
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -430,6 +489,26 @@ export default function PrivacyPolicyPage() {
                 We may share aggregated, anonymized data that cannot identify
                 individual users or businesses for research, industry reports,
                 and platform improvement purposes.
+              </p>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                4.5 Certifier Sharing (NOP Audit PDF)
+              </h4>
+              <p className="mt-2 leading-[1.8]">
+                When you export a NOP Audit PDF, the Platform produces a file you
+                control. Trazo does not transmit the PDF to any certifier on your
+                behalf — you choose when, how, and to whom you share it (typically
+                by uploading to your certifier&apos;s portal such as MyCCOF or
+                emailing it directly). Once you share the PDF, the recipient will
+                have access to the data described in Section 2.6, including
+                photo EXIF/GPS metadata, change-history attribution, drift
+                findings, and the compliance snapshot.
+              </p>
+              <p className="mt-2 leading-[1.8]">
+                Trazo is a documentation platform and is not a USDA-accredited
+                certifier. We do not represent your operation to any certifier
+                and do not receive their decisions. Recipients of the PDF are
+                bound by their own privacy obligations, not ours.
               </p>
             </section>
 

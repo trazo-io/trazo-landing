@@ -27,7 +27,7 @@ export default function MethodologyPage() {
               published openly for scrutiny and reproducibility.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Version 1.1 &middot; April 2026 &middot; License: CC BY 4.0
+              Version 1.2 &middot; April 2026 &middot; License: CC BY 4.0
             </p>
           </header>
 
@@ -830,10 +830,174 @@ export default function MethodologyPage() {
               </div>
             </section>
 
-            {/* 7. Known Limitations */}
+            {/* 7. NOP Audit PDF Methodology */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                7. Known Limitations
+                7. NOP Audit PDF Methodology
+              </h3>
+              <p className="mt-3 leading-[1.8]">
+                For organic operations, Trazo generates a 13-page Audit PDF
+                designed to support certifier review under the USDA National
+                Organic Program (7 CFR Part 205). The PDF is reference material
+                farmers attach to their certifier&apos;s annual inspection
+                package. Trazo is a documentation platform and is not a
+                USDA-accredited certifier; the PDF does not constitute
+                certification or any determination of compliance.
+              </p>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                7.1 Document Structure
+              </h4>
+              <p className="mt-3 leading-[1.8]">
+                Each export is filtered by certification type (organic,
+                GLOBALG.A.P., Regenerative Organic, or all). The organic-typed
+                PDF contains the following sections, in order:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>Page-1 Compliance Snapshot:</strong> 11-row table
+                  citing 7 CFR § 205.201 (OSP), § 205.103 (records),
+                  § 205.203(c) (compost / raw manure), § 205.206 (pest
+                  management), § 205.273 (lot traceability), and § 205.201(b)
+                  (contamination). Each row is automatically classified
+                  PASS / REVIEW / FAIL based on the data the farmer has entered.
+                </li>
+                <li>
+                  <strong>Producer Attestation</strong> (§ 205.401(d)):
+                  electronic signature block per 21 CFR Part 11
+                  trustworthy-records principles.
+                </li>
+                <li>
+                  <strong>Organic System Plan reference:</strong> active OSP
+                  version, status, and § 205.201 narrative.
+                </li>
+                <li>
+                  <strong>Approved Inputs Registry:</strong> OMRI-Listed and
+                  National List substances on file for the operation.
+                </li>
+                <li>
+                  <strong>Drift Findings:</strong> per § 205.400(f)(1), inputs
+                  used that are not on the approved registry, with explanation.
+                </li>
+                <li>
+                  <strong>Field Events:</strong> chemical applications, soil
+                  management, pest management, equipment cleaning, weather, and
+                  general documentation, each with timestamps, GPS, and
+                  CFR-paired column headers.
+                </li>
+                <li>
+                  <strong>Compost &amp; Manure Handling:</strong> compost
+                  temperature curves vs. § 205.203(c)(2) (windrow or static
+                  pile); raw manure 90-day or 120-day pre-harvest interval
+                  per § 205.203(c)(1).
+                </li>
+                <li>
+                  <strong>Pest IPM Threshold Monitoring:</strong> scouting
+                  observations, action thresholds, and rationale per
+                  § 205.206(a) and (e).
+                </li>
+                <li>
+                  <strong>Photo Gallery:</strong> embedded thumbnails in
+                  NOP-priority order (pest, soil/compost, chemical, equipment
+                  cleaning, contamination, then routine production), with EXIF
+                  date/GPS captions. Capped at 4 photos per event and 60 total.
+                </li>
+                <li>
+                  <strong>SOE Compliance Status:</strong> attestations per the
+                  2024 Strengthening Organic Enforcement final rule — Fraud
+                  Prevention Plan (§ 205.201(a)(3)), 5-Year Retention
+                  (§ 205.103(b)(4)), Unannounced Inspection Readiness
+                  (§ 205.661), Non-Retail Container Labeling
+                  (§ 205.273 / § 205.307), and NOP Import Certificate. Each
+                  attestation reports actual platform state — never a false
+                  claim.
+                </li>
+                <li>
+                  <strong>Record Change History:</strong> every edit logged with
+                  user attribution and timestamp; flagged when changes occur
+                  after production finalization.
+                </li>
+              </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                7.2 Drift Detector Logic
+              </h4>
+              <p className="mt-3 leading-[1.8]">
+                When a farmer logs a chemical or soil amendment event, a
+                post-save signal compares the input against the operation&apos;s
+                Approved Inputs Registry using a three-layer cascade:
+              </p>
+              <ol className="mt-3 list-decimal space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>Foreign-key membership check:</strong> if the event
+                  references a specific OMRI Product or National List Substance
+                  by ID, the detector confirms that ID is in the approved set.
+                </li>
+                <li>
+                  <strong>Fuzzy name match:</strong> if no FK is set, the
+                  free-text commercial name is matched against the OMRI catalog
+                  and National List using token-based comparison with brand-
+                  anchor constraints. Confidence below the threshold is treated
+                  as unresolved.
+                </li>
+                <li>
+                  <strong>Unresolved &rarr; flagged:</strong> events that match
+                  no approved input are surfaced as drift findings with a
+                  § 205.400(f)(1) citation. The detector never blocks a save:
+                  farmers may use unapproved inputs provided they notify their
+                  certifier per § 205.400(f)(1).
+                </li>
+              </ol>
+              <p className="mt-3 leading-[1.8]">
+                Fuzzy matching can produce false positives or false negatives.
+                Drift findings should be treated as advisory and reviewed before
+                sharing the PDF with a certifier.
+              </p>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                7.3 What the PDF Does Not Do
+              </h4>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>It does not certify.</strong> Only USDA-accredited
+                  certifying agents (CCOF, Oregon Tilth, MOFGA, OEFFA, PCO, and
+                  others) issue organic certificates. The PDF is reference
+                  material, not a certification.
+                </li>
+                <li>
+                  <strong>It does not verify.</strong> Trazo does not visit
+                  farms, sample soil, audit supplier invoices, or independently
+                  validate that documented practices actually occurred.
+                </li>
+                <li>
+                  <strong>It does not guarantee outcomes.</strong> A farmer
+                  whose PDF passes Trazo&apos;s automated snapshot may still
+                  receive a non-compliance finding from their certifier.
+                </li>
+                <li>
+                  <strong>It is compliance-assisting, not
+                  compliance-granting.</strong> The intended use is to make
+                  inspector pre-read faster, not to replace inspector judgement.
+                </li>
+              </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                7.4 Tamper-Evidence Footer
+              </h4>
+              <p className="mt-3 leading-[1.8]">
+                Each photo in the gallery includes a footer listing the original
+                S3 object key, upload timestamp, file size, and uploader account
+                — metadata retained in the producer dashboard for cross-
+                reference. The PDF does not currently include a SHA-256 hash on
+                the file itself; that capability may be added in a future
+                release.
+              </p>
+            </section>
+
+            {/* 8. Known Limitations */}
+            <section>
+              <h3 className="text-xl font-bold text-foreground">
+                8. Known Limitations
               </h3>
               <p className="mt-3 leading-[1.8]">
                 Transparency about limitations is fundamental to this{" "}
@@ -878,10 +1042,10 @@ export default function MethodologyPage() {
               </ul>
             </section>
 
-            {/* 8. Regulatory Alignment */}
+            {/* 9. Regulatory Alignment */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                8. Regulatory Context
+                9. Regulatory Context
               </h3>
               <p className="mt-3 leading-[1.8]">
                 This methodology was developed with reference to the following
@@ -925,10 +1089,10 @@ export default function MethodologyPage() {
               </ul>
             </section>
 
-            {/* 9. References */}
+            {/* 10. References */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                9. References
+                10. References
               </h3>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">

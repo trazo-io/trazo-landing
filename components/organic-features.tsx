@@ -18,9 +18,9 @@ const organicFeatures = [
   },
   {
     icon: FileSpreadsheet,
-    title: "Audit-Ready Reports",
+    title: "NOP Audit PDF Export",
     description:
-      "Export organic-filtered PDF or CSV reports with chemical inputs, organic approval status, soil management practices, and equipment cleaning records. One click, formatted for certifier review.",
+      "Generate a 13-page audit-ready PDF for your certifier. Page-1 Compliance Snapshot (PASS / REVIEW / FAIL per CFR rule), 30+ unique 7 CFR 205.x citations, OSP drift detector for inputs, photo gallery in NOP-priority order, and 5-year change-history attribution. The PDF is reference material for certifier review — not a certification.",
   },
   {
     icon: Clock,

@@ -22,7 +22,7 @@ export default function TermsOfServicePage() {
               Terms and conditions governing use of the Trazo platform.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Last updated: March 21, 2026
+              Last updated: April 14, 2026
             </p>
           </header>
 
@@ -225,8 +225,12 @@ export default function TermsOfServicePage() {
             {/* 7 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                7. Carbon Calculations Disclaimer
+                7. Compliance Documentation Disclaimers
               </h3>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                7.1 Carbon Calculations
+              </h4>
               <p className="mt-3 leading-[1.8]">
                 Trazo provides carbon footprint estimates using published
                 emission factors from the EPA (40 CFR Part 98) and USDA sources.
@@ -240,6 +244,51 @@ export default function TermsOfServicePage() {
                 basis for regulatory compliance filings, carbon credit
                 applications, official emissions reporting, or any purpose
                 requiring independently verified methodology.
+              </p>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                7.2 NOP Audit PDF
+              </h4>
+              <p className="mt-3 leading-[1.8]">
+                The NOP Audit PDF (also called the &quot;Compliance Report&quot;)
+                is generated from the production data, photos, and event logs you
+                submit to the Platform. It includes a Compliance Snapshot,
+                citations to 7 CFR 205.x, drift detection against OMRI and
+                National List databases, photo galleries with EXIF/GPS captions,
+                Statement of Equivalence (SOE) attestations, and a 5-year change
+                history.
+              </p>
+              <p className="mt-3 leading-[1.8]">
+                Trazo is a documentation platform and is not a USDA-accredited
+                organic certifier. Only USDA-accredited certifying agents
+                (CCOF, Oregon Tilth, MOFGA, OEFFA, PCO, and others) can grant,
+                renew, suspend, or revoke organic certification. The NOP Audit
+                PDF is reference material for your certifier&apos;s review; it
+                does not constitute certification, regulatory approval, or any
+                determination of compliance with 7 CFR Part 205.
+              </p>
+              <p className="mt-3 leading-[1.8]">
+                Trazo does not independently verify your farming practices.
+                We do not visit your farm, sample your soil, audit your supplier
+                invoices, or confirm that practices on the ground match what
+                you have documented. The Platform&apos;s automated checks
+                (including the drift detector&apos;s comparison of your inputs
+                against the OMRI Listed Products database and the USDA National
+                List) operate on the text and metadata you submit; matches and
+                mismatches are advisory and may include false positives or
+                false negatives. The Compliance Snapshot, drift findings, and
+                attestation rows in the PDF reflect the data you have entered
+                and the automated checks the Platform applied to that data —
+                nothing more.
+              </p>
+              <p className="mt-3 leading-[1.8]">
+                You are solely responsible for the accuracy, completeness, and
+                truthfulness of all production data and uploaded documents. If
+                your certifier requests revisions, declines to accept the PDF,
+                or finds non-compliance based on data you provided, Trazo has
+                no liability for the outcome. Submit only truthful, complete
+                records, and review every page of the PDF before sharing it
+                with a certifier.
               </p>
             </section>
 
