@@ -836,7 +836,7 @@ export default function MethodologyPage() {
                 7. NOP Audit PDF Methodology
               </h3>
               <p className="mt-3 leading-[1.8]">
-                For organic operations, Trazo generates a 13-page Audit PDF
+                For organic operations, Trazo generates a 24-page Audit PDF
                 designed to support certifier review under the USDA National
                 Organic Program (7 CFR Part 205). The PDF is reference material
                 farmers attach to their certifier&apos;s annual inspection
@@ -855,12 +855,16 @@ export default function MethodologyPage() {
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
-                  <strong>Page-1 Compliance Snapshot:</strong> 11-row table
-                  citing 7 CFR § 205.201 (OSP), § 205.103 (records),
+                  <strong>Page-1 Compliance Snapshot:</strong> 13+ row table
+                  citing 7 CFR § 205.201 (OSP), § 205.201(a)(2) (OSP narrative
+                  vs. registry sync), § 205.103 (records), § 205.103(b)(2)
+                  (SOE traceability), § 205.202 (land requirements),
                   § 205.203(c) (compost / raw manure), § 205.206 (pest
-                  management), § 205.273 (lot traceability), and § 205.201(b)
-                  (contamination). Each row is automatically classified
-                  PASS / REVIEW / FAIL based on the data the farmer has entered.
+                  management), § 205.272 (contamination prevention),
+                  § 205.307 (lot traceability), § 205.400(f)(2) (unapproved-input
+                  drift findings), and § 205.201(a)(3) (OFPP). Each row is
+                  automatically classified PASS / REVIEW / FAIL based on the
+                  data the farmer has entered.
                 </li>
                 <li>
                   <strong>Producer Attestation</strong> (§ 205.401(d)):
@@ -907,8 +911,8 @@ export default function MethodologyPage() {
                   2024 Strengthening Organic Enforcement final rule — Fraud
                   Prevention Plan (§ 205.201(a)(3)), 5-Year Retention
                   (§ 205.103(b)(4)), Unannounced Inspection Readiness
-                  (§ 205.661), Non-Retail Container Labeling
-                  (§ 205.273 / § 205.307), and NOP Import Certificate. Each
+                  (§ 205.661), Non-Retail Container Labeling (§ 205.307),
+                  and NOP Import Certificate. Each
                   attestation reports actual platform state — never a false
                   claim.
                 </li>

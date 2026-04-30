@@ -20,7 +20,7 @@ const organicFeatures = [
     icon: FileSpreadsheet,
     title: "NOP Audit PDF Export",
     description:
-      "Generate a 13-page audit-ready PDF for your certifier. Page-1 Compliance Snapshot (PASS / REVIEW / FAIL per CFR rule), 30+ unique 7 CFR 205.x citations, OSP drift detector for inputs, photo gallery in NOP-priority order, and 5-year change-history attribution. The PDF is reference material for certifier review — not a certification.",
+      "Generate a 24-page audit-ready PDF for your certifier. Page-1 Compliance Snapshot (13+ rows PASS / REVIEW / FAIL per CFR rule), 30+ unique 7 CFR 205.x citations, OSP drift detector for inputs (OMRI / WSDA / National List / CDFA OIM cross-check), photo gallery in NOP-priority order, and 5-year change-history attribution. The PDF is reference material for certifier review — not a certification.",
   },
   {
     icon: Clock,
@@ -42,9 +42,9 @@ const organicFeatures = [
   },
   {
     icon: ClipboardCheck,
-    title: "SOE Fraud Prevention Plan",
+    title: "SOE Fraud Prevention Plan (OFPP)",
     description:
-      "Document your Supply Chain Oversight and Evaluation fraud prevention plan, including supplier verification steps and risk assessments. Designed to meet NOP recordkeeping requirements (7 CFR 205.103).",
+      "Document your Organic Fraud Prevention Plan including supplier verification, supply-chain risk assessment, and review cadence. Required under USDA's 2024 Strengthening Organic Enforcement final rule (88 FR 3622, effective 2024-03-19), 7 CFR 205.201(a)(3).",
   },
   {
     icon: Sprout,
