@@ -19,11 +19,6 @@ const BANNED_FRAGMENTS = [
 const COLOR = {
   green500: "#4CAF50",
   green600: "#388E3C",
-  green400: "#66BB6A",
-  yellow: "#FBBF24",
-  orange: "#FB923C",
-  red: "#EF4444",
-  gray: "#9CA3AF",
   textPrimary: "#1F2937",
   textSecondary: "#6B7280",
   white: "#FFFFFF",
@@ -33,34 +28,12 @@ interface ApiResponse {
   product?: { name?: string };
   product_info?: { name?: string };
   farmer?: { name?: string };
-  quick_view?: { transparency_score?: { percentage?: number } };
+  // Claim-safety (2026-06): the self-graded transparency SCORE is gated out of
+  // the anonymous payload and is a farmer-dashboard KPI, not a consumer claim.
+  // The share image leads with the FACTUAL documented-practices count instead.
+  standard_view?: { transparency_details?: { actual_events?: number } };
+  timeline?: unknown[];
   blockchain_verification?: { verified?: boolean };
-}
-
-function getScoreColor(score: number): string {
-  if (score >= 80) return COLOR.green500;
-  if (score >= 60) return COLOR.green400;
-  if (score >= 40) return COLOR.yellow;
-  if (score >= 20) return COLOR.orange;
-  return COLOR.red;
-}
-
-function getScoreGrade(score: number): string {
-  if (score >= 90) return "A+";
-  if (score >= 80) return "A";
-  if (score >= 70) return "B";
-  if (score >= 60) return "C";
-  if (score >= 40) return "D";
-  return "F";
-}
-
-// Tier label, no emojis (satori emoji rendering is finicky and adds 100KB+).
-function getTierLabel(score: number): string {
-  if (score >= 95) return "Open Book Farm";
-  if (score >= 85) return "Farm Storyteller";
-  if (score >= 70) return "Working Farm";
-  if (score >= 50) return "Growing Story";
-  return "Farm Beginnings";
 }
 
 function clamp(text: string, max: number): string {
@@ -128,20 +101,19 @@ export async function GET(
     return new Response("Compliance violation", { status: 422 });
   }
 
-  const rawScore = data.quick_view?.transparency_score?.percentage;
-  const score =
-    typeof rawScore === "number" && Number.isFinite(rawScore)
-      ? Math.max(0, Math.min(100, Math.round(rawScore)))
+  // Factual documented-practices count — the share-image highlight. A raw count
+  // can't be gamed the way a 0-100 score can, so it carries no anti-gaming floor;
+  // it's simply hidden when there's nothing documented yet.
+  const rawCount =
+    data.standard_view?.transparency_details?.actual_events ??
+    (Array.isArray(data.timeline) ? data.timeline.length : undefined);
+  const practicesCount =
+    typeof rawCount === "number" && Number.isFinite(rawCount) && rawCount > 0
+      ? Math.round(rawCount)
       : null;
 
-  // Anti-gaming: scores under 30 omit the number, grade, and tier badge.
-  // (Per .claude/rules/carbon-methodology.md — fewer than 3 events caps at 30.)
-  const showScore = score !== null && score >= 30;
+  const showCount = practicesCount !== null;
   const blockchainRecorded = Boolean(data.blockchain_verification?.verified);
-
-  const scoreColor = showScore && score !== null ? getScoreColor(score) : COLOR.gray;
-  const grade = showScore && score !== null ? getScoreGrade(score) : null;
-  const tier = showScore && score !== null ? getTierLabel(score) : null;
 
   let robotoBold: ArrayBuffer;
   let robotoRegular: ArrayBuffer;
@@ -166,7 +138,7 @@ export async function GET(
           width: "100%",
           display: "flex",
           flexDirection: "column",
-          background: `linear-gradient(135deg, ${scoreColor}26 0%, ${scoreColor}0D 60%, ${COLOR.white} 100%)`,
+          background: `linear-gradient(135deg, ${COLOR.green500}26 0%, ${COLOR.green500}0D 60%, ${COLOR.white} 100%)`,
           padding: "60px 80px",
           fontFamily: "Roboto",
         }}
@@ -222,7 +194,7 @@ export async function GET(
               display: "flex",
               flexDirection: "column",
               flex: 1,
-              maxWidth: showScore ? 660 : 1040,
+              maxWidth: showCount ? 660 : 1040,
             }}
           >
             <div
@@ -246,29 +218,15 @@ export async function GET(
             >
               {`by ${farmName}`}
             </div>
-            {tier ? (
-              <div
-                style={{
-                  display: "flex",
-                  marginTop: 36,
-                  fontSize: 32,
-                  fontWeight: 700,
-                  color: scoreColor,
-                }}
-              >
-                {tier}
-              </div>
-            ) : null}
           </div>
 
-          {showScore && score !== null ? (
+          {showCount && practicesCount !== null ? (
             <div
               style={{
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 marginLeft: 40,
-                position: "relative",
               }}
             >
               <div
@@ -278,53 +236,38 @@ export async function GET(
                   height: 240,
                   borderRadius: 9999,
                   background: COLOR.white,
-                  border: `10px solid ${scoreColor}`,
+                  border: `10px solid ${COLOR.green500}`,
                   alignItems: "center",
                   justifyContent: "center",
                   flexDirection: "column",
-                  boxShadow: `0 0 40px ${scoreColor}40`,
+                  boxShadow: `0 0 40px ${COLOR.green500}40`,
                 }}
               >
                 <div
                   style={{
                     display: "flex",
-                    fontSize: 88,
+                    fontSize: 96,
                     fontWeight: 700,
-                    color: scoreColor,
+                    color: COLOR.green600,
                     lineHeight: 1,
                   }}
                 >
-                  {`${score}`}
+                  {`${practicesCount}`}
                 </div>
                 <div
                   style={{
                     display: "flex",
-                    fontSize: 22,
+                    flexDirection: "column",
+                    alignItems: "center",
+                    fontSize: 20,
                     color: COLOR.textPrimary,
-                    marginTop: 6,
+                    marginTop: 8,
                   }}
                 >
-                  Transparency
+                  <div style={{ display: "flex" }}>practices</div>
+                  <div style={{ display: "flex" }}>documented</div>
                 </div>
               </div>
-              {grade ? (
-                <div
-                  style={{
-                    display: "flex",
-                    position: "absolute",
-                    top: 4,
-                    right: -8,
-                    padding: "8px 18px",
-                    borderRadius: 9999,
-                    background: scoreColor,
-                    color: COLOR.white,
-                    fontSize: 26,
-                    fontWeight: 700,
-                  }}
-                >
-                  {grade}
-                </div>
-              ) : null}
             </div>
           ) : null}
         </div>

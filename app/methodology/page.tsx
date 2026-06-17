@@ -134,12 +134,17 @@ export default function MethodologyPage() {
               <p className="mt-3 leading-[1.8]">
                 Trazo inverts the incentive:{" "}
                 <strong>
-                  more documentation = higher transparency score = more consumer
+                  more documentation = a more complete record = more consumer
                   trust
                 </strong>
-                . Carbon data is calculated automatically and remains available
-                for B2B reporting, but the consumer-facing primary metric is
-                transparency, not carbon.
+                . The transparency score (0–100) is the farmer-facing
+                completeness metric that drives this — it lives on the producer
+                dashboard. Consumers don&apos;t see a self-assigned score; they
+                see the documented practices, photos, and third-party
+                certifications the score is built from. Carbon data is
+                calculated automatically and remains available for B2B
+                reporting; the consumer-facing story is transparency, not
+                carbon.
               </p>
             </section>
 
@@ -303,7 +308,10 @@ export default function MethodologyPage() {
               <p className="mt-3 text-xs text-muted-foreground">
                 Grades are calculated by Trazo based on farmer-reported
                 documentation completeness. They do not represent an independent
-                assessment or third-party certification.
+                assessment or third-party certification. The grade and score are
+                a farmer-dashboard representation of completeness; the consumer
+                QR page shows the documented practices, photos, and
+                certifications themselves, not a self-assigned grade.
               </p>
             </section>
 
@@ -1039,9 +1047,14 @@ export default function MethodologyPage() {
                 </li>
                 <li>
                   <strong>EU regulatory status:</strong> Under the EU Directive
-                  2024/825 (effective September 2026), the transparency score
-                  could be classified as a self-created sustainability label.
-                  Serving EU consumers may require external methodology audit.
+                  2024/825 (effective September 2026), a self-created
+                  sustainability score shown to consumers could be classified as
+                  a self-created sustainability label. For this reason the
+                  transparency score is not displayed on the consumer QR page —
+                  it is a farmer-dashboard completeness metric only, and
+                  consumers see the documented practices and third-party
+                  certifications directly. Full EU substantiation may still
+                  require external methodology audit.
                 </li>
               </ul>
             </section>

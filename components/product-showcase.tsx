@@ -19,7 +19,7 @@ export function ProductShowcase() {
             <br className="hidden md:block" /> they scan your QR code
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-            Every product gets a public transparency profile. Consumers see your score, your farming journey, and verified event documentation.
+            Every product gets a public transparency profile. Consumers see your documented practices, your farming journey, and third-party certifications.
           </p>
         </div>
         </ScrollReveal>
@@ -33,15 +33,15 @@ export function ProductShowcase() {
               <div className="relative h-[520px] w-[260px] overflow-hidden rounded-[2.5rem] border-[8px] border-foreground/10 bg-card shadow-2xl shadow-primary/10 md:h-[560px] md:w-[280px]">
                 <Image
                   src="/images/consumer-transparency.png"
-                  alt="Trazo consumer view showing Avocado product with 100/100 Transparency Score by Coastal Valleys Farm"
+                  alt="Trazo consumer view showing an Avocado from Solana Verde Organic Ranch — Certified Organic by CCOF, with 24 documented practices"
                   fill
                   className="object-cover object-top"
                 />
               </div>
               <div className="text-center">
-                <h3 className="text-lg font-bold text-foreground">Transparency Score</h3>
+                <h3 className="text-lg font-bold text-foreground">Transparency Profile</h3>
                 <p className="mt-1 max-w-[260px] text-sm text-muted-foreground">
-                  Product ratings, farm badges, and transparency scores at a glance
+                  Product ratings, farm certifications, and documented practices at a glance
                 </p>
               </div>
             </div>
@@ -51,7 +51,7 @@ export function ProductShowcase() {
               <div className="relative h-[520px] w-[260px] overflow-hidden rounded-[2.5rem] border-[8px] border-foreground/10 bg-card shadow-2xl shadow-primary/10 md:h-[560px] md:w-[280px]">
                 <Image
                   src="/images/consumer-journey.png"
-                  alt="Trazo Production Journey view showing 19 documented farming events with detailed soil analysis and timeline"
+                  alt="Trazo Production Journey showing 24 documented farming events with field notes and photo evidence"
                   fill
                   className="object-cover object-top"
                 />
@@ -71,7 +71,7 @@ export function ProductShowcase() {
         <div className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-6 md:grid-cols-4">
           {[
             { icon: Shield, label: "Blockchain Recorded", desc: "Tamper-proof records (add-on)" },
-            { icon: Star, label: "Transparency Score", desc: "0-100 rating system" },
+            { icon: Star, label: "Documented Practices", desc: "Every farming step logged" },
             { icon: LineChart, label: "Full Timeline", desc: "Seed to harvest" },
             { icon: Smartphone, label: "QR Code Access", desc: "Scan to discover" },
           ].map((feature) => (
