@@ -23,9 +23,9 @@ export function StatsBar() {
             Simple enough for the field. Strong enough for the buyer.
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-            Trazo turns every farming practice into a transparency-scored
-            digital record — so consumers trust your product and you can command
-            the prices it deserves.
+            Trazo turns every farming practice into a documented digital record
+            — so buyers can verify how your crop was grown and you stand out
+            through premium positioning.
           </p>
         </div>
         </ScrollReveal>

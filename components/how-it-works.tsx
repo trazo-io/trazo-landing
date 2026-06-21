@@ -29,7 +29,7 @@ const steps = [
     label: "STEP 3",
     title: "Share QR Codes & Earn Trust",
     description:
-      "Finish your harvest and the QR code auto-generates. When consumers scan, they see your transparency score, farming timeline, and documented practices. Nothing goes live until you're ready.",
+      "Finish your harvest and the QR code auto-generates. When consumers scan, they see your farming timeline, documented practices, and certifications. Nothing goes live until you're ready.",
     image: "/images/step-consumer-scan.jpg",
     alt: "Consumer scanning a QR code on fresh produce to see the farm story",
   },

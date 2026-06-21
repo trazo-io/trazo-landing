@@ -1,12 +1,12 @@
 export interface BlogPost {
-  slug: string
-  category: string
-  date: string
-  title: string
-  excerpt: string
-  image: string
-  readTime: string
-  content: string
+  slug: string;
+  category: string;
+  date: string;
+  title: string;
+  excerpt: string;
+  image: string;
+  readTime: string;
+  content: string;
 }
 
 export const posts: BlogPost[] = [
@@ -15,8 +15,10 @@ export const posts: BlogPost[] = [
     category: "Industry Insights",
     date: "February 3, 2026",
     readTime: "5 min read",
-    title: "Why 9 in 10 Consumers Don't Trust Food Labels (And What Farmers Can Do About It)",
-    excerpt: "Consumer trust in food labeling has hit an all-time low. Discover why traditional labels are failing and how direct farmer transparency is the solution.",
+    title:
+      "Why 9 in 10 Consumers Don't Trust Food Labels (And What Farmers Can Do About It)",
+    excerpt:
+      "Consumer trust in food labeling has hit an all-time low. Discover why traditional labels are failing and how direct farmer transparency is the solution.",
     image: "/images/blog-food-labels.jpg",
     content: `
 <p>When shoppers lose faith in food labels, it's the entire food supply chain that suffers.</p>
@@ -56,7 +58,7 @@ export const posts: BlogPost[] = [
 <p>Instead of adding more labels to food products, the answer lies in providing consumers with a way to verify information provided by producers. Imagine a consumer shopping at a farmer's market. The consumer picks up an avocado and scans a QR code with their mobile device. Instead of receiving a marketing message, the consumer receives a list of information including:</p>
 
 <ul>
-<li>A transparency score indicating how thoroughly the farming practices were documented;</li>
+<li>A count of documented farming practices, showing how thoroughly the process was recorded;</li>
 <li>A timeline of all of the events from planting to harvest;</li>
 <li>Photos from the field taken by the farmer during actual farming activities;</li>
 <li>Blockchain-based verification demonstrating that the information has not been altered.</li>
@@ -93,8 +95,10 @@ export const posts: BlogPost[] = [
     category: "Technology",
     date: "February 10, 2026",
     readTime: "7 min read",
-    title: "The Perverse Incentive Problem: Why Carbon-First Platforms Penalize Honest Farmers",
-    excerpt: "Carbon-first platforms create a paradox where the most transparent farmers get the lowest scores. Learn why transparency-first approaches produce better outcomes for honest operations.",
+    title:
+      "The Perverse Incentive Problem: Why Carbon-First Platforms Penalize Honest Farmers",
+    excerpt:
+      "Carbon-first platforms create a paradox where the most transparent farmers get the lowest scores. Learn why transparency-first approaches produce better outcomes for honest operations.",
     image: "/images/blog-perverse-incentive.jpg",
     content: `
 <p>Most agricultural technology companies do not want to discuss the paradox of the systems that are created to provide incentives for sustainable farming; however, they ultimately create disincentives for the most transparent of the farmers.</p>
@@ -196,8 +200,10 @@ export const posts: BlogPost[] = [
     category: "Technology",
     date: "February 17, 2026",
     readTime: "8 min read",
-    title: "Blockchain Verification in Agriculture: A Simple Explanation for Farmers",
-    excerpt: "Blockchain sounds complex, but the concept is simple: create a permanent, tamper-proof record of your farming practices that anyone can verify.",
+    title:
+      "Blockchain Verification in Agriculture: A Simple Explanation for Farmers",
+    excerpt:
+      "Blockchain sounds complex, but the concept is simple: create a permanent, tamper-proof record of your farming practices that anyone can verify.",
     image: "/images/blog-blockchain.jpg",
     content: `
 <p>You do not need to understand how blockchain works in order to use it. Similarly, you do not need to know how email servers work to send an email.</p>
@@ -290,7 +296,7 @@ export const posts: BlogPost[] = [
 <p>To the consumer, blockchain validation is easy to understand. All the consumer has to do is scan a QR Code and see:</p>
 
 <ul>
-<li>a transparency score which shows the extent to which you have properly documented your farming process</li>
+<li>the documented evidence showing the extent to which you have recorded your farming process</li>
 <li>the history of your farming process (from planting to harvesting) as recorded by a series of events</li>
 <li>a badge that indicates that your documentation has been validated using blockchain technology</li>
 <li>optionally, a link to the blockchain explorer for those who want to verify your records independently.</li>
@@ -319,7 +325,8 @@ export const posts: BlogPost[] = [
     date: "February 24, 2026",
     readTime: "6 min read",
     title: "How QR Codes Are Changing Farm-to-Consumer Trust",
-    excerpt: "QR codes on produce are bridging the gap between farmers and consumers, giving buyers instant access to the story behind their food.",
+    excerpt:
+      "QR codes on produce are bridging the gap between farmers and consumers, giving buyers instant access to the story behind their food.",
     image: "/images/blog-qr-codes.jpg",
     content: `
 <p>QR codes evolved beyond menus at restaurants to almost all of commerce – and now to agriculture.</p>
@@ -338,7 +345,7 @@ export const posts: BlogPost[] = [
 <li>The exact production cycle for that batch of product</li>
 <li>All documented farming events from planting to harvest</li>
 <li>Photos of the actual farming process</li>
-<li>A transparency score representing how complete the documentation is</li>
+<li>A count of documented events and photos representing how complete the record is</li>
 <li>Blockchain recording (optional add-on) proving that records cannot be modified</li>
 <li>Reviews from other customers that purchased the product</li>
 </ul>
@@ -349,7 +356,7 @@ export const posts: BlogPost[] = [
 
 <p>Once a consumer scans a QR code with a Trazo code, the user experience is built around progressively building trust:</p>
 
-<p><strong>Within the first two seconds</strong>: A transparency score will load. This score is based on a scale of 0 to 100 and provides the consumer with an immediate sense of how well this farm documented their processes.</p>
+<p><strong>Within the first two seconds</strong>: A snapshot of documented evidence will load — the count of farming practices recorded, photo evidence on file, and any third-party certifications — giving the consumer an immediate, factual sense of how thoroughly this farm documented its process.</p>
 
 <p><strong>Next three to five seconds</strong>: Consumers will see some basic production data about the product — what was grown, where it was grown, when it was harvested, and how many different farming events were documented.</p>
 
@@ -363,7 +370,7 @@ export const posts: BlogPost[] = [
 <h2>Real World Examples</h2>
 
 <h3>At the Farmer's Market</h3>
-<p>A local grower of specialty avocados prints QR codes on each crate and provides them to consumers. Once a consumer scans the QR code, they will see the full growing history — 14 documented events over eight months — of the avocado, including the application of organic fertilizers, irrigation records, and photos of the harvest. The transparency score of 92%, indicates to the consumer, this grower has nothing to hide.</p>
+<p>A local grower of specialty avocados prints QR codes on each crate and provides them to consumers. Once a consumer scans the QR code, they will see the full growing history — 14 documented events over eight months — of the avocado, including the application of organic fertilizers, irrigation records, and photos of the harvest. The breadth of documented evidence shows the consumer this grower has nothing to hide.</p>
 
 <h3>In Specialized Retail</h3>
 <p>A coffee producer prints QR codes on their packaging and once scanned, consumers will see the elevation, soil preparation, harvest methodology, and processing details for that particular lot of coffee. With blockchain verification enabled (available as an add-on), each record becomes tamper-proof. The retail partner utilizes the QR code as a premium positioning element.</p>
@@ -414,8 +421,10 @@ export const posts: BlogPost[] = [
     category: "Guides",
     date: "March 3, 2026",
     readTime: "10 min read",
-    title: "From Planting to Harvest: A Complete Guide to Agricultural Event Documentation",
-    excerpt: "A step-by-step guide to documenting every farming event from soil preparation through harvest, building a complete transparency record.",
+    title:
+      "From Planting to Harvest: A Complete Guide to Agricultural Event Documentation",
+    excerpt:
+      "A step-by-step guide to documenting every farming event from soil preparation through harvest, building a complete transparency record.",
     image: "/images/blog-planting-harvest.jpg",
     content: `
 <p>Every farming practice has a story behind it; the issue is who is recording it?</p>
@@ -493,7 +502,7 @@ export const posts: BlogPost[] = [
 
 <p>With each entry you make documenting your production process, your transparency score will increase — a 0-100 score reflecting how well you've documented your production process. The more entries you make, the higher your transparency score.</p>
 
-<p>A consumer who scans your QR code will be able to see your transparency score before they even look at your information about your farm and/or products. If a consumer sees a transparency score of 90+, this is telling them, "This farmer has documented almost all of what went on with this crop." That's a strong trust indicator.</p>
+<p>A consumer who scans your QR code will see your documented farming practices, photos, and certifications alongside your farm and product information. When most of the growing process is documented, it tells them, "This farmer has documented almost all of what went on with this crop." That's a strong trust indicator.</p>
 
 <p>And since the entire production record was recorded on the blockchain when you finished producing the product, consumers know your documentation wasn't falsified or changed.</p>
 
@@ -508,7 +517,8 @@ export const posts: BlogPost[] = [
     date: "March 10, 2026",
     readTime: "8 min read",
     title: "Premium Pricing Through Transparency: What the Research Shows",
-    excerpt: "Research confirms that consumers are willing to pay more for products with verified transparency. Here's how to position your farm for premium pricing.",
+    excerpt:
+      "Research confirms that consumers are willing to pay more for products with verified transparency. Here's how to position your farm for premium pricing.",
     image: "/images/blog-premium-pricing.jpg",
     content: `
 <p>Can transparency really help you charge more for your produce? Yes, says a growing body of research. There is one caveat – the claims have to be verifiable.</p>
@@ -598,8 +608,10 @@ export const posts: BlogPost[] = [
     category: "Organic Farming",
     date: "March 26, 2026",
     readTime: "8 min read",
-    title: "The Organic Farmer's Guide to Digital Record-Keeping: What NOP Requires and How to Stay Ahead",
-    excerpt: "51% of organic farmers say record-keeping is their biggest burden. Here's what NOP actually requires, the most common mistakes that risk certification, and how digital documentation closes the gap between annual audits.",
+    title:
+      "The Organic Farmer's Guide to Digital Record-Keeping: What NOP Requires and How to Stay Ahead",
+    excerpt:
+      "51% of organic farmers say record-keeping is their biggest burden. Here's what NOP actually requires, the most common mistakes that risk certification, and how digital documentation closes the gap between annual audits.",
     image: "/images/blog-organic-records.jpg",
     content: `
 <p>Ask any organic farmer what the hardest part of maintaining certification is, and the answer is rarely pests, weather, or markets. It is paperwork.</p>
@@ -689,4 +701,4 @@ export const posts: BlogPost[] = [
 <p>The goal is not to create more paperwork. It is to make the documentation you already need serve double duty: compliance readiness and consumer-facing transparency. The farms that achieve this will be the ones that maintain their certification with less stress and build stronger relationships with their buyers.</p>
     `,
   },
-]
+];

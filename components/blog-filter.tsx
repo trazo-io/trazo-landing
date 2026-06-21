@@ -1,19 +1,26 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowUpRight } from "lucide-react"
-import type { BlogPost } from "@/lib/blog-data"
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
+import type { BlogPost } from "@/lib/blog-data";
 
-const categories = ["All", "Industry Insights", "Technology", "Transparency", "Guides"]
+const categories = [
+  "All",
+  "Industry Insights",
+  "Technology",
+  "Transparency",
+  "Guides",
+];
 
 export function BlogFilter({ posts }: { posts: BlogPost[] }) {
-  const [active, setActive] = useState("All")
+  const [active, setActive] = useState("All");
 
-  const filtered = active === "All" ? posts : posts.filter((p) => p.category === active)
-  const featured = filtered[0]
-  const rest = filtered.slice(1)
+  const filtered =
+    active === "All" ? posts : posts.filter((p) => p.category === active);
+  const featured = filtered[0];
+  const rest = filtered.slice(1);
 
   return (
     <>
@@ -76,7 +83,11 @@ export function BlogFilter({ posts }: { posts: BlogPost[] }) {
         <section className="mx-auto mt-14 max-w-7xl px-6">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {rest.map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group block"
+              >
                 <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
                   <div className="relative aspect-[16/10] overflow-hidden">
                     <Image
@@ -88,7 +99,9 @@ export function BlogFilter({ posts }: { posts: BlogPost[] }) {
                   </div>
                   <div className="flex flex-1 flex-col p-6">
                     <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                      <span className="font-semibold text-primary">{post.category}</span>
+                      <span className="font-semibold text-primary">
+                        {post.category}
+                      </span>
                       <span>{post.date}</span>
                     </div>
                     <h3 className="mt-3 flex-1 text-lg font-bold leading-snug text-foreground transition-colors group-hover:text-primary">
@@ -112,9 +125,11 @@ export function BlogFilter({ posts }: { posts: BlogPost[] }) {
 
       {filtered.length === 0 && (
         <div className="mx-auto mt-14 max-w-7xl px-6 text-center">
-          <p className="text-muted-foreground">No articles in this category yet.</p>
+          <p className="text-muted-foreground">
+            No articles in this category yet.
+          </p>
         </div>
       )}
     </>
-  )
+  );
 }
