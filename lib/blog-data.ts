@@ -70,7 +70,7 @@ export const posts: BlogPost[] = [
 
 <p>For farmers who actually follow best practices for growing crops, the current crisis of trust is not a bad thing. When most of your competitors are hiding behind vague and unsubstantiated claims, verifiable transparency is a competitive advantage.</p>
 
-<p>Research on organic market pricing shows that certified organic specialty crops often command higher prices than conventional equivalents. However, as certification alone becomes less differentiating in crowded markets, verified transparency in farming practices is emerging as the next layer of trust consumers and buyers require. The key is not simply claiming sustainability — it is demonstrating it through a verifiable, documented record.</p>
+<p>Research on organic market pricing shows that certified organic specialty crops often command higher prices than conventional equivalents. However, as certification alone becomes less differentiating in crowded markets, verified transparency in farming practices is emerging as the next layer of trust consumers and buyers require. The key is not simply claiming sustainability. It is demonstrating it through a verifiable, documented record.</p>
 
 <p>Farmers who document their practices and connect directly with consumers are positioned for premium positioning based on verifiable, documented practices. This includes documenting the following:</p>
 
@@ -84,9 +84,9 @@ export const posts: BlogPost[] = [
 
 <h2>Sources</h2>
 <ul>
-<li><a href="https://piconext.com/article/digital-product-passport-global-sustainability-study/" target="_blank" rel="noopener noreferrer">PicoNext — Digital Product Passport Global Sustainability Study (2024)</a></li>
-<li><a href="https://environment.ec.europa.eu/topics/circular-economy-topics/green-claims_en" target="_blank" rel="noopener noreferrer">European Commission — Green Claims Directive</a></li>
-<li><a href="https://blueyonder.com/blog/2025/2025-survey-results-only-20-of-consumers-believe-brand-sustainability-claims" target="_blank" rel="noopener noreferrer">Blue Yonder — 2025 Consumer Sustainability Survey (5,000+ respondents)</a></li>
+<li><a href="https://piconext.com/article/digital-product-passport-global-sustainability-study/" target="_blank" rel="noopener noreferrer">PicoNext: Digital Product Passport Global Sustainability Study (2024)</a></li>
+<li><a href="https://environment.ec.europa.eu/topics/circular-economy-topics/green-claims_en" target="_blank" rel="noopener noreferrer">European Commission: Green Claims Directive</a></li>
+<li><a href="https://blueyonder.com/blog/2025/2025-survey-results-only-20-of-consumers-believe-brand-sustainability-claims" target="_blank" rel="noopener noreferrer">Blue Yonder: 2025 Consumer Sustainability Survey (5,000+ respondents)</a></li>
 </ul>
     `,
   },
@@ -107,7 +107,7 @@ export const posts: BlogPost[] = [
 
 <h2>Carbon-Based Tracking Systems</h2>
 
-<p>Most traditional carbon-tracking systems measure a farm's environmental footprint by calculating the number of activities that the farmer documents in order to determine the farm's overall carbon footprint. The more activities that a farmer documents — fuel usage, fertilizer applications, equipment operations — the lower the farm's overall carbon footprint.</p>
+<p>Most traditional carbon-tracking systems measure a farm's environmental footprint by calculating the number of activities that the farmer documents in order to determine the farm's overall carbon footprint. The more activities that a farmer documents (fuel usage, fertilizer applications, equipment operations), the lower the farm's overall carbon footprint.</p>
 
 <p>From the surface level, this appears to be a very logical method for determining a farm's environmental footprint, and therefore, the farm's carbon footprint: document all of the activities that occur on the farm, calculate the total carbon footprint, and then generate a carbon score.</p>
 
@@ -115,11 +115,11 @@ export const posts: BlogPost[] = [
 
 <h2>Broken Logic</h2>
 
-<p>Consider two farmers that are both growing the same crop. Farmer A documents five events during the production cycle. As a result, his calculated carbon footprint is relatively low — not due to the fact that he is using cleaner methods, but simply because there is less data recorded.</p>
+<p>Consider two farmers that are both growing the same crop. Farmer A documents five events during the production cycle. As a result, his calculated carbon footprint is relatively low, not due to the fact that he is using cleaner methods, but simply because there is less data recorded.</p>
 
-<p>On the other hand, Farmer B documents fifteen events during the same time frame. He documents every irrigation event, every chemical application, and every piece of equipment that is operated during the production cycle. His calculated carbon footprint is significantly higher — not because he is farming worse, but simply because he is providing more documentation.</p>
+<p>On the other hand, Farmer B documents fifteen events during the same time frame. He documents every irrigation event, every chemical application, and every piece of equipment that is operated during the production cycle. His calculated carbon footprint is significantly higher, not because he is farming worse, but simply because he is providing more documentation.</p>
 
-<p>As a result of this, Farmer A is viewed as having a lower carbon footprint than Farmer B — even though Farmer B may actually be farming using cleaner methods. In a carbon-based system, Farmer A is rewarded for being less transparent than Farmer B.</p>
+<p>As a result of this, Farmer A is viewed as having a lower carbon footprint than Farmer B, even though Farmer B may actually be farming using cleaner methods. In a carbon-based system, Farmer A is rewarded for being less transparent than Farmer B.</p>
 
 <p>This is not merely a hypothetical scenario. There have been studies published in peer-reviewed climate policy journals that show farmers have actual concerns regarding the creation of perverse incentives within carbon-based market programs. Additionally, early adopters of conservation practices are especially concerned that existing requirements can create disincentives for them as they have already implemented many beneficial farming practices.</p>
 
@@ -146,17 +146,17 @@ export const posts: BlogPost[] = [
 
 <p>The solution is not to discontinue tracking altogether, but to reverse the incentive of the tracking system.</p>
 
-<p>A transparency-based approach tracks something fundamentally different than the amount of carbon generated by the farm's activities — namely, how completely and thoroughly the farmer documents their activities.</p>
+<p>A transparency-based approach tracks something fundamentally different than the amount of carbon generated by the farm's activities: how completely and thoroughly the farmer documents their activities.</p>
 
 <p>In a transparency-based system:</p>
 
 <ul>
-<li><strong>Documenting more events = Higher transparency score</strong>. You are rewarded for your comprehensive documentation efforts — not penalized.</li>
-<li><strong>Carbon calculations still take place</strong> — they just serve as supporting documentation — rather than the sole focus of the tracking system.</li>
+<li><strong>Documenting more events = Higher transparency score</strong>. You are rewarded for your comprehensive documentation efforts, not penalized.</li>
+<li><strong>Carbon calculations still take place</strong>. They serve as supporting documentation rather than the sole focus of the tracking system.</li>
 <li><strong>Consumers use the documentation completeness</strong> of a farm as a trust indicator, thereby aligning the incentives of farmers with the interests of consumers.</li>
 </ul>
 
-<p>Therefore, Farmer B — who documented 15 events — would likely receive a significantly higher transparency-based score than Farmer A — who only documented 5 events. The system provides incentives for exactly the type of behavior that consumers, regulators, and the environment desire: Complete and Honest Documentation.</p>
+<p>Therefore, Farmer B (who documented 15 events) would likely receive a significantly higher transparency-based score than Farmer A (who only documented 5 events). The system provides incentives for exactly the type of behavior that consumers, regulators, and the environment desire: Complete and Honest Documentation.</p>
 
 <h2>Repositioning Carbon Data</h2>
 
@@ -169,7 +169,7 @@ export const posts: BlogPost[] = [
 <li>Carbon Credit Programs Where Applicable</li>
 </ul>
 
-<p>The difference lies in the primary incentive of the tracking system. When transparency-based scoring drives farmer behavior as opposed to minimizing carbon emissions, you get better data across the board — including more accurate carbon calculations, since farmers are documenting everything, rather than selectively excluding certain activities.</p>
+<p>The difference lies in the primary incentive of the tracking system. When transparency-based scoring drives farmer behavior as opposed to minimizing carbon emissions, you get better data across the board, including more accurate carbon calculations, since farmers are documenting everything, rather than selectively excluding certain activities.</p>
 
 <h2>Transitioning to a New System</h2>
 
@@ -177,8 +177,8 @@ export const posts: BlogPost[] = [
 
 <ol>
 <li><strong>Does it reward you for documenting more events?</strong> A good transparency-based tracking system should reward you for documenting as many events as possible.</li>
-<li><strong>Is carbon data present — but secondary?</strong> Good transparency-based tracking systems should allow you to view carbon calculations as supporting evidence for your claim — rather than punishing you for your thoroughness.</li>
-<li><strong>Will consumers be able to view your documentation completeness?</strong> Transparency-based tracking systems should provide consumers with a clear indication of whether or not you are providing complete documentation — as well as provide you with the ability to clearly demonstrate your commitment to transparency.</li>
+<li><strong>Is carbon data present, but secondary?</strong> Good transparency-based tracking systems should allow you to view carbon calculations as supporting evidence for your claim, rather than punishing you for your thoroughness.</li>
+<li><strong>Will consumers be able to view your documentation completeness?</strong> Transparency-based tracking systems should provide consumers with a clear indication of whether or not you are providing complete documentation, as well as provide you with the ability to clearly demonstrate your commitment to transparency.</li>
 <li><strong>Are Emission Factors Based on Verified Sources?</strong> Look for data that is based upon verified sources such as the EPA, USDA, or other government agencies. Avoid data that is based upon proprietary "black boxes".</li>
 </ol>
 
@@ -189,8 +189,8 @@ export const posts: BlogPost[] = [
 
 <h2>Sources</h2>
 <ul>
-<li><a href="https://www.iatp.org/carbon-markets-and-agriculture" target="_blank" rel="noopener noreferrer">Institute for Agriculture and Trade Policy — Carbon Markets & Agriculture</a></li>
-<li><a href="https://www.epa.gov/climateleadership/ghg-emission-factors-hub" target="_blank" rel="noopener noreferrer">EPA GHG Emission Factors Hub — 40 CFR Part 98</a></li>
+<li><a href="https://www.iatp.org/carbon-markets-and-agriculture" target="_blank" rel="noopener noreferrer">Institute for Agriculture and Trade Policy: Carbon Markets & Agriculture</a></li>
+<li><a href="https://www.epa.gov/climateleadership/ghg-emission-factors-hub" target="_blank" rel="noopener noreferrer">EPA GHG Emission Factors Hub: 40 CFR Part 98</a></li>
 <li><a href="https://www.ers.usda.gov/" target="_blank" rel="noopener noreferrer">USDA Economic Research Service</a></li>
 </ul>
     `,
@@ -207,7 +207,7 @@ export const posts: BlogPost[] = [
     content: `
 <p>QR codes evolved beyond menus at restaurants to almost all of commerce – and now to agriculture.</p>
 
-<p>Farmers see QR codes as an effective way to connect directly to consumers — and ultimately, as a way to eliminate the need for intermediaries like retailers, marketers, etc. That is, when a consumer chooses to scan your QR code, you know he/she is interested in your product and is located near the product itself.</p>
+<p>Farmers see QR codes as an effective way to connect directly to consumers, and ultimately, as a way to eliminate the need for intermediaries like retailers, marketers, etc. That is, when a consumer chooses to scan your QR code, you know he/she is interested in your product and is located near the product itself.</p>
 
 <p>That interest, that curiosity, is the most valuable marketing opportunity in agriculture. Yet, most farms are not utilizing it.</p>
 
@@ -232,11 +232,11 @@ export const posts: BlogPost[] = [
 
 <p>Once a consumer scans a QR code with a Trazo code, the user experience is built around progressively building trust:</p>
 
-<p><strong>Within the first two seconds</strong>: A snapshot of documented evidence will load — the count of farming practices recorded, photo evidence on file, and any third-party certifications — giving the consumer an immediate, factual sense of how thoroughly this farm documented its process.</p>
+<p><strong>Within the first two seconds</strong>: A snapshot of documented evidence will load: the count of farming practices recorded, photo evidence on file, and any third-party certifications, giving the consumer an immediate, factual sense of how thoroughly this farm documented its process.</p>
 
-<p><strong>Next three to five seconds</strong>: Consumers will see some basic production data about the product — what was grown, where it was grown, when it was harvested, and how many different farming events were documented.</p>
+<p><strong>Next three to five seconds</strong>: Consumers will see some basic production data about the product: what was grown, where it was grown, when it was harvested, and how many different farming events were documented.</p>
 
-<p><strong>Consumers that wish to learn more</strong>: Can scroll through a timeline of the entire growing process — a series of documents describing the events from planting through harvest, each document provided with a date, description, and a verification badge.</p>
+<p><strong>Consumers that wish to learn more</strong>: Can scroll through a timeline of the entire growing process: a series of documents describing the events from planting through harvest, each document provided with a date, description, and a verification badge.</p>
 
 <p><strong>Full Verification</strong>: For the most detail-conscious consumers, links to blockchain transactions may be available to verify independently each record in the database.</p>
 
@@ -246,13 +246,13 @@ export const posts: BlogPost[] = [
 <h2>Real World Examples</h2>
 
 <h3>At the Farmer's Market</h3>
-<p>A local grower of specialty avocados prints QR codes on each crate and provides them to consumers. Once a consumer scans the QR code, they will see the full growing history — 14 documented events over eight months — of the avocado, including the application of organic fertilizers, irrigation records, and photos of the harvest. The breadth of documented evidence shows the consumer this grower has nothing to hide.</p>
+<p>A local grower of specialty avocados prints QR codes on each crate and provides them to consumers. Once a consumer scans the QR code, they will see the full growing history (14 documented events over eight months) of the avocado, including the application of organic fertilizers, irrigation records, and photos of the harvest. The breadth of documented evidence shows the consumer this grower has nothing to hide.</p>
 
 <h3>In Specialized Retail</h3>
 <p>A coffee producer prints QR codes on their packaging and once scanned, consumers will see the elevation, soil preparation, harvest methodology, and processing details for that particular lot of coffee. With blockchain verification enabled (available as an add-on), each record becomes tamper-proof. The retail partner utilizes the QR code as a premium positioning element.</p>
 
 <h3>Direct-to-Consumer</h3>
-<p>An organic vegetable farm prints QR codes on the containers sent out with their CSA program. Once the subscriber scans the QR code, they can see exactly what occurred in the field that week — which events occurred, what conditions the vegetables were subjected to, and photos of the harvest. In doing so, the farm transforms a transaction into a relationship.</p>
+<p>An organic vegetable farm prints QR codes on the containers sent out with their CSA program. Once the subscriber scans the QR code, they can see exactly what occurred in the field that week: which events occurred, what conditions the vegetables were subjected to, and photos of the harvest. In doing so, the farm transforms a transaction into a relationship.</p>
 
 <h2>Why QR Beats Traditional Labels</h2>
 
@@ -325,7 +325,7 @@ export const posts: BlogPost[] = [
 
 <h3>1. Production Events</h3>
 <p><strong>Document</strong>: Planting, irrigation, pruning, harvest, transplanting, cultivation, thinning, pollination, and post-harvest processing. Include date, crop variety, method, and quantities.</p>
-<p><strong>Why</strong>: Production events are the backbone of your transparency record. They document everything from planting through harvest — the complete story of how your crop was grown.</p>
+<p><strong>Why</strong>: Production events are the backbone of your transparency record. They document everything from planting through harvest, the complete story of how your crop was grown.</p>
 <p><strong>Document Time</strong>: ~90 Seconds</p>
 
 <h3>2. Chemical Applications</h3>
@@ -340,7 +340,7 @@ export const posts: BlogPost[] = [
 
 <h3>4. Pest Management</h3>
 <p><strong>Document</strong>: Date, pest type identified, severity, scouting observations, integrated pest management (IPM) actions taken, biological controls deployed.</p>
-<p><strong>Why</strong>: Shows consumers you are actively monitoring and managing pests — especially important for organic operations where chemical options are limited.</p>
+<p><strong>Why</strong>: Shows consumers you are actively monitoring and managing pests, especially important for organic operations where chemical options are limited.</p>
 <p><strong>Document Time</strong>: ~90 Seconds</p>
 
 <h3>5. Weather Events</h3>
@@ -350,12 +350,12 @@ export const posts: BlogPost[] = [
 
 <h3>6. Business Events</h3>
 <p><strong>Document</strong>: Certifications obtained or renewed, inspections completed, labor practices, equipment investments, sustainability initiatives.</p>
-<p><strong>Why</strong>: Business events show the operational commitment behind your farming practices — the investments you make in equipment, certifications, and your team.</p>
+<p><strong>Why</strong>: Business events show the operational commitment behind your farming practices: the investments you make in equipment, certifications, and your team.</p>
 <p><strong>Document Time</strong>: ~60 Seconds</p>
 
 <h3>7. General Observations</h3>
 <p><strong>Document</strong>: Date, observation text, photos, voice notes.</p>
-<p><strong>Why</strong>: Some things don't fit into categories. General observations capture the details that make your farming story unique — wildlife sightings, field conditions, crew milestones.</p>
+<p><strong>Why</strong>: Some things don't fit into categories. General observations capture the details that make your farming story unique: wildlife sightings, field conditions, crew milestones.</p>
 <p><strong>Document Time</strong>: ~30 Seconds</p>
 
 <h2>Documenting Your Practices Effectively</h2>
@@ -376,7 +376,7 @@ export const posts: BlogPost[] = [
 
 <h2>How Your Documenting Leads to Transparency</h2>
 
-<p>With each entry you make documenting your production process, your transparency score will increase — a 0-100 score reflecting how well you've documented your production process. The more entries you make, the higher your transparency score.</p>
+<p>With each entry you make documenting your production process, your transparency score will increase, a 0-100 score reflecting how well you've documented your production process. The more entries you make, the higher your transparency score.</p>
 
 <p>A consumer who scans your QR code will see your documented farming practices, photos, and certifications alongside your farm and product information. When most of the growing process is documented, it tells them, "This farmer has documented almost all of what went on with this crop." That's a strong trust indicator.</p>
 
