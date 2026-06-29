@@ -550,7 +550,7 @@ export default function PricingPage() {
                 transparency. 14-day free trial, no credit card required.
               </p>
               <p className="mx-auto mt-3 max-w-2xl text-sm text-primary-foreground/60">
-                Early access &mdash; farms that join now get founding member
+                Early access: farms that join now get founding member
                 pricing locked in, direct input on the product roadmap, and
                 priority support as we scale.
               </p>
