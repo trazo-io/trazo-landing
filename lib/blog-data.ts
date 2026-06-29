@@ -61,7 +61,7 @@ export const posts: BlogPost[] = [
 <li>A count of documented farming practices, showing how thoroughly the process was recorded;</li>
 <li>A timeline of all of the events from planting to harvest;</li>
 <li>Photos from the field taken by the farmer during actual farming activities;</li>
-<li>Blockchain-based verification demonstrating that the information has not been altered.</li>
+<li>Timestamped, tamper-evident records showing the documentation has not been altered.</li>
 </ul>
 
 <p>This is an example of what verified transparency means. This method does not ask consumers to blindly trust a label. It allows consumers to evaluate the information for themselves and determine whether the producer is credible.</p>
@@ -76,7 +76,7 @@ export const posts: BlogPost[] = [
 
 <ul>
 <li>Your practices - including planting, irrigation, chemical applications and harvesting;</li>
-<li>Verifying your documentation - including timestamped records and optionally, tamper-evident blockchain recording for an additional layer of trust;</li>
+<li>Verifying your documentation - including timestamped, tamper-evident records that show your data was not altered after the fact;</li>
 <li>Sharing your story - including the ability to allow consumers to access your documentation through QR codes.</li>
 </ul>
 
@@ -222,7 +222,7 @@ export const posts: BlogPost[] = [
 <li>All documented farming events from planting to harvest</li>
 <li>Photos of the actual farming process</li>
 <li>A count of documented events and photos representing how complete the record is</li>
-<li>Blockchain recording (optional add-on) proving that records cannot be modified</li>
+<li>Timestamped records that show your documentation was not modified after the fact</li>
 <li>Reviews from other customers that purchased the product</li>
 </ul>
 
@@ -238,7 +238,7 @@ export const posts: BlogPost[] = [
 
 <p><strong>Consumers that wish to learn more</strong>: Can scroll through a timeline of the entire growing process: a series of documents describing the events from planting through harvest, each document provided with a date, description, and a verification badge.</p>
 
-<p><strong>Full Verification</strong>: For the most detail-conscious consumers, links to blockchain transactions may be available to verify independently each record in the database.</p>
+<p><strong>Full Verification</strong>: For the most detail-conscious consumers, every record carries its own timestamp and source details, so each entry can be reviewed independently.</p>
 
 <h3>Progressive Approach</h3>
 <p>Trazo's design enables casual users to obtain value from a QR scan within seconds, while providing engaged consumers with the option to explore as deeply as they would like.</p>
@@ -249,7 +249,7 @@ export const posts: BlogPost[] = [
 <p>A local grower of specialty avocados prints QR codes on each crate and provides them to consumers. Once a consumer scans the QR code, they will see the full growing history (14 documented events over eight months) of the avocado, including the application of organic fertilizers, irrigation records, and photos of the harvest. The breadth of documented evidence shows the consumer this grower has nothing to hide.</p>
 
 <h3>In Specialized Retail</h3>
-<p>A coffee producer prints QR codes on their packaging and once scanned, consumers will see the elevation, soil preparation, harvest methodology, and processing details for that particular lot of coffee. With blockchain verification enabled (available as an add-on), each record becomes tamper-proof. The retail partner utilizes the QR code as a premium positioning element.</p>
+<p>A coffee producer prints QR codes on their packaging and once scanned, consumers will see the elevation, soil preparation, harvest methodology, and processing details for that particular lot of coffee. Each record is timestamped and tamper-evident, so the history cannot be quietly changed. The retail partner uses the QR code as a premium positioning element.</p>
 
 <h3>Direct-to-Consumer</h3>
 <p>An organic vegetable farm prints QR codes on the containers sent out with their CSA program. Once the subscriber scans the QR code, they can see exactly what occurred in the field that week: which events occurred, what conditions the vegetables were subjected to, and photos of the harvest. In doing so, the farm transforms a transaction into a relationship.</p>
@@ -372,7 +372,7 @@ export const posts: BlogPost[] = [
 <p>If you have farm workers or family members assisting you, ask them to document their own activities. This will spread out the responsibility and create a more complete set of records.</p>
 
 <h3>Don't Backdate</h3>
-<p>Record your events as they occur in real time. This will ensure that your documents are correct and have a blockchain timestamp that verifies when they were recorded. When you backdate your entries, it can cause people to question their accuracy.</p>
+<p>Record your events as they occur in real time. This will ensure that your documents are correct and carry an accurate timestamp showing when they were recorded. When you backdate your entries, it can cause people to question their accuracy.</p>
 
 <h2>How Your Documenting Leads to Transparency</h2>
 
@@ -380,7 +380,7 @@ export const posts: BlogPost[] = [
 
 <p>A consumer who scans your QR code will see your documented farming practices, photos, and certifications alongside your farm and product information. When most of the growing process is documented, it tells them, "This farmer has documented almost all of what went on with this crop." That's a strong trust indicator.</p>
 
-<p>And since the entire production record was recorded on the blockchain when you finished producing the product, consumers know your documentation wasn't falsified or changed.</p>
+<p>And since the entire production record is locked and timestamped when you finish producing the product, consumers know your documentation wasn't falsified or changed.</p>
 
 <p>Your documentation isn't paperwork, it's the basis for consumer confidence.</p>
 
