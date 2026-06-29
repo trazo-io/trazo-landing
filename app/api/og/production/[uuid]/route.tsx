@@ -33,7 +33,6 @@ interface ApiResponse {
   // The share image leads with the FACTUAL documented-practices count instead.
   standard_view?: { transparency_details?: { actual_events?: number } };
   timeline?: unknown[];
-  blockchain_verification?: { verified?: boolean };
 }
 
 function clamp(text: string, max: number): string {
@@ -101,7 +100,7 @@ export async function GET(
     return new Response("Compliance violation", { status: 422 });
   }
 
-  // Factual documented-practices count — the share-image highlight. A raw count
+  // Factual documented-practices count, the share-image highlight. A raw count
   // can't be gamed the way a 0-100 score can, so it carries no anti-gaming floor;
   // it's simply hidden when there's nothing documented yet.
   const rawCount =
@@ -113,7 +112,6 @@ export async function GET(
       : null;
 
   const showCount = practicesCount !== null;
-  const blockchainRecorded = Boolean(data.blockchain_verification?.verified);
 
   let robotoBold: ArrayBuffer;
   let robotoRegular: ArrayBuffer;
@@ -143,7 +141,7 @@ export async function GET(
           fontFamily: "Roboto",
         }}
       >
-        {/* Top row: logo + optional blockchain pill */}
+        {/* Top row: logo */}
         <div
           style={{
             display: "flex",
@@ -158,28 +156,10 @@ export async function GET(
             height={64}
             alt=""
           />
-          {blockchainRecorded ? (
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                padding: "10px 22px",
-                borderRadius: 9999,
-                background: COLOR.white,
-                color: COLOR.green600,
-                fontSize: 20,
-                fontWeight: 700,
-                border: `2px solid ${COLOR.green500}`,
-              }}
-            >
-              Blockchain-recorded
-            </div>
-          ) : (
-            <div style={{ display: "flex" }} />
-          )}
+          <div style={{ display: "flex" }} />
         </div>
 
-        {/* Main content: left text block + right score circle */}
+        {/* Main content: left text block + right practices-count circle */}
         <div
           style={{
             display: "flex",
@@ -282,7 +262,7 @@ export async function GET(
             marginTop: 24,
           }}
         >
-          consumer.trazo.io  ·  Agricultural Transparency
+          consumer.trazo.io · Agricultural Transparency
         </div>
       </div>
     ),

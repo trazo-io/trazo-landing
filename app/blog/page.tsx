@@ -1,36 +1,38 @@
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
-import { NewsletterForm } from "@/components/newsletter-form"
-import { BlogFilter } from "@/components/blog-filter"
-import { posts } from "@/lib/blog-data"
-import type { Metadata } from "next"
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import { NewsletterForm } from "@/components/newsletter-form";
+import { BlogFilter } from "@/components/blog-filter";
+import { posts } from "@/lib/blog-data";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Blog — Agricultural Transparency Insights | Trazo',
-  description: 'Guides, insights, and best practices for agricultural transparency, blockchain verification, carbon calculations, and premium market positioning for specialty crop farms.',
-}
+  title: "Blog: Agricultural Transparency Insights | Trazo",
+  description:
+    "Guides, insights, and best practices for agricultural transparency, organic audit readiness, and buyer trust for specialty crop farms.",
+};
 
 const blogListJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'CollectionPage',
-  name: 'Trazo Blog — Agricultural Transparency Insights',
-  description: 'Guides, insights, and best practices for agricultural transparency and premium market positioning.',
-  url: 'https://www.trazo.io/blog',
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Trazo Blog: Agricultural Transparency Insights",
+  description:
+    "Guides, insights, and best practices for agricultural transparency and premium market positioning.",
+  url: "https://www.trazo.io/blog",
   isPartOf: {
-    '@type': 'WebSite',
-    name: 'Trazo',
-    url: 'https://www.trazo.io',
+    "@type": "WebSite",
+    name: "Trazo",
+    url: "https://www.trazo.io",
   },
   mainEntity: {
-    '@type': 'ItemList',
+    "@type": "ItemList",
     itemListElement: posts.map((post, i) => ({
-      '@type': 'ListItem',
+      "@type": "ListItem",
       position: i + 1,
       url: `https://www.trazo.io/blog/${post.slug}`,
       name: post.title,
     })),
   },
-}
+};
 
 export default function BlogPage() {
   return (
@@ -51,7 +53,8 @@ export default function BlogPage() {
               Agricultural Transparency Insights
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-              Guides, insights, and best practices for agricultural transparency and premium market positioning.
+              Guides, insights, and best practices for agricultural transparency
+              and premium market positioning.
             </p>
           </div>
         </section>
@@ -65,7 +68,8 @@ export default function BlogPage() {
               Stay Up to Date
             </h2>
             <p className="mx-auto mt-2 max-w-md text-muted-foreground">
-              Get the latest insights on agricultural transparency delivered to your inbox monthly.
+              Get the latest insights on agricultural transparency delivered to
+              your inbox monthly.
             </p>
             <NewsletterForm variant="block" />
           </div>
@@ -73,5 +77,5 @@ export default function BlogPage() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }

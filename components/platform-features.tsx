@@ -1,28 +1,34 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import { FileText, ShieldCheck, QrCode, BarChart3, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import { useState } from "react";
+import Image from "next/image";
+import {
+  FileText,
+  ShieldCheck,
+  QrCode,
+  BarChart3,
+  ArrowRight,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const features = [
   {
     id: "document",
     tag: "DOCUMENT",
     icon: FileText,
-    title: "Prove what you grow — in under 2 minutes",
+    title: "Prove what you grow, in under 2 minutes",
     description:
-      "Smart forms, voice recording, and photo capture let you document farming activities quickly (even in poor connectivity). Seven event types cover everything from planting to harvest. Designed to meet NOP recordkeeping requirements (7 CFR 205.103) \u2014 the same events that build consumer trust also generate audit-ready documentation.",
+      "Smart forms, voice recording, and photo capture let you document farming activities quickly (even in poor connectivity). Seven event types cover everything from planting to harvest. Designed to meet NOP recordkeeping requirements (7 CFR 205.103). The same events that build consumer trust also generate audit-ready documentation.",
     image: "/images/feature-document.avif",
   },
   {
     id: "verify",
     tag: "VERIFY",
     icon: ShieldCheck,
-    title: "Records with tamper-proof data integrity",
+    title: "Certifications verified against the USDA database",
     description:
-      "When you complete a production, Trazo creates a cryptographic fingerprint of your entire record and writes it to the Polygon blockchain. No one can change this after that point — proving your documentation was not altered after submission. Available as an optional add-on ($15/month). USDA Organic certifications are cross-referenced against the USDA Organic Integrity Database (36,000+ certified operations) — consumers see a \u2018Verified\u2019 badge for farms found in the government database.",
+      "When you complete a production, your record is locked as a permanent, tamper-evident document. USDA Organic certifications are cross-referenced against the USDA Organic Integrity Database (36,000+ certified operations). Consumers see a \u2018Verified\u2019 badge for farms found in the government database. Other certifications display as ‘Self-Reported.’",
     image: "/images/feature-verify.avif",
   },
   {
@@ -43,14 +49,17 @@ const features = [
       "You will be able to track qr code scans, consumer engagement and reviews through our single dashboard. You will know which farming practices resonate with your buyers and you will be able to refine your transparency story over time.",
     image: "/images/feature-grow.avif",
   },
-]
+];
 
 export function PlatformFeatures() {
-  const [activeIndex, setActiveIndex] = useState(0)
-  const activeFeature = features[activeIndex]
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeFeature = features[activeIndex];
 
   return (
-    <section id="features" className="relative border-y border-border bg-secondary/30 py-16 lg:py-24">
+    <section
+      id="features"
+      className="relative border-y border-border bg-secondary/30 py-16 lg:py-24"
+    >
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Header */}
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
@@ -63,7 +72,10 @@ export function PlatformFeatures() {
               <br className="hidden lg:block" /> consumer trust
             </h2>
           </div>
-          <Button className="gap-2 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+          <Button
+            className="gap-2 bg-primary text-primary-foreground hover:bg-primary/90"
+            asChild
+          >
             <a href="https://app.trazo.io/auth/signup">
               Start Free Trial
               <ArrowRight size={16} />
@@ -74,7 +86,10 @@ export function PlatformFeatures() {
         {/* Features Grid */}
         <div className="mt-14 grid gap-6 lg:grid-cols-5 lg:gap-8">
           {/* Tabs */}
-          <div className="-mx-6 flex flex-row gap-2 overflow-x-auto px-6 pb-2 lg:mx-0 lg:col-span-2 lg:flex-col lg:gap-2 lg:overflow-x-visible lg:px-0 lg:pb-0" role="tablist">
+          <div
+            className="-mx-6 flex flex-row gap-2 overflow-x-auto px-6 pb-2 lg:mx-0 lg:col-span-2 lg:flex-col lg:gap-2 lg:overflow-x-visible lg:px-0 lg:pb-0"
+            role="tablist"
+          >
             {features.map((feature, i) => (
               <button
                 key={feature.id}
@@ -96,10 +111,14 @@ export function PlatformFeatures() {
                   )}
                 />
                 <div>
-                  <p className={cn(
-                    "text-xs font-bold uppercase tracking-wider",
-                    i === activeIndex ? "text-primary" : "text-muted-foreground/70"
-                  )}>
+                  <p
+                    className={cn(
+                      "text-xs font-bold uppercase tracking-wider",
+                      i === activeIndex
+                        ? "text-primary"
+                        : "text-muted-foreground/70"
+                    )}
+                  >
                     {feature.tag}
                   </p>
                   <p className="mt-0.5 text-sm font-medium">{feature.title}</p>
@@ -134,5 +153,5 @@ export function PlatformFeatures() {
         </div>
       </div>
     </section>
-  )
+  );
 }

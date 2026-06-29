@@ -41,7 +41,7 @@ export function VideoSection() {
               See Trazo in 60 seconds
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              From QR scan to documented practices — watch how farmers log
+              From QR scan to documented practices. Watch how farmers log
               their growing story and how buyers explore the proof.
             </p>
           </div>
@@ -105,7 +105,7 @@ export function VideoSection() {
 
             {/* Caption */}
             <p className="mt-4 text-center text-sm text-muted-foreground">
-              From consumer QR scan to farmer dashboard — the complete Trazo
+              From consumer QR scan to farmer dashboard, the complete Trazo
               experience
             </p>
           </div>

@@ -1,37 +1,32 @@
-"use client"
+"use client";
 
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/components/ui/accordion";
 
 const faqs = [
   {
     question: "How does Trazo help me compete for premium buyers?",
     answer:
-      "Trazo creates transparency pages for your products that consumers access via QR codes. When buyers can see exactly how their food was grown — with documented practices, photos, and tamper-proof records — they gain the confidence to choose your product over undocumented alternatives. Specialty retailers increasingly require this kind of documentation — Trazo makes it easy to provide.",
+      "Trazo creates transparency pages for your products that consumers access via QR codes. When buyers can see exactly how their food was grown, with documented practices, photos, and tamper-proof records, they gain the confidence to choose your product over undocumented alternatives. Specialty retailers increasingly require this kind of documentation, so Trazo makes it easy to provide.",
   },
   {
     question: "What if I'm not tech-savvy?",
     answer:
-      "Trazo runs in any web browser on your phone or computer — no downloads needed. The interface uses simple forms, voice recording, and photo uploads. The interface is designed for field conditions — most users are comfortable from day one.",
+      "Trazo runs in any web browser on your phone or computer. No downloads needed. The interface uses simple forms, voice recording, and photo uploads. The interface is designed for field conditions, so most users are comfortable from day one.",
   },
   {
     question: "Will consumers actually scan my QR codes?",
     answer:
-      "Transparency pages are designed for mobile-first quick loading. Consumers actively seek transparency — Trazo makes it easy to provide and easy to verify. Our analytics dashboard tracks every scan so you can see the engagement.",
-  },
-  {
-    question: "How does blockchain verification work?",
-    answer:
-      "When you finish a production (after harvest), Trazo generates a cryptographic fingerprint of the entire production record and writes it to the Polygon blockchain. All events become permanently locked — nobody can alter them after that point. Blockchain verification is available as an add-on ($15/month) for any plan. You don't manage it — it works automatically.",
+      "Transparency pages are designed for mobile-first quick loading. Consumers actively seek transparency, and Trazo makes it easy to provide and easy to verify. Our analytics dashboard tracks every scan so you can see the engagement.",
   },
   {
     question: "How accurate are the carbon calculations?",
     answer:
-      "Trazo calculates Direct Operational Emissions — the emissions farmers actually control: fuel combustion, fertilizer application, and equipment operation. This is not a full lifecycle assessment. All emission factors are sourced from EPA (40 CFR Part 98) and USDA government-published data.",
+      "Trazo calculates Direct Operational Emissions, the emissions farmers actually control: fuel combustion, fertilizer application, and equipment operation. This is not a full lifecycle assessment. All emission factors are sourced from EPA (40 CFR Part 98) and USDA government-published data.",
   },
   {
     question: "Does Trazo verify organic certifications?",
@@ -41,33 +36,36 @@ const faqs = [
   {
     question: "Can Trazo help with organic record-keeping?",
     answer:
-      "Trazo tracks the inputs and practices organic farms already document \u2014 OMRI-listed materials, soil amendments, composting events, cover crops, equipment cleaning, and seed sourcing. Every event is timestamped with optional photo evidence. You can export organic-filtered audit reports (PDF or CSV) at any time. While Trazo does not replace your certifier\u2019s paperwork, it provides a structured, digital record of your organic practices that supports the documentation requirements of NOP 7 CFR 205.103.",
+      "Trazo tracks the inputs and practices organic farms already document: OMRI-listed materials, soil amendments, composting events, cover crops, equipment cleaning, and seed sourcing. Every event is timestamped with optional photo evidence. You can export organic-filtered audit reports (PDF or CSV) at any time. While Trazo does not replace your certifier\u2019s paperwork, it provides a structured, digital record of your organic practices that supports the documentation requirements of NOP 7 CFR 205.103.",
   },
   {
     question: "Does Trazo work for farms transitioning to organic?",
     answer:
-      "Yes. Chemical events include a \u2018Transitional\u2019 status for farms in the certification process. You can set your production method to Organic from day one and begin building your documentation record. Trazo\u2019s transparency score rewards thorough documentation regardless of certification status \u2014 so transitional farms benefit from the same system as fully certified operations.",
+      "Yes. Chemical events include a \u2018Transitional\u2019 status for farms in the certification process. You can set your production method to Organic from day one and begin building your documentation record. Trazo\u2019s system rewards thorough documentation regardless of certification status, so transitional farms benefit from the same system as fully certified operations.",
   },
   {
     question: "Can I cancel anytime?",
     answer:
       "Yes. No long-term contracts. Cancel anytime from your dashboard. You'll retain access until the end of your billing period. Your data is always yours.",
   },
-]
+];
 
 const faqJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
   mainEntity: faqs.map((faq) => ({
-    '@type': 'Question',
+    "@type": "Question",
     name: faq.question,
-    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
   })),
-}
+};
 
 export function FaqSection() {
   return (
-    <section id="faq" className="relative border-t border-border bg-secondary/30 py-16 lg:py-24">
+    <section
+      id="faq"
+      className="relative border-t border-border bg-secondary/30 py-16 lg:py-24"
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -100,5 +98,5 @@ export function FaqSection() {
         </Accordion>
       </div>
     </section>
-  )
+  );
 }

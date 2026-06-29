@@ -1,37 +1,77 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { ArrowRight, Check, Minus, HelpCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
+import { useState } from "react";
+import Link from "next/link";
+import { ArrowRight, Check, Minus, HelpCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/components/ui/accordion";
 
 const pricingJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  name: 'Trazo Pricing — Agricultural Transparency Platform',
-  description: 'Simple, transparent pricing for specialty crop farms. Free tier available. Plans from $69/month with 14-day free trial.',
-  url: 'https://www.trazo.io/pricing',
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Trazo Pricing | Agricultural Transparency Platform",
+  description:
+    "Simple, transparent pricing for specialty crop farms. Free tier available. Plans from $69/month with 14-day free trial.",
+  url: "https://www.trazo.io/pricing",
   mainEntity: {
-    '@type': 'SoftwareApplication',
-    name: 'Trazo',
-    applicationCategory: 'BusinessApplication',
+    "@type": "SoftwareApplication",
+    name: "Trazo",
+    applicationCategory: "BusinessApplication",
     offers: [
-      { '@type': 'Offer', name: 'Starter', price: '0', priceCurrency: 'USD', description: 'Free forever — 1 farm, 1 parcel, 1 production, 2 GB storage' },
-      { '@type': 'Offer', name: 'Basic', price: '69', priceCurrency: 'USD', billingDuration: 'P1M', description: '1 farm, 2 parcels, 3 productions/year, 10 GB, voice recording' },
-      { '@type': 'Offer', name: 'Standard', price: '119', priceCurrency: 'USD', billingDuration: 'P1M', description: '2 farms, 2 parcels, 4 productions/year, 25 GB, 24hr support' },
-      { '@type': 'Offer', name: 'Corporate', price: '149', priceCurrency: 'USD', billingDuration: 'P1M', description: '4 farms, 4 parcels, 6 productions/year, 50 GB, priority support' },
-      { '@type': 'Offer', name: 'Enterprise', price: '299', priceCurrency: 'USD', billingDuration: 'P1M', description: 'Unlimited farms, parcels, productions, storage, dedicated support' },
+      {
+        "@type": "Offer",
+        name: "Starter",
+        price: "0",
+        priceCurrency: "USD",
+        description:
+          "Free forever: 1 farm, 1 parcel, 1 production, 2 GB storage",
+      },
+      {
+        "@type": "Offer",
+        name: "Basic",
+        price: "69",
+        priceCurrency: "USD",
+        billingDuration: "P1M",
+        description:
+          "1 farm, 2 parcels, 3 productions/year, 10 GB, voice recording",
+      },
+      {
+        "@type": "Offer",
+        name: "Standard",
+        price: "119",
+        priceCurrency: "USD",
+        billingDuration: "P1M",
+        description:
+          "2 farms, 2 parcels, 4 productions/year, 25 GB, 24hr support",
+      },
+      {
+        "@type": "Offer",
+        name: "Corporate",
+        price: "149",
+        priceCurrency: "USD",
+        billingDuration: "P1M",
+        description:
+          "4 farms, 4 parcels, 6 productions/year, 50 GB, priority support",
+      },
+      {
+        "@type": "Offer",
+        name: "Enterprise",
+        price: "299",
+        priceCurrency: "USD",
+        billingDuration: "P1M",
+        description:
+          "Unlimited farms, parcels, productions, storage, dedicated support",
+      },
     ],
   },
-}
+};
 
 const plans = [
   {
@@ -131,34 +171,62 @@ const plans = [
       "Unlimited farms, parcels & productions",
     ],
   },
-]
+];
 
 const comparisonFeatures = [
   { label: "Monthly price", values: ["Free", "$69", "$119", "$149", "$299"] },
-  { label: "Annual price", values: ["\u2014", "$690/yr", "$1,190/yr", "$1,490/yr", "$2,990/yr"] },
-  { label: "Farms / Parcels per farm", values: ["1 / 1", "1 / 2", "2 / 2", "4 / 4", "Unlimited"] },
+  {
+    label: "Annual price",
+    values: ["Free", "$690/yr", "$1,190/yr", "$1,490/yr", "$2,990/yr"],
+  },
+  {
+    label: "Farms / Parcels per farm",
+    values: ["1 / 1", "1 / 2", "2 / 2", "4 / 4", "Unlimited"],
+  },
   { label: "Productions / year", values: ["1", "3", "4", "6", "Unlimited"] },
-  { label: "QR scans / month", values: ["1,000", "5,000", "10,000", "20,000", "Unlimited"] },
-  { label: "Storage", values: ["2 GB", "10 GB", "25 GB", "50 GB", "Unlimited"] },
+  {
+    label: "QR scans / month",
+    values: ["1,000", "5,000", "10,000", "20,000", "Unlimited"],
+  },
+  {
+    label: "Storage",
+    values: ["2 GB", "10 GB", "25 GB", "50 GB", "Unlimited"],
+  },
   { label: "AI event templates", values: [true, true, true, true, true] },
   { label: "Transparency score", values: [true, true, true, true, true] },
   { label: "QR code generation", values: [true, true, true, true, true] },
-  { label: "Carbon calculations (EPA/USDA)", values: [true, true, true, true, true] },
-  { label: "Certification verification (USDA Organic)", values: [true, true, true, true, true] },
+  {
+    label: "Carbon calculations (EPA/USDA)",
+    values: [true, true, true, true, true],
+  },
+  {
+    label: "Certification verification (USDA Organic)",
+    values: [true, true, true, true, true],
+  },
   { label: "Photo documentation", values: [true, true, true, true, true] },
   { label: "Voice recording", values: [false, true, true, true, true] },
-  { label: "Blockchain verification", values: ["Add-on", "Add-on", "Add-on", "Add-on", "Add-on"] },
-  { label: "Dedicated account manager", values: [false, false, false, false, true] },
-  { label: "Support", values: ["\u2014", "48hr Email", "24hr Email", "12hr Priority", "4hr Dedicated"] },
-]
+  {
+    label: "Dedicated account manager",
+    values: [false, false, false, false, true],
+  },
+  {
+    label: "Support",
+    values: [
+      "N/A",
+      "48hr Email",
+      "24hr Email",
+      "12hr Priority",
+      "4hr Dedicated",
+    ],
+  },
+];
 
 const addons = [
   { name: "Extra Farm", price: "$30", period: "/month" },
   { name: "Extra Parcel", price: "$25", period: "/month" },
   { name: "Extra Production", price: "$20", period: "/month" },
   { name: "Extra Storage", price: "$10", period: "/year" },
-  { name: "Blockchain Add-on", price: "$15", period: "/month" },
-]
+];
 
 const pricingFaqs = [
   {
@@ -175,7 +243,7 @@ const pricingFaqs = [
   },
   {
     q: "What if I exceed my QR scan limit?",
-    a: "Your QR codes will continue to work \u2014 consumers will always be able to view your transparency pages. Analytics tracking pauses until your scan count resets at the start of your next billing period.",
+    a: "Your QR codes will continue to work. Consumers will always be able to view your transparency pages. Analytics tracking pauses until your scan count resets at the start of your next billing period.",
   },
   {
     q: "Discounts for cooperatives or large groups?",
@@ -191,12 +259,12 @@ const pricingFaqs = [
   },
   {
     q: "Is my data secure?",
-    a: "Yes. Trazo uses industry-standard encryption, secure authentication with JWT tokens, and role-based access controls. Your farm data is stored securely on AWS infrastructure. Blockchain records are immutable and publicly verifiable on Polygon.",
+    a: "Yes. Trazo uses industry-standard encryption, secure authentication with JWT tokens, and role-based access controls. Your farm data is stored securely on AWS infrastructure.",
   },
-]
+];
 
 export default function PricingPage() {
-  const [isYearly, setIsYearly] = useState(false)
+  const [isYearly, setIsYearly] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
@@ -277,7 +345,9 @@ export default function PricingPage() {
                   </div>
                 )}
                 <div>
-                  <h3 className="text-lg font-bold text-foreground">{plan.name}</h3>
+                  <h3 className="text-lg font-bold text-foreground">
+                    {plan.name}
+                  </h3>
                   <p className="mt-1 text-sm text-muted-foreground">
                     {plan.description}
                   </p>
@@ -289,14 +359,20 @@ export default function PricingPage() {
                       <span className="text-4xl font-bold text-foreground">
                         {plan.priceLabel}
                       </span>
-                      <p className="mt-1 text-sm text-muted-foreground">{plan.priceNote}</p>
+                      <p className="mt-1 text-sm text-muted-foreground">
+                        {plan.priceNote}
+                      </p>
                     </div>
                   ) : (
                     <div>
                       <span className="text-4xl font-bold text-foreground">
-                        ${isYearly ? Math.round(plan.yearly / 12) : plan.monthly}
+                        $
+                        {isYearly ? Math.round(plan.yearly / 12) : plan.monthly}
                       </span>
-                      <span className="text-sm text-muted-foreground"> /mo</span>
+                      <span className="text-sm text-muted-foreground">
+                        {" "}
+                        /mo
+                      </span>
                       {isYearly && (
                         <p className="mt-1 text-sm text-muted-foreground">
                           ${plan.yearly}/yr billed annually
@@ -311,8 +387,14 @@ export default function PricingPage() {
                 </p>
                 <ul className="mt-4 flex flex-1 flex-col gap-3">
                   {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2 text-sm text-foreground">
-                      <Check size={16} className="mt-0.5 shrink-0 text-primary" />
+                    <li
+                      key={feature}
+                      className="flex items-start gap-2 text-sm text-foreground"
+                    >
+                      <Check
+                        size={16}
+                        className="mt-0.5 shrink-0 text-primary"
+                      />
                       {feature}
                     </li>
                   ))}
@@ -323,8 +405,8 @@ export default function PricingPage() {
                     plan.highlight
                       ? "bg-primary text-primary-foreground hover:bg-primary/90"
                       : plan.cta === "Contact Sales"
-                        ? "border-border bg-card text-foreground hover:bg-secondary"
-                        : "border-primary/30 bg-primary/5 text-primary hover:bg-primary/10"
+                      ? "border-border bg-card text-foreground hover:bg-secondary"
+                      : "border-primary/30 bg-primary/5 text-primary hover:bg-primary/10"
                   }`}
                   variant={plan.highlight ? "default" : "outline"}
                   asChild
@@ -348,9 +430,20 @@ export default function PricingPage() {
             <table className="w-full min-w-[800px] text-sm">
               <thead>
                 <tr className="border-b border-border bg-secondary/50">
-                  <th className="px-6 py-4 text-left font-semibold text-foreground">Feature</th>
-                  {["Starter", "Basic", "Standard", "Corporate", "Enterprise"].map((h) => (
-                    <th key={h} className="px-4 py-4 text-center font-semibold text-foreground">
+                  <th className="px-6 py-4 text-left font-semibold text-foreground">
+                    Feature
+                  </th>
+                  {[
+                    "Starter",
+                    "Basic",
+                    "Standard",
+                    "Corporate",
+                    "Enterprise",
+                  ].map((h) => (
+                    <th
+                      key={h}
+                      className="px-4 py-4 text-center font-semibold text-foreground"
+                    >
                       {h}
                     </th>
                   ))}
@@ -360,11 +453,18 @@ export default function PricingPage() {
                 {comparisonFeatures.map((row, i) => (
                   <tr
                     key={row.label}
-                    className={`border-b border-border/60 ${i % 2 === 0 ? "bg-card" : "bg-secondary/20"}`}
+                    className={`border-b border-border/60 ${
+                      i % 2 === 0 ? "bg-card" : "bg-secondary/20"
+                    }`}
                   >
-                    <td className="px-6 py-3.5 font-medium text-foreground">{row.label}</td>
+                    <td className="px-6 py-3.5 font-medium text-foreground">
+                      {row.label}
+                    </td>
                     {row.values.map((val, j) => (
-                      <td key={j} className="px-4 py-3.5 text-center text-muted-foreground">
+                      <td
+                        key={j}
+                        className="px-4 py-3.5 text-center text-muted-foreground"
+                      >
                         {val === true ? (
                           <Check size={16} className="mx-auto text-primary" />
                         ) : val === false ? (
@@ -395,9 +495,13 @@ export default function PricingPage() {
                 key={addon.name}
                 className="rounded-xl border border-border bg-card p-6 text-center transition-all hover:border-primary/30 hover:shadow-sm"
               >
-                <p className="text-3xl font-bold text-foreground">{addon.price}</p>
+                <p className="text-3xl font-bold text-foreground">
+                  {addon.price}
+                </p>
                 <p className="text-sm text-muted-foreground">{addon.period}</p>
-                <p className="mt-3 text-sm font-semibold text-foreground">{addon.name}</p>
+                <p className="mt-3 text-sm font-semibold text-foreground">
+                  {addon.name}
+                </p>
               </div>
             ))}
           </div>
@@ -410,7 +514,11 @@ export default function PricingPage() {
           </h2>
           <Accordion type="single" collapsible className="mt-10">
             {pricingFaqs.map((faq, i) => (
-              <AccordionItem key={i} value={`faq-${i}`} className="border-border">
+              <AccordionItem
+                key={i}
+                value={`faq-${i}`}
+                className="border-border"
+              >
                 <AccordionTrigger className="py-5 text-left text-base font-semibold text-foreground hover:text-primary hover:no-underline">
                   {faq.q}
                 </AccordionTrigger>
@@ -425,17 +533,26 @@ export default function PricingPage() {
         {/* Final CTA */}
         <section className="mx-auto mt-24 max-w-7xl px-6">
           <div className="relative overflow-hidden rounded-3xl bg-primary px-8 py-20 text-center">
-            <div className="pointer-events-none absolute -top-20 -left-20 h-64 w-64 rounded-full bg-primary-foreground/5" aria-hidden="true" />
-            <div className="pointer-events-none absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-primary-foreground/5" aria-hidden="true" />
+            <div
+              className="pointer-events-none absolute -top-20 -left-20 h-64 w-64 rounded-full bg-primary-foreground/5"
+              aria-hidden="true"
+            />
+            <div
+              className="pointer-events-none absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-primary-foreground/5"
+              aria-hidden="true"
+            />
             <div className="relative">
               <h2 className="text-balance text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
                 Start proving your practices today
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/80">
-                Join farmers who are building consumer trust through verified transparency. 14-day free trial, no credit card required.
+                Join farmers who are building consumer trust through verified
+                transparency. 14-day free trial, no credit card required.
               </p>
               <p className="mx-auto mt-3 max-w-2xl text-sm text-primary-foreground/60">
-                Early access &mdash; farms that join now get founding member pricing locked in, direct input on the product roadmap, and priority support as we scale.
+                Early access &mdash; farms that join now get founding member
+                pricing locked in, direct input on the product roadmap, and
+                priority support as we scale.
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Button
@@ -465,5 +582,5 @@ export default function PricingPage() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }

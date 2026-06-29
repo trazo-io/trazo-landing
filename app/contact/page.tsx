@@ -23,7 +23,7 @@ const contactFaqs = [
   },
   {
     q: "Who owns my data?",
-    a: "You do, 100%. Trazo is the platform, not the data owner. You control what gets published — nothing goes live until you finish a production. You can access your data anytime.",
+    a: "You do, 100%. Trazo is the platform, not the data owner. You control what gets published. Nothing goes live until you finish a production. You can access your data anytime.",
   },
   {
     q: "How do I get started?",
@@ -35,7 +35,7 @@ const contactFaqs = [
   },
   {
     q: "Where can I find documentation?",
-    a: "Check our blog for guides, or explore the platform — it's designed to be self-explanatory.",
+    a: "Check our blog for guides, or explore the platform. It's designed to be self-explanatory.",
   },
 ]
 

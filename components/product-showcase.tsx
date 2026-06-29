@@ -12,16 +12,16 @@ export function ProductShowcase() {
         <ScrollReveal>
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-              Consumer Experience
+              Buyer-Facing Proof
             </p>
             <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
-              What consumers see when
+              What your buyers see when
               <br className="hidden md:block" /> they scan your QR code
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Every product gets a public transparency profile. Consumers see
-              your documented practices, your farming journey, and third-party
-              certifications.
+              Every product gets a public transparency page. Your buyers, and
+              the shoppers they sell to, see your documented practices, farming
+              journey, and third-party certifications.
             </p>
           </div>
         </ScrollReveal>
@@ -30,12 +30,12 @@ export function ProductShowcase() {
         <ScrollReveal delay={200} duration={800}>
           <div className="relative mt-16">
             <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:items-start md:gap-12 lg:gap-20">
-              {/* Phone 1 - Transparency Score */}
+              {/* Phone 1 - Transparency Profile */}
               <div className="flex flex-col items-center gap-6">
                 <div className="relative h-[520px] w-[260px] overflow-hidden rounded-[2.5rem] border-[8px] border-foreground/10 bg-card shadow-2xl shadow-primary/10 md:h-[560px] md:w-[280px]">
                   <Image
                     src="/images/consumer-transparency.png"
-                    alt="Trazo consumer view showing an Avocado from Solana Verde Organic Ranch — Certified Organic by CCOF, with 24 documented practices"
+                    alt="Trazo consumer view showing an Avocado from Solana Verde Organic Ranch, Certified Organic by CCOF, with 24 documented practices"
                     fill
                     sizes="(min-width: 768px) 280px, 260px"
                     quality={95}
@@ -47,8 +47,8 @@ export function ProductShowcase() {
                     Transparency Profile
                   </h3>
                   <p className="mt-1 max-w-[260px] text-sm text-muted-foreground">
-                    Product ratings, farm certifications, and documented
-                    practices at a glance
+                    Farm certifications, documented practices, and your farming
+                    story at a glance
                   </p>
                 </div>
               </div>
@@ -70,8 +70,8 @@ export function ProductShowcase() {
                     Production Journey
                   </h3>
                   <p className="mt-1 max-w-[260px] text-sm text-muted-foreground">
-                    Detailed farming events, field notes, and tamper-proof data
-                    logs (blockchain optional)
+                    Detailed farming events, field notes, and tamper-evident
+                    data logs
                   </p>
                 </div>
               </div>
@@ -84,8 +84,8 @@ export function ProductShowcase() {
           {[
             {
               icon: Shield,
-              label: "Blockchain Recorded",
-              desc: "Tamper-proof records (add-on)",
+              label: "Verified Certifications",
+              desc: "Checked against USDA database",
             },
             {
               icon: Star,

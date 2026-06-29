@@ -7,7 +7,7 @@ import { posts } from "@/lib/blog-data"
 const homepageSlugs = [
   "consumers-dont-trust-food-labels",
   "perverse-incentive-problem",
-  "blockchain-verification-agriculture",
+  "organic-record-keeping-guide",
   "qr-codes-farm-to-consumer-trust",
 ]
 const displayPosts = homepageSlugs

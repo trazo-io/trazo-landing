@@ -278,8 +278,7 @@ export default function TermsOfServicePage() {
                 mismatches are advisory and may include false positives or
                 false negatives. The Compliance Snapshot, drift findings, and
                 attestation rows in the PDF reflect the data you have entered
-                and the automated checks the Platform applied to that data —
-                nothing more.
+                and the automated checks the Platform applied to that data, nothing more.
               </p>
               <p className="mt-3 leading-[1.8]">
                 You are solely responsible for the accuracy, completeness, and

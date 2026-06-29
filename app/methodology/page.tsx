@@ -1,13 +1,13 @@
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
-import type { Metadata } from "next"
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
     "Transparency Scoring Methodology | Trazo - Agricultural Transparency Platform",
   description:
-    "Open methodology behind Trazo's agricultural transparency score (0-100). EPA/USDA-sourced emission factors, anti-gaming protections, and full calculation details. Published under CC BY 4.0.",
-}
+    "Open methodology behind Trazo's producer transparency scoring and direct operational emission calculations. EPA/USDA-sourced factors, anti-gaming protections, and full calculation details. Published under CC BY 4.0.",
+};
 
 export default function MethodologyPage() {
   return (
@@ -23,8 +23,9 @@ export default function MethodologyPage() {
               Transparency Scoring Methodology
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
-              How Trazo calculates transparency scores and carbon emissions —
-              published openly for scrutiny and reproducibility.
+              How Trazo calculates producer transparency scores and direct
+              operational emissions, published openly for scrutiny and
+              reproducibility.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
               Version 1.2 &middot; April 2026 &middot; License: CC BY 4.0
@@ -36,24 +37,23 @@ export default function MethodologyPage() {
             <section className="rounded-xl border border-border bg-secondary/30 p-6">
               <h3 className="text-xl font-bold text-foreground">Abstract</h3>
               <p className="mt-3 leading-[1.8]">
-                This document describes the methodology behind{" "}
-                {"Trazo's"} agricultural transparency scoring system, a
-                consumer-facing metric (0–100) that measures how completely a
-                farmer has documented their farming practices for a given
-                production cycle. Unlike carbon-first approaches, which
-                inadvertently penalize comprehensive documentation,{" "}
-                {"Trazo's"} transparency-first model rewards farmers for
-                logging more events. Carbon data is calculated simultaneously
-                using government-sourced emission factors and remains available
-                for B2B sustainability reporting. Scores are calculated from
-                farmer-reported documentation and have not been independently
-                audited.
+                This document describes the methodology behind {"Trazo's"}{" "}
+                agricultural transparency scoring system, a consumer-facing
+                metric (0–100) that measures how completely a farmer has
+                documented their farming practices for a given production cycle.
+                Unlike carbon-first approaches, which inadvertently penalize
+                comprehensive documentation, {"Trazo's"} transparency-first
+                model rewards farmers for logging more events. Carbon data is
+                calculated simultaneously using government-sourced emission
+                factors and remains available for B2B sustainability reporting.
+                Scores are calculated from farmer-reported documentation and
+                have not been independently audited.
               </p>
               <p className="mt-3 leading-[1.8]">
-                This methodology is published to invite scrutiny,
-                encourage reproducibility, and advance the broader conversation
-                around agricultural transparency standards. It was developed by
-                Trazo and has not yet undergone external peer review.
+                This methodology is published to invite scrutiny, encourage
+                reproducibility, and advance the broader conversation around
+                agricultural transparency standards. It was developed by Trazo
+                and has not yet undergone external peer review.
               </p>
             </section>
 
@@ -63,9 +63,9 @@ export default function MethodologyPage() {
                 1. The Problem: Why Carbon-First Fails
               </h3>
               <p className="mt-3 leading-[1.8]">
-                Traditional agricultural carbon platforms calculate a{" "}
-                {"farm's"} environmental impact based on logged activities. This
-                creates a destructive paradox:
+                Traditional agricultural carbon platforms calculate a {"farm's"}{" "}
+                environmental impact based on logged activities. This creates a
+                destructive paradox:
               </p>
               <div className="mt-4 overflow-x-auto">
                 <table className="w-full text-sm">
@@ -127,8 +127,7 @@ export default function MethodologyPage() {
                 </li>
                 <li>
                   <strong>91% of consumers</strong> are actively worried about
-                  greenwashing (WhatTheyThink, 2025. Global consumer
-                  survey)
+                  greenwashing (WhatTheyThink, 2025. Global consumer survey)
                 </li>
               </ul>
               <p className="mt-3 leading-[1.8]">
@@ -138,7 +137,7 @@ export default function MethodologyPage() {
                   trust
                 </strong>
                 . The transparency score (0–100) is the farmer-facing
-                completeness metric that drives this — it lives on the producer
+                completeness metric that drives this. It lives on the producer
                 dashboard. Consumers don&apos;t see a self-assigned score; they
                 see the documented practices, photos, and third-party
                 certifications the score is built from. Carbon data is
@@ -197,18 +196,14 @@ export default function MethodologyPage() {
                       </td>
                     </tr>
                     <tr className="border-b border-border/50">
-                      <td className="py-3 pr-4 font-medium">
-                        Soil Management
-                      </td>
+                      <td className="py-3 pr-4 font-medium">Soil Management</td>
                       <td className="py-3 pr-4">18%</td>
                       <td className="py-3">
                         Soil testing, cover crops, composting, pH adjustment
                       </td>
                     </tr>
                     <tr className="border-b border-border/50">
-                      <td className="py-3 pr-4 font-medium">
-                        Pest Management
-                      </td>
+                      <td className="py-3 pr-4 font-medium">Pest Management</td>
                       <td className="py-3 pr-4">12%</td>
                       <td className="py-3">
                         Scouting, beneficial insects, trap monitoring, IPM
@@ -344,9 +339,9 @@ export default function MethodologyPage() {
                   (green badge) or &quot;Self-Reported&quot; (gray badge).
                 </li>
                 <li>
-                  <strong>Regional irrigation defaults:</strong> Irrigation depth
-                  defaults are adjusted by state (e.g., 2.5&quot; for Arizona
-                  vs. 1.0&quot; for humid eastern states) to prevent
+                  <strong>Regional irrigation defaults:</strong> Irrigation
+                  depth defaults are adjusted by state (e.g., 2.5&quot; for
+                  Arizona vs. 1.0&quot; for humid eastern states) to prevent
                   underestimation in arid regions.
                 </li>
               </ul>
@@ -418,12 +413,12 @@ export default function MethodologyPage() {
                 5. Carbon Calculation Methodology
               </h3>
               <p className="mt-3 leading-[1.8]">
-                Trazo calculates{" "}
-                <strong>Direct Operational Emissions</strong>, meaning emissions from
-                activities that farmers directly control during the production
-                cycle. This is not a full Life Cycle Assessment (LCA). It covers
-                only emissions under direct farmer control and excludes supply
-                chain, transportation, retail, and end-of-life emissions.
+                Trazo calculates <strong>Direct Operational Emissions</strong>,
+                meaning emissions from activities that farmers directly control
+                during the production cycle. This is not a full Life Cycle
+                Assessment (LCA). It covers only emissions under direct farmer
+                control and excludes supply chain, transportation, retail, and
+                end-of-life emissions.
               </p>
 
               <div className="mt-4 overflow-x-auto">
@@ -467,17 +462,11 @@ export default function MethodologyPage() {
                       <td className="py-2 pr-4">
                         Equipment operation (electricity)
                       </td>
-                      <td className="py-2">
-                        Distribution and retail
-                      </td>
+                      <td className="py-2">Distribution and retail</td>
                     </tr>
                     <tr>
-                      <td className="py-2 pr-4">
-                        Irrigation pumping energy
-                      </td>
-                      <td className="py-2">
-                        Consumer transport, end-of-life
-                      </td>
+                      <td className="py-2 pr-4">Irrigation pumping energy</td>
+                      <td className="py-2">Consumer transport, end-of-life</td>
                     </tr>
                   </tbody>
                 </table>
@@ -519,20 +508,23 @@ export default function MethodologyPage() {
               </h4>
               <p className="mt-3 leading-[1.8]">
                 USDA per-hectare fuel factors (Section 6) assume mechanical
-                equipment. When a farmer documents a manual method — for example,
-                &quot;Hand thinning with pruning shears&quot; — applying a
-                mechanical fuel average would overstate emissions by 10–100x.
+                equipment. When a farmer documents a manual method (for example, &quot;Hand thinning with pruning shears&quot;), applying a mechanical fuel average would overstate emissions by
+                10–100x.
               </p>
               <p className="mt-3 leading-[1.8]">
                 Trazo detects manual operations from the farmer{"'"}s free-text
-                method field and routes to a <strong>manual labor estimate
-                (0.1 kg CO&#8322;e per acre)</strong>, representing hand-tool
-                wear and worker logistics. Mechanical keywords (tractor,
-                harvester, sprayer) take precedence on ambiguous descriptions.
+                method field and routes to a{" "}
+                <strong>
+                  manual labor estimate (0.1 kg CO&#8322;e per acre)
+                </strong>
+                , representing hand-tool wear and worker logistics. Mechanical
+                keywords (tractor, harvester, sprayer) take precedence on
+                ambiguous descriptions.
               </p>
               <div className="mt-4 rounded-lg border border-border bg-secondary/30 p-4">
                 <p className="font-semibold text-foreground">
-                  Example: Hand Thinning (20 ha orange orchard, 12 workers, 4 days)
+                  Example: Hand Thinning (20 ha orange orchard, 12 workers, 4
+                  days)
                 </p>
                 <div className="mt-3 overflow-x-auto">
                   <table className="w-full text-sm">
@@ -551,9 +543,7 @@ export default function MethodologyPage() {
                     </thead>
                     <tbody>
                       <tr className="border-b border-border/50">
-                        <td className="py-2 pr-4">
-                          USDA mechanical average
-                        </td>
+                        <td className="py-2 pr-4">USDA mechanical average</td>
                         <td className="py-2 pr-4">0.75 gal/ha diesel</td>
                         <td className="py-2">153.2 kg CO&#8322;e</td>
                       </tr>
@@ -578,10 +568,10 @@ export default function MethodologyPage() {
               </div>
               <p className="mt-3 leading-[1.8]">
                 This ensures that farmers who document more receive{" "}
-                <strong>more accurate</strong> carbon values — not blanket
-                averages. When a farmer explicitly reports zero fuel consumption,
-                the calculator respects that value rather than falling back to
-                USDA estimates.
+                <strong>more accurate</strong> carbon values, not blanket
+                averages. When a farmer explicitly reports zero fuel
+                consumption, the calculator respects that value rather than
+                falling back to USDA estimates.
               </p>
             </section>
 
@@ -591,9 +581,9 @@ export default function MethodologyPage() {
                 6. Emission Factor Sources
               </h3>
               <p className="mt-3 leading-[1.8]">
-                All emission factors are sourced from government publications and
-                peer-reviewed literature. Each factor includes a confidence level
-                (0.0–1.0) representing source evidence strength.
+                All emission factors are sourced from government publications
+                and peer-reviewed literature. Each factor includes a confidence
+                level (0.0–1.0) representing source evidence strength.
               </p>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
@@ -689,9 +679,7 @@ export default function MethodologyPage() {
                       <td className="py-2">EPA 40 CFR Part 98</td>
                     </tr>
                     <tr>
-                      <td className="py-2 pr-4">
-                        Potassium (K&#8322;O)
-                      </td>
+                      <td className="py-2 pr-4">Potassium (K&#8322;O)</td>
                       <td className="py-2 pr-4">
                         0.65 kg CO&#8322;/kg K&#8322;O
                       </td>
@@ -774,8 +762,8 @@ export default function MethodologyPage() {
                 Equipment Operations (USDA ARS)
               </h4>
               <p className="mt-2 text-sm text-muted-foreground">
-                Per-hectare fuel factors for mechanical operations. When a farmer
-                documents manual methods, the manual labor factor (0.1 kg
+                Per-hectare fuel factors for mechanical operations. When a
+                farmer documents manual methods, the manual labor factor (0.1 kg
                 CO&#8322;e/acre) is used instead (see Section 5).
               </p>
               <div className="mt-3 overflow-x-auto">
@@ -865,14 +853,13 @@ export default function MethodologyPage() {
                 <li>
                   <strong>Page-1 Compliance Snapshot:</strong> 13+ row table
                   citing 7 CFR § 205.201 (OSP), § 205.201(a)(2) (OSP narrative
-                  vs. registry sync), § 205.103 (records), § 205.103(b)(2)
-                  (SOE traceability), § 205.202 (land requirements),
-                  § 205.203(c) (compost / raw manure), § 205.206 (pest
-                  management), § 205.272 (contamination prevention),
-                  § 205.307 (lot traceability), § 205.400(f)(2) (unapproved-input
-                  drift findings), and § 205.201(a)(3) (OFPP). Each row is
-                  automatically classified PASS / REVIEW / FAIL based on the
-                  data the farmer has entered.
+                  vs. registry sync), § 205.103 (records), § 205.103(b)(2) (SOE
+                  traceability), § 205.202 (land requirements), § 205.203(c)
+                  (compost / raw manure), § 205.206 (pest management), § 205.272
+                  (contamination prevention), § 205.307 (lot traceability), §
+                  205.400(f)(2) (unapproved-input drift findings), and §
+                  205.201(a)(3) (OFPP). Each row is automatically classified
+                  PASS / REVIEW / FAIL based on the data the farmer has entered.
                 </li>
                 <li>
                   <strong>Producer Attestation</strong> (§ 205.401(d)):
@@ -900,13 +887,13 @@ export default function MethodologyPage() {
                 <li>
                   <strong>Compost &amp; Manure Handling:</strong> compost
                   temperature curves vs. § 205.203(c)(2) (windrow or static
-                  pile); raw manure 90-day or 120-day pre-harvest interval
-                  per § 205.203(c)(1).
+                  pile); raw manure 90-day or 120-day pre-harvest interval per §
+                  205.203(c)(1).
                 </li>
                 <li>
                   <strong>Pest IPM Threshold Monitoring:</strong> scouting
-                  observations, action thresholds, and rationale per
-                  § 205.206(a) and (e).
+                  observations, action thresholds, and rationale per §
+                  205.206(a) and (e).
                 </li>
                 <li>
                   <strong>Photo Gallery:</strong> embedded thumbnails in
@@ -916,13 +903,11 @@ export default function MethodologyPage() {
                 </li>
                 <li>
                   <strong>SOE Compliance Status:</strong> attestations per the
-                  2024 Strengthening Organic Enforcement final rule — Fraud
-                  Prevention Plan (§ 205.201(a)(3)), 5-Year Retention
-                  (§ 205.103(b)(4)), Unannounced Inspection Readiness
-                  (§ 205.661), Non-Retail Container Labeling (§ 205.307),
-                  and NOP Import Certificate. Each
-                  attestation reports actual platform state — never a false
-                  claim.
+                  2024 Strengthening Organic Enforcement final rule: Fraud
+                  Prevention Plan (§ 205.201(a)(3)), 5-Year Retention (§
+                  205.103(b)(4)), Unannounced Inspection Readiness (§ 205.661),
+                  Non-Retail Container Labeling (§ 205.307), and NOP Import
+                  Certificate. Each attestation reports actual platform state, never a false claim.
                 </li>
                 <li>
                   <strong>Record Change History:</strong> every edit logged with
@@ -954,8 +939,8 @@ export default function MethodologyPage() {
                 </li>
                 <li>
                   <strong>Unresolved &rarr; flagged:</strong> events that match
-                  no approved input are surfaced as drift findings with a
-                  § 205.400(f)(1) citation. The detector never blocks a save:
+                  no approved input are surfaced as drift findings with a §
+                  205.400(f)(1) citation. The detector never blocks a save:
                   farmers may use unapproved inputs provided they notify their
                   certifier per § 205.400(f)(1).
                 </li>
@@ -987,9 +972,11 @@ export default function MethodologyPage() {
                   receive a non-compliance finding from their certifier.
                 </li>
                 <li>
-                  <strong>It is compliance-assisting, not
-                  compliance-granting.</strong> The intended use is to make
-                  inspector pre-read faster, not to replace inspector judgement.
+                  <strong>
+                    It is compliance-assisting, not compliance-granting.
+                  </strong>{" "}
+                  The intended use is to make inspector pre-read faster, not to
+                  replace inspector judgement.
                 </li>
               </ul>
 
@@ -998,8 +985,7 @@ export default function MethodologyPage() {
               </h4>
               <p className="mt-3 leading-[1.8]">
                 Each photo in the gallery includes a footer listing the original
-                S3 object key, upload timestamp, file size, and uploader account
-                — metadata retained in the producer dashboard for cross-
+                S3 object key, upload timestamp, file size, and uploader account, metadata retained in the producer dashboard for cross-
                 reference. The PDF does not currently include a SHA-256 hash on
                 the file itself; that capability may be added in a future
                 release.
@@ -1018,14 +1004,18 @@ export default function MethodologyPage() {
               <ul className="mt-3 list-disc space-y-3 pl-6 leading-[1.8]">
                 <li>
                   <strong>Self-reported data:</strong> The transparency score is
-                  entirely based on farmer-reported data. There is no independent
-                  verification of event accuracy. The consumer-facing disclaimer
-                  reads: <em>&quot;Based on farmer-reported documentation. Not independently audited.&quot;</em>
+                  entirely based on farmer-reported data. There is no
+                  independent verification of event accuracy. The
+                  consumer-facing disclaimer reads:{" "}
+                  <em>
+                    &quot;Based on farmer-reported documentation. Not
+                    independently audited.&quot;
+                  </em>
                 </li>
                 <li>
                   <strong>Documentation completeness, not quality:</strong> The
-                  score measures how many events were documented, not whether the
-                  documented practices are good or sustainable.
+                  score measures how many events were documented, not whether
+                  the documented practices are good or sustainable.
                 </li>
                 <li>
                   <strong>Photo content verification:</strong> Photo anti-gaming
@@ -1034,10 +1024,10 @@ export default function MethodologyPage() {
                   farm.
                 </li>
                 <li>
-                  <strong>Carbon scope:</strong> Carbon calculations cover direct
-                  operational emissions only (Scope 1 equivalent). This is
-                  deliberately narrower than a full Life Cycle Assessment per ISO
-                  14067.
+                  <strong>Carbon scope:</strong> Carbon calculations cover
+                  direct operational emissions only (Scope 1 equivalent). This
+                  is deliberately narrower than a full Life Cycle Assessment per
+                  ISO 14067.
                 </li>
                 <li>
                   <strong>Emission factor age:</strong> Some factors derive from
@@ -1050,8 +1040,7 @@ export default function MethodologyPage() {
                   2024/825 (effective September 2026), a self-created
                   sustainability score shown to consumers could be classified as
                   a self-created sustainability label. For this reason the
-                  transparency score is not displayed on the consumer QR page —
-                  it is a farmer-dashboard completeness metric only, and
+                  transparency score is not displayed on the consumer QR page. It is a farmer-dashboard completeness metric only, and
                   consumers see the documented practices and third-party
                   certifications directly. Full EU substantiation may still
                   require external methodology audit.
@@ -1081,9 +1070,9 @@ export default function MethodologyPage() {
                       FTC Green Guides (16 CFR Part 260)
                     </a>
                     :
-                  </strong>{" "}No implied
-                  third-party endorsement. All emission factors cite specific
-                  government publications. Blockchain described as
+                  </strong>{" "}
+                  No implied third-party endorsement. All emission factors cite
+                  specific government publications. Blockchain described as
                   &quot;blockchain-recorded&quot; (immutability), never
                   &quot;blockchain-verified.&quot;
                 </li>
@@ -1093,15 +1082,17 @@ export default function MethodologyPage() {
                   Methodology published openly.
                 </li>
                 <li>
-                  <strong>ISO 22005:2007</strong> (Food Traceability): Production
-                  event tracking follows traceability design principles: each
-                  event records who, what, when, where, and how.
+                  <strong>ISO 22005:2007</strong> (Food Traceability):
+                  Production event tracking follows traceability design
+                  principles: each event records who, what, when, where, and
+                  how.
                 </li>
                 <li>
-                  <strong>ISO 14067:2018</strong> (Carbon Footprint of Products):
-                  Carbon calculations reference ISO 14067 principles for emission
-                  factor selection, though {"Trazo's"} direct operational scope
-                  is narrower than a full product carbon footprint.
+                  <strong>ISO 14067:2018</strong> (Carbon Footprint of
+                  Products): Carbon calculations reference ISO 14067 principles
+                  for emission factor selection, though {"Trazo's"} direct
+                  operational scope is narrower than a full product carbon
+                  footprint.
                 </li>
               </ul>
             </section>
@@ -1118,10 +1109,7 @@ export default function MethodologyPage() {
               <ol className="mt-3 list-decimal space-y-2 pl-6 text-sm leading-[1.8]">
                 <li>
                   U.S. Environmental Protection Agency.{" "}
-                  <em>
-                    Greenhouse Gas Emission Factors Hub (40 CFR Part 98)
-                  </em>
-                  .{" "}
+                  <em>Greenhouse Gas Emission Factors Hub (40 CFR Part 98)</em>.{" "}
                   <a
                     href="https://www.epa.gov/climateleadership/ghg-emission-factors-hub"
                     target="_blank"
@@ -1146,8 +1134,8 @@ export default function MethodologyPage() {
                 <li>
                   U.S. Energy Information Administration. (2023).{" "}
                   <em>
-                    How much carbon dioxide is produced per kilowatthour of
-                    U.S. electricity generation?
+                    How much carbon dioxide is produced per kilowatthour of U.S.
+                    electricity generation?
                   </em>{" "}
                   <a
                     href="https://www.eia.gov/tools/faqs/faq.php?id=74&t=11"
@@ -1160,10 +1148,8 @@ export default function MethodologyPage() {
                 </li>
                 <li>
                   IPCC. (2006/2019).{" "}
-                  <em>
-                    Guidelines for National Greenhouse Gas Inventories
-                  </em>
-                  . N&#8322;O emission factors (EF1=1%, GWP=265).{" "}
+                  <em>Guidelines for National Greenhouse Gas Inventories</em>.
+                  N&#8322;O emission factors (EF1=1%, GWP=265).{" "}
                   <a
                     href="https://www.ipcc-nggip.iges.or.jp/"
                     target="_blank"
@@ -1175,10 +1161,7 @@ export default function MethodologyPage() {
                 </li>
                 <li>
                   USDA Natural Resources Conservation Service.{" "}
-                  <em>
-                    National Engineering Handbook, Chapter 8: Irrigation
-                  </em>
-                  .{" "}
+                  <em>National Engineering Handbook, Chapter 8: Irrigation</em>.{" "}
                   <a
                     href="https://www.nrcs.usda.gov/wps/portal/wcc/home/"
                     target="_blank"
@@ -1237,8 +1220,8 @@ export default function MethodologyPage() {
                 className="mt-3 list-decimal space-y-2 pl-6 text-sm leading-[1.8]"
               >
                 <li>
-                  Blue Yonder. (2025).{" "}
-                  <em>Consumer Sustainability Survey</em>. 5,000+ respondents.{" "}
+                  Blue Yonder. (2025). <em>Consumer Sustainability Survey</em>.
+                  5,000+ respondents.{" "}
                   <a
                     href="https://blueyonder.com/blog/2025/2025-survey-results-only-20-of-consumers-believe-brand-sustainability-claims"
                     target="_blank"
@@ -1250,8 +1233,8 @@ export default function MethodologyPage() {
                 </li>
                 <li>
                   WhatTheyThink / Adopter.net. (2025).{" "}
-                  <em>Greenwashing Statistics Report</em>.
-                  Global consumer survey, 91% greenwashing concern.{" "}
+                  <em>Greenwashing Statistics Report</em>. Global consumer
+                  survey, 91% greenwashing concern.{" "}
                   <a
                     href="https://www.adopter.net/knowledge-hub/45-greenwashing-statistics-you-need-to-know-in-2026"
                     target="_blank"
@@ -1311,9 +1294,9 @@ export default function MethodologyPage() {
                 </p>
                 <p className="mt-1 text-sm leading-[1.8]">
                   Emission factors are reviewed annually against updated
-                  EPA/USDA publications. Scoring methodology undergoes review
-                  on a semi-annual basis. All updates are documented in the
-                  version history below.
+                  EPA/USDA publications. Scoring methodology undergoes review on
+                  a semi-annual basis. All updates are documented in the version
+                  history below.
                 </p>
               </div>
               <div className="mt-4 border-t border-border pt-4">
@@ -1360,5 +1343,5 @@ export default function MethodologyPage() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }

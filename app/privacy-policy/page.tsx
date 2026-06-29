@@ -323,7 +323,7 @@ export default function PrivacyPolicyPage() {
                         Blockchain recording of production hashes
                       </td>
                       <td className="py-2">
-                        Consent (Art. 6(1)(a)) — you explicitly activate this
+                        Consent (Art. 6(1)(a)): you explicitly activate this
                         add-on
                       </td>
                     </tr>
@@ -332,7 +332,7 @@ export default function PrivacyPolicyPage() {
                         Voice recording processing via OpenAI
                       </td>
                       <td className="py-2">
-                        Consent (Art. 6(1)(a)) — you initiate each recording
+                        Consent (Art. 6(1)(a)): you initiate each recording
                       </td>
                     </tr>
                     <tr>
@@ -340,7 +340,7 @@ export default function PrivacyPolicyPage() {
                         Analytics cookies (Vercel Analytics)
                       </td>
                       <td className="py-2">
-                        Consent (Art. 6(1)(a)) — via cookie banner
+                        Consent (Art. 6(1)(a)): via cookie banner
                       </td>
                     </tr>
                     <tr>
@@ -348,7 +348,7 @@ export default function PrivacyPolicyPage() {
                         Platform improvement, aggregated research
                       </td>
                       <td className="py-2">
-                        Legitimate interest (Art. 6(1)(f)) — improving service
+                        Legitimate interest (Art. 6(1)(f)): improving service
                         quality
                       </td>
                     </tr>
@@ -357,7 +357,7 @@ export default function PrivacyPolicyPage() {
                         Security monitoring, fraud prevention
                       </td>
                       <td className="py-2">
-                        Legitimate interest (Art. 6(1)(f)) — protecting users
+                        Legitimate interest (Art. 6(1)(f)): protecting users
                         and platform
                       </td>
                     </tr>
@@ -384,7 +384,7 @@ export default function PrivacyPolicyPage() {
                         checks against OMRI / National List on event save)
                       </td>
                       <td className="py-2">
-                        Contract performance (Art. 6(1)(b)) — part of the
+                        Contract performance (Art. 6(1)(b)): part of the
                         organic documentation feature
                       </td>
                     </tr>
@@ -420,33 +420,33 @@ export default function PrivacyPolicyPage() {
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
-                  <strong>USDA APIs</strong> — Crop types, production methods for
+                  <strong>USDA APIs</strong>: Crop types, production methods for
                   emission factor validation and compliance
                 </li>
                 <li>
-                  <strong>Stripe</strong> — Billing information, usage metrics
+                  <strong>Stripe</strong>: Billing information, usage metrics
                   for payment processing and subscription management
                 </li>
                 <li>
-                  <strong>DigitalOcean</strong> — Application hosting and
+                  <strong>DigitalOcean</strong>: Application hosting and
                   managed database services
                 </li>
                 <li>
-                  <strong>AWS</strong> — Media file storage (S3) for images,
+                  <strong>AWS</strong>: Media file storage (S3) for images,
                   documents, and QR codes
                 </li>
                 <li>
-                  <strong>Polygon Network</strong> — Production verification
+                  <strong>Polygon Network</strong>: Production verification
                   hashes blockchain-recorded for tamper-proof data integrity
                   (optional add-on)
                 </li>
                 <li>
-                  <strong>OpenAI</strong> — Voice recordings, text data for
+                  <strong>OpenAI</strong>: Voice recordings, text data for
                   AI-powered data processing (Trazo has opted out of model
                   training; your data is not used to train OpenAI models)
                 </li>
                 <li>
-                  <strong>Vercel Analytics</strong> — Anonymized page view and
+                  <strong>Vercel Analytics</strong>: Anonymized page view and
                   performance data for platform improvement (no PII collected)
                 </li>
               </ul>
@@ -497,7 +497,7 @@ export default function PrivacyPolicyPage() {
               <p className="mt-2 leading-[1.8]">
                 When you export a NOP Audit PDF, the Platform produces a file you
                 control. Trazo does not transmit the PDF to any certifier on your
-                behalf — you choose when, how, and to whom you share it (typically
+                behalf. You choose when, how, and to whom you share it (typically
                 by uploading to your certifier&apos;s portal such as MyCCOF or
                 emailing it directly). Once you share the PDF, the recipient will
                 have access to the data described in Section 2.6, including

@@ -1,7 +1,18 @@
-"use client"
+"use client";
 
-import { Leaf, ShieldCheck, FileSpreadsheet, Clock, Scale, History, ClipboardCheck, Sprout, WrenchIcon, Archive } from "lucide-react"
-import { ScrollReveal } from "@/components/scroll-reveal"
+import {
+  Leaf,
+  ShieldCheck,
+  FileSpreadsheet,
+  Clock,
+  Scale,
+  History,
+  ClipboardCheck,
+  Sprout,
+  WrenchIcon,
+  Archive,
+} from "lucide-react";
+import { ScrollReveal } from "@/components/scroll-reveal";
 
 const organicFeatures = [
   {
@@ -14,13 +25,13 @@ const organicFeatures = [
     icon: ShieldCheck,
     title: "USDA Organic Verification",
     description:
-      "Organic certifications are verified against the USDA Organic Integrity Database (36,000+ operations). Consumers see a green \"Verified\" badge on your QR page. Other certifications display as \"Self-Reported.\"",
+      'Organic certifications are verified against the USDA Organic Integrity Database (36,000+ operations). Consumers see a green "Verified" badge on your QR page. Other certifications display as "Self-Reported."',
   },
   {
     icon: FileSpreadsheet,
     title: "NOP Audit PDF Export",
     description:
-      "Generate a 24-page audit-ready PDF for your certifier. Page-1 Compliance Snapshot (13+ rows PASS / REVIEW / FAIL per CFR rule), 30+ unique 7 CFR 205.x citations, OSP drift detector for inputs (OMRI / WSDA / National List / CDFA OIM cross-check), photo gallery in NOP-priority order, and 5-year change-history attribution. The PDF is reference material for certifier review — not a certification.",
+      "Generate a 24-page audit-ready PDF for your certifier. Page-1 Compliance Snapshot (13+ rows PASS / REVIEW / FAIL per CFR rule), 30+ unique 7 CFR 205.x citations, OSP drift detector for inputs (OMRI / WSDA / National List / CDFA OIM cross-check), photo gallery in NOP-priority order, and 5-year change-history attribution. The PDF is reference material for certifier review, not a certification.",
   },
   {
     icon: Clock,
@@ -38,7 +49,7 @@ const organicFeatures = [
     icon: History,
     title: "3-Year Field History",
     description:
-      "Maintain per-parcel crop rotation and input history across seasons \u2014 the minimum NOP requires for organic certification. Always ready when your certifier asks.",
+      "Maintain per-parcel crop rotation and input history across seasons, the minimum NOP requires for organic certification. Always ready when your certifier asks.",
   },
   {
     icon: ClipboardCheck,
@@ -50,7 +61,7 @@ const organicFeatures = [
     icon: Sprout,
     title: "Seed Source Search Records",
     description:
-      "Document commercial availability searches for organic seed (NOP 5029). Record suppliers contacted, dates, and availability determinations \u2014 all in one place for certifier review.",
+      "Document commercial availability searches for organic seed (NOP 5029). Record suppliers contacted, dates, and availability determinations, all in one place for certifier review.",
   },
   {
     icon: WrenchIcon,
@@ -62,9 +73,9 @@ const organicFeatures = [
     icon: Archive,
     title: "5-Year Record Retention",
     description:
-      "All event data, photos, and reports retained for 5 years \u2014 exceeding the NOP minimum and aligned with USDA audit windows. Your records are always available when you need them.",
+      "All event data, photos, and reports retained for 5 years, exceeding the NOP minimum and aligned with USDA audit windows. Your records are always available when you need them.",
   },
-]
+];
 
 export function OrganicFeatures() {
   return (
@@ -79,8 +90,10 @@ export function OrganicFeatures() {
               Organic audit readiness, built in
             </h2>
             <p className="mt-4 text-base text-muted-foreground">
-              Designed to meet NOP recordkeeping requirements (7 CFR 205.103). The same events
-              that build consumer trust also generate the documentation your certifier needs at inspection.
+              Designed to meet NOP recordkeeping requirements (7 CFR 205.103).
+              The records you already keep become inspection-ready
+              documentation. What used to take a binder week now takes an
+              afternoon.
             </p>
           </div>
         </ScrollReveal>
@@ -112,5 +125,5 @@ export function OrganicFeatures() {
         </ScrollReveal>
       </div>
     </section>
-  )
+  );
 }

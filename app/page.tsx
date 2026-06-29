@@ -2,7 +2,6 @@ import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { ProblemSection } from "@/components/problem-section";
 import { VideoSection } from "@/components/video-section";
-import { FormulaSection } from "@/components/formula-section";
 import { StatsBar } from "@/components/stats-bar";
 import { PlatformFeatures } from "@/components/platform-features";
 import { FieldFeatures } from "@/components/field-features";
@@ -22,7 +21,7 @@ const softwareAppJsonLd = {
   operatingSystem: "Web",
   url: "https://www.trazo.io",
   description:
-    "Agricultural transparency platform that documents farming practices, calculates carbon emissions using EPA/USDA emission factors, and generates QR codes for consumer-facing transparency pages.",
+    "Agricultural transparency platform that documents farming practices, generates audit-ready NOP recordkeeping exports, and creates QR codes for buyer-facing transparency pages.",
   offers: {
     "@type": "AggregateOffer",
     lowPrice: "0",
@@ -32,9 +31,9 @@ const softwareAppJsonLd = {
   },
   featureList: [
     "22 US crop templates with USDA-sourced crop timing data",
-    "Transparency scoring (0-100) based on documented farming events",
-    "Carbon calculations using EPA 40 CFR Part 98 emission factors",
-    "Optional blockchain recording on Polygon network (add-on)",
+    "Documentation completeness tracking based on documented farming events",
+    "Direct operational emission calculations using EPA/USDA emission factors",
+    "NOP audit-ready PDF export (7 CFR 205.103)",
     "QR code generation for consumer-facing transparency pages",
     "Voice recording and photo documentation",
     "Certification verification via USDA Organic Integrity Database",
@@ -60,14 +59,13 @@ export default function Home() {
       <main>
         <Hero />
         <ProblemSection />
-        <VideoSection />
-        <FormulaSection />
-        <HowItWorks />
-        <StatsBar />
-        <PlatformFeatures />
-        <ProductShowcase />
-        <FieldFeatures />
         <OrganicFeatures />
+        <ProductShowcase />
+        <HowItWorks />
+        <VideoSection />
+        <PlatformFeatures />
+        <StatsBar />
+        <FieldFeatures />
         <CtaBanner />
         <BlogSection />
         <FaqSection />
