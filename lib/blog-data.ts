@@ -64,13 +64,13 @@ export const posts: BlogPost[] = [
 <li>Timestamped, tamper-evident records showing the documentation has not been altered.</li>
 </ul>
 
-<p>This is an example of what verified transparency means. This method does not ask consumers to blindly trust a label. It allows consumers to evaluate the information for themselves and determine whether the producer is credible.</p>
+<p>This is an example of what documented transparency means. This method does not ask consumers to blindly trust a label. It allows consumers to evaluate the information for themselves and determine whether the producer is credible.</p>
 
 <h2>Benefits of verifiable transparency for farmers</h2>
 
 <p>For farmers who actually follow best practices for growing crops, the current crisis of trust is not a bad thing. When most of your competitors are hiding behind vague and unsubstantiated claims, verifiable transparency is a competitive advantage.</p>
 
-<p>Research on organic market pricing shows that certified organic specialty crops often command higher prices than conventional equivalents. However, as certification alone becomes less differentiating in crowded markets, verified transparency in farming practices is emerging as the next layer of trust consumers and buyers require. The key is not simply claiming sustainability. It is demonstrating it through a verifiable, documented record.</p>
+<p>As organic certification becomes more common, the certificate alone carries less differentiating weight with buyers. Documented practices are the next layer of evidence a buyer can actually inspect. The point is not to claim sustainability; it is to show the record and let the buyer judge it. Trazo makes no representation about the prices any farm will obtain.</p>
 
 <p>Farmers who document their practices and connect directly with consumers are positioned for premium positioning based on verifiable, documented practices. This includes documenting the following:</p>
 
@@ -384,7 +384,7 @@ export const posts: BlogPost[] = [
 
 <p>Your documentation isn't paperwork, it's the basis for consumer confidence.</p>
 
-<p><strong>It will take you 90 seconds to document your first event.</strong> Tell your farming story through a verified transparency account.</p>
+<p><strong>It will take you 90 seconds to document your first event.</strong> Tell your farming story through a documented record of your practices.</p>
     `,
   },
   {
@@ -395,12 +395,12 @@ export const posts: BlogPost[] = [
     title:
       "The Organic Farmer's Guide to Digital Record-Keeping: What NOP Requires and How to Stay Ahead",
     excerpt:
-      "51% of organic farmers say record-keeping is their biggest burden. Here's what NOP actually requires, the most common mistakes that risk certification, and how digital documentation closes the gap between annual audits.",
+      "55% of organic farmers name certification paperwork, record-keeping and compliance costs as their top concern (USDA NASS 2021 Certified Organic Survey). Here's what NOP actually requires, the most common mistakes that risk certification, and how digital documentation closes the gap between annual audits.",
     image: "/images/blog-organic-records.jpg",
     content: `
 <p>Ask any organic farmer what the hardest part of maintaining certification is, and the answer is rarely pests, weather, or markets. It is paperwork.</p>
 
-<p>Research from organic trade organizations consistently shows that record-keeping is the single biggest burden for organic farmers. It is also the most common reason farms surrender their certification entirely. Not because they stopped farming organically, but because the documentation requirements became overwhelming alongside the actual work of farming.</p>
+<p>In the USDA&rsquo;s 2021 Certified Organic Survey, 55% of organic farmers named certification paperwork, record-keeping and compliance costs as their top concern &mdash; more than any other issue. Paperwork is not the main reason farms leave organic certification; the National Organic Coalition&rsquo;s 2026 analysis found roughly 11% of exiting operations cite cost or paperwork. But for farms that stay, it is the burden they report most.</p>
 
 <p>This guide breaks down what the USDA National Organic Program actually requires for record-keeping, the most common mistakes that lead to noncompliance findings, and how digital documentation tools can close the gap between annual audits.</p>
 
@@ -464,7 +464,7 @@ export const posts: BlogPost[] = [
 
 <p>There is an additional benefit to digital organic documentation that goes beyond compliance. The same events that build your inspection record also build consumer trust.</p>
 
-<p>When a consumer scans a QR code on your product and sees a timeline of documented organic practices, cover crops, OMRI-listed amendments, and verified USDA Organic certification, that is a level of transparency no paper record can provide. It turns record-keeping from a compliance burden into a marketing asset.</p>
+<p>When a consumer scans a QR code on your product and sees a timeline of documented organic practices, cover crops, OMRI-listed amendments, and certification status checked against the USDA Organic Integrity Database, that is a level of transparency no paper record can provide. It turns record-keeping from a compliance burden into a marketing asset.</p>
 
 <p>The farms doing the most thorough documentation are also the farms that can show the most complete transparency story to their consumers. For organic farms, where consumers already expect higher standards, this alignment between compliance documentation and consumer transparency is particularly valuable.</p>
 

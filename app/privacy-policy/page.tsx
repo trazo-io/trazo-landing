@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
               How Trazo collects, uses, and protects your personal information.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Last updated: April 14, 2026
+              Last updated: August 6, 2026
             </p>
           </header>
 
@@ -222,10 +222,6 @@ export default function PrivacyPolicyPage() {
                   Generate and manage QR codes for consumer transparency access
                 </li>
                 <li>
-                  Blockchain-record production verification hashes on the
-                  Polygon network (optional add-on)
-                </li>
-                <li>
                   Track agricultural production events and sustainability metrics
                 </li>
               </ul>
@@ -316,15 +312,6 @@ export default function PrivacyPolicyPage() {
                       </td>
                       <td className="py-2">
                         Contract performance (Art. 6(1)(b))
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="py-2 pr-4">
-                        Blockchain recording of production hashes
-                      </td>
-                      <td className="py-2">
-                        Consent (Art. 6(1)(a)): you explicitly activate this
-                        add-on
                       </td>
                     </tr>
                     <tr>
@@ -436,11 +423,6 @@ export default function PrivacyPolicyPage() {
                   documents, and QR codes
                 </li>
                 <li>
-                  <strong>Polygon Network</strong>: Production verification
-                  hashes blockchain-recorded for tamper-proof data integrity
-                  (optional add-on)
-                </li>
-                <li>
                   <strong>OpenAI</strong>: Voice recordings, text data for
                   AI-powered data processing (Trazo has opted out of model
                   training; your data is not used to train OpenAI models)
@@ -460,8 +442,9 @@ export default function PrivacyPolicyPage() {
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
-                  QR code scanning providing transparency scores and farming
-                  practice summaries
+                  QR code scanning providing documented farming practices,
+                  photos and certification status. The transparency score is a
+                  producer-dashboard metric and is not shared with consumers
                 </li>
                 <li>Public sustainability metrics and certification status</li>
                 <li>
@@ -529,10 +512,6 @@ export default function PrivacyPolicyPage() {
                 <li>
                   <strong>File Storage:</strong> AWS S3 for images, documents,
                   and QR codes
-                </li>
-                <li>
-                  <strong>Blockchain Records:</strong> Polygon network (global,
-                  immutable storage)
                 </li>
                 <li>
                   <strong>Security Logs:</strong> Rotating log files with
@@ -616,10 +595,6 @@ export default function PrivacyPolicyPage() {
                 <li>
                   <strong>Agricultural Data:</strong> 7 years or until deletion
                   request
-                </li>
-                <li>
-                  <strong>Blockchain Records:</strong> Permanent (immutable by
-                  design)
                 </li>
                 <li>
                   <strong>Payment Records:</strong> 7 years (tax and financial
@@ -723,11 +698,6 @@ export default function PrivacyPolicyPage() {
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
-                  <strong>Blockchain Immutability:</strong> Verification hashes
-                  blockchain-recorded on the Polygon network cannot be deleted
-                  due to the immutable nature of blockchain technology
-                </li>
-                <li>
                   <strong>Legal Requirements:</strong> Data required for
                   compliance with agricultural regulations and audit trails
                 </li>
@@ -741,12 +711,8 @@ export default function PrivacyPolicyPage() {
                 </li>
               </ul>
               <p className="mt-3 leading-[1.8]">
-                <strong>Important:</strong> While blockchain records are
-                immutable, we only store cryptographic hashes and verification
-                status on-chain, not personal information. Personal data
-                associated with these records can still be deleted from our
-                traditional databases. We will provide detailed explanations of
-                any limitations when processing your requests.
+                <strong>Important:</strong> We will provide detailed
+                explanations of any limitations when processing your requests.
               </p>
             </section>
 

@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Check, Minus, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -18,7 +17,7 @@ const pricingJsonLd = {
   "@type": "WebPage",
   name: "Trazo Pricing | Agricultural Transparency Platform",
   description:
-    "Simple, transparent pricing for specialty crop farms. Free tier available. Plans from $69/month with 14-day free trial.",
+    "Simple, transparent pricing for specialty crop farms. The Starter plan is free permanently \u2014 no card, no expiry. Compliance is $249 per farm per year.",
   url: "https://www.trazo.io/pricing",
   mainEntity: {
     "@type": "SoftwareApplication",
@@ -31,231 +30,187 @@ const pricingJsonLd = {
         price: "0",
         priceCurrency: "USD",
         description:
-          "Free forever: 1 farm, 1 parcel, 1 production, 2 GB storage",
+          "Free forever: 1 farm, unlimited parcels, 1 production/year, 2 GB storage",
       },
       {
         "@type": "Offer",
-        name: "Basic",
-        price: "69",
+        name: "Compliance",
+        price: "249",
         priceCurrency: "USD",
-        billingDuration: "P1M",
+        billingDuration: "P1Y",
         description:
-          "1 farm, 2 parcels, 3 productions/year, 10 GB, voice recording",
-      },
-      {
-        "@type": "Offer",
-        name: "Standard",
-        price: "119",
-        priceCurrency: "USD",
-        billingDuration: "P1M",
-        description:
-          "2 farms, 2 parcels, 4 productions/year, 25 GB, 24hr support",
-      },
-      {
-        "@type": "Offer",
-        name: "Corporate",
-        price: "149",
-        priceCurrency: "USD",
-        billingDuration: "P1M",
-        description:
-          "4 farms, 4 parcels, 6 productions/year, 50 GB, priority support",
+          "1 farm, unlimited parcels and productions, OSP records, certifier link, CA PUR export",
       },
       {
         "@type": "Offer",
         name: "Enterprise",
-        price: "299",
         priceCurrency: "USD",
-        billingDuration: "P1M",
         description:
-          "Unlimited farms, parcels, productions, storage, dedicated support",
+          "Unlimited farms, parcels and productions, dedicated onboarding",
       },
     ],
   },
 };
 
 const plans = [
+  // Two tiers plus Enterprise, priced ANNUALLY (2026-08-07).
+  //
+  // The previous $69-299/MONTH ladder was 5-8x the category: COG Pro charges $99/$155/$179 per
+  // YEAR (and stops service 2026-12-31), Quick Organics $150/yr. A COG Pro refugee paying $155
+  // was never going to sign for $828.
+  //
+  // Priced per FARM, not per parcel. A parcel is a block, so parcel count prices farm geometry
+  // rather than value — and charging more for structuring records properly is the same perverse
+  // incentive Trazo rejected when it refused carbon-first scoring.
   {
     name: "Starter",
-    description: "Try Trazo risk-free",
+    description: "Document one season, free",
     monthly: 0,
     yearly: 0,
     priceLabel: "Free",
     priceNote: "Free forever",
     highlight: false,
-    cta: "Start Free Trial",
+    cta: "Start free",
     ctaLink: "https://app.trazo.io/auth/signup",
     includesLabel: "Includes",
     features: [
-      "Carbon calculations (EPA/USDA)",
-      "Transparency scoring & QR codes",
-      "AI-powered event templates",
+      "1 farm, unlimited parcels/blocks",
+      "1 production per year",
+      "Event logging with AI templates",
+      "QR code and buyer page",
       "2 GB storage",
-      "1,000 QR scans/month",
-      "1 farm, 1 parcel, 1 production",
     ],
   },
   {
-    name: "Basic",
-    description: "Best for small family farms",
-    monthly: 69,
-    yearly: 690,
+    name: "Compliance",
+    description: "Everything one certified farm needs for renewal season",
+    monthly: null,
+    yearly: 249,
     priceLabel: null,
-    priceNote: null,
-    highlight: false,
-    cta: "Start Free Trial",
+    priceNote: "per farm, per year",
+    highlight: true,
+    cta: "Start free",
     ctaLink: "https://app.trazo.io/auth/signup",
     includesLabel: "Everything in Starter, plus",
     features: [
-      "48-hour email support",
-      "Voice recording & photo docs",
-      "10 GB storage",
-      "5,000 QR scans/month",
-      "Up to 3 active productions/year",
-      "1 farm, 2 parcels per farm",
-    ],
-  },
-  {
-    name: "Standard",
-    description: "Best for growing farms",
-    monthly: 119,
-    yearly: 1190,
-    priceLabel: null,
-    priceNote: null,
-    highlight: true,
-    cta: "Start Free Trial",
-    ctaLink: "https://app.trazo.io/auth/signup",
-    includesLabel: "Everything in Basic, plus",
-    features: [
-      "24-hour email support",
+      "Unlimited productions per year",
+      "Voice logging from the field",
+      "Organic System Plan (7 CFR 205.201) with Common OSP § 11 records",
+      "The four required OSP attachment workbooks, filled from your records",
+      "Certifier link — your certifier reviews online, with your permission",
+      "California PUR export (DPR-PML-017C), monthly",
+      "Free migration from COG Pro or spreadsheets",
       "25 GB storage",
-      "10,000 QR scans/month",
-      "Up to 4 active productions/year",
-      "2 farms, 2 parcels per farm",
-    ],
-  },
-  {
-    name: "Corporate",
-    description: "Best for multi-plot operations",
-    monthly: 149,
-    yearly: 1490,
-    priceLabel: null,
-    priceNote: null,
-    highlight: false,
-    cta: "Start Free Trial",
-    ctaLink: "https://app.trazo.io/auth/signup",
-    includesLabel: "Everything in Standard, plus",
-    features: [
-      "12-hour priority support",
-      "50 GB storage",
-      "20,000 QR scans/month",
-      "Up to 6 active productions/year",
-      "4 farms, 4 parcels per farm",
     ],
   },
   {
     name: "Enterprise",
-    description: "For cooperatives & brands",
-    monthly: 299,
-    yearly: 2990,
-    priceLabel: null,
-    priceNote: null,
+    description: "Multiple farms or entities",
+    monthly: null,
+    yearly: null,
+    priceLabel: "Talk to us",
+    priceNote: "Unlimited farms",
     highlight: false,
     cta: "Contact Sales",
     ctaLink: "mailto:info@trazo.io",
-    includesLabel: "Everything in Corporate, plus",
+    includesLabel: "Everything in Compliance, plus",
     features: [
-      "Onboarding & training support",
-      "4-hour dedicated support",
-      "Dedicated account manager",
-      "Unlimited QR scans & storage",
-      "Unlimited farms, parcels & productions",
+      "Unlimited farms and parcels",
+      "Dedicated onboarding",
+      "Priority support",
     ],
   },
 ];
 
-const comparisonFeatures = [
-  { label: "Monthly price", values: ["Free", "$69", "$119", "$149", "$299"] },
+// One cell per plan, in `plans` order. Typed as a fixed-length tuple on purpose: when the tiers
+// went from five to three, four rows silently kept five values and rendered extra <td>s past the
+// header count. A tuple turns that into a compile error instead of a broken table.
+type ComparisonCell = boolean | string;
+type ComparisonRow = {
+  label: string;
+  values: [ComparisonCell, ComparisonCell, ComparisonCell];
+};
+
+const comparisonFeatures: ComparisonRow[] = [
   {
-    label: "Annual price",
-    values: ["Free", "$690/yr", "$1,190/yr", "$1,490/yr", "$2,990/yr"],
+    label: "Price",
+    values: ["Free", "$249/yr per farm", "Talk to us"],
   },
   {
     label: "Farms / Parcels per farm",
-    values: ["1 / 1", "1 / 2", "2 / 2", "4 / 4", "Unlimited"],
+    values: ["1 / Unlimited", "1 / Unlimited", "Unlimited / Unlimited"],
   },
-  { label: "Productions / year", values: ["1", "3", "4", "6", "Unlimited"] },
+  { label: "Productions / year", values: ["1", "Unlimited", "Unlimited"] },
   {
     label: "QR scans / month",
-    values: ["1,000", "5,000", "10,000", "20,000", "Unlimited"],
+    values: ["1,000", "Unlimited", "Unlimited"],
   },
   {
     label: "Storage",
-    values: ["2 GB", "10 GB", "25 GB", "50 GB", "Unlimited"],
+    values: ["2 GB", "25 GB", "Unlimited"],
   },
-  { label: "AI event templates", values: [true, true, true, true, true] },
-  { label: "Transparency score", values: [true, true, true, true, true] },
-  { label: "QR code generation", values: [true, true, true, true, true] },
+  { label: "AI event templates", values: [true, true, true] },
+  { label: "Farm records score (your dashboard)", values: [true, true, true] },
+  { label: "QR code and buyer page", values: [true, true, true] },
   {
-    label: "Carbon calculations (EPA/USDA)",
-    values: [true, true, true, true, true],
+    label: "Carbon calculations (EPA/USDA-sourced)",
+    values: [true, true, true],
   },
   {
-    label: "Certification verification (USDA Organic)",
-    values: [true, true, true, true, true],
+    label: "Organic certificate check (USDA Organic Integrity Database)",
+    values: [true, true, true],
   },
-  { label: "Photo documentation", values: [true, true, true, true, true] },
-  { label: "Voice recording", values: [false, true, true, true, true] },
+  { label: "Photo documentation", values: [true, true, true] },
+  { label: "Voice recording", values: [false, true, true] },
   {
-    label: "Dedicated account manager",
-    values: [false, false, false, false, true],
+    label: "Organic System Plan (7 CFR 205.201) + Common OSP § 11",
+    values: [false, true, true],
+  },
+  { label: "OSP attachment workbooks", values: [false, true, true] },
+  { label: "Certifier review link", values: [false, true, true] },
+  {
+    label: "California PUR export (DPR-PML-017C)",
+    values: [false, true, true],
+  },
+  { label: "Free migration from COG Pro", values: [false, true, true] },
+  {
+    label: "Dedicated onboarding",
+    values: [false, false, true],
   },
   {
     label: "Support",
-    values: [
-      "N/A",
-      "48hr Email",
-      "24hr Email",
-      "12hr Priority",
-      "4hr Dedicated",
-    ],
+    values: ["72hr email", "24hr priority", "4hr dedicated"],
   },
-];
-
-const addons = [
-  { name: "Extra Farm", price: "$30", period: "/month" },
-  { name: "Extra Parcel", price: "$25", period: "/month" },
-  { name: "Extra Production", price: "$20", period: "/month" },
-  { name: "Extra Storage", price: "$10", period: "/year" },
 ];
 
 const pricingFaqs = [
   {
-    q: "Is there a free trial?",
-    a: "Yes. Every new account starts with a 14-day free trial on the Starter plan. No credit card required. You get full access to core features including transparency scoring, QR codes, and carbon calculations. Upgrade anytime from your dashboard.",
+    q: "Is the Starter plan really free, or is it a trial?",
+    a: "Free permanently. It does not expire and never asks for a card. It covers 1 farm with unlimited parcels or blocks and 1 production per year \u2014 enough to keep a real season of records and produce your certifier packet. Compliance adds unlimited productions, the OSP records and the exports; upgrade whenever you outgrow it, not when a clock runs out.",
   },
   {
     q: "Can I switch plans?",
-    a: "Absolutely. Upgrade or downgrade anytime from your dashboard. When you upgrade, you'll get immediate access to new features with prorated billing. When you downgrade, the change takes effect at your next billing cycle.",
+    a: "Yes, in either direction, and your records are never held hostage. Downgrading to Starter keeps every event, photo and document you have logged \u2014 you keep reading and exporting all of it; the Starter limits only apply to what you create next.",
   },
   {
     q: 'What counts as a "production"?',
-    a: "A production represents one crop cycle from planting to harvest on a single parcel. For example, if you grow avocados on 3 parcels, that's 3 productions. Seasonal crops that you replant count as new productions each cycle.",
+    a: "One crop cycle from planting to harvest on a single parcel. Three parcels of avocados is three productions, and a replanted seasonal crop starts a new one each cycle. Compliance has no production limit, so on a paid plan this only affects how your records are organised, not what you are allowed to log.",
   },
   {
     q: "What if I exceed my QR scan limit?",
-    a: "Your QR codes will continue to work. Consumers will always be able to view your transparency pages. Analytics tracking pauses until your scan count resets at the start of your next billing period.",
+    a: "Your QR codes keep working \u2014 a buyer scanning a case in a warehouse always reaches your page. Only the analytics counting pauses, and only on Starter, until the month resets. Compliance has no scan limit.",
   },
   {
     q: "Discounts for cooperatives or large groups?",
     a: "Yes. For large organizations, our Enterprise plan offers unlimited farms, parcels, and productions with dedicated support. Contact us at info@trazo.io for custom needs.",
   },
   {
-    q: "What payment methods do you accept?",
-    a: "We accept all major credit cards (Visa, Mastercard, American Express) through our secure payment partner, Stripe. For Enterprise plans, we also offer invoice-based billing.",
+    q: "How do I pay for a paid plan?",
+    a: "By invoice, arranged directly with us at info@trazo.io \u2014 there is no card form at signup. Signing up puts you on the free Starter plan; nothing charges you automatically, and no plan converts to paid on its own.",
   },
   {
-    q: "Can I access my data?",
-    a: "Your data is always yours. You can access all your farm data, event records, and documentation through the Trazo platform at any time, regardless of your subscription status.",
+    q: "Can I get my data out?",
+    a: "Yes, and this matters more than usual right now: growers are being moved off recordkeeping tools that are shutting down. Your events, photos and documents export from Trazo at any time, on any plan, including the free one. If you are leaving COG Pro, we import your CSV exports for you at no charge.",
   },
   {
     q: "Is my data secure?",
@@ -264,8 +219,6 @@ const pricingFaqs = [
 ];
 
 export default function PricingPage() {
-  const [isYearly, setIsYearly] = useState(false);
-
   return (
     <div className="min-h-screen bg-background">
       <script
@@ -280,56 +233,30 @@ export default function PricingPage() {
             Simple, Transparent Pricing
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
-            Start free. Scale as you grow. Cancel anytime.
+            Free to start, priced per farm per year. No card, no lock-in.
           </p>
 
           {/* Trust badges */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
             <span className="flex items-center gap-2">
               <Check size={16} className="text-primary" />
-              14-Day Free Trial
+              Free plan, no expiry
             </span>
             <span className="flex items-center gap-2">
               <Check size={16} className="text-primary" />
-              No Credit Card Required
+              No credit card required
             </span>
             <span className="flex items-center gap-2">
               <Check size={16} className="text-primary" />
-              Cancel Anytime
+              Export your records anytime
             </span>
           </div>
 
-          {/* Billing Toggle */}
-          <div className="mt-10 inline-flex items-center gap-3 rounded-full border border-border bg-card p-1">
-            <button
-              onClick={() => setIsYearly(false)}
-              className={`rounded-full px-5 py-2 text-sm font-medium transition-all ${
-                !isYearly
-                  ? "bg-primary text-primary-foreground shadow-sm"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Monthly
-            </button>
-            <button
-              onClick={() => setIsYearly(true)}
-              className={`flex items-center gap-2 rounded-full px-5 py-2 text-sm font-medium transition-all ${
-                isYearly
-                  ? "bg-primary text-primary-foreground shadow-sm"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Yearly
-              <span className="rounded-full bg-accent px-2 py-0.5 text-xs font-semibold text-accent-foreground">
-                2 Months Free
-              </span>
-            </button>
-          </div>
         </section>
 
         {/* Plan Cards */}
         <section className="mx-auto mt-14 max-w-7xl px-6">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2 lg:grid-cols-3">
             {plans.map((plan) => (
               <div
                 key={plan.name}
@@ -366,18 +293,12 @@ export default function PricingPage() {
                   ) : (
                     <div>
                       <span className="text-4xl font-bold text-foreground">
-                        $
-                        {isYearly ? Math.round(plan.yearly / 12) : plan.monthly}
+                        ${plan.yearly}
                       </span>
-                      <span className="text-sm text-muted-foreground">
-                        {" "}
-                        /mo
-                      </span>
-                      {isYearly && (
-                        <p className="mt-1 text-sm text-muted-foreground">
-                          ${plan.yearly}/yr billed annually
-                        </p>
-                      )}
+                      <span className="text-sm text-muted-foreground"> /yr</span>
+                      <p className="mt-1 text-sm text-muted-foreground">
+                        {plan.priceNote}
+                      </p>
                     </div>
                   )}
                 </div>
@@ -433,13 +354,7 @@ export default function PricingPage() {
                   <th className="px-6 py-4 text-left font-semibold text-foreground">
                     Feature
                   </th>
-                  {[
-                    "Starter",
-                    "Basic",
-                    "Standard",
-                    "Corporate",
-                    "Enterprise",
-                  ].map((h) => (
+                  {plans.map((p) => p.name).map((h) => (
                     <th
                       key={h}
                       className="px-4 py-4 text-center font-semibold text-foreground"
@@ -481,30 +396,22 @@ export default function PricingPage() {
           </div>
         </section>
 
-        {/* Add-ons */}
-        <section className="mx-auto mt-24 max-w-7xl px-6 text-center">
+        {/* Second farm */}
+        <section className="mx-auto mt-24 max-w-3xl px-6 text-center">
           <h2 className="text-2xl font-bold text-foreground md:text-3xl">
-            Need More? Add What You Need
+            Farming more than one operation?
           </h2>
-          <p className="mt-2 text-muted-foreground">
-            Available on any plan. Add or remove anytime.
+          <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
+            Each certified operation files its own Organic System Plan, so Trazo
+            prices per farm. If you run several — or a co-op filing on behalf
+            of members — tell us how it is structured and we will quote it.
           </p>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-            {addons.map((addon) => (
-              <div
-                key={addon.name}
-                className="rounded-xl border border-border bg-card p-6 text-center transition-all hover:border-primary/30 hover:shadow-sm"
-              >
-                <p className="text-3xl font-bold text-foreground">
-                  {addon.price}
-                </p>
-                <p className="text-sm text-muted-foreground">{addon.period}</p>
-                <p className="mt-3 text-sm font-semibold text-foreground">
-                  {addon.name}
-                </p>
-              </div>
-            ))}
-          </div>
+          <Button className="mt-8 gap-2" variant="outline" asChild>
+            <a href="mailto:info@trazo.io">
+              Talk to us
+              <ArrowRight size={16} />
+            </a>
+          </Button>
         </section>
 
         {/* Pricing FAQ */}
@@ -546,13 +453,12 @@ export default function PricingPage() {
                 Start proving your practices today
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/80">
-                Join farmers who are building consumer trust through verified
-                transparency. 14-day free trial, no credit card required.
+                Join farmers who are building buyer trust with documented
+                practices. Free Starter plan, no credit card required.
               </p>
               <p className="mx-auto mt-3 max-w-2xl text-sm text-primary-foreground/60">
-                Early access: farms that join now get founding member
-                pricing locked in, direct input on the product roadmap, and
-                priority support as we scale.
+                Moving from another recordkeeping tool? Send us your export and we
+                will set it up for you, free.
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Button
@@ -561,7 +467,7 @@ export default function PricingPage() {
                   asChild
                 >
                   <a href="https://app.trazo.io/auth/signup">
-                    Start Free Trial
+                    Start free
                     <ArrowRight size={18} />
                   </a>
                 </Button>

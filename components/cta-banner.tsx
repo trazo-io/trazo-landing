@@ -22,8 +22,8 @@ export function CtaBanner() {
               Your records, doing double duty.
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-primary-foreground/80">
-              Start documenting your farm in under 15 minutes. 14-day free
-              trial. Cancel anytime.
+              Start documenting your farm in under 15 minutes. The Starter plan is
+              free permanently — no card, no expiry.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button
@@ -32,7 +32,7 @@ export function CtaBanner() {
                 asChild
               >
                 <a href="https://app.trazo.io/auth/signup">
-                  Start Free Trial
+                  Start free
                   <ArrowRight size={18} />
                 </a>
               </Button>

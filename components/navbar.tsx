@@ -51,7 +51,7 @@ export function Navbar() {
           </Button>
           <Button size="sm" className="gap-1.5 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
             <a href="https://app.trazo.io/auth/signup">
-              Start Free Trial
+              Start free
               <ArrowRight size={14} />
             </a>
           </Button>
@@ -87,7 +87,7 @@ export function Navbar() {
               </Button>
               <Button size="sm" className="w-full gap-1.5 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
                 <a href="https://app.trazo.io/auth/signup">
-                  Start Free Trial
+                  Start free
                   <ArrowRight size={14} />
                 </a>
               </Button>

@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { ProblemSection } from "@/components/problem-section";
+import { RenewalSeason } from "@/components/renewal-season";
 import { VideoSection } from "@/components/video-section";
 import { StatsBar } from "@/components/stats-bar";
 import { PlatformFeatures } from "@/components/platform-features";
@@ -60,6 +61,7 @@ export default function Home() {
       <main>
         <Hero />
         <ProblemSection />
+        <RenewalSeason />
         <DualOutput />
         <OrganicFeatures />
         <ProductShowcase />

@@ -25,22 +25,23 @@ export function Hero() {
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
             <span className="text-xs font-medium text-primary">
-              Try free for 14 days
+              Renewal packets go out November 3
             </span>
           </div>
 
           {/* Heading: static (above the fold; must not animate in / gate LCP) */}
           <h1 className="max-w-4xl text-balance text-3xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl">
-            Your organic records, turned into{" "}
-            <span className="text-primary">inspection-ready proof</span>, and a
-            page your buyers can actually see.
+            Walk into renewal season with your records{" "}
+            <span className="text-primary">already assembled</span>.
           </h1>
 
           {/* Subheading */}
           <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            You already keep these records for your certifier. Enter them once in
-            Trazo. The same records become inspection-ready audit
-            documentation and a transparency page your buyers can scan.
+            Your annual update is due between January and April. Log the season on
+            your phone as you go, and Trazo drafts the records section, the
+            attachment forms and your inspection packet from what you entered — you
+            review and sign. The same records also produce a page your buyer can
+            scan.
           </p>
 
           {/* CTA Buttons */}
@@ -51,7 +52,7 @@ export function Hero() {
               asChild
             >
               <a href="https://app.trazo.io/auth/signup">
-                Start Free Trial
+                Start free
                 <ArrowRight size={18} />
               </a>
             </Button>
@@ -70,8 +71,8 @@ export function Hero() {
 
           {/* Pricing note */}
           <p className="mt-4 text-sm text-muted-foreground">
-            Try free for 14 days &middot; Plans from $69/month &middot; No credit
-            card required
+            Starter plan free permanently &middot; No credit card &middot; Export
+            everything, anytime
           </p>
 
           {/* Hero Image - Real App Screenshot (below fold; lazy + reveal on scroll) */}

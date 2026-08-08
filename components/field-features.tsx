@@ -1,6 +1,6 @@
 "use client"
 
-import { Monitor, Mic, FileCheck, DoorOpen } from "lucide-react"
+import { Monitor, Mic, Languages, DoorOpen } from "lucide-react"
 import { ScrollReveal } from "@/components/scroll-reveal"
 
 const fieldFeatures = [
@@ -17,16 +17,16 @@ const fieldFeatures = [
       "Our voice recording technology and smart form capabilities will allow your team to document their daily practices immediately without requiring training. The system is simple enough to use by anyone in the field while still providing the detail needed for verification.",
   },
   {
-    icon: FileCheck,
-    title: "Data From Government Sources",
+    icon: Languages,
+    title: "English And Spanish, Everywhere",
     description:
-      "All emissions calculations using Trazo utilize government-sourced emission factors from both EPA (40 CFR Part 98) and USDA. Therefore, all of your documentation is audit-ready from the first day.",
+      "The whole app is bilingual \u2014 every screen, every field, every prompt, not just the login page. Your crew logs the spray in Spanish, you read the certifier packet in English, and it is the same record. If your field team and your office do not share a first language, this is the difference between records that get written and records that do not.",
   },
   {
     icon: DoorOpen,
     title: "Cancellation Is Available At Any Time",
     description:
-      "We have no contract or lock-in requirements. We offer a 14-day free trial. Upgrade to paid at any time after the trial ends and your data remains yours regardless of your status with us.",
+      "No contract, no lock-in. The Starter plan is free permanently rather than a trial that expires, every record exports as CSV, and your complete inspection binder prints as a PDF whenever you want it. If Trazo stops being the right fit you leave with your records intact.",
   },
 ]
 

@@ -22,7 +22,7 @@ export default function TermsOfServicePage() {
               Terms and conditions governing use of the Trazo platform.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Last updated: April 14, 2026
+              Last updated: August 6, 2026
             </p>
           </header>
 
@@ -65,10 +65,6 @@ export default function TermsOfServicePage() {
                   Create QR codes for consumer-facing transparency profiles
                 </li>
                 <li>
-                  Optionally blockchain-record production hashes on the Polygon
-                  network (paid add-on)
-                </li>
-                <li>
                   Calculate carbon footprint estimates using EPA/USDA emission
                   factors
                 </li>
@@ -109,8 +105,9 @@ export default function TermsOfServicePage() {
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
-                  <strong>Free Trial:</strong> New accounts receive a 14-day free
-                  trial. No credit card required.
+                  <strong>Starter Plan:</strong> The Starter plan is free of charge
+                  and does not expire. No credit card is required to create an
+                  account.
                 </li>
                 <li>
                   <strong>Billing Cycle:</strong> Subscriptions are billed
@@ -122,9 +119,9 @@ export default function TermsOfServicePage() {
                   the end of your then-current subscription term.
                 </li>
                 <li>
-                  <strong>Add-Ons:</strong> Optional add-ons (blockchain
-                  verification, additional farms, parcels, or storage) are
-                  billed monthly at the rates listed on the Pricing page.
+                  <strong>Add-Ons:</strong> Optional add-ons (additional farms,
+                  parcels, productions, or storage) are billed monthly at the
+                  rates listed on the Pricing page.
                 </li>
                 <li>
                   <strong>Failed Payments:</strong> If a payment fails, we will
@@ -183,49 +180,7 @@ export default function TermsOfServicePage() {
             {/* 6 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                6. Blockchain Verification
-              </h3>
-              <p className="mt-3 leading-[1.8]">
-                Blockchain verification is available as an optional add-on
-                ($15/month). When activated:
-              </p>
-              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
-                <li>
-                  Cryptographic hashes of your production records are
-                  blockchain-recorded on the Polygon network for tamper-proof
-                  data integrity
-                </li>
-                <li>
-                  Blockchain records are permanent and cannot be deleted or
-                  modified
-                </li>
-                <li>
-                  Only verification hashes are blockchain-recorded, not personal
-                  information
-                </li>
-                <li>
-                  You are responsible for reviewing data before verification is
-                  triggered
-                </li>
-                <li>
-                  Trazo is not liable for erroneously submitted blockchain
-                  records, Polygon network outages, hard forks, or loss of
-                  network access
-                </li>
-              </ul>
-              <p className="mt-3 leading-[1.8]">
-                If you request data erasure under applicable privacy laws, Trazo
-                will delete your personal data from our systems; however,
-                cryptographic hashes previously blockchain-recorded on the
-                Polygon network cannot be removed due to the immutable nature of
-                blockchain technology.
-              </p>
-            </section>
-
-            {/* 7 */}
-            <section>
-              <h3 className="text-xl font-bold text-foreground">
-                7. Compliance Documentation Disclaimers
+                6. Compliance Documentation Disclaimers
               </h3>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
@@ -291,10 +246,10 @@ export default function TermsOfServicePage() {
               </p>
             </section>
 
-            {/* 8 */}
+            {/* 7 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                8. Acceptable Use
+                7. Acceptable Use
               </h3>
               <p className="mt-3 leading-[1.8]">
                 You agree not to:
@@ -323,24 +278,27 @@ export default function TermsOfServicePage() {
               </ul>
             </section>
 
-            {/* 9 */}
+            {/* 8 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                9. QR Codes and Consumer-Facing Pages
+                8. QR Codes and Consumer-Facing Pages
               </h3>
               <p className="mt-3 leading-[1.8]">
                 QR codes generated by the Platform link to publicly accessible
                 transparency profiles. By generating a QR code, you authorize
-                Trazo to display the associated production data, transparency
-                scores, and farming events to anyone who scans the code.
-                Productions are not published until you explicitly finalize them.
+                Trazo to display the associated production data and farming
+                events to anyone who scans the code. Productions are not
+                published until you explicitly finalize them. The transparency
+                score is a producer-dashboard metric and is deliberately withheld
+                from consumer-facing pages, along with any grade, tier or badge
+                derived from it.
               </p>
             </section>
 
-            {/* 10 */}
+            {/* 9 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                10. Intellectual Property
+                9. Intellectual Property
               </h3>
               <p className="mt-3 leading-[1.8]">
                 The Platform, including its design, code, features, and content
@@ -350,10 +308,10 @@ export default function TermsOfServicePage() {
               </p>
             </section>
 
-            {/* 11 */}
+            {/* 10 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                11. Disclaimer of Warranties
+                10. Disclaimer of Warranties
               </h3>
               <p className="mt-3 font-semibold uppercase leading-[1.8]">
                 The Platform is provided &quot;as is&quot; and &quot;as
@@ -372,10 +330,10 @@ export default function TermsOfServicePage() {
               </p>
             </section>
 
-            {/* 12 */}
+            {/* 11 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                12. Limitation of Liability
+                11. Limitation of Liability
               </h3>
               <p className="mt-3 leading-[1.8]">
                 To the maximum extent permitted by law, Trazo shall not be liable
@@ -391,9 +349,6 @@ export default function TermsOfServicePage() {
                 <li>
                   Errors in carbon calculations or transparency scores
                 </li>
-                <li>
-                  Blockchain network failures or delays
-                </li>
                 <li>Any third-party conduct on the Platform</li>
               </ul>
               <p className="mt-3 font-semibold leading-[1.8]">
@@ -406,10 +361,10 @@ export default function TermsOfServicePage() {
               </p>
             </section>
 
-            {/* 13 */}
+            {/* 12 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                13. Indemnification
+                12. Indemnification
               </h3>
               <p className="mt-3 leading-[1.8]">
                 You agree to indemnify, defend, and hold harmless Trazo and its
@@ -431,16 +386,16 @@ export default function TermsOfServicePage() {
               </ul>
             </section>
 
-            {/* 14 */}
+            {/* 13 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                14. Termination
+                13. Termination
               </h3>
               <p className="mt-3 leading-[1.8]">
                 We may suspend or terminate your account if you violate these
                 Terms. For non-payment issues, we will provide at least 30
                 days&apos; notice before termination. For acceptable use
-                violations (Section 8), we may suspend your account immediately
+                violations (Section 7), we may suspend your account immediately
                 with notice.
               </p>
               <p className="mt-3 leading-[1.8]">
@@ -457,10 +412,10 @@ export default function TermsOfServicePage() {
               </p>
             </section>
 
-            {/* 15 */}
+            {/* 14 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                15. Changes to Terms
+                14. Changes to Terms
               </h3>
               <p className="mt-3 leading-[1.8]">
                 We may modify these Terms at any time. We will provide at least
@@ -472,10 +427,10 @@ export default function TermsOfServicePage() {
               </p>
             </section>
 
-            {/* 16 */}
+            {/* 15 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                16. Dispute Resolution and Arbitration
+                15. Dispute Resolution and Arbitration
               </h3>
               <p className="mt-3 leading-[1.8]">
                 <strong>Informal Resolution:</strong> Before filing a formal
@@ -516,7 +471,7 @@ export default function TermsOfServicePage() {
                   legal@trazo.io
                 </a>{" "}
                 within 30 days of first accepting these Terms. If you opt out,
-                disputes will be resolved in court per Section 17.
+                disputes will be resolved in court per Section 16.
               </p>
               <p className="mt-3 leading-[1.8]">
                 <strong>Class Action Waiver:</strong> You agree that any dispute
@@ -542,16 +497,16 @@ export default function TermsOfServicePage() {
               </p>
             </section>
 
-            {/* 17 */}
+            {/* 16 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                17. Governing Law
+                16. Governing Law
               </h3>
               <p className="mt-3 leading-[1.8]">
                 These Terms are governed by the laws of the State of Delaware,
                 United States, without regard to conflict of law principles. To
                 the extent that litigation is permitted under these Terms (see
-                Section 16), you consent to the exclusive jurisdiction of the
+                Section 15), you consent to the exclusive jurisdiction of the
                 federal and state courts located in the State of Delaware.
               </p>
               <p className="mt-3 leading-[1.8]">
@@ -563,25 +518,25 @@ export default function TermsOfServicePage() {
               </p>
             </section>
 
-            {/* 18 */}
+            {/* 17 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                18. Force Majeure
+                17. Force Majeure
               </h3>
               <p className="mt-3 leading-[1.8]">
                 Trazo shall not be liable for any failure or delay in
                 performance due to causes beyond its reasonable control,
-                including but not limited to blockchain network failures or
-                congestion, third-party service outages (DigitalOcean, AWS,
-                Stripe, Polygon), natural disasters, acts of government,
+                including but not limited to third-party service outages
+                (DigitalOcean, AWS, Stripe), natural disasters, acts of
+                government,
                 pandemics, or internet infrastructure failures.
               </p>
             </section>
 
-            {/* 19 */}
+            {/* 18 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                19. Assignment
+                18. Assignment
               </h3>
               <p className="mt-3 leading-[1.8]">
                 Trazo may assign these Terms in whole or in part without your
@@ -592,10 +547,10 @@ export default function TermsOfServicePage() {
               </p>
             </section>
 
-            {/* 20 */}
+            {/* 19 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                20. Notices
+                19. Notices
               </h3>
               <p className="mt-3 leading-[1.8]">
                 Notices to Trazo must be sent to{" "}
@@ -611,10 +566,10 @@ export default function TermsOfServicePage() {
               </p>
             </section>
 
-            {/* 21 */}
+            {/* 20 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                21. Waiver
+                20. Waiver
               </h3>
               <p className="mt-3 leading-[1.8]">
                 The failure of Trazo to enforce any right or provision of these
@@ -624,10 +579,10 @@ export default function TermsOfServicePage() {
               </p>
             </section>
 
-            {/* 22 */}
+            {/* 21 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                22. Severability
+                21. Severability
               </h3>
               <p className="mt-3 leading-[1.8]">
                 If any provision of these Terms is held to be unenforceable or
@@ -637,10 +592,10 @@ export default function TermsOfServicePage() {
               </p>
             </section>
 
-            {/* 23 */}
+            {/* 22 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                23. Entire Agreement
+                22. Entire Agreement
               </h3>
               <p className="mt-3 leading-[1.8]">
                 These Terms, together with the{" "}
@@ -664,10 +619,10 @@ export default function TermsOfServicePage() {
               </p>
             </section>
 
-            {/* 24 */}
+            {/* 23 */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                24. Contact Us
+                23. Contact Us
               </h3>
               <p className="mt-3 leading-[1.8]">
                 For questions about these Terms, contact us at:

@@ -14,6 +14,10 @@ const footerLinks = {
   essentials: [
     { label: "Blog", href: "/blog" },
     { label: "Methodology", href: "/methodology" },
+    // COG Pro stops service 2026-12-31 (their own signup page). Its subscribers are the one
+    // audience in this market on a forced migration, and they arrive by search — so the guide
+    // needs a real link, not just a sitemap entry.
+    { label: "COG Pro Migration", href: "/cog-pro-migration" },
     { label: "Contact Us", href: "/contact" },
   ],
   legal: [

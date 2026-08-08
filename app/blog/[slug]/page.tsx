@@ -150,7 +150,7 @@ export default async function BlogDetailPage({
               href="https://app.trazo.io/auth/signup"
               className="mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
-              Start Free Trial
+              Start free
               <ArrowUpRight size={14} />
             </a>
           </div>

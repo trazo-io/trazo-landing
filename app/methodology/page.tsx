@@ -38,9 +38,13 @@ export default function MethodologyPage() {
               <h3 className="text-xl font-bold text-foreground">Abstract</h3>
               <p className="mt-3 leading-[1.8]">
                 This document describes the methodology behind {"Trazo's"}{" "}
-                agricultural transparency scoring system, a consumer-facing
-                metric (0–100) that measures how completely a farmer has
-                documented their farming practices for a given production cycle.
+                agricultural transparency scoring system, a{" "}
+                <strong>producer-dashboard</strong> metric (0–100) that measures
+                how completely a farmer has documented their farming practices
+                for a given production cycle. It is not shown to consumers: the
+                QR page presents the documented practices, photos and
+                third-party certifications themselves, never a score or grade
+                Trazo assigned.
                 Unlike carbon-first approaches, which inadvertently penalize
                 comprehensive documentation, {"Trazo's"} transparency-first
                 model rewards farmers for logging more events. Carbon data is
@@ -260,53 +264,19 @@ export default function MethodologyPage() {
               </p>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
-                Grade Scale
+                Why there is no grade
               </h4>
-              <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
-                <div className="rounded-lg border border-border p-3 text-center">
-                  <div className="text-2xl font-bold text-green-500">A+</div>
-                  <div className="text-xs text-muted-foreground">
-                    90–100 Outstanding
-                  </div>
-                </div>
-                <div className="rounded-lg border border-border p-3 text-center">
-                  <div className="text-2xl font-bold text-green-500">A</div>
-                  <div className="text-xs text-muted-foreground">
-                    80–89 Excellent
-                  </div>
-                </div>
-                <div className="rounded-lg border border-border p-3 text-center">
-                  <div className="text-2xl font-bold text-green-500">B</div>
-                  <div className="text-xs text-muted-foreground">
-                    70–79 Good
-                  </div>
-                </div>
-                <div className="rounded-lg border border-border p-3 text-center">
-                  <div className="text-2xl font-bold text-yellow-500">C</div>
-                  <div className="text-xs text-muted-foreground">
-                    60–69 Average
-                  </div>
-                </div>
-                <div className="rounded-lg border border-border p-3 text-center">
-                  <div className="text-2xl font-bold text-orange-500">D</div>
-                  <div className="text-xs text-muted-foreground">
-                    40–59 Below Avg
-                  </div>
-                </div>
-                <div className="rounded-lg border border-border p-3 text-center">
-                  <div className="text-2xl font-bold text-red-500">F</div>
-                  <div className="text-xs text-muted-foreground">
-                    0–39 Needs Work
-                  </div>
-                </div>
-              </div>
-              <p className="mt-3 text-xs text-muted-foreground">
-                Grades are calculated by Trazo based on farmer-reported
-                documentation completeness. They do not represent an independent
-                assessment or third-party certification. The grade and score are
-                a farmer-dashboard representation of completeness; the consumer
-                QR page shows the documented practices, photos, and
-                certifications themselves, not a self-assigned grade.
+              <p className="mt-3 leading-[1.8]">
+                Trazo does not assign a letter grade, tier, medal or badge to a
+                farm. An earlier version of this document published an A+ to F
+                scale; that construct was removed from the product in August 2026
+                and is no longer published here. A self-created rating shown to
+                consumers is the label class restricted by EU Directive 2024/825
+                and carries general-environmental-benefit risk under FTC 16 CFR
+                260.6 — and a grade Trazo invented says more about our thresholds
+                than about the farm. The score below is a completeness measure on
+                the producer&apos;s own dashboard; consumers see the documented
+                practices, photos and third-party certifications themselves.
               </p>
             </section>
 

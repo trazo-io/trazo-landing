@@ -14,8 +14,8 @@ import {
 
 const contactFaqs = [
   {
-    q: "How long is the free trial?",
-    a: "14 days, no credit card required. You get full access to all features on the Starter plan.",
+    q: "Is the Starter plan a trial?",
+    a: "No. Starter is free permanently \u2014 it does not expire and never asks for a card. Paid plans add farms, parcels and productions when you outgrow it.",
   },
   {
     q: "Can I upgrade or downgrade anytime?",
@@ -31,7 +31,7 @@ const contactFaqs = [
   },
   {
     q: "Do you offer demos?",
-    a: "We'd be happy to walk you through the platform. Send us a message and we'll schedule a call.",
+    a: "Send us a message and we will reply with a short recorded walkthrough of the parts you care about, plus a link to a live sample farm you can click through in your own time.",
   },
   {
     q: "Where can I find documentation?",

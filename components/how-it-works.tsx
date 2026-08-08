@@ -59,7 +59,7 @@ export function HowItWorks() {
               asChild
             >
               <a href="https://app.trazo.io/auth/signup">
-                Start Free Trial
+                Start free
                 <ArrowRight size={16} />
               </a>
             </Button>

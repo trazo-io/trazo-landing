@@ -39,9 +39,9 @@ const faqs = [
       "Trazo tracks the inputs and practices organic farms already document: OMRI-listed materials, soil amendments, composting events, cover crops, equipment cleaning, and seed sourcing. Every event is timestamped with optional photo evidence. You can export organic-filtered audit reports (PDF or CSV) at any time. While Trazo does not replace your certifier\u2019s paperwork, it provides a structured, digital record of your organic practices that supports the documentation requirements of NOP 7 CFR 205.103.",
   },
   {
-    question: "Does Trazo work for farms transitioning to organic?",
+    question: "I was certified recently \u2014 or I am applying for 2027. Is this for me?",
     answer:
-      "Yes. Chemical events include a \u2018Transitional\u2019 status for farms in the certification process. You can set your production method to Organic from day one and begin building your documentation record. Trazo\u2019s system rewards thorough documentation regardless of certification status, so transitional farms benefit from the same system as fully certified operations.",
+      "That is who it is built for. In your first years the routines are still forming, and the annual update is the moment it shows. If you are applying, your certifier will ask you to describe your recordkeeping system in the OSP itself, and processing runs roughly 8\u201316 weeks \u2014 so a plan submitted around New Year is what gets you certified in time to sell as organic in spring. Starting the system before you apply means the description is something you already do rather than something you promise. Farms in transition can use it the same way: parcels carry a Transitional status and the record builds from day one.",
   },
   {
     question: "Can I cancel anytime?",
