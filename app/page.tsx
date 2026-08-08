@@ -6,6 +6,7 @@ import { StatsBar } from "@/components/stats-bar";
 import { PlatformFeatures } from "@/components/platform-features";
 import { FieldFeatures } from "@/components/field-features";
 import { ProductShowcase } from "@/components/product-showcase";
+import { DualOutput } from "@/components/dual-output";
 import { HowItWorks } from "@/components/how-it-works";
 import { OrganicFeatures } from "@/components/organic-features";
 import { CtaBanner } from "@/components/cta-banner";
@@ -30,7 +31,7 @@ const softwareAppJsonLd = {
     offerCount: 5,
   },
   featureList: [
-    "22 US crop templates with USDA-sourced crop timing data",
+    "27 US crop templates with USDA-sourced crop timing data",
     "Documentation completeness tracking based on documented farming events",
     "Direct operational emission calculations using EPA/USDA emission factors",
     "NOP audit-ready PDF export (7 CFR 205.103)",
@@ -59,6 +60,7 @@ export default function Home() {
       <main>
         <Hero />
         <ProblemSection />
+        <DualOutput />
         <OrganicFeatures />
         <ProductShowcase />
         <HowItWorks />

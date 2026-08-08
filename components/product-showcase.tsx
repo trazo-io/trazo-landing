@@ -57,8 +57,8 @@ export function ProductShowcase() {
               <div className="flex flex-col items-center gap-6">
                 <div className="relative h-[520px] w-[260px] overflow-hidden rounded-[2.5rem] border-[8px] border-foreground/10 bg-card shadow-2xl shadow-primary/10 md:h-[560px] md:w-[280px]">
                   <Image
-                    src="/images/consumer-journey.png"
-                    alt="Trazo Production Journey showing 24 documented farming events with field notes and photo evidence"
+                    src="/images/consumer-journey-v3.png"
+                    alt="A Trazo farming event opened on the Production Journey: what happened, why it matters, the farmer's own field notes, and key details including area, yield and grade"
                     fill
                     sizes="(min-width: 768px) 280px, 260px"
                     quality={95}
@@ -70,8 +70,8 @@ export function ProductShowcase() {
                     Production Journey
                   </h3>
                   <p className="mt-1 max-w-[260px] text-sm text-muted-foreground">
-                    Detailed farming events, field notes, and tamper-evident
-                    data logs
+                    Every farming event, in plain words, with the farmer&rsquo;s
+                    own notes and the numbers behind them
                   </p>
                 </div>
               </div>
