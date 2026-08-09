@@ -55,7 +55,7 @@ export default function CogProMigrationPage() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <main className="pt-24 pb-20">
+      <main className="pt-32 pb-20">
         <article className="mx-auto max-w-3xl px-6">
           {/* Hero */}
           <header className="mb-12">

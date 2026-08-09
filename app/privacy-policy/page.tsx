@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <main className="pt-24 pb-20">
+      <main className="pt-32 pb-20">
         <article className="mx-auto max-w-3xl px-6">
           <header className="mb-12 text-center">
             <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl">

@@ -1,26 +1,54 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { Menu, X, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "Features", href: "/#features" },
+  // "Common OSP" promoted to primary nav 2026-08-09: it is the category-defining
+  // page and was footer-only. "Features" stays reachable as a homepage section.
   { label: "How it Works", href: "/#how-it-works" },
+  { label: "Common OSP", href: "/common-osp" },
+  { label: "For Farmers", href: "/for-farmers" },
   { label: "Pricing", href: "/pricing" },
+  { label: "COG Pro Migration", href: "/cog-pro-migration" },
   { label: "Blog", href: "/blog" },
-  { label: "FAQ", href: "/#faq" },
-]
+];
 
 export function Navbar() {
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-lg">
+      {/* Renewal-season strip — the honest adaptation of the countdown-banner
+          pattern: real external deadlines (certifier windows, COG Pro sunset),
+          never an invented discount clock. The linked pages carry the full
+          confirm-with-your-certifier hedges.
+          MAINTENANCE: this copy is true through Dec 31, 2026. After the COG Pro
+          sunset passes, swap the second fact for the next real deadline
+          (OCCSP Dec 31 → certifier due dates Jan–Apr) or remove the strip. */}
+      <div className="bg-primary text-primary-foreground">
+        <div className="mx-auto flex max-w-7xl items-center justify-center gap-2 px-4 py-1.5 text-center text-xs font-medium sm:text-sm">
+          <span className="hidden sm:inline">Renewal season is coming:</span>
+          <span>
+            CCOF annual updates open Nov 3 · COG Pro ends Dec 31, 2026
+          </span>
+          <Link
+            href="/cog-pro-migration"
+            className="underline underline-offset-2 hover:opacity-85"
+          >
+            Bring your records over →
+          </Link>
+        </div>
+      </div>
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5">
-        <Link href="/" className="flex items-center gap-1" aria-label="Trazo Home">
+        <Link
+          href="/"
+          className="flex items-center gap-1"
+          aria-label="Trazo Home"
+        >
           <Image
             src="/images/logo-green.png"
             alt="Trazo"
@@ -46,10 +74,19 @@ export function Navbar() {
 
         {/* Desktop Actions */}
         <div className="hidden items-center gap-3 md:flex">
-          <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground" asChild>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-muted-foreground hover:text-foreground"
+            asChild
+          >
             <a href="https://app.trazo.io/auth/signin">Log In</a>
           </Button>
-          <Button size="sm" className="gap-1.5 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+          <Button
+            size="sm"
+            className="gap-1.5 bg-primary text-primary-foreground hover:bg-primary/90"
+            asChild
+          >
             <a href="https://app.trazo.io/auth/signup">
               Start free
               <ArrowRight size={14} />
@@ -82,10 +119,19 @@ export function Navbar() {
               </Link>
             ))}
             <div className="flex flex-col gap-3 border-t border-border pt-4">
-              <Button variant="ghost" size="sm" className="w-full justify-center text-muted-foreground" asChild>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="w-full justify-center text-muted-foreground"
+                asChild
+              >
                 <a href="https://app.trazo.io/auth/signin">Log In</a>
               </Button>
-              <Button size="sm" className="w-full gap-1.5 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+              <Button
+                size="sm"
+                className="w-full gap-1.5 bg-primary text-primary-foreground hover:bg-primary/90"
+                asChild
+              >
                 <a href="https://app.trazo.io/auth/signup">
                   Start free
                   <ArrowRight size={14} />
@@ -96,5 +142,5 @@ export function Navbar() {
         </div>
       )}
     </header>
-  )
+  );
 }

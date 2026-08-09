@@ -1,13 +1,16 @@
 "use client";
 
-import { Timer, Layers, ClipboardCheck, Calculator } from "lucide-react";
+import { Timer, Layers, DollarSign, Languages } from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
 
+// Every number here must be flat-out true and stay true: guided-OSP module count
+// and flat price are product facts; the two-language claim covers the app
+// (activity logging, forms, module content EN/ES).
 const stats = [
-  { icon: Timer, value: "<2 min", label: "Per Event Logged" },
-  { icon: Layers, value: "7", label: "Event Types Tracked" },
-  { icon: ClipboardCheck, value: "NOP", label: "Audit-Ready Records" },
-  { icon: Calculator, value: "EPA/USDA", label: "Sourced Calculations" },
+  { icon: Layers, value: "17", label: "Guided OSP Modules, Common-OSP Aligned" },
+  { icon: DollarSign, value: "$249 flat", label: "Per Farm, Per Year — Not Revenue-Banded" },
+  { icon: Languages, value: "EN + ES", label: "Log and Review in English or Spanish" },
+  { icon: Timer, value: "<2 min", label: "Per Activity Logged" },
 ];
 
 export function StatsBar() {

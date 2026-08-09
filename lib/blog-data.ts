@@ -11,288 +11,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "consumers-dont-trust-food-labels",
-    category: "Industry Insights",
-    date: "February 3, 2026",
-    readTime: "5 min read",
-    title:
-      "Why 9 in 10 Consumers Don't Trust Food Labels (And What Farmers Can Do About It)",
-    excerpt:
-      "Consumer trust in food labeling has hit an all-time low. Discover why traditional labels are failing and how direct farmer transparency is the solution.",
-    image: "/images/blog-food-labels.jpg",
-    content: `
-<p>When shoppers lose faith in food labels, it's the entire food supply chain that suffers.</p>
-
-<p>The most recent surveys conducted by the food industry show that approximately <a href="https://piconext.com/article/digital-product-passport-global-sustainability-study/" target="_blank" rel="noopener noreferrer">91 percent of consumers believe that at least some companies making environmental claims</a> about their food products are either exaggerating, lying or completely fabricating the truth about the environmental impact of their products. The level of distrust in food companies using "greenwashing" (making environmental claims that are misleading) to sell their products has never been lower.</p>
-
-<p>For the farmers that are actually practicing environmentally friendly farming techniques, the loss of public trust in labeling of food products is a major problem as well as a huge opportunity.</p>
-
-<h2>The extent of the problem</h2>
-
-<p>There are a lot of statistics available that help illustrate the scale of the issue of greenwashing on food packaging in Europe. Research done by the EU found that there are <a href="https://environment.ec.europa.eu/topics/circular-economy-topics/green-claims_en" target="_blank" rel="noopener noreferrer">over 40 percent of environmental claims made on packaged foods that are either misleading</a> or cannot be verified by consumers as being true. In addition, there has been a dramatic increase in the number of high-level greenwashing cases reported in the last few years.</p>
-
-<p>In the marketplace today, terms such as "natural", "ecofriendly", and "sustainable" have lost much of their value to consumers due to the excessive use of the terms in food advertising, and the lack of a strict definition of each term. Since virtually every product in the supermarket makes environmental claims, consumers are left wondering which ones to trust.</p>
-
-<p>As a result, consumers are becoming cynical about all environmental claims made on food products. As a result, consumers are less likely to purchase products that make unsubstantiated environmental claims, and more likely to seek out alternative products that clearly demonstrate the steps that were taken to protect the environment.</p>
-
-<h2>What consumers really want</h2>
-
-<p>While consumers are not abandoning their desire to buy environmentally friendly food products, what they want has changed dramatically. Shoppers are moving beyond the marketing hype and looking for verifiable evidence that demonstrates how their food was grown and processed. While consumers may be interested in hearing that their food was "produced sustainably", they want to know what actions were taken by the farmer to ensure that the product was sustainably produced.</p>
-
-<p>In short, consumers are no longer trusting marketing statements alone. They want to see proof that is not controlled by the company selling the product. This is a significant change in behavior for consumers; from trusting a brand name to trusting a verification process.</p>
-
-<h2>Limitations of traditional certification</h2>
-
-<p>Organic certifications, fair trade labels, and other sustainability certifications have filled an important gap in the marketplace. However, there are several issues with these certifications that consumers are starting to realize:</p>
-
-<ul>
-<li>Annual audits provide little assurance that the company's practices are consistent between audits.</li>
-<li>High costs make these certifications accessible only to larger-scale farms.</li>
-<li>Static labels do not provide a comprehensive view of the steps that were taken to grow a particular product.</li>
-<li>Self-reported data in many certification programs provides an opportunity for misrepresentation by the certified company.</li>
-<li>Consumers are seeing the gaps in certification processes and while they see the certification symbol, they cannot verify what occurred in between audits.</li>
-</ul>
-
-<h2>An alternative to more labeling</h2>
-
-<p>Instead of adding more labels to food products, the answer lies in providing consumers with a way to verify information provided by producers. Imagine a consumer shopping at a farmer's market. The consumer picks up an avocado and scans a QR code with their mobile device. Instead of receiving a marketing message, the consumer receives a list of information including:</p>
-
-<ul>
-<li>A count of documented farming practices, showing how thoroughly the process was recorded;</li>
-<li>A timeline of all of the events from planting to harvest;</li>
-<li>Photos from the field taken by the farmer during actual farming activities;</li>
-<li>Timestamped, tamper-evident records showing the documentation has not been altered.</li>
-</ul>
-
-<p>This is an example of what documented transparency means. This method does not ask consumers to blindly trust a label. It allows consumers to evaluate the information for themselves and determine whether the producer is credible.</p>
-
-<h2>Benefits of verifiable transparency for farmers</h2>
-
-<p>For farmers who actually follow best practices for growing crops, the current crisis of trust is not a bad thing. When most of your competitors are hiding behind vague and unsubstantiated claims, verifiable transparency is a competitive advantage.</p>
-
-<p>As organic certification becomes more common, the certificate alone carries less differentiating weight with buyers. Documented practices are the next layer of evidence a buyer can actually inspect. The point is not to claim sustainability; it is to show the record and let the buyer judge it. Trazo makes no representation about the prices any farm will obtain.</p>
-
-<p>Farmers who document their practices and connect directly with consumers are positioned for premium positioning based on verifiable, documented practices. This includes documenting the following:</p>
-
-<ul>
-<li>Your practices - including planting, irrigation, chemical applications and harvesting;</li>
-<li>Verifying your documentation - including timestamped, tamper-evident records that show your data was not altered after the fact;</li>
-<li>Sharing your story - including the ability to allow consumers to access your documentation through QR codes.</li>
-</ul>
-
-<p>By beginning the process of documenting your practices, you will position yourself to be ahead of the curve when consumers begin demanding proof of sustainability rather than relying solely on marketing claims.</p>
-
-<h2>Sources</h2>
-<ul>
-<li><a href="https://piconext.com/article/digital-product-passport-global-sustainability-study/" target="_blank" rel="noopener noreferrer">PicoNext: Digital Product Passport Global Sustainability Study (2024)</a></li>
-<li><a href="https://environment.ec.europa.eu/topics/circular-economy-topics/green-claims_en" target="_blank" rel="noopener noreferrer">European Commission: Green Claims Directive</a></li>
-<li><a href="https://blueyonder.com/blog/2025/2025-survey-results-only-20-of-consumers-believe-brand-sustainability-claims" target="_blank" rel="noopener noreferrer">Blue Yonder: 2025 Consumer Sustainability Survey (5,000+ respondents)</a></li>
-</ul>
-    `,
-  },
-  {
-    slug: "perverse-incentive-problem",
-    category: "Technology",
-    date: "February 10, 2026",
-    readTime: "7 min read",
-    title:
-      "The Perverse Incentive Problem: Why Carbon-First Platforms Penalize Honest Farmers",
-    excerpt:
-      "Carbon-first platforms create a paradox where the most transparent farmers get the lowest scores. Learn why transparency-first approaches produce better outcomes for honest operations.",
-    image: "/images/blog-perverse-incentive.jpg",
-    content: `
-<p>Most agricultural technology companies do not want to discuss the paradox of the systems that are created to provide incentives for sustainable farming; however, they ultimately create disincentives for the most transparent of the farmers.</p>
-
-<p>This is referred to as the perverse incentive problem and is an inherent part of the foundational structure of all carbon-based tracking platforms.</p>
-
-<h2>Carbon-Based Tracking Systems</h2>
-
-<p>Most traditional carbon-tracking systems measure a farm's environmental footprint by calculating the number of activities that the farmer documents in order to determine the farm's overall carbon footprint. The more activities that a farmer documents (fuel usage, fertilizer applications, equipment operations), the lower the farm's overall carbon footprint.</p>
-
-<p>From the surface level, this appears to be a very logical method for determining a farm's environmental footprint, and therefore, the farm's carbon footprint: document all of the activities that occur on the farm, calculate the total carbon footprint, and then generate a carbon score.</p>
-
-<p>However, the logic breaks down at this point.</p>
-
-<h2>Broken Logic</h2>
-
-<p>Consider two farmers that are both growing the same crop. Farmer A documents five events during the production cycle. As a result, his calculated carbon footprint is relatively low, not due to the fact that he is using cleaner methods, but simply because there is less data recorded.</p>
-
-<p>On the other hand, Farmer B documents fifteen events during the same time frame. He documents every irrigation event, every chemical application, and every piece of equipment that is operated during the production cycle. His calculated carbon footprint is significantly higher, not because he is farming worse, but simply because he is providing more documentation.</p>
-
-<p>As a result of this, Farmer A is viewed as having a lower carbon footprint than Farmer B, even though Farmer B may actually be farming using cleaner methods. In a carbon-based system, Farmer A is rewarded for being less transparent than Farmer B.</p>
-
-<p>This is not merely a hypothetical scenario. There have been studies published in peer-reviewed climate policy journals that show farmers have actual concerns regarding the creation of perverse incentives within carbon-based market programs. Additionally, early adopters of conservation practices are especially concerned that existing requirements can create disincentives for them as they have already implemented many beneficial farming practices.</p>
-
-<h2>Industry-Wide Issue</h2>
-
-<p>This is not merely a concern of one single platform. The <a href="https://www.iatp.org/carbon-markets-and-agriculture" target="_blank" rel="noopener noreferrer">Institute for Agriculture and Trade Policy (IATP)</a> conducted research and produced a report detailing some of the fundamental structural issues that exist within how carbon-based markets interact with agriculture. The IATP noted that many of the current incentive structures in place create disincentives for farmers to fully document their activities, and thus, they end up rewarding less documentation than better practices.</p>
-
-<p>Ultimately, the outcome is that farmers quickly discover that the less they document, the better their score will be. Therefore, the system creates disincentives for farmers to be completely transparent and honest, and instead, rewards a lack of documentation (which is the opposite of what consumers, regulators, and the environment desire).</p>
-
-<h2>Why This Applies to Your Farm</h2>
-
-<p>If you are utilizing a carbon-based tracking system (and/or if you are considering doing so), you need to ask yourself: Does this system reward me for documenting as many events as possible, or does it punish me for being completely transparent and documenting everything?</p>
-
-<p>The implications of this extend far beyond a simple score on a dashboard:</p>
-
-<ul>
-<li><strong>Consumers lose</strong>: Consumers are provided with an incomplete picture of how their food was grown.</li>
-<li><strong>Regulators lose</strong>: Data collected for compliance purposes is unreliable when the incentive is to report less information.</li>
-<li><strong>Farmers lose</strong>: Those who spend the time and effort to document everything are scored worse than those who do not.</li>
-<li><strong>The environment loses</strong>: Complete environmental impact assessments require complete and detailed documentation of all of a farm's activities.</li>
-</ul>
-
-<h2>Transparency-Based Solution</h2>
-
-<p>The solution is not to discontinue tracking altogether, but to reverse the incentive of the tracking system.</p>
-
-<p>A transparency-based approach tracks something fundamentally different than the amount of carbon generated by the farm's activities: how completely and thoroughly the farmer documents their activities.</p>
-
-<p>In a transparency-based system:</p>
-
-<ul>
-<li><strong>Documenting more events = Higher transparency score</strong>. You are rewarded for your comprehensive documentation efforts, not penalized.</li>
-<li><strong>Carbon calculations still take place</strong>. They serve as supporting documentation rather than the sole focus of the tracking system.</li>
-<li><strong>Consumers use the documentation completeness</strong> of a farm as a trust indicator, thereby aligning the incentives of farmers with the interests of consumers.</li>
-</ul>
-
-<p>Therefore, Farmer B (who documented 15 events) would likely receive a significantly higher transparency-based score than Farmer A (who only documented 5 events). The system provides incentives for exactly the type of behavior that consumers, regulators, and the environment desire: Complete and Honest Documentation.</p>
-
-<h2>Repositioning Carbon Data</h2>
-
-<p>This is not to say that carbon data is irrelevant. Carbon data remains essential for:</p>
-
-<ul>
-<li>B2B Sustainability Reporting</li>
-<li>Compliance with Regulatory Requirements (<a href="https://www.epa.gov/climateleadership/ghg-emission-factors-hub" target="_blank" rel="noopener noreferrer">EPA</a>/<a href="https://www.ers.usda.gov/" target="_blank" rel="noopener noreferrer">USDA</a> Requirements)</li>
-<li>Internal Benchmarking and Improvement</li>
-<li>Carbon Credit Programs Where Applicable</li>
-</ul>
-
-<p>The difference lies in the primary incentive of the tracking system. When transparency-based scoring drives farmer behavior as opposed to minimizing carbon emissions, you get better data across the board, including more accurate carbon calculations, since farmers are documenting everything, rather than selectively excluding certain activities.</p>
-
-<h2>Transitioning to a New System</h2>
-
-<p>If you are currently utilizing a carbon-based tracking system, or if you are beginning from scratch, you should look for the following characteristics in a transparency-based tracking system:</p>
-
-<ol>
-<li><strong>Does it reward you for documenting more events?</strong> A good transparency-based tracking system should reward you for documenting as many events as possible.</li>
-<li><strong>Is carbon data present, but secondary?</strong> Good transparency-based tracking systems should allow you to view carbon calculations as supporting evidence for your claim, rather than punishing you for your thoroughness.</li>
-<li><strong>Will consumers be able to view your documentation completeness?</strong> Transparency-based tracking systems should provide consumers with a clear indication of whether or not you are providing complete documentation, as well as provide you with the ability to clearly demonstrate your commitment to transparency.</li>
-<li><strong>Are Emission Factors Based on Verified Sources?</strong> Look for data that is based upon verified sources such as the EPA, USDA, or other government agencies. Avoid data that is based upon proprietary "black boxes".</li>
-</ol>
-
-<p>Farms that consistently provide consumers with a clear understanding of their commitment to transparency through their documentation will be best positioned to meet the increasing demand for transparency-based metrics from consumers, regulators, and markets.</p>
-
-<p><strong>Stop Being Penalized for Honesty</strong></p>
-<p>Document more. Score higher. Not the other way around.</p>
-
-<h2>Sources</h2>
-<ul>
-<li><a href="https://www.iatp.org/carbon-markets-and-agriculture" target="_blank" rel="noopener noreferrer">Institute for Agriculture and Trade Policy: Carbon Markets & Agriculture</a></li>
-<li><a href="https://www.epa.gov/climateleadership/ghg-emission-factors-hub" target="_blank" rel="noopener noreferrer">EPA GHG Emission Factors Hub: 40 CFR Part 98</a></li>
-<li><a href="https://www.ers.usda.gov/" target="_blank" rel="noopener noreferrer">USDA Economic Research Service</a></li>
-</ul>
-    `,
-  },
-  {
-    slug: "qr-codes-farm-to-consumer-trust",
-    category: "Transparency",
-    date: "February 24, 2026",
-    readTime: "6 min read",
-    title: "How QR Codes Are Changing Farm-to-Consumer Trust",
-    excerpt:
-      "QR codes on produce are bridging the gap between farmers and consumers, giving buyers instant access to the story behind their food.",
-    image: "/images/blog-qr-codes.jpg",
-    content: `
-<p>QR codes evolved beyond menus at restaurants to almost all of commerce – and now to agriculture.</p>
-
-<p>Farmers see QR codes as an effective way to connect directly to consumers, and ultimately, as a way to eliminate the need for intermediaries like retailers, marketers, etc. That is, when a consumer chooses to scan your QR code, you know he/she is interested in your product and is located near the product itself.</p>
-
-<p>That interest, that curiosity, is the most valuable marketing opportunity in agriculture. Yet, most farms are not utilizing it.</p>
-
-<h2>The Trust Opportunity</h2>
-
-<p>Traditional food labels have space for approximately 20 words to describe how a product was grown. These words were likely selected by marketers, printed months ago, and used for all products regardless of when or where the product was actually produced.</p>
-
-<p>QR codes enable a connection to a live webpage that can provide a wide range of data about how your product was grown. This can include:</p>
-
-<ul>
-<li>The exact production cycle for that batch of product</li>
-<li>All documented farming events from planting to harvest</li>
-<li>Photos of the actual farming process</li>
-<li>A count of documented events and photos representing how complete the record is</li>
-<li>Timestamped records that show your documentation was not modified after the fact</li>
-<li>Reviews from other customers that purchased the product</li>
-</ul>
-
-<p>This is the difference between stating a product is "sustainably grown," versus providing evidence of what that statement really represents.</p>
-
-<h2>What Does the Consumer See?</h2>
-
-<p>Once a consumer scans a QR code with a Trazo code, the user experience is built around progressively building trust:</p>
-
-<p><strong>Within the first two seconds</strong>: A snapshot of documented evidence will load: the count of farming practices recorded, photo evidence on file, and any third-party certifications, giving the consumer an immediate, factual sense of how thoroughly this farm documented its process.</p>
-
-<p><strong>Next three to five seconds</strong>: Consumers will see some basic production data about the product: what was grown, where it was grown, when it was harvested, and how many different farming events were documented.</p>
-
-<p><strong>Consumers that wish to learn more</strong>: Can scroll through a timeline of the entire growing process: a series of documents describing the events from planting through harvest, each document provided with a date, description, and a verification badge.</p>
-
-<p><strong>Full Verification</strong>: For the most detail-conscious consumers, every record carries its own timestamp and source details, so each entry can be reviewed independently.</p>
-
-<h3>Progressive Approach</h3>
-<p>Trazo's design enables casual users to obtain value from a QR scan within seconds, while providing engaged consumers with the option to explore as deeply as they would like.</p>
-
-<h2>Real World Examples</h2>
-
-<h3>At the Farmer's Market</h3>
-<p>A local grower of specialty avocados prints QR codes on each crate and provides them to consumers. Once a consumer scans the QR code, they will see the full growing history (14 documented events over eight months) of the avocado, including the application of organic fertilizers, irrigation records, and photos of the harvest. The breadth of documented evidence shows the consumer this grower has nothing to hide.</p>
-
-<h3>In Specialized Retail</h3>
-<p>A coffee producer prints QR codes on their packaging and once scanned, consumers will see the elevation, soil preparation, harvest methodology, and processing details for that particular lot of coffee. Each record is timestamped and tamper-evident, so the history cannot be quietly changed. The retail partner uses the QR code as a premium positioning element.</p>
-
-<h3>Direct-to-Consumer</h3>
-<p>An organic vegetable farm prints QR codes on the containers sent out with their CSA program. Once the subscriber scans the QR code, they can see exactly what occurred in the field that week: which events occurred, what conditions the vegetables were subjected to, and photos of the harvest. In doing so, the farm transforms a transaction into a relationship.</p>
-
-<h2>Why QR Beats Traditional Labels</h2>
-
-<table>
-<thead>
-<tr><th>Traditional Label</th><th>QR-Linked Transparency Page</th></tr>
-</thead>
-<tbody>
-<tr><td>Static text, same for all units</td><td>Dynamic, specific to each production</td></tr>
-<tr><td>Marketer-written claims</td><td>Farmer-documented evidence</td></tr>
-<tr><td>Printed months before sale</td><td>Updated with each new event</td></tr>
-<tr><td>Cannot be verified</td><td>Documented, timestamped records</td></tr>
-<tr><td>One-way communication</td><td>Consumers can leave reviews</td></tr>
-<tr><td>Limited by physical space</td><td>Unlimited detail depth</td></tr>
-</tbody>
-</table>
-
-<h2>Getting Started with QR Codes for Your Farm</h2>
-
-<p>Trazo makes creating QR codes easy:</p>
-
-<ol>
-<li><strong>Track your production</strong> - Track all of your farm events as they occur. The more information you track, the more detailed the customer experience will be.</li>
-<li><strong>Create your QR codes</strong> - Trazo will create a QR code for every production, simply download or print your QR code.</li>
-<li><strong>Post your QR codes</strong> - Anywhere that customers may view your QR codes (e.g., on packaging, crate labels, at markets, etc.)</li>
-<li><strong>Follow up on customer interaction</strong> - Scan counts, customer interaction and review comments are displayed on your dashboard.</li>
-</ol>
-
-<p>There is no cost for generating your QR code. It is the history behind your QR code (verified documentation of your farming practices) that provides the value.</p>
-
-<h2>The Bottom Line</h2>
-
-<p>With every product you sell, you create the opportunity to form a personal connection with the person purchasing that product. QR codes provide you with the ability to take that opportunity and make something tangible out of it. When a consumer has the ability to see and confirm where and how their food was grown, they develop trust with the farmer producing that food.</p>
-
-<p>Those farmers that begin to establish transparency around their products today will have a distinct advantage over time as the number of consumers demanding verifiable sourcing continues to grow.</p>
-
-<p><strong>You can create your first QR code in under 2 minutes.</strong> Start connecting directly with the customers that support your practices.</p>
-    `,
-  },
-  {
     slug: "planting-to-harvest-documentation",
     category: "Guides",
     date: "March 3, 2026",
@@ -483,6 +201,232 @@ export const posts: BlogPost[] = [
 <p>These five record types cover the majority of what inspectors review during organic audits. Once they are consistently documented, adding soil tests, pest monitoring, cover crop management, and business events fills out the complete picture.</p>
 
 <p>The goal is not to create more paperwork. It is to make the documentation you already need serve double duty: compliance readiness and consumer-facing transparency. The farms that achieve this will be the ones that maintain their certification with less stress and build stronger relationships with their buyers.</p>
+    `,
+  },
+  {
+    slug: "cog-pro-shutting-down-migration-guide",
+    category: "Guides",
+    date: "August 9, 2026",
+    readTime: "6 min read",
+    title:
+      "COG Pro Is Shutting Down: A Migration Checklist for Organic Growers",
+    excerpt:
+      "COG Pro has announced it will end service December 31, 2026. Here's the export checklist, the field-mapping guide, and the vendor questions to ask before your organic records disappear along with the software.",
+    image: "/images/blog-organic-records.jpg",
+    content: `
+<p>COG Pro has announced that it will end service on December 31, 2026. If your walnut, almond, citrus, or avocado operation's organic records live in that system, the exact shutdown date matters less than what happens to your history once the software goes dark. Confirm the current timeline and any final export windows directly with the vendor, since shutdown plans can shift.</p>
+
+<p>This is a migration checklist, not a eulogy. The goal is simple: get every record out, in a form your certifier can still use, before you lose the ability to log in.</p>
+
+<h2>What the Shutdown Actually Means for Your Records</h2>
+
+<p>Under 7 CFR 205.103, certified operations must maintain records that fully disclose all activities and transactions, and those records must be kept for not less than five years beyond their creation (7 CFR 205.103(b)(3)). That requirement does not pause because a software vendor closes its doors. If an inspector asks for an input application from three years ago and your only copy lived inside a platform that no longer exists, "the software shut down" is not an exemption.</p>
+
+<p>That makes this a five-year problem, not a one-year problem. Every application log, harvest record, and sales record that falls inside your rolling five-year window needs to come out, and needs to land somewhere you control, in a format you can still read after the account is closed.</p>
+
+<h2>Step 1: Inventory What You Need to Export</h2>
+
+<p>Before you touch an export button, list every record type you actually have stored in COG Pro. Most organic operations end up needing at least these:</p>
+
+<ul>
+<li><strong>Field and crop lists.</strong> Your parcel or field inventory, acreage, and crop history by field.</li>
+<li><strong>Input applications.</strong> Every fertilizer, pesticide, and soil amendment record: product, rate, date, field, and applicator.</li>
+<li><strong>Harvest logs.</strong> Date, field, quantity, and lot identification for each harvest event.</li>
+<li><strong>Sales and mass-balance records.</strong> What was sold, to whom, in what quantity, and how it reconciles against what was harvested.</li>
+<li><strong>Organic System Plan documents.</strong> Any OSP sections, land-use history, or buffer documentation stored in the platform.</li>
+<li><strong>Certificates and inspection history.</strong> Prior certificates, inspection reports, and any noncompliance correspondence.</li>
+</ul>
+
+<p>If you are not sure whether a record type exists in your account, check every menu. Older or less-visible features sometimes hold data that does not show up on the main dashboard.</p>
+
+<h2>Step 2: Verify Your Date Ranges Cover Five Years</h2>
+
+<p>This is the step most growers skip. It is common to export "this year" or "the last 12 months" and assume that is enough. It is not. Because 7 CFR 205.103(b)(3) requires five years of retrievable records, your export needs to reach back five full years from today, not just cover the current certification cycle.</p>
+
+<p>If your farm has used COG Pro for fewer than five years, export everything from day one. If you have used it longer, pull the full five-year trailing window at minimum. A gap in your export is a gap you will have to explain to an inspector later, and "the export tool only defaulted to one year" is a weak answer to give.</p>
+
+<h2>Step 3: Map Each Record Type to Your Next Tool</h2>
+
+<p>A CSV export is only useful if the next place it lands can turn rows back into records your certifier can review. Before you migrate, understand how COG Pro's structure maps onto whatever tool you choose next:</p>
+
+<ul>
+<li><strong>Field &rarr; Parcel.</strong> What COG Pro calls a Field is typically what most successor systems call a parcel: a defined piece of land with its own boundary and history.</li>
+<li><strong>Row / Section &rarr; a block identifier on each activity.</strong> The subdivisions you used to separate rows or sections inside a field usually become a block or sub-parcel identifier attached to individual activity records, not a separate entity on their own. If you farm in California, this is often the same block number that already appears on your Pesticide Use Report.</li>
+<li><strong>Input applications &rarr; chemical or input events.</strong> Each row in your application export should become one dated, field-linked event, not a line item buried in a spreadsheet.</li>
+<li><strong>Harvest logs &rarr; production or harvest events.</strong> Harvest date, quantity, and lot number should carry forward as a structured record tied to the specific field and planting.</li>
+</ul>
+
+<p>A successor tool that just stores your CSV as an attachment has not really migrated your records, it has archived a file. The difference shows up the next time your certifier asks for input history on a specific field: a dumped spreadsheet takes explaining, a structured, dated, field-linked record does not.</p>
+
+<h2>Step 4: Time the Migration Before Renewal Season, Not During It</h2>
+
+<p>Late fall through winter is when most certifiers open their annual update windows and when USDA's cost-share application typically comes due (see our <a href="/blog/organic-renewal-season-calendar">renewal-season calendar</a> for the full sequence). That is the worst possible stretch to also be untangling a software migration. Do the export and mapping work now, during the postharvest lull, while you still have full access to COG Pro and before your attention splits across annual paperwork, inspections, and deadlines.</p>
+
+<p>Waiting until your certifier's deadline is close is how growers end up trying to reconstruct three years of application history from memory the week before renewal.</p>
+
+<h2>Step 5: Ask Any Successor Vendor These Questions Before You Commit</h2>
+
+<p>Not every recordkeeping tool is built the same way, and a rushed migration can leave you worse off than a spreadsheet. Before you decide where your records go next, ask:</p>
+
+<ul>
+<li><strong>Structured fields or free text?</strong> Can the tool require a rate, date, and area for every application, or does it just accept a paragraph of notes?</li>
+<li><strong>Per-activity records or one running log?</strong> Can you pull up a single input application with its own date, photo, and field link, or is everything one long export?</li>
+<li><strong>Can your certifier view records directly?</strong> Does the certifier get an online view of your records, or are you still emailing PDFs and spreadsheets every time they ask?</li>
+<li><strong>Does it support your crew's language?</strong> If your field crew logs activities directly, does the tool work in Spanish as well as English?</li>
+<li><strong>Can it import your COG Pro export directly?</strong> Or are you retyping years of history by hand?</li>
+</ul>
+
+<p>The answers determine whether next year's renewal is easier or harder than this one.</p>
+
+<h2>If You Have Already Lost Access</h2>
+
+<p>If your account is already closed or your export window has passed, you are not entirely out of options. Contact the vendor's support line directly and ask whether a data export can still be generated on request. Check for any paper or PDF copies of applications, harvest logs, or receipts you may have kept outside the software. And contact your certifier: certifying agents keep their own file of what you submitted in past annual updates and inspection reports, which can help you reconstruct gaps even if the original software account is gone.</p>
+
+<p>None of these are as clean as a full CSV export done ahead of time, which is exactly why the window to act is now, not after the shutdown date passes.</p>
+
+<p>Trazo accepts COG Pro CSV exports directly. Send your field, input, and harvest exports, and the records come in as structured, dated activities tied to your parcels, not a spreadsheet buried in an attachments folder. Trazo's guided modules follow the Common OSP structure, and the Starter plan is free. <a href="https://app.trazo.io/auth/signup" target="_blank" rel="noopener noreferrer">Start a free account</a> to see how your exported records look once they are organized.</p>
+    `,
+  },
+  {
+    slug: "organic-renewal-season-calendar",
+    category: "Guides",
+    date: "August 9, 2026",
+    readTime: "6 min read",
+    title:
+      "The Organic Renewal-Season Calendar: Every Deadline From October to April",
+    excerpt:
+      "Organic renewal isn't one deadline, it's a six-month sequence from postharvest through spring. A month-by-month calendar of what typically falls due, from OCCSP cost-share to certifier annual updates.",
+    image: "/images/blog-premium-pricing.jpg",
+    content: `
+<p>Organic renewal does not happen on a single date. It is a sequence that starts the moment you finish harvest and does not let up until your certifier signs off in spring. Miss one piece of it, and the rest gets harder.</p>
+
+<p>Not every orchard's harvest calendar lines up neatly with October. Walnuts and almonds are typically off the trees by then, but citrus and avocado harvest windows vary by variety and can run well into winter or spring. The reconciliation step below still applies, it just happens whenever your particular crop and block finish coming off, not necessarily on a single calendar date.</p>
+
+<p>This calendar walks the season month by month: what typically falls due, what a complete annual update actually contains, and why so many growers end up racing a deadline that did not have to sneak up on them. Deadlines shift year to year and certifier to certifier, so treat every date below as a planning guide, not a substitute for checking with your certifier and with USDA's Farm Service Agency directly.</p>
+
+<h2>October: Close Out the Season While It Is Still Fresh</h2>
+
+<p>Postharvest is the best time in the entire calendar to reconcile your records, and the most commonly skipped. Your harvest totals, input logs, and sales records are still fresh enough that you can catch a missing receipt or a mismatched quantity while you can still do something about it.</p>
+
+<p>Use October to:</p>
+
+<ul>
+<li>Reconcile harvested quantities against what was sold or is currently in storage.</li>
+<li>Close out any open chemical or input application logs for the season.</li>
+<li>Attach purchase receipts to the input records they support.</li>
+<li>Note any deviations from your Organic System Plan that happened during the season, while you still remember the details.</li>
+</ul>
+
+<p>If part of your fall task list also includes moving off a shutting-down platform, do that now too. See our <a href="/blog/cog-pro-shutting-down-migration-guide">COG Pro migration checklist</a> if that applies to your farm. Every week you wait after harvest, the details get fuzzier and the crew members who applied a given input are more likely to have moved on to another job.</p>
+
+<h2>December 31: OCCSP Cost-Share Deadline</h2>
+
+<p>The Organic Certification Cost Share Program (OCCSP), administered through USDA's Farm Service Agency, reimburses eligible organic operations for a portion of certification costs, historically up to 75 percent of costs with a cap of $750 per certification scope. Applications have typically been due December 31. Because program terms, caps, and deadlines can change year to year, verify current-year terms and the application window directly with your local FSA office before you count on a specific figure.</p>
+
+<p>To apply, you will generally need proof of certification costs paid during the program year, so keep your certifier invoices on hand as you move through the fall.</p>
+
+<h2>January: The Certifier Deadline Cluster</h2>
+
+<p>January is when most annual update deadlines land, though the exact date depends entirely on your certifying agent. As typical recent deadlines, several major certifiers have followed a pattern like this, though you should confirm your own certifier's current dates directly:</p>
+
+<ul>
+<li><strong>CCOF:</strong> the annual update window has typically opened November 3, with updates due January 1.</li>
+<li><strong>Pennsylvania Certified Organic (PCO):</strong> annual updates have typically been due January 15.</li>
+<li><strong>Oregon Tilth Certified Organic (OTCO):</strong> deadlines have typically fallen around January 1 or April 1, depending on the program and scope.</li>
+</ul>
+
+<p>If you are certified through a smaller or regional certifier not listed here, ask directly when their window opens. Certifiers publish these dates on their own websites and can adjust them from year to year.</p>
+
+<h2>February 1: MOSA and the Stragglers</h2>
+
+<p>Midwest Organic Services Association (MOSA) has typically set its annual update deadline around February 1. If you are certified through MOSA, or you are catching up after missing an earlier window with another certifier, February is often the last realistic month to get a complete update in before inspection scheduling tightens up for the season.</p>
+
+<h2>What a Complete Annual Update Actually Contains</h2>
+
+<p>An annual update is not just a form. Certifiers are looking for a complete picture of what changed and what stayed the same since your last inspection. A complete submission generally includes:</p>
+
+<ul>
+<li><strong>An updated Organic System Plan.</strong> Under 7 CFR 205.201(a), your OSP has to reflect your actual current practices, so any new inputs, new practices, or changed procedures need to be written in, not left describing last year's operation.</li>
+<li><strong>A current input list.</strong> Every product you intend to use this season, checked against the National List.</li>
+<li><strong>Land-history changes.</strong> New leases, new acreage, or changes to how adjoining land is used.</li>
+<li><strong>New parcels and buffer documentation.</strong> If you added ground, or your neighbors changed what they are growing next to you, your buffer zone documentation under 7 CFR 205.202(c) needs to reflect it.</li>
+<li><strong>Records ready for inspection.</strong> Not summarized, not reconstructed from memory: the actual application logs, harvest records, and sales records an inspector can review, kept on file per the five-year retention requirement at 7 CFR 205.103(b)(3). For a deeper look at what inspectors actually review, see our guide to <a href="/blog/what-your-organic-inspector-actually-checks">what your organic inspector checks</a>.</li>
+</ul>
+
+<h2>Why Updates Get Delayed</h2>
+
+<p>Ask any certifier what slows down the annual update process, and the answer is rarely a farm's growing practices. It is the paperwork behind them. In USDA's 2021 Certified Organic Survey (NASS), over half of organic farms named certification paperwork and record-keeping among their top challenges, more than any other single issue. That is not one farm's problem; it is the industry's own, consistently reported experience.</p>
+
+<p>Beyond that structural challenge, the practical causes of delay tend to repeat every year: a lab result that should have been ordered earlier, new lease paperwork still waiting on a signature, a missing receipt that has to be tracked down after the fact, or a crew member who applied an input and moved on before writing it down.</p>
+
+<h2>A Month-by-Month Prep Checklist</h2>
+
+<ol>
+<li><strong>October:</strong> Reconcile harvest and sales. Close out chemical and input logs for the season. Attach receipts.</li>
+<li><strong>November:</strong> Gather receipts and invoices for OCCSP. If your certifier's window opens this month (CCOF's has typically opened November 3), start your annual update early rather than waiting for the deadline.</li>
+<li><strong>December:</strong> Submit your OCCSP cost-share application before December 31. Finish any outstanding OSP updates.</li>
+<li><strong>January:</strong> Submit your annual update by your certifier's deadline. Pull your five-year record archive together in case an inspection is scheduled early in the year.</li>
+<li><strong>February:</strong> MOSA's deadline falls here if that is your certifier. Catch up on anything still outstanding from January.</li>
+<li><strong>March and April:</strong> OTCO's second window has typically fallen around April 1. Use this stretch to prepare for on-site inspection scheduling, which usually ramps up through the growing season.</li>
+</ol>
+
+<p>Trazo assembles a renewal packet from the season's logged events. Instead of building the update from scratch every January, the input applications, harvest records, and OSP-relevant events documented through the year are already organized by field and date. The Starter plan is free. <a href="https://app.trazo.io/auth/signup" target="_blank" rel="noopener noreferrer">See how the packet comes together</a> before this year's deadlines hit.</p>
+    `,
+  },
+  {
+    slug: "what-your-organic-inspector-actually-checks",
+    category: "Guides",
+    date: "August 9, 2026",
+    readTime: "5 min read",
+    title:
+      "What Your Organic Inspector Actually Checks (And the Records That Answer)",
+    excerpt:
+      "An organic inspection follows a predictable set of questions, not a hidden test. Here's what inspectors actually check, area by area, and the specific record that answers each one.",
+    image: "/images/blog-planting-harvest.jpg",
+    content: `
+<p>An organic inspection can feel like a test with a syllabus nobody handed you. It is not. Inspectors work through a defined set of questions, area by area, and every one of those questions has a specific kind of record that answers it. Know the questions ahead of time, and the inspection stops being a mystery.</p>
+
+<p>This applies whether you are growing walnuts, almonds, citrus, or avocados, and it matters even more for wholesale operations, where a packing house or handler may run its own traceability check on top of whatever your certifier asks for. Here is the walk-through from a records perspective: five areas an inspector reviews, the question behind each one, and the record that answers it.</p>
+
+<h2>Input Applications: "What Did You Put on This Field, and Is It Allowed?"</h2>
+
+<p><strong>The question:</strong> For every fertilizer, pesticide, or soil amendment applied, the inspector wants to know the product, the rate, the date, the field or area treated, who applied it, and whether the product is actually allowed under the National List (7 CFR 205.601-606).</p>
+
+<p><strong>The record that answers it:</strong> A dated application log entry for each event, tied to a specific field, with the product name, rate, and applicator recorded at the time of application rather than reconstructed afterward. A photo of the product label or the purchase receipt strengthens the record by showing the product's actual composition, not just its name.</p>
+
+<h2>Seed Sourcing: "Why Isn't This an Organic Seed?"</h2>
+
+<p><strong>The question:</strong> Under 7 CFR 205.204, you are required to use organic seed unless an equivalent organic variety is not commercially available. If you planted conventional, untreated, non-GMO seed instead, the inspector wants to see that you actually looked for an organic option first.</p>
+
+<p><strong>The record that answers it:</strong> Documentation of your commercial availability search, typically showing you contacted at least three different suppliers before concluding the organic variety was not available in the form, quantity, or timeframe you needed. Keep the supplier names, the dates you contacted them, their responses, and the seed lot number and supplier certificate for whatever you ultimately planted.</p>
+
+<h2>Buffer Zones and Adjoining Land: "What Happened to the Buffer-Row Crop?"</h2>
+
+<p><strong>The question:</strong> Under 7 CFR 205.202(c), if your organic ground adjoins land that is not organically managed, you need a buffer or another documented method to prevent contact with prohibited substances. The inspector's question is specific: where is the buffer, and what happened to whatever grew inside it?</p>
+
+<p><strong>The record that answers it:</strong> A buffer zone diagram or description in your Organic System Plan showing where the buffer sits relative to the adjoining land, plus a harvest record showing the buffer-strip crop was either excluded from your organic harvest or segregated and sold or labeled as non-organic. "We have a buffer" is not the record. What happened to that strip at harvest is the record.</p>
+
+<h2>Harvest-to-Sale Traceability: "Can You Connect This Field to This Sale?"</h2>
+
+<p><strong>The question:</strong> Inspectors run traceback and mass-balance checks: pick a sale and trace it back to the field it came from, or pick a harvest and trace it forward to where it was sold. If the quantities do not reconcile, or the chain has a gap, that becomes a finding.</p>
+
+<p><strong>The record that answers it:</strong> A harvest log with field, date, and quantity, connected to a storage or lot identifier, connected to a sales record with buyer, quantity, and date. Each link has to actually add up: what you harvested should account for what you sold plus what is still in inventory. For wholesale orchard crops, this chain often runs through a third party, a huller for walnuts and almonds, a packing house for citrus and avocados, so keep the receiving tickets or settlement sheets from that handler as part of your own record, not just the check that eventually comes back.</p>
+
+<h2>Equipment Cleanout: "Was This Used on Conventional Ground First?"</h2>
+
+<p><strong>The question:</strong> If you share equipment, bins, or storage with a conventional operation, or use custom equipment that was previously on non-organic ground, the inspector wants to know it was cleaned before it touched your organic crop. This is common in tree nut orchards that bring in a custom harvester or shaker crew that also works conventional ground, and it falls under the commingling and contact-prevention requirements at 7 CFR 205.272.</p>
+
+<p><strong>The record that answers it:</strong> A cleanout log: date, method used, what the equipment was used for previously, and who verified the cleaning was complete. "We always clean it" without a log entry is a practice, not a record, and inspectors are checking records.</p>
+
+<h2>The Five-Year Rule Behind All of It</h2>
+
+<p>Every record above is only useful if it is still there when someone asks for it. 7 CFR 205.103 requires certified operations to keep records that fully disclose all activities and transactions, and 205.103(b)(3) sets the retention period at not less than five years beyond their creation. Records also have to be "readily auditable," meaning organized enough that anyone reviewing them can actually find what is being asked for. A drawer of receipts in date order counts. A box nobody has sorted since last season does not, even if every piece of paper is technically in it somewhere. Our guide to <a href="/blog/organic-record-keeping-guide">organic record-keeping under NOP</a> covers the full recordkeeping requirement in more depth.</p>
+
+<h2>A Simple Way to Prepare</h2>
+
+<p>Before your next inspection, walk through the five areas above and pull the relevant records into one place for each: input applications, seed sourcing, buffer documentation, harvest-to-sale records, and equipment cleanout logs. Doing this the same week you close out your <a href="/blog/organic-renewal-season-calendar">annual update</a> means you are not repeating the work twice. If you can hand over the record that answers each question without reconstructing it on the spot, the inspection moves fast. If you are searching for one of these mid-inspection, that gap is exactly what a finding looks like.</p>
+
+<p>Trazo's event forms are built around these same five questions. Each entry asks for the field, the date, and the specific details a certifier will look for, so the record exists in the form an inspector wants it, not just in a form you happen to remember writing. The Starter plan is free. <a href="https://app.trazo.io/auth/signup" target="_blank" rel="noopener noreferrer">See how a logged event becomes an inspection-ready record</a>.</p>
     `,
   },
 ];

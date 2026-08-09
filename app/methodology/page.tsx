@@ -4,31 +4,32 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Transparency Scoring Methodology | Trazo - Agricultural Transparency Platform",
+    "Methodology: records, readiness checks, and emission calculations | Trazo",
   description:
-    "Open methodology behind Trazo's producer transparency scoring and direct operational emission calculations. EPA/USDA-sourced factors, anti-gaming protections, and full calculation details. Published under CC BY 4.0.",
+    "How Trazo turns field activity logs into certifier-ready records, runs documentation readiness checks, and calculates direct operational emissions from EPA/USDA-sourced factors. Published openly under CC BY 4.0.",
 };
 
 export default function MethodologyPage() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <main className="pt-24 pb-20">
+      <main className="pt-32 pb-20">
         <article className="mx-auto max-w-3xl px-6">
           <header className="mb-12 text-center">
             <p className="text-sm font-medium tracking-widest text-primary uppercase">
               Published Methodology
             </p>
             <h1 className="mt-3 text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-              Transparency Scoring Methodology
+              How Trazo&apos;s Records and Calculations Work
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
-              How Trazo calculates producer transparency scores and direct
-              operational emissions, published openly for scrutiny and
-              reproducibility.
+              How field activity logs become certifier-ready records, how
+              documentation readiness checks are computed, and how direct
+              operational emissions are calculated — published openly for
+              scrutiny and reproducibility.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Version 1.2 &middot; April 2026 &middot; License: CC BY 4.0
+              Version 2.0 &middot; August 2026 &middot; License: CC BY 4.0
             </p>
           </header>
 
@@ -37,131 +38,87 @@ export default function MethodologyPage() {
             <section className="rounded-xl border border-border bg-secondary/30 p-6">
               <h3 className="text-xl font-bold text-foreground">Abstract</h3>
               <p className="mt-3 leading-[1.8]">
-                This document describes the methodology behind {"Trazo's"}{" "}
-                agricultural transparency scoring system, a{" "}
-                <strong>producer-dashboard</strong> metric (0–100) that measures
-                how completely a farmer has documented their farming practices
-                for a given production cycle. It is not shown to consumers: the
-                QR page presents the documented practices, photos and
-                third-party certifications themselves, never a score or grade
-                Trazo assigned.
-                Unlike carbon-first approaches, which inadvertently penalize
-                comprehensive documentation, {"Trazo's"} transparency-first
-                model rewards farmers for logging more events. Carbon data is
-                calculated simultaneously using government-sourced emission
-                factors and remains available for B2B sustainability reporting.
-                Scores are calculated from farmer-reported documentation and
-                have not been independently audited.
+                This document describes how Trazo works, in three parts. First,
+                the <strong>records model</strong>: dated, parcel-linked
+                activity records whose required fields follow 7&nbsp;CFR
+                205.103, assembled into Organic System Plan modules that follow
+                the Common OSP structure — authored and confirmed by the
+                operator, as § 205.201(a) requires. Second,{" "}
+                <strong>readiness checks</strong>: completeness measurements
+                computed over those records (including a 0–100 documentation
+                completeness metric shown only on the producer&apos;s own
+                dashboard — never to consumers, and never as any form of
+                sustainability grade). Third, the{" "}
+                <strong>emission calculations</strong>: direct operational
+                emissions computed from EPA/USDA-published factors, kept as
+                background data for business reporting — not a consumer-facing
+                claim.
               </p>
               <p className="mt-3 leading-[1.8]">
-                This methodology is published to invite scrutiny, encourage
-                reproducibility, and advance the broader conversation around
-                agricultural transparency standards. It was developed by Trazo
-                and has not yet undergone external peer review.
+                All records are farmer-reported and not independently audited;
+                readiness checks are preparation aids for the operator, never
+                certification findings — the certifier&apos;s review is the
+                certifier&apos;s. This methodology is published to invite
+                scrutiny and encourage reproducibility. It was developed by
+                Trazo and has not undergone external peer review.
               </p>
             </section>
 
-            {/* 1. Problem Statement */}
+            {/* 1. The records model */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                1. The Problem: Why Carbon-First Fails
+                1. The Records Model: One Entry, Two Outputs
               </h3>
               <p className="mt-3 leading-[1.8]">
-                Traditional agricultural carbon platforms calculate a {"farm's"}{" "}
-                environmental impact based on logged activities. This creates a
-                destructive paradox:
+                Trazo&apos;s unit of work is the{" "}
+                <strong>activity record</strong>: a dated, parcel-linked entry —
+                an input application, a harvest, an irrigation set, a cleanout —
+                whose structured fields follow what 7&nbsp;CFR&nbsp;205.103
+                recordkeeping asks an organic operation to retain: what was
+                done, where, when, with what, by whom. Input applications carry
+                product, rate, area treated, and applicator; harvests carry
+                quantity, how the amount was determined, destination, and
+                buffer-row disposition; equipment shared with conventional
+                ground links to its cleanout log.
               </p>
-              <div className="mt-4 overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-border">
-                      <th className="py-2 pr-4 text-left font-semibold text-foreground">
-                        Scenario
-                      </th>
-                      <th className="py-2 pr-4 text-left font-semibold text-foreground">
-                        Carbon-First Result
-                      </th>
-                      <th className="py-2 text-left font-semibold text-foreground">
-                        Transparency-First Result
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 pr-4">
-                        Farmer logs 15 events (comprehensive)
-                      </td>
-                      <td className="py-3 pr-4 text-red-500">
-                        Higher emissions → Lower score
-                      </td>
-                      <td className="py-3 text-green-500">
-                        15/15 documented → Higher score
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="py-3 pr-4">
-                        Farmer logs 3 events (minimal)
-                      </td>
-                      <td className="py-3 pr-4 text-green-500">
-                        Lower emissions → Higher score
-                      </td>
-                      <td className="py-3 text-red-500">
-                        3/15 documented → Lower score
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <p className="mt-4 leading-[1.8]">
-                <strong>The core problem:</strong> Carbon calculators treat
-                &quot;more data&quot; as &quot;more emissions&quot; rather than
-                &quot;more transparency.&quot; This incentivizes farms to
-                document less. The exact opposite of what consumers, regulators,
-                and the agricultural industry need.
-              </p>
-
-              <h4 className="mt-6 text-lg font-semibold text-foreground">
-                Consumer Trust Gap
-              </h4>
-              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
-                <li>
-                  <strong>Only 20% of consumers</strong> believe brand
-                  sustainability claims (Blue Yonder, 2025. 5,000+ consumer
-                  survey)
-                </li>
-                <li>
-                  <strong>91% of consumers</strong> are actively worried about
-                  greenwashing (WhatTheyThink, 2025. Global consumer survey)
-                </li>
-              </ul>
               <p className="mt-3 leading-[1.8]">
-                Trazo inverts the incentive:{" "}
-                <strong>
-                  more documentation = a more complete record = more consumer
-                  trust
-                </strong>
-                . The transparency score (0–100) is the farmer-facing
-                completeness metric that drives this. It lives on the producer
-                dashboard. Consumers don&apos;t see a self-assigned score; they
-                see the documented practices, photos, and third-party
-                certifications the score is built from. Carbon data is
-                calculated automatically and remains available for B2B
-                reporting; the consumer-facing story is transparency, not
-                carbon.
+                The same records then serve two audiences without re-entry.{" "}
+                <strong>For the certifier:</strong> records assemble into
+                Organic System Plan modules that follow the Common OSP structure
+                (§&nbsp;205.201(a)), per-parcel applications (§&nbsp;205.202),
+                an audit PDF with inline Part&nbsp;205 citations, and a renewal
+                packet. Where Trazo can derive a suggested answer from the
+                season&apos;s records, it presents the suggestion{" "}
+                <em>with its evidence named</em> — the operator confirms or
+                edits every answer, because the operator authors the plan.{" "}
+                <strong>For the buyer:</strong> the same records produce a
+                scannable product page showing documented practices, photos, and
+                third-party certifications — facts, never a self-assigned grade.
+              </p>
+              <p className="mt-3 leading-[1.8]">
+                A design consequence worth stating: because Trazo measures{" "}
+                <em>documentation completeness</em> rather than scoring
+                environmental impact, a farm is never penalized for logging
+                more. More records mean a more complete file — for the
+                inspector, and for the buyer.
               </p>
             </section>
 
             {/* 2. Score Calculation */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                2. Transparency Score Calculation
+                2. Documentation Completeness (Producer-Dashboard Metric)
               </h3>
               <p className="mt-3 leading-[1.8]">
-                The transparency score measures{" "}
-                <strong>documentation completeness</strong>: what percentage of
-                expected farming practices have been recorded for a given
-                production cycle, adjusted for documentation quality (photo
-                evidence).
+                The producer dashboard shows a 0–100 completeness metric —
+                internally called the transparency score. It appears{" "}
+                <strong>only</strong> on the producer&apos;s own dashboard: it
+                is never displayed to consumers, never embedded in the buyer
+                page, and never presented as a sustainability rating of any
+                kind. It measures <strong>documentation completeness</strong>:
+                what percentage of expected farming practices have been recorded
+                for a given production cycle, adjusted for documentation quality
+                (photo evidence).
               </p>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
@@ -269,14 +226,15 @@ export default function MethodologyPage() {
               <p className="mt-3 leading-[1.8]">
                 Trazo does not assign a letter grade, tier, medal or badge to a
                 farm. An earlier version of this document published an A+ to F
-                scale; that construct was removed from the product in August 2026
-                and is no longer published here. A self-created rating shown to
-                consumers is the label class restricted by EU Directive 2024/825
-                and carries general-environmental-benefit risk under FTC 16 CFR
-                260.6 — and a grade Trazo invented says more about our thresholds
-                than about the farm. The score below is a completeness measure on
-                the producer&apos;s own dashboard; consumers see the documented
-                practices, photos and third-party certifications themselves.
+                scale; that construct was removed from the product in August
+                2026 and is no longer published here. A self-created rating
+                shown to consumers is the label class restricted by EU Directive
+                2024/825 and carries general-environmental-benefit risk under
+                FTC 16 CFR 260.6 — and a grade Trazo invented says more about
+                our thresholds than about the farm. The score below is a
+                completeness measure on the producer&apos;s own dashboard;
+                consumers see the documented practices, photos and third-party
+                certifications themselves.
               </p>
             </section>
 
@@ -478,8 +436,9 @@ export default function MethodologyPage() {
               </h4>
               <p className="mt-3 leading-[1.8]">
                 USDA per-hectare fuel factors (Section 6) assume mechanical
-                equipment. When a farmer documents a manual method (for example, &quot;Hand thinning with pruning shears&quot;), applying a mechanical fuel average would overstate emissions by
-                10–100x.
+                equipment. When a farmer documents a manual method (for example,
+                &quot;Hand thinning with pruning shears&quot;), applying a
+                mechanical fuel average would overstate emissions by 10–100x.
               </p>
               <p className="mt-3 leading-[1.8]">
                 Trazo detects manual operations from the farmer{"'"}s free-text
@@ -877,7 +836,8 @@ export default function MethodologyPage() {
                   Prevention Plan (§ 205.201(a)(3)), 5-Year Retention (§
                   205.103(b)(4)), Unannounced Inspection Readiness (§ 205.661),
                   Non-Retail Container Labeling (§ 205.307), and NOP Import
-                  Certificate. Each attestation reports actual platform state, never a false claim.
+                  Certificate. Each attestation reports actual platform state,
+                  never a false claim.
                 </li>
                 <li>
                   <strong>Record Change History:</strong> every edit logged with
@@ -955,7 +915,8 @@ export default function MethodologyPage() {
               </h4>
               <p className="mt-3 leading-[1.8]">
                 Each photo in the gallery includes a footer listing the original
-                S3 object key, upload timestamp, file size, and uploader account, metadata retained in the producer dashboard for cross-
+                S3 object key, upload timestamp, file size, and uploader
+                account, metadata retained in the producer dashboard for cross-
                 reference. The PDF does not currently include a SHA-256 hash on
                 the file itself; that capability may be added in a future
                 release.
@@ -1010,7 +971,8 @@ export default function MethodologyPage() {
                   2024/825 (effective September 2026), a self-created
                   sustainability score shown to consumers could be classified as
                   a self-created sustainability label. For this reason the
-                  transparency score is not displayed on the consumer QR page. It is a farmer-dashboard completeness metric only, and
+                  transparency score is not displayed on the consumer QR page.
+                  It is a farmer-dashboard completeness metric only, and
                   consumers see the documented practices and third-party
                   certifications directly. Full EU substantiation may still
                   require external methodology audit.
@@ -1182,39 +1144,9 @@ export default function MethodologyPage() {
                 </li>
               </ol>
 
-              <h4 className="mt-6 text-lg font-semibold text-foreground">
-                Consumer Research
-              </h4>
-              <ol
-                start={9}
-                className="mt-3 list-decimal space-y-2 pl-6 text-sm leading-[1.8]"
-              >
-                <li>
-                  Blue Yonder. (2025). <em>Consumer Sustainability Survey</em>.
-                  5,000+ respondents.{" "}
-                  <a
-                    href="https://blueyonder.com/blog/2025/2025-survey-results-only-20-of-consumers-believe-brand-sustainability-claims"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline"
-                  >
-                    blueyonder.com
-                  </a>
-                </li>
-                <li>
-                  WhatTheyThink / Adopter.net. (2025).{" "}
-                  <em>Greenwashing Statistics Report</em>. Global consumer
-                  survey, 91% greenwashing concern.{" "}
-                  <a
-                    href="https://www.adopter.net/knowledge-hub/45-greenwashing-statistics-you-need-to-know-in-2026"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline"
-                  >
-                    adopter.net
-                  </a>
-                </li>
-              </ol>
+              {/* Consumer-survey references removed 2026-08-09 with the
+                  "carbon-first fails" section that cited them — a reference
+                  list must not cite sources the page no longer uses. */}
             </section>
 
             {/* Full Methodology Download */}

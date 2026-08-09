@@ -1,5 +1,5 @@
-import type { MetadataRoute } from "next"
-import { posts } from "@/lib/blog-data"
+import type { MetadataRoute } from "next";
+import { posts } from "@/lib/blog-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const blogEntries = posts.map((post) => ({
@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.6,
-  }))
+  }));
 
   return [
     {
@@ -29,6 +29,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: "https://www.trazo.io/common-osp",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: "https://www.trazo.io/for-farmers",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: "https://www.trazo.io/for-certifiers",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
       url: "https://www.trazo.io/methodology",
       lastModified: new Date(),
       changeFrequency: "monthly",
@@ -39,6 +57,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.7,
+    },
+    {
+      url: "https://www.trazo.io/about",
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
     },
     {
       url: "https://www.trazo.io/contact",
@@ -65,5 +89,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.2,
     },
-  ]
+  ];
 }

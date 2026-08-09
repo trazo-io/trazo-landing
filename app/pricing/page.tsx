@@ -226,7 +226,7 @@ export default function PricingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingJsonLd) }}
       />
       <Navbar />
-      <main className="pt-24 pb-20">
+      <main className="pt-32 pb-20">
         {/* Header */}
         <section className="mx-auto max-w-7xl px-6 text-center">
           <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
@@ -397,6 +397,61 @@ export default function PricingPage() {
         </section>
 
         {/* Second farm */}
+        {/* Honest price comparison (plan #67) — public list prices, checked 2026-08-08 */}
+        <section className="mx-auto mt-24 max-w-4xl px-6">
+          <h2 className="text-center text-2xl font-bold text-foreground md:text-3xl">
+            How Trazo pricing compares
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
+            Public list prices for organic recordkeeping tools, as published by
+            each vendor. Trazo is one flat price per farm — it does not rise
+            with your revenue.
+          </p>
+          <div className="mt-8 overflow-x-auto rounded-2xl border border-border">
+            <table className="w-full min-w-[560px] text-left text-sm">
+              <thead className="bg-muted/50">
+                <tr>
+                  <th className="px-5 py-3 font-semibold text-foreground">Tool</th>
+                  <th className="px-5 py-3 font-semibold text-foreground">Price per year</th>
+                  <th className="px-5 py-3 font-semibold text-foreground">How it scales</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                <tr className="bg-primary/5">
+                  <td className="px-5 py-4 font-semibold text-foreground">Trazo Compliance</td>
+                  <td className="px-5 py-4 text-foreground">$249 flat</td>
+                  <td className="px-5 py-4 text-muted-foreground">
+                    Per farm. Same price at any revenue.
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-4 text-foreground">Quick Organics</td>
+                  <td className="px-5 py-4 text-foreground">$150 – $4,250</td>
+                  <td className="px-5 py-4 text-muted-foreground">
+                    Banded by your gross organic revenue — the more you sell,
+                    the more you pay.
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-4 text-foreground">COG Pro</td>
+                  <td className="px-5 py-4 text-foreground">Shutting down</td>
+                  <td className="px-5 py-4 text-muted-foreground">
+                    Announced shutdown December 31, 2026.{" "}
+                    <Link href="/cog-pro-migration" className="text-primary underline">
+                      See our migration guide
+                    </Link>
+                    .
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-center text-xs text-muted-foreground">
+            Competitor prices from their public pricing pages. If they change,
+            tell us and we will update this table.
+          </p>
+        </section>
+
         <section className="mx-auto mt-24 max-w-3xl px-6 text-center">
           <h2 className="text-2xl font-bold text-foreground md:text-3xl">
             Farming more than one operation?

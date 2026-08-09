@@ -17,23 +17,24 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Trazo - Agricultural Transparency Platform | Prove Your Practices",
+  title: "Trazo - Organic Recordkeeping & Renewal Readiness | One Entry, Two Outputs",
   description:
-    "Document every farming practice and share your story with consumers through QR codes. The transparency platform that turns honest farming into a competitive advantage.",
+    "Your Organic System Plan, activity records, and renewal readiness in one place - plus the page your buyer can see. Built for specialty crop farms, $249 per farm per year.",
   keywords: [
-    "agriculture",
-    "transparency",
+    "organic system plan",
+    "OSP software",
+    "organic certification renewal",
+    "NOP recordkeeping",
     "organic audit",
-    "farming",
-    "QR codes",
-    "food traceability",
     "specialty crop farms",
+    "food traceability",
+    "QR codes",
   ],
   metadataBase: new URL("https://www.trazo.io"),
   openGraph: {
-    title: "Trazo - Agricultural Transparency Platform",
+    title: "Trazo - Organic Recordkeeping & Renewal Readiness",
     description:
-      "Prove your practices. Build buyer confidence. Document every farming event and share with consumers via QR codes.",
+      "Log each activity once. It fills your Organic System Plan, your audit dossier, and the page your buyer can see.",
     url: "https://www.trazo.io",
     siteName: "Trazo",
     type: "website",
@@ -49,9 +50,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trazo - Agricultural Transparency Platform",
+    title: "Trazo - Organic Recordkeeping & Renewal Readiness",
     description:
-      "Prove your practices. Build buyer confidence. The transparency platform for specialty crop farms.",
+      "One entry, two outputs: certifier-ready records and a buyer-facing page. For specialty crop farms.",
     images: ["/images/og-image.jpg"],
   },
 };

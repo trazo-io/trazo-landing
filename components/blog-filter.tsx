@@ -6,16 +6,15 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import type { BlogPost } from "@/lib/blog-data";
 
-const categories = [
-  "All",
-  "Industry Insights",
-  "Technology",
-  "Transparency",
-  "Guides",
-];
-
 export function BlogFilter({ posts }: { posts: BlogPost[] }) {
   const [active, setActive] = useState("All");
+
+  // Derived, not hardcoded: a stale hardcoded list once showed three empty
+  // category tabs and hid a live category entirely.
+  const categories = [
+    "All",
+    ...Array.from(new Set(posts.map((p) => p.category))),
+  ];
 
   const filtered =
     active === "All" ? posts : posts.filter((p) => p.category === active);

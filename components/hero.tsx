@@ -38,10 +38,10 @@ export function Hero() {
           {/* Subheading */}
           <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
             Your annual update is due between January and April. Log the season on
-            your phone as you go, and Trazo drafts the records section, the
-            attachment forms and your inspection packet from what you entered — you
-            review and sign. The same records also produce a page your buyer can
-            scan.
+            your phone as you go — in English or Spanish — and Trazo drafts the
+            records section, the attachment forms and your inspection packet from
+            what you entered. You review and sign. The same records also produce a
+            page your buyer can scan.
           </p>
 
           {/* CTA Buttons */}
