@@ -3,9 +3,9 @@ import { Footer } from "@/components/footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Trazo - Agricultural Transparency Platform",
+  title: "Terms of Service | Trazo",
   description:
-    "Terms of Service for the Trazo agricultural transparency platform.",
+    "Terms of Service for Trazo, organic recordkeeping software for US farms.",
 }
 
 export default function TermsOfServicePage() {
@@ -33,7 +33,7 @@ export default function TermsOfServicePage() {
                 1. Acceptance of Terms
               </h3>
               <p className="mt-3 leading-[1.8]">
-                By accessing or using the Trazo agricultural transparency
+                By accessing or using the Trazo organic recordkeeping
                 platform (&quot;Platform&quot;), you agree to be bound by these
                 Terms of Service (&quot;Terms&quot;). If you do not agree, you
                 may not access or use the Platform.
@@ -51,7 +51,7 @@ export default function TermsOfServicePage() {
                 2. Description of Service
               </h3>
               <p className="mt-3 leading-[1.8]">
-                Trazo provides an agricultural transparency platform that enables
+                Trazo provides an organic recordkeeping platform that enables
                 farmers and producers to:
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
@@ -66,8 +66,10 @@ export default function TermsOfServicePage() {
                   Create QR codes for consumer-facing transparency profiles
                 </li>
                 <li>
-                  Calculate carbon footprint estimates using EPA/USDA emission
-                  factors
+                  {/* "carbon footprint" implies a full LCA; the methodology is
+                      direct operational emissions only. Safe form per compliance.md. */}
+                  Estimate direct operational emissions using EPA/USDA-sourced
+                  emission factors
                 </li>
                 <li>
                   Track consumer engagement through QR code analytics
@@ -111,19 +113,18 @@ export default function TermsOfServicePage() {
                   account.
                 </li>
                 <li>
-                  <strong>Billing Cycle:</strong> Subscriptions are billed
-                  monthly or annually as selected.
+                  <strong>Billing Cycle:</strong> Paid plans are billed annually
+                  per farm. There is no monthly billing option.
                 </li>
                 <li>
                   <strong>Price Changes:</strong> We may update pricing with 30
                   days&apos; notice. Existing subscriptions are honored through
                   the end of your then-current subscription term.
                 </li>
-                <li>
-                  <strong>Add-Ons:</strong> Optional add-ons (additional farms,
-                  parcels, productions, or storage) are billed monthly at the
-                  rates listed on the Pricing page.
-                </li>
+                {/* The per-farm / per-parcel / per-production monthly add-on ladder
+                    is retired (parcels are unlimited), and the Pricing page this
+                    clause pointed at lists no add-on rates — the clause referred to
+                    nothing. Do not restore it without a live rate table to cite. */}
                 <li>
                   <strong>Failed Payments:</strong> If a payment fails, we will
                   attempt to retry for up to 7 days and notify you by email.
@@ -131,22 +132,19 @@ export default function TermsOfServicePage() {
                   suspended until the balance is resolved.
                 </li>
                 <li>
-                  <strong>Cancellation:</strong> Cancel anytime from your
-                  dashboard. Access continues through the end of the current
-                  billing period.
+                  <strong>Cancellation:</strong> Paid plans are arranged by
+                  invoice; contact us to stop a renewal. Access continues
+                  through the end of the period already paid for, after which
+                  the account reverts to the free Starter plan.
                 </li>
                 <li>
                   <strong>Refunds:</strong> We do not provide refunds for partial
                   billing periods unless required by law. EU consumers retain
                   their 14-day right of withdrawal under Directive 2011/83/EU.
                 </li>
-                <li>
-                  <strong>Early Access Pricing:</strong> Subscribers who create
-                  a paid account during the Early Access period (before general
-                  availability launch) retain their subscription rate for as
-                  long as their subscription remains active and in good
-                  standing, regardless of future price changes.
-                </li>
+                {/* "Early Access Pricing" — a perpetual rate lock for a period no
+                    page defines or offers — was the last survivor of the founding-member
+                    class, and it contradicts the Oct-Feb $0-revenue design. Removed. */}
               </ul>
             </section>
 
@@ -185,7 +183,7 @@ export default function TermsOfServicePage() {
               </h3>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
-                7.1 Carbon Calculations
+                6.1 Carbon Calculations
               </h4>
               <p className="mt-3 leading-[1.8]">
                 Trazo provides carbon footprint estimates using published
@@ -203,7 +201,7 @@ export default function TermsOfServicePage() {
               </p>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
-                7.2 NOP Audit PDF
+                6.2 NOP Audit PDF
               </h4>
               <p className="mt-3 leading-[1.8]">
                 The NOP Audit PDF (also called the &quot;Compliance Report&quot;)

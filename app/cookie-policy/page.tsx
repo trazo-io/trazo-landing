@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | Trazo - Agricultural Transparency Platform",
+  title: "Cookie Policy | Trazo",
   description:
     "How Trazo uses cookies and similar technologies on our platform.",
 }

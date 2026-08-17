@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Trazo - Agricultural Transparency Platform",
+  title: "Privacy Policy | Trazo",
   description:
     "How Trazo collects, uses, and protects your personal information.",
 }
@@ -34,7 +34,7 @@ export default function PrivacyPolicyPage() {
               </h3>
               <p className="mt-3 leading-[1.8]">
                 {
-                  'Trazo ("we," "us," or "our") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our agricultural transparency platform.'
+                  'Trazo ("we," "us," or "our") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our organic recordkeeping platform.'
                 }
               </p>
               <p className="mt-3 leading-[1.8]">

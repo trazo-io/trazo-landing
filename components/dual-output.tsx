@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowDown, EyeOff, FileText, QrCode } from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { CertifierLogPreview } from "@/components/certifier-log-preview";
@@ -21,17 +22,18 @@ import { CertifierLogPreview } from "@/components/certifier-log-preview";
 
 /** What the grower typed once, in the field. */
 const ENTRY_FIELDS: Array<{ label: string; value: string }> = [
-  { label: "Product", value: "Entrust SC Naturalyte Insect Control" },
-  { label: "Date", value: "July 8, 2025" },
-  // Mirrors the record exactly. The parcel is named "Block 1 – Chandler" in the app and
-  // the export's Area cell reads "42.50 acres · Block 1"; an invented "(Chandler)" format
-  // would contradict this section's own claim that nothing here was re-typed.
-  { label: "Block", value: "Block 1 · 42.5 acres" },
+  { label: "Product", value: "Entrust SC" },
+  { label: "Date", value: "August 7, 2025" },
+  // Mirrors the record exactly. Re-cut 2026-08-15 onto Blue Oak Orchards, the farm the rest
+  // of the page shows: the old entry came from a different demo farm (Block 1, 42.5 acres,
+  // a Visalia supplier), so a visitor scrolling from the hero met a second, unrelated
+  // operation. The export's Area cell reads "12.50 acres".
+  { label: "Block", value: "East Block · 12.5 acres" },
   // The grower types a TOTAL, not a rate. Showing "8 fl oz/acre" here claimed both a
   // number they never entered and a unit the record does not store (volume_unit is "oz").
   // The per-acre rate is derived — which is the section's argument, so it belongs in the
   // outputs, not the input.
-  { label: "Amount", value: "340 oz" },
+  { label: "Amount", value: "75 oz" },
   { label: "Method", value: "Air-blast" },
   { label: "Target", value: "Navel orangeworm" },
 ];
@@ -144,6 +146,19 @@ export function DualOutput() {
                   buffer distance, EPA registration, supplier invoice, with the
                   CFR sections cited.
                 </p>
+                {/* The log is ONE of the certifier artifacts; without this line the
+                    section undersold the family (packet, dossier, PUR — 2026-08-11). */}
+                <p className="mx-auto mt-2 max-w-[300px] text-xs text-muted-foreground">
+                  One page of a family: the OSP renewal packet, whole-operation
+                  dossier, and California PUR export are built from the same
+                  records.{" "}
+                  <Link
+                    href="/for-certifiers"
+                    className="font-medium text-primary underline underline-offset-2"
+                  >
+                    Reviewing as a certifier? →
+                  </Link>
+                </p>
               </div>
             </div>
 
@@ -156,10 +171,10 @@ export function DualOutput() {
                     to fill the frame. That intermediate state renders as a wildly zoomed,
                     cropped screenshot. */}
                 <Image
-                  src="/images/dual-output-consumer-v3.png"
-                  alt="The same spray on the public Trazo page: the product name, the date, a plain-language line saying a pest treatment approved for organic growing was applied, an OMRI Listed badge, and details reading What's in it: Spinosad 22.5%, Area Treated: 42.5 acres, What it protects against: Navel orangeworm."
-                  width={375}
-                  height={750}
+                  src="/images/dual-output-consumer-v6.png"
+                  alt="The same spray on the public Trazo page: Entrust SC, pest control, August 7 2025, performed by the farm team, a plain-language line saying a pest treatment approved for organic growing was applied, a note that products allowed in organic growing are reviewed against a public national list, an Allowed Input badge citing National List section 205.601, and a Self Reported label."
+                  width={750}
+                  height={1800}
                   quality={95}
                   className="h-full w-full object-cover object-top"
                 />
@@ -213,6 +228,47 @@ export function DualOutput() {
                   ))}
                 </ul>
               </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* ── The page that one record lives on ──────────────────────────
+            Absorbed from the former ProductShowcase section. That section showed
+            two phones, and its second one was the SAME buyer event card already
+            standing in Output 2 above — same farm, same "Self Reported" pill, same
+            12.5 acres — so the page told the buyer story twice, two scrolls apart.
+            Only this view (the whole page, rather than one record on it) was new,
+            so it moves here and the buyer page now has exactly one home. */}
+        <ScrollReveal delay={300}>
+          <div className="mt-14 flex flex-col items-center gap-10 rounded-2xl border border-border bg-background p-6 md:flex-row md:gap-14 md:p-10">
+            {/* Same frame dimensions as the Output-2 phone above, md: bump included —
+                without it this renders 244x504 beside a 264x544 sibling and reads as a
+                different device. */}
+            <div className="relative h-[520px] w-[260px] shrink-0 overflow-hidden rounded-[2.5rem] border-[8px] border-foreground/10 bg-card shadow-2xl shadow-primary/10 md:h-[560px] md:w-[280px]">
+              <Image
+                src="/images/consumer-transparency-v3.png"
+                alt="Trazo buyer page for walnuts from Blue Oak Orchards: Lot BO-2025-EB-01, harvested October 22 2025, 27 practices documented, above the documented growing story and the practices, origin, harvest and records row."
+                width={750}
+                height={1624}
+                quality={95}
+                className="h-full w-full object-cover object-top"
+              />
+            </div>
+            <div className="min-w-0 text-center md:text-left">
+              <h3 className="text-xl font-bold text-foreground">
+                One scan reaches the whole season, not one spray
+              </h3>
+              <p className="mt-3 leading-relaxed text-muted-foreground">
+                The record above is one row on this page. A buyer scanning the
+                lot tag lands here: the farm, the lot, the harvest date, and
+                every practice you documented across the season &mdash; counted,
+                not graded. Trazo does not award your farm a score, and no
+                self-assigned rating appears anywhere a buyer can see.
+              </p>
+              <p className="mt-3 leading-relaxed text-muted-foreground">
+                Nothing is public until you finish the production and choose to
+                publish it.
+              </p>
             </div>
           </div>
         </ScrollReveal>

@@ -1,7 +1,14 @@
 export interface BlogPost {
   slug: string;
   category: string;
+  /** Human-readable, for display only. Never emit this into structured data. */
   date: string;
+  /**
+   * ISO 8601, for schema.org and sitemap `lastModified`. Schema.org `datePublished`
+   * is typed `Date`; feeding it "March 3, 2026" fails Google's Rich Results Test,
+   * which is what BlogPosting was doing on all five posts.
+   */
+  datePublishedISO: string;
   title: string;
   excerpt: string;
   image: string;
@@ -14,6 +21,7 @@ export const posts: BlogPost[] = [
     slug: "planting-to-harvest-documentation",
     category: "Guides",
     date: "March 3, 2026",
+    datePublishedISO: "2026-03-03",
     readTime: "10 min read",
     title:
       "From Planting to Harvest: A Complete Guide to Agricultural Event Documentation",
@@ -94,13 +102,13 @@ export const posts: BlogPost[] = [
 
 <h2>How Your Documenting Leads to Transparency</h2>
 
-<p>With each entry you make documenting your production process, your transparency score will increase, a 0-100 score reflecting how well you've documented your production process. The more entries you make, the higher your transparency score.</p>
+<p>Each entry you make fills in more of the record your certifier will ask for at renewal — and more of the story a buyer can read. There is no grade attached to it: Trazo does not assign your farm a score, and no self-assigned rating appears on the page a buyer sees.</p>
 
-<p>A consumer who scans your QR code will see your documented farming practices, photos, and certifications alongside your farm and product information. When most of the growing process is documented, it tells them, "This farmer has documented almost all of what went on with this crop." That's a strong trust indicator.</p>
+<p>A consumer who scans your QR code sees your documented farming practices, photos, and certifications alongside your farm and product information — the facts you recorded, not a verdict we invented about them.</p>
 
-<p>And since the entire production record is locked and timestamped when you finish producing the product, consumers know your documentation wasn't falsified or changed.</p>
+<p>Finishing a production locks the record and timestamps it, so what a buyer sees is the version you filed rather than something edited afterwards. That is a statement about the record, not about the farming: Trazo does not independently verify that a documented practice took place.</p>
 
-<p>Your documentation isn't paperwork, it's the basis for consumer confidence.</p>
+<p>None of it is extra work invented for a buyer. It is the same record your certifier asks for at renewal, written once.</p>
 
 <p><strong>It will take you 90 seconds to document your first event.</strong> Tell your farming story through a documented record of your practices.</p>
     `,
@@ -109,16 +117,17 @@ export const posts: BlogPost[] = [
     slug: "organic-record-keeping-guide",
     category: "Organic Farming",
     date: "March 26, 2026",
+    datePublishedISO: "2026-03-26",
     readTime: "8 min read",
     title:
       "The Organic Farmer's Guide to Digital Record-Keeping: What NOP Requires and How to Stay Ahead",
     excerpt:
-      "55% of organic farmers name certification paperwork, record-keeping and compliance costs as their top concern (USDA NASS 2021 Certified Organic Survey). Here's what NOP actually requires, the most common mistakes that risk certification, and how digital documentation closes the gap between annual audits.",
+      "55% of organic farmers name certification paperwork, record-keeping and compliance costs as their top concern (Organic Trade Association briefing, July 2025, citing USDA NASS data). Here's what NOP actually requires, the most common mistakes that risk certification, and how digital documentation closes the gap between annual audits.",
     image: "/images/blog-organic-records.jpg",
     content: `
 <p>Ask any organic farmer what the hardest part of maintaining certification is, and the answer is rarely pests, weather, or markets. It is paperwork.</p>
 
-<p>In the USDA&rsquo;s 2021 Certified Organic Survey, 55% of organic farmers named certification paperwork, record-keeping and compliance costs as their top concern &mdash; more than any other issue. Paperwork is not the main reason farms leave organic certification; the National Organic Coalition&rsquo;s 2026 analysis found roughly 11% of exiting operations cite cost or paperwork. But for farms that stay, it is the burden they report most.</p>
+<p>In a July 2025 Organic Trade Association briefing citing USDA NASS data, 55% of organic farmers named certification paperwork, record-keeping and compliance costs as their top concern &mdash; more than any other issue. Paperwork is not the main reason farms leave organic certification, and it would be dishonest to imply otherwise: only around one in ten exiting operations cites cost or paperwork. But for farms that stay, it is the burden they report most.</p>
 
 <p>This guide breaks down what the USDA National Organic Program actually requires for record-keeping, the most common mistakes that lead to noncompliance findings, and how digital documentation tools can close the gap between annual audits.</p>
 
@@ -132,7 +141,7 @@ export const posts: BlogPost[] = [
 <p>Every substance applied to organic fields must be documented: the specific product name, the crop and field treated, the date of application, the application rate and method, the reason for use, and purchase receipts showing product composition. For organic farms, each input must also be verified as allowed under the National List (7 CFR 205.601-606) or listed by the Organic Materials Review Institute (OMRI).</p>
 
 <h3>2. Seed and Planting Stock</h3>
-<p>NOP 205.204 requires organic seeds unless they are commercially unavailable. If conventional seeds are used, the farmer must document a commercial availability search, contacting at least three suppliers, and verify the seeds are untreated and non-GMO. Seed lot numbers, supplier names, and organic certificate numbers should all be recorded.</p>
+<p>NOP 205.204 requires organic seeds unless they are commercially unavailable. If conventional seeds are used, the farmer must document a commercial availability search — which suppliers were contacted, when, and what they said — and verify the seeds are untreated and non-GMO. The rule sets no minimum number of suppliers; your certifier decides whether the search was adequate. Seed lot numbers, supplier names, and organic certificate numbers should all be recorded.</p>
 
 <h3>3. Field Activities and Crop Rotation</h3>
 <p>Planting dates, harvest dates, crop varieties, field locations, and routine activities such as weeding, tillage, mowing, and pest monitoring must all be documented with dates. Crop rotation patterns are part of the Organic System Plan and must be updated annually.</p>
@@ -207,6 +216,7 @@ export const posts: BlogPost[] = [
     slug: "cog-pro-shutting-down-migration-guide",
     category: "Guides",
     date: "August 9, 2026",
+    datePublishedISO: "2026-08-09",
     readTime: "6 min read",
     title:
       "COG Pro Is Shutting Down: A Migration Checklist for Organic Growers",
@@ -291,6 +301,7 @@ export const posts: BlogPost[] = [
     slug: "organic-renewal-season-calendar",
     category: "Guides",
     date: "August 9, 2026",
+    datePublishedISO: "2026-08-09",
     readTime: "6 min read",
     title:
       "The Organic Renewal-Season Calendar: Every Deadline From October to April",
@@ -377,6 +388,7 @@ export const posts: BlogPost[] = [
     slug: "what-your-organic-inspector-actually-checks",
     category: "Guides",
     date: "August 9, 2026",
+    datePublishedISO: "2026-08-09",
     readTime: "5 min read",
     title:
       "What Your Organic Inspector Actually Checks (And the Records That Answer)",
@@ -398,7 +410,7 @@ export const posts: BlogPost[] = [
 
 <p><strong>The question:</strong> Under 7 CFR 205.204, you are required to use organic seed unless an equivalent organic variety is not commercially available. If you planted conventional, untreated, non-GMO seed instead, the inspector wants to see that you actually looked for an organic option first.</p>
 
-<p><strong>The record that answers it:</strong> Documentation of your commercial availability search, typically showing you contacted at least three different suppliers before concluding the organic variety was not available in the form, quantity, or timeframe you needed. Keep the supplier names, the dates you contacted them, their responses, and the seed lot number and supplier certificate for whatever you ultimately planted.</p>
+<p><strong>The record that answers it:</strong> Documentation of your commercial availability search, showing which suppliers you contacted before concluding the organic variety was not available in the form, quantity, or timeframe you needed. The rule sets no minimum number — your certifier judges whether the search was thorough enough. Keep the supplier names, the dates you contacted them, their responses, and the seed lot number and supplier certificate for whatever you ultimately planted.</p>
 
 <h2>Buffer Zones and Adjoining Land: "What Happened to the Buffer-Row Crop?"</h2>
 

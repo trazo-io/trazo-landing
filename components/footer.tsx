@@ -6,7 +6,9 @@ import { NewsletterForm } from "@/components/newsletter-form";
 
 const footerLinks = {
   product: [
-    { label: "Features", href: "/#features" },
+    // Was "/#features" — that anchor belonged to PlatformFeatures, which is no
+    // longer rendered. ProductTour is where the product is actually shown.
+    { label: "Features", href: "/#product-tour" },
     { label: "How it Works", href: "/#how-it-works" },
     { label: "Pricing", href: "/pricing" },
     { label: "FAQ", href: "/#faq" },

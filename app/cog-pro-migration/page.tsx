@@ -26,10 +26,20 @@ import { Footer } from "@/components/footer";
  */
 
 export const metadata: Metadata = {
-  title: "COG Pro is closing — how to move your organic records | Trazo",
+  title: "COG Pro is closing: move your organic records | Trazo",
   description:
-    "COG Pro stops service on December 31, 2026. How to export your records before the deadline, what to look for in a replacement, and how Trazo imports your data free.",
+    "COG Pro stops service on December 31, 2026. How to export your records before the deadline, and how Trazo imports them for you, free.",
   alternates: { canonical: "https://www.trazo.io/cog-pro-migration" },
+  openGraph: {
+    title: "COG Pro is closing December 31, 2026",
+    description:
+      "A migration checklist for organic growers, and a free import of your COG Pro CSV export into Trazo.",
+    url: "./",
+    // Next merges metadata SHALLOWLY: a page-level `openGraph` REPLACES the
+    // root object rather than extending it, so omitting this dropped og:image
+    // entirely and the page shared as a card with no picture at all.
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 const trazoDoes = [
@@ -286,12 +296,19 @@ export default function CogProMigrationPage() {
                 delete the account on request.
               </p>
               <p className="mt-3 leading-[1.8]">
-                The Starter plan is free permanently, not a trial that expires.
-                Everything you enter exports back out as CSV, and your complete
-                inspection binder prints as a PDF at any time — so if Trazo ever
-                stops being the right fit, you leave with your records intact.
-                After a vendor shutdown, that guarantee is the one we would want
-                in writing too.
+                {/* Do NOT restore the old "everything exports back out as CSV …
+                    at any time" wording. Every export — audit dossier, OSP renewal
+                    packet, PUR — sits behind Compliance in `subscriptions/gating.py`;
+                    Starter has no export at all. Worded as a written guarantee to
+                    people who just lost a vendor, that was the site's largest trust
+                    exposure. Same retraction as `components/hero.tsx:72-85`. */}
+                The Starter plan is free permanently, not a trial that expires,
+                and you can log a whole season on it. Importing your COG Pro CSVs
+                costs nothing. The certifier documents — audit dossier, OSP
+                renewal packet, PUR export — are part of the Compliance plan.
+                And the part we will not dress up after what you have just been
+                through: a one-click export of your whole account is not built
+                yet. If you want your records out, ask and we will produce them.
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg">

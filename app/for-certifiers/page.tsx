@@ -14,10 +14,20 @@ import { Footer } from "@/components/footer";
  */
 
 export const metadata: Metadata = {
-  title: "Trazo for certifiers and reviewers — records you can actually trace",
+  title: "Trazo for organic certifiers and reviewers",
   description:
-    "Clients on Trazo arrive with dated activity records, per-parcel applications, Common OSP module answers, and an online review link — organized the way your checklist reads.",
+    "Clients arrive with dated activity records, per-parcel applications, Common OSP module answers and an online review link, organized as your checklist reads.",
   alternates: { canonical: "https://www.trazo.io/for-certifiers" },
+  openGraph: {
+    title: "Trazo for organic certifiers and reviewers",
+    description:
+      "How Trazo compiles a grower's records into reviewable artifacts, with every readiness check traced to its CFR section.",
+    url: "./",
+    // Next merges metadata SHALLOWLY: a page-level `openGraph` REPLACES the
+    // root object rather than extending it, so omitting this dropped og:image
+    // entirely and the page shared as a card with no picture at all.
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 export default function ForCertifiersPage() {

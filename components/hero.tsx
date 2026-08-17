@@ -7,7 +7,7 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-28 pb-20 lg:pt-36 lg:pb-28">
+    <section className="relative overflow-hidden pt-28 pb-10 lg:pt-36 lg:pb-14">
       {/* Subtle dot pattern */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.4]"
@@ -37,11 +37,11 @@ export function Hero() {
 
           {/* Subheading */}
           <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            Your annual update is due between January and April. Log the season on
-            your phone as you go — in English or Spanish — and Trazo drafts the
-            records section, the attachment forms and your inspection packet from
-            what you entered. You review and sign. The same records also produce a
-            page your buyer can scan.
+            Your annual update is due between January and April. Log the season
+            on your phone as you go — in English or Spanish — and Trazo drafts
+            the records section, the attachment forms and your inspection packet
+            from what you entered. You review and sign. The same records also
+            produce a page your buyer can scan.
           </p>
 
           {/* CTA Buttons */}
@@ -69,26 +69,74 @@ export function Hero() {
             </Button>
           </div>
 
-          {/* Pricing note */}
+          {/*
+            Pricing note.
+
+            ⚠️ 2026-08-15: this used to end "Export everything, anytime". That became FALSE when
+            the certifier documents — the OSP renewal packet, the audit dossiers, the California
+            PUR export and the certifier review link — moved behind the Compliance plan
+            (`trazo-back/subscriptions/gating.py`). Starter is now bounded by what it PRODUCES,
+            not by how much it can log, so the true and stronger claim is unlimited logging: log
+            a whole season, every block, at no cost. The app's signup screen carries the same
+            line and was corrected in the same pass.
+
+            Do NOT re-add an export claim here until a free data-portability export exists —
+            today the only exports in the product are the certifier artifacts.
+          */}
           <p className="mt-4 text-sm text-muted-foreground">
-            Starter plan free permanently &middot; No credit card &middot; Export
-            everything, anytime
+            Starter plan free permanently &middot; No credit card &middot; Log a
+            whole season, unlimited
           </p>
 
           {/* Hero Image - Real App Screenshot (below fold; lazy + reveal on scroll) */}
-          <ScrollReveal delay={0} duration={800}>
-            <div className="relative mt-16 w-full max-w-5xl">
+          <ScrollReveal delay={0} duration={800} className="w-full">
+            <div className="relative mt-12 w-full max-w-6xl lg:mt-14">
               <div
                 className="absolute -inset-4 rounded-3xl bg-primary/5 blur-2xl"
                 aria-hidden="true"
               />
-              <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-xl shadow-foreground/5">
+              {/* The WHOLE screen, unframed.
+                  Two earlier attempts sit behind this one. First was the full dashboard in a
+                  1024px box: 0.71x, and the CFR citations were unreadable. Second cropped to
+                  two cards for legibility and lost the thing that says "software" — with no
+                  sidebar and no nav, a bordered card of UI on the landing's own background
+                  reads as a marketing component someone built in Tailwind. Browser chrome was
+                  added to fix that and it worked, but it was a prosthetic for a missing
+                  sidebar. Showing the real screen solves it at the source: the nav, the farm
+                  switcher and the sidebar say "app" with no costume. All three were compared
+                  side by side at true hero width before choosing (2026-08-15).
+
+                  The container is 6xl, not 5xl, on purpose: the full screen is 1671 CSS px of
+                  app, which lands at 61% in a 1024px box and 69% in a 1152px one. That is the
+                  difference between a grower reading "in 77 days" and not.
+
+                  Filename is versioned on EVERY re-cut. `_next/image` keys its optimizer cache
+                  on the source URL, so replacing bytes under a name that has already been
+                  requested serves the OLD image indefinitely — verified 2026-08-15. */}
+              {/* Art-directed. A 1671 CSS px desktop screen inside a 340px phone column is a
+                  20% reduction — a grey blur, and the same failure the tour panels already had
+                  to solve. Phones get the screen captured AT phone width, where the app's own
+                  responsive layout keeps every line readable. Two <Image>s rather than
+                  <picture> so next/image owns each srcset; only one is ever in the layout. */}
+              <div className="relative mx-auto max-w-[340px] overflow-hidden rounded-2xl border border-border bg-card shadow-xl shadow-foreground/5 md:hidden">
                 <Image
-                  src="/images/app-screenshot.jpg"
-                  alt="Trazo agricultural dashboard showing farm management, production tracking, audit-ready documentation, and satellite mapping for Coastal Valleys Farm"
-                  width={1400}
-                  height={900}
-                  sizes="(max-width: 1024px) 100vw, 1024px"
+                  src="/images/app-screenshot-m-v2.png"
+                  alt="The Trazo farm home on a phone: a Certifier deadlines card listing the 2026 OSP annual update as started but not submitted, the USDA Organic certificate due in 77 days and the CDFA State Organic Program renewal in 62 days, above a card reading 16 record checks on your latest season with two open items."
+                  width={780}
+                  height={1688}
+                  quality={92}
+                  sizes="340px"
+                  className="w-full"
+                />
+              </div>
+              <div className="relative hidden overflow-hidden rounded-2xl border border-border bg-card shadow-xl shadow-foreground/5 md:block">
+                <Image
+                  src="/images/app-screenshot-full-v2.png"
+                  alt="The Trazo farm home for Blue Oak Orchards in Winters, California, with the farm sidebar on the left: a Certifier deadlines card listing the 2026 OSP annual update as started but not submitted, a USDA Organic certificate due in 77 days and a CDFA State Organic Program renewal due in 62 days; below it a card reading Chandler Walnuts 2025, 16 record checks on your latest season, with one open item for documentation depth."
+                  width={3342}
+                  height={2072}
+                  quality={92}
+                  sizes="(max-width: 1152px) 100vw, 1152px"
                   className="w-full"
                 />
               </div>

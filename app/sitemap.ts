@@ -2,9 +2,13 @@ import type { MetadataRoute } from "next";
 import { posts } from "@/lib/blog-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Blog posts carry their REAL publication date. Every entry previously reported
+  // `new Date()`, i.e. the build timestamp, so all 20 URLs claimed to change on every
+  // deploy — a signal crawlers discount entirely, which threw away the one honest
+  // freshness hint the renewal-season posts actually have.
   const blogEntries = posts.map((post) => ({
     url: `https://www.trazo.io/blog/${post.slug}`,
-    lastModified: new Date(),
+    lastModified: new Date(post.datePublishedISO),
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));

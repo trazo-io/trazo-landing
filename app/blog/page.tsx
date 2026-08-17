@@ -6,17 +6,27 @@ import { posts } from "@/lib/blog-data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog: Agricultural Transparency Insights | Trazo",
+  title: "Organic Recordkeeping Guides | Trazo",
   description:
-    "Guides, insights, and best practices for agricultural transparency, organic audit readiness, and buyer trust for specialty crop farms.",
+    "Renewal deadlines, Organic System Plan updates, inspection prep and NOP recordkeeping — written for certified organic growers.",
+  openGraph: {
+    title: "Organic Recordkeeping Guides",
+    description:
+      "Renewal deadlines, Organic System Plan updates, inspection prep and NOP recordkeeping — for certified organic growers.",
+    url: "./",
+    // Next merges metadata SHALLOWLY: a page-level `openGraph` REPLACES the
+    // root object rather than extending it, so omitting this dropped og:image
+    // entirely and the page shared as a card with no picture at all.
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 const blogListJsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: "Trazo Blog: Agricultural Transparency Insights",
+  name: "Trazo Blog: Organic Recordkeeping Guides",
   description:
-    "Guides, insights, and best practices for agricultural transparency and premium market positioning.",
+    "Guides on organic certification recordkeeping, renewal season deadlines, Organic System Plan updates and inspection preparation for certified US farms.",
   url: "https://www.trazo.io/blog",
   isPartOf: {
     "@type": "WebSite",
@@ -50,11 +60,11 @@ export default function BlogPage() {
               Blogs & insights
             </p>
             <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
-              Agricultural Transparency Insights
+              Organic Recordkeeping Guides
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-              Guides, insights, and best practices for agricultural transparency
-              and premium market positioning.
+              What your certifier asks for, when it is due, and how to have it
+              ready — written for certified organic growers.
             </p>
           </div>
         </section>
@@ -68,7 +78,7 @@ export default function BlogPage() {
               Stay Up to Date
             </h2>
             <p className="mx-auto mt-2 max-w-md text-muted-foreground">
-              Get the latest insights on agricultural transparency delivered to
+              Renewal deadlines, recordkeeping guides and NOP rule changes, in
               your inbox monthly.
             </p>
             <NewsletterForm variant="block" />

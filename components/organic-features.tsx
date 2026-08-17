@@ -2,9 +2,6 @@
 
 import {
   Leaf,
-  ShieldCheck,
-  FileSpreadsheet,
-  Clock,
   Scale,
   History,
   ClipboardCheck,
@@ -21,24 +18,15 @@ const organicFeatures = [
     description:
       "Every chemical event classifies inputs as OMRI Listed, USDA NOP Approved, Organic Equivalent, Transitional, or Not Organic. Organic vs synthetic subtypes tracked separately across fertilizers, pesticides, herbicides, and fungicides.",
   },
-  {
-    icon: ShieldCheck,
-    title: "USDA Organic Verification",
-    description:
-      'Organic certifications are verified against the USDA Organic Integrity Database (36,000+ operations). Consumers see a green "Verified" badge on your QR page. Other certifications display as "Self-Reported."',
-  },
-  {
-    icon: FileSpreadsheet,
-    title: "NOP Audit PDF Export",
-    description:
-      "Generate a 24-page audit-ready PDF for your certifier. Page-1 Compliance Snapshot (13+ rows PASS / REVIEW / FAIL per CFR rule), 30+ unique 7 CFR 205.x citations, OSP drift detector for inputs (OMRI / WSDA / National List / CDFA OIM cross-check), photo gallery in NOP-priority order, and 5-year change-history attribution. The PDF is reference material for certifier review, not a certification.",
-  },
-  {
-    icon: Clock,
-    title: "Continuous Proof Between Audits",
-    description:
-      "Certification is a snapshot. Trazo fills the gap with timestamped, photo-documented farming events throughout the season. Every organic amendment, cover crop, and harvest builds your record automatically.",
-  },
+  /* THREE CARDS REMOVED — each was said better elsewhere on the page:
+     · "USDA Organic Verification"      the Integrity Database claim ran FOUR times
+                                        across the homepage; FAQ Q4 keeps it.
+     · "NOP Audit PDF Export"           ProductTour's "Your documents" panel shows the
+                                        real artifact, and DualOutput shows a page of it.
+                                        Its "24-page / 13+ rows / 30+ citations" numbers
+                                        were also unverified against the generator.
+     · "Continuous Proof Between Audits"  restated this section's own closing line.
+     What is left is the regulatory surface area nothing else on the page carries. */
   {
     icon: Scale,
     title: "Mass-Balance & Trace-Back Reports",
@@ -73,7 +61,9 @@ const organicFeatures = [
     icon: Archive,
     title: "5-Year Record Retention",
     description:
-      "All event data, photos, and reports retained for 5 years, exceeding the NOP minimum and aligned with USDA audit windows. Your records are always available when you need them.",
+      // Five years IS the NOP minimum (7 CFR 205.103(b)(3)) — claiming to exceed it
+      // was a wrong compliance claim on the block a certifier-literate reader trusts most.
+      "All event data, photos, and reports retained for 5 years, matching the NOP retention requirement at 7 CFR 205.103(b)(3) and aligned with USDA audit windows.",
   },
 ];
 

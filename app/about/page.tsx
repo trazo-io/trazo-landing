@@ -17,8 +17,18 @@ import { Footer } from "@/components/footer";
 export const metadata: Metadata = {
   title: "About Trazo — who builds this and how",
   description:
-    "Trazo is built by a software engineer working directly with organic growers: records once, certifier-ready and buyer-visible. Built on the Common OSP structure, EPA/USDA-published factors, and a published methodology.",
+    "Built by a software engineer working directly with organic growers, on the Common OSP structure, EPA/USDA-published factors and a published methodology.",
   alternates: { canonical: "https://www.trazo.io/about" },
+  openGraph: {
+    title: "About Trazo",
+    description:
+      "Who builds Trazo, why it exists, and what it deliberately does not claim.",
+    url: "./",
+    // Next merges metadata SHALLOWLY: a page-level `openGraph` REPLACES the
+    // root object rather than extending it, so omitting this dropped og:image
+    // entirely and the page shared as a card with no picture at all.
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 export default function AboutPage() {

@@ -20,8 +20,23 @@ export async function generateMetadata({
   const post = posts.find((p) => p.slug === slug)
   if (!post) return { title: "Post Not Found" }
   return {
-    title: `${post.title} | Trazo Blog`,
+    // "| Trazo", not "| Trazo Blog" — these post titles already run 60-95 chars, so
+    // the suffix is the first thing SERP truncation eats; five wasted characters on
+    // a word that adds nothing is five characters of headline lost.
+    title: `${post.title} | Trazo`,
     description: post.excerpt,
+    // Required explicitly. Next inherits the ROOT `openGraph` object wholesale when a
+    // page does not declare one — it does NOT fold this page's `title`/`description`
+    // into it. Without this block every post shared as the homepage card, which is
+    // exactly what breaks when a certifier pastes a post into a newsletter.
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `/blog/${post.slug}`,
+      type: "article",
+      publishedTime: post.datePublishedISO,
+      images: [{ url: post.image, alt: post.title }],
+    },
   }
 }
 
@@ -44,8 +59,9 @@ export default async function BlogDetailPage({
     headline: post.title,
     description: post.excerpt,
     image: `https://www.trazo.io${post.image}`,
-    datePublished: post.date,
-    dateModified: post.date,
+    // ISO 8601, not the display string — schema.org types these as Date.
+    datePublished: post.datePublishedISO,
+    dateModified: post.datePublishedISO,
     author: {
       '@type': 'Person',
       name: 'Oscar Munoz',

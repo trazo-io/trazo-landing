@@ -16,7 +16,7 @@ const faqs = [
   {
     question: "Can Trazo help with organic record-keeping?",
     answer:
-      "Trazo tracks the inputs and practices organic farms already document: OMRI-listed materials, soil amendments, composting events, cover crops, equipment cleaning, and seed sourcing. Every event is timestamped with optional photo evidence. You can export organic-filtered audit reports (PDF or CSV) at any time. While Trazo does not replace your certifier\u2019s paperwork, it provides a structured, digital record of your organic practices that supports the documentation requirements of NOP 7 CFR 205.103.",
+      "Trazo tracks the inputs and practices organic farms already document: OMRI-listed materials, soil amendments, composting events, cover crops, equipment cleaning, and seed sourcing. Every event is timestamped with optional photo evidence. Organic-filtered audit reports (PDF or CSV) are part of the Compliance plan. While Trazo does not replace your certifier\u2019s paperwork, it provides a structured, digital record of your organic practices that supports the documentation requirements of NOP 7 CFR 205.103.",
   },
   {
     question: "What if I'm not tech-savvy?",
@@ -46,7 +46,7 @@ const faqs = [
   {
     question: "Can I cancel anytime?",
     answer:
-      "Yes. No long-term contracts. Cancel anytime from your dashboard. You'll retain access until the end of your billing period. Your data is always yours.",
+      "Yes. No long-term contracts, and nothing charges you automatically — paid plans are arranged by invoice, so there is no card on file to forget about. Email info@trazo.io to stop a renewal and you keep access to the end of the period you paid for. Starter stays free after that, so your logged season does not disappear when you stop paying.",
   },
 ];
 

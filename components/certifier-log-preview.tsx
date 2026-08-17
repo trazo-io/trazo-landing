@@ -34,10 +34,10 @@ export function CertifierLogPreview() {
           aria-label="Expand the full Input Application Log from the audit export"
         >
           <Image
-            src="/images/dual-output-certifier-v6.png"
-            alt="A page of the Trazo NOP audit export: an Input Application Log listing the Entrust SC application with its date, product, type, concentration, amount, area, method and target pest, followed by Input Purchase Traceability under 7 CFR 205.103 and OMRI / National List verification under 7 CFR 205.601."
-            width={700}
-            height={1400}
+            src="/images/dual-output-certifier-v8.png"
+            alt="A page of the Trazo NOP audit export for Blue Oak Orchards: an Input Application Log listing five applications with date, product, type, concentration, amount and per-acre rate, area, method, target, organic status, re-entry and pre-harvest intervals, followed by Input Purchase Traceability under 7 CFR 205.103 showing supplier, purchase date, invoice, lot, quantity purchased and applicator."
+            width={800}
+            height={1770}
             quality={95}
             className="h-full w-full object-cover object-top"
           />
@@ -71,13 +71,13 @@ export function CertifierLogPreview() {
         {/* Horizontal scrolling belongs here — inside a view the reader chose to open. */}
         <div className="mt-2 overflow-x-auto rounded-md border border-border bg-white">
           <Image
-            src="/images/dual-output-certifier-full-v6.png"
-            alt="The complete Input Application Log table: Date, Product, Type, NPK or concentration, Amount, Area, Method, Target, Organic Status, REI hours, PHI days, Buffer metres, EPA registration number and restricted-use flag, for a fertigation and an Entrust SC application."
-            width={1425}
+            src="/images/dual-output-certifier-full-v8.png"
+            alt="The complete Input Application Log table: Date, Product, Type, NPK or concentration, Amount and rate, Area, Method, Target or purpose, Organic Status, REI hours, PHI days, Buffer, EPA registration number and restricted-use flag, across two fertigations, two copper applications and the Entrust SC hull-split spray."
+            width={1290}
             height={430}
             quality={95}
             className="h-auto max-w-none"
-            style={{ width: "1140px" }}
+            style={{ width: "1160px" }}
           />
         </div>
         <p className="text-xs text-muted-foreground">

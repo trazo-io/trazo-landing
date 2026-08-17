@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef, useState, type ReactNode } from "react"
-import { cn } from "@/lib/utils"
 
 interface ScrollRevealProps {
   children: ReactNode
@@ -23,6 +22,10 @@ export function ScrollReveal({
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
 
   useEffect(() => {
+    // Proof that hydration happened, which retires the CSS failsafe in globals.css.
+    // Until this lands, a page whose bundle never arrives still reveals itself at 4s.
+    document.documentElement.classList.add("js-ready")
+
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
     setPrefersReducedMotion(mq.matches)
     if (mq.matches) {
@@ -47,28 +50,24 @@ export function ScrollReveal({
     }
   }, [])
 
-  const directionStyles = {
-    up: "translate-y-8",
-    down: "-translate-y-8",
-    left: "translate-x-8",
-    right: "-translate-x-8",
-    none: "",
-  }
-
+  // The hidden state lives in CSS (globals.css), gated on `html.js`, NOT in classes
+  // emitted here. React cannot know at render time whether its own bundle will
+  // arrive, so anything this component hides directly is hidden in the server HTML
+  // too — which is exactly how nine sections came to ship at opacity 0.
   return (
     <div
       ref={ref}
-      className={cn(
-        "transition-all ease-out",
-        isVisible
-          ? "translate-x-0 translate-y-0 opacity-100"
-          : `opacity-0 ${directionStyles[direction]}`,
-        className
-      )}
-      style={prefersReducedMotion ? undefined : {
-        transitionDuration: `${duration}ms`,
-        transitionDelay: `${delay}ms`,
-      }}
+      data-reveal={isVisible ? "shown" : "pending"}
+      data-reveal-dir={direction}
+      className={className}
+      style={
+        prefersReducedMotion
+          ? undefined
+          : ({
+              "--reveal-duration": `${duration}ms`,
+              "--reveal-delay": `${delay}ms`,
+            } as React.CSSProperties)
+      }
     >
       {children}
     </div>
@@ -95,6 +94,10 @@ export function StaggerChildren({
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
 
   useEffect(() => {
+    // Proof that hydration happened, which retires the CSS failsafe in globals.css.
+    // Until this lands, a page whose bundle never arrives still reveals itself at 4s.
+    document.documentElement.classList.add("js-ready")
+
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
     setPrefersReducedMotion(mq.matches)
     if (mq.matches) {
@@ -119,30 +122,24 @@ export function StaggerChildren({
     }
   }, [])
 
-  const directionStyles = {
-    up: "translate-y-6",
-    down: "-translate-y-6",
-    left: "translate-x-6",
-    right: "-translate-x-6",
-    none: "",
-  }
-
+  // Same contract as ScrollReveal above: hidden state comes from CSS gated on
+  // `html.js`, never from classes rendered on the server.
   return (
     <div ref={ref} className={className}>
       {Array.isArray(children)
         ? children.map((child, i) => (
             <div
               key={i}
-              className={cn(
-                "transition-all ease-out",
-                isVisible
-                  ? "translate-x-0 translate-y-0 opacity-100"
-                  : `opacity-0 ${directionStyles[direction]}`
-              )}
-              style={prefersReducedMotion ? undefined : {
-                transitionDuration: `${duration}ms`,
-                transitionDelay: `${i * staggerDelay}ms`,
-              }}
+              data-reveal={isVisible ? "shown" : "pending"}
+              data-reveal-dir={direction}
+              style={
+                prefersReducedMotion
+                  ? undefined
+                  : ({
+                      "--reveal-duration": `${duration}ms`,
+                      "--reveal-delay": `${i * staggerDelay}ms`,
+                    } as React.CSSProperties)
+              }
             >
               {child}
             </div>

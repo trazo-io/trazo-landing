@@ -4,9 +4,19 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Methodology: records, readiness checks, and emission calculations | Trazo",
+    "Methodology: records and readiness checks | Trazo",
   description:
-    "How Trazo turns field activity logs into certifier-ready records, runs documentation readiness checks, and calculates direct operational emissions from EPA/USDA-sourced factors. Published openly under CC BY 4.0.",
+    "How Trazo turns activity logs into certifier-ready records, runs documentation readiness checks and estimates direct operational emissions. CC BY 4.0.",
+  openGraph: {
+    title: "How Trazo's records and readiness checks work",
+    description:
+      "The rules behind Trazo's readiness checks, the emission factors it uses, and the limits of what it can claim.",
+    url: "./",
+    // Next merges metadata SHALLOWLY: a page-level `openGraph` REPLACES the
+    // root object rather than extending it, so omitting this dropped og:image
+    // entirely and the page shared as a card with no picture at all.
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 export default function MethodologyPage() {
@@ -477,13 +487,13 @@ export default function MethodologyPage() {
                         <td className="py-2">153.2 kg CO&#8322;e</td>
                       </tr>
                       <tr>
-                        <td className="py-2 pr-4 font-medium text-green-600">
+                        <td className="py-2 pr-4 font-medium text-primary">
                           Method-aware (hand labor documented)
                         </td>
-                        <td className="py-2 pr-4 font-medium text-green-600">
+                        <td className="py-2 pr-4 font-medium text-primary">
                           0.1 kg CO&#8322;e/acre
                         </td>
-                        <td className="py-2 font-medium text-green-600">
+                        <td className="py-2 font-medium text-primary">
                           4.94 kg CO&#8322;e
                         </td>
                       </tr>
@@ -742,13 +752,13 @@ export default function MethodologyPage() {
                       <td className="py-2">85%</td>
                     </tr>
                     <tr>
-                      <td className="py-2 pr-4 font-medium text-green-600">
+                      <td className="py-2 pr-4 font-medium text-primary">
                         Manual operation (any type)
                       </td>
-                      <td className="py-2 pr-4 font-medium text-green-600">
+                      <td className="py-2 pr-4 font-medium text-primary">
                         0.1 kg CO&#8322;e/acre
                       </td>
-                      <td className="py-2 text-green-600">75%</td>
+                      <td className="py-2 text-primary">75%</td>
                     </tr>
                   </tbody>
                 </table>

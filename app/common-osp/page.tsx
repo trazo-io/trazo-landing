@@ -26,6 +26,16 @@ export const metadata: Metadata = {
   description:
     "What the USDA-supported Common OSP is, which certifiers use it, what its grower modules ask, and how to prepare your answers from records you already keep.",
   alternates: { canonical: "https://www.trazo.io/common-osp" },
+  openGraph: {
+    title: "The Common Organic System Plan, explained",
+    description:
+      "What the USDA-supported Common OSP template set is, what it changes for growers, and how to ask your certifier about it.",
+    url: "./",
+    // Next merges metadata SHALLOWLY: a page-level `openGraph` REPLACES the
+    // root object rather than extending it, so omitting this dropped og:image
+    // entirely and the page shared as a card with no picture at all.
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 const modules = [

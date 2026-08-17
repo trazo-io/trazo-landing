@@ -4,15 +4,30 @@ import { ArrowRight, ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { posts } from "@/lib/blog-data"
 
+/**
+ * The four posts a renewal-season visitor should see. Order matters: the deadline
+ * calendar and the COG Pro shutdown are the two pieces with an expiry date on them.
+ *
+ * These were previously four consumer-trust posts, three of which had been deleted in
+ * the pivot. `.filter(Boolean)` swallowed the misses, so a `lg:grid-cols-4` grid
+ * rendered a single lonely card and nothing failed — hence the throw below. A missing
+ * slug is a content bug and must be loud, not quietly absorbed.
+ */
 const homepageSlugs = [
-  "consumers-dont-trust-food-labels",
-  "perverse-incentive-problem",
+  "organic-renewal-season-calendar",
+  "cog-pro-shutting-down-migration-guide",
+  "what-your-organic-inspector-actually-checks",
   "organic-record-keeping-guide",
-  "qr-codes-farm-to-consumer-trust",
 ]
-const displayPosts = homepageSlugs
-  .map((slug) => posts.find((p) => p.slug === slug))
-  .filter(Boolean) as typeof posts
+const displayPosts = homepageSlugs.map((slug) => {
+  const post = posts.find((p) => p.slug === slug)
+  if (!post) {
+    throw new Error(
+      `blog-section: no post with slug "${slug}". Update homepageSlugs when a post is renamed or removed — do not let the grid render short.`,
+    )
+  }
+  return post
+})
 
 export function BlogSection() {
   return (
@@ -25,8 +40,8 @@ export function BlogSection() {
               Resources & Insights
             </p>
             <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              Learn How Transparency Builds
-              <br className="hidden md:block" /> Buyer Confidence
+              Renewal season,
+              <br className="hidden md:block" /> explained
             </h2>
           </div>
           <Button
@@ -49,8 +64,13 @@ export function BlogSection() {
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
                     src={post.image}
-                    alt={post.title}
+                    // Decorative: the <h3> below is inside the same <Link> and carries
+                    // the title, so alt={post.title} made a screen reader say it twice.
+                    alt=""
                     fill
+                    // Without `sizes`, next/image assumes 100vw and shipped a 1920-wide
+                    // render (~175KB) into a ~290px card. Four cards, ~570KB wasted.
+                    sizes="(min-width: 1024px) 290px, (min-width: 640px) 45vw, 100vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>

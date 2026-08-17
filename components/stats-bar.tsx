@@ -9,7 +9,10 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 const stats = [
   { icon: Layers, value: "17", label: "Guided OSP Modules, Common-OSP Aligned" },
   { icon: DollarSign, value: "$249 flat", label: "Per Farm, Per Year — Not Revenue-Banded" },
-  { icon: Languages, value: "EN + ES", label: "Log and Review in English or Spanish" },
+  // Absorbed from the retired FieldFeatures section, whose one non-duplicated line
+  // this is: the crew logs in Spanish, you read the certifier packet in English, and
+  // it is the same record. Quick Organics has no Spanish marketing at all.
+  { icon: Languages, value: "EN + ES", label: "Crew Logs in Spanish, You File in English" },
   { icon: Timer, value: "<2 min", label: "Per Activity Logged" },
 ];
 

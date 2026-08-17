@@ -3,6 +3,21 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/*
+ * BRAND GREEN — must stay byte-identical to the app's `green.700` in
+ * `trazo-app/src/theme/styles.js`. It is written as a hex, not an oklch triple, on purpose:
+ * the closest oklch — oklch(0.523 0.135 144.2) — round-trips to #2D7D32, one step off in red.
+ * Invisible, and the contrast is identical (5.13:1), but an exact string match is what lets a
+ * future audit diff the two repos in one grep. Format purity is worth less than that.
+ *
+ * MEASURED, 2026-08-14. This was `oklch(0.59 0.14 148)` = #35934A, hue 133°, and it was the
+ * reason the landing and the app read as two different products:
+ *   logo    #007E00 / #107B0A   hue 117-120°
+ *   app     #2E7D32             hue 123°
+ *   landing #35934A             hue 133°   ← 10° off the app, 13-16° off our OWN logo
+ * Past roughly 5° people stop reading a shade and start reading a different colour. #35934A
+ * also failed AA on its own "Start free" button: white on it is 3.87:1, and it needs 4.5.
+ */
 :root {
   --background: oklch(0.99 0.002 120);
   --foreground: oklch(0.18 0.02 155);
@@ -10,7 +25,7 @@
   --card-foreground: oklch(0.18 0.02 155);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.18 0.02 155);
-  --primary: oklch(0.59 0.14 148);
+  --primary: #2e7d32;
   --primary-foreground: oklch(0.99 0.002 120);
   --secondary: oklch(0.96 0.01 150);
   --secondary-foreground: oklch(0.30 0.04 155);
@@ -22,8 +37,8 @@
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: oklch(0.91 0.01 150);
   --input: oklch(0.91 0.01 150);
-  --ring: oklch(0.59 0.14 148);
-  --chart-1: oklch(0.59 0.14 148);
+  --ring: #2e7d32;
+  --chart-1: #2e7d32;
   --chart-2: oklch(0.60 0.10 155);
   --chart-3: oklch(0.55 0.08 200);
   --chart-4: oklch(0.70 0.10 140);
@@ -31,12 +46,12 @@
   --radius: 0.75rem;
   --sidebar: oklch(0.97 0.005 150);
   --sidebar-foreground: oklch(0.18 0.02 155);
-  --sidebar-primary: oklch(0.59 0.14 148);
+  --sidebar-primary: #2e7d32;
   --sidebar-primary-foreground: oklch(0.99 0.002 120);
   --sidebar-accent: oklch(0.94 0.02 150);
   --sidebar-accent-foreground: oklch(0.18 0.02 155);
   --sidebar-border: oklch(0.91 0.01 150);
-  --sidebar-ring: oklch(0.59 0.14 148);
+  --sidebar-ring: #2e7d32;
 }
 
 @theme inline {
@@ -155,11 +170,63 @@
     color: oklch(0.18 0.02 155);
   }
   .prose-custom a {
-    color: oklch(0.59 0.14 148);
+    color: #2e7d32;
     text-decoration: underline;
     text-underline-offset: 2px;
   }
   .prose-custom a:hover {
-    color: oklch(0.50 0.14 148);
+    color: #1b5e20;
   }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SCROLL REVEAL — a progressive enhancement, so the UN-enhanced state is VISIBLE.
+
+   This used to be `useState(false)` inside a client component, which meant the
+   server rendered 41 elements at `opacity-0` and they only appeared once React
+   had hydrated and IntersectionObserver had fired. Nine sections — including the
+   two that carry the whole pitch — were invisible until then. On rural LTE that
+   is a hero followed by seconds of white space, and with JS blocked it never
+   resolved at all.
+
+   Now: nothing hides unless `html.js` is present, and that class is set by a
+   synchronous inline script in <head> (see layout.tsx) that runs before first
+   paint — so there is no flash of content that then hides itself.
+
+   The failsafe animation is the important half. If the marker lands but the React
+   bundle never arrives, the keyframe forces the element visible at 4s.
+
+   It is scoped to `:not(.js-ready)` on purpose. `js-ready` is added the moment a
+   ScrollReveal mounts, i.e. once hydration has demonstrably happened. Without that
+   scope the failsafe fires on a healthy page too: anyone who reads the hero for
+   more than four seconds before scrolling would find every section below already
+   revealed, and the animation would never play for them. The failsafe must cover
+   "the bundle died", not "the reader is slow".
+   ───────────────────────────────────────────────────────────────────────────── */
+[data-reveal] {
+  transition:
+    opacity var(--reveal-duration, 600ms) ease-out var(--reveal-delay, 0ms),
+    transform var(--reveal-duration, 600ms) ease-out var(--reveal-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html.js [data-reveal="pending"] {
+    opacity: 0;
+  }
+  html.js:not(.js-ready) [data-reveal="pending"] {
+    animation: trazo-reveal-failsafe 0s linear 4s forwards;
+  }
+  html.js [data-reveal="pending"][data-reveal-dir="up"] { transform: translateY(2rem); }
+  html.js [data-reveal="pending"][data-reveal-dir="down"] { transform: translateY(-2rem); }
+  html.js [data-reveal="pending"][data-reveal-dir="left"] { transform: translateX(2rem); }
+  html.js [data-reveal="pending"][data-reveal-dir="right"] { transform: translateX(-2rem); }
+}
+
+@keyframes trazo-reveal-failsafe {
+  to { opacity: 1; transform: none; }
+}
+
+/* Reduced motion gets the content, never the movement — and no leftover fade. */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { transition: none; opacity: 1; transform: none; }
 }

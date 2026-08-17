@@ -16,8 +16,18 @@ import { Footer } from "@/components/footer";
 export const metadata: Metadata = {
   title: "Trazo for farmers — renewal without the paperwork pile",
   description:
-    "Log each activity once, from the field, in English or Spanish. Trazo turns your log into certifier-ready records, your Organic System Plan draft, and a page your buyer can see.",
+    "Log each activity once, from the field, in English or Spanish. It becomes your certifier records, your Organic System Plan draft and your buyer's page.",
   alternates: { canonical: "https://www.trazo.io/for-farmers" },
+  openGraph: {
+    title: "Renewal without the paperwork pile",
+    description:
+      "Log the season on your phone. Trazo drafts your records section, the attachment workbooks and your inspection packet.",
+    url: "./",
+    // Next merges metadata SHALLOWLY: a page-level `openGraph` REPLACES the
+    // root object rather than extending it, so omitting this dropped og:image
+    // entirely and the page shared as a card with no picture at all.
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 export default function ForFarmersPage() {

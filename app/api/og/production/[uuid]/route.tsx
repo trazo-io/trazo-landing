@@ -18,7 +18,11 @@ const BANNED_FRAGMENTS = [
 
 const COLOR = {
   green500: "#4CAF50",
+  // green.600 #388E3C is 4.12:1 on white — a BOUNDARY colour (borders, rings),
+  // not a text colour. The project rule is categorical: if it renders glyphs, it
+  // is green.700. Kept here only for non-text use.
   green600: "#388E3C",
+  green700: "#2E7D32",
   textPrimary: "#1F2937",
   textSecondary: "#6B7280",
   white: "#FFFFFF",
@@ -228,7 +232,7 @@ export async function GET(
                     display: "flex",
                     fontSize: 96,
                     fontWeight: 700,
-                    color: COLOR.green600,
+                    color: COLOR.green700,
                     lineHeight: 1,
                   }}
                 >
@@ -262,7 +266,7 @@ export async function GET(
             marginTop: 24,
           }}
         >
-          consumer.trazo.io · Agricultural Transparency
+          consumer.trazo.io · Documented growing practices
         </div>
       </div>
     ),

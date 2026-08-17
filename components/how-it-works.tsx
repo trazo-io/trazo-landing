@@ -20,18 +20,30 @@ const steps = [
     label: "STEP 2",
     title: "Document Your Practices",
     description:
-      "Log every farming event in under 2 minutes with voice recording, photo capture, or simple forms.",
+      "Log every farming event fast with voice recording, photo capture, or simple forms — and Trazo flags any certifier-required detail still missing while you can still remember it.",
     image: "/images/step-document.jpg",
     alt: "Farmer documenting agricultural practices with Trazo",
   },
   {
     number: "03",
     label: "STEP 3",
-    title: "Share QR Codes & Earn Trust",
+    title: "Walk Into Renewal Ready",
     description:
-      "Finish your harvest and the QR code auto-generates. When consumers scan, they see your farming timeline, documented practices, and certifications. Nothing goes live until you're ready.",
-    image: "/images/step-consumer-scan.jpg",
-    alt: "Consumer scanning a QR code on fresh produce to see the farm story",
+      "Your records compile into your Organic System Plan, renewal packet, and audit exports — and when you finish a harvest, a QR buyer page is generated from the same season. Nothing goes live until you're ready.",
+    // TODO(step-3 art): interim. Wants a photograph of the RENEWAL MOMENT — see the brief in
+    // `docs/step-3-photo-brief.md`. `farm-field.jpg` is on-register and on-brand but it is a
+    // landscape: the copy carries the meaning, the image only sets the mood.
+    //
+    // WHY THIS IS A PHOTOGRAPH AND NOT THE AUDIT REPORT.
+    // It was briefly the audit report's own cover page, which broke this section two ways.
+    // Register: steps 1 and 2 are warm photographic stock, so a flat white document scan in
+    // the third card reads as a rendering fault rather than a choice — and the card's
+    // `group-hover:scale-105`, a Ken Burns move built for photos, zooms into a PDF.
+    // Redundancy: the page already carries ten product screenshots (hero, product tour,
+    // one-entry-two-outputs, certifier log, consumer showcase). How It Works is the narrative
+    // section; the artifacts prove themselves in the sections built to display them.
+    image: "/images/farm-field.jpg",
+    alt: "Golden-hour aerial of a working farm: planted rows running across rolling green hills toward a farmstead on the horizon.",
   },
 ];
 
@@ -39,7 +51,9 @@ export function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="relative border-b border-border bg-background py-16 lg:py-24"
+      // The navbar's "How it Works" links straight here, and the header is FIXED at 109px, so
+      // without an offset the "HOW IT WORKS" eyebrow lands underneath it. scroll-mt-28 = 112px.
+      className="relative scroll-mt-28 border-b border-border bg-background py-16 lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Header */}
@@ -50,7 +64,10 @@ export function HowItWorks() {
                 How It Works
               </p>
               <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
-                From sign-up to consumer trust
+                {/* Was "to consumer trust", which is pre-pivot: the shopper is no longer the
+                    climax of the farmer's story. Step 3 ends at renewal, and the QR buyer page
+                    is a by-product of finishing a harvest, not the goal. */}
+                From sign-up to renewal-ready
                 <br className="hidden lg:block" /> in three steps
               </h2>
             </div>
@@ -81,6 +98,12 @@ export function HowItWorks() {
                     src={step.image}
                     alt={step.alt}
                     fill
+                    // A `fill` image with no `sizes` is the reason these were soft: next/image
+                    // fell back to a tiny srcset candidate and pushed a 207px file into a 340px
+                    // box on a phone. The card is half of the 1232px content column at lg+
+                    // (measured 615px), and the full column below it.
+                    sizes="(min-width: 1024px) 616px, 100vw"
+                    quality={92}
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>

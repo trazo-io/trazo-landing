@@ -95,10 +95,15 @@ export function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
+        {/* The negative margin cancels the padding, so this reaches a 44x44 target
+            without moving anything in the bar. It was 24x24 — the only route to the
+            nav on a phone, for growers wearing work gloves. */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="text-foreground md:hidden"
+          className="-m-2.5 p-2.5 text-foreground md:hidden"
           aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-nav"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -106,7 +111,10 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="border-t border-border bg-background px-6 py-6 md:hidden">
+        <div
+          id="mobile-nav"
+          className="border-t border-border bg-background px-6 py-6 md:hidden"
+        >
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link

@@ -1,8 +1,12 @@
-"use client";
-
+// NOT a client component. It carries no state, no effects and no handlers — the only
+// interactive thing on the page is the shadcn Accordion, which is "use client" itself.
+// The stray directive here made it impossible to export `metadata`, so the highest-intent
+// page on the site inherited the homepage's title, description and canonical.
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check, Minus, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { PriceBandCompare } from "@/components/price-band-compare";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import {
@@ -12,10 +16,29 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+export const metadata: Metadata = {
+  // Under the ~60-char SERP limit, leading with the term a farmer comparing tools
+  // would type, and with the number that beats a revenue-banded competitor.
+  title: "Organic Recordkeeping Pricing — $249/yr | Trazo",
+  description:
+    "Free Starter plan, no card and no expiry. Compliance is $249 per farm per year, flat — not banded by your revenue like other organic software.",
+  alternates: { canonical: "/pricing" },
+  openGraph: {
+    title: "Pricing — $249 per farm, per year, flat",
+    description:
+      "Free Starter plan, no card and no expiry. Compliance is $249 per farm per year — not banded by your revenue.",
+    url: "./",
+    // Next merges metadata SHALLOWLY: a page-level `openGraph` REPLACES the
+    // root object rather than extending it, so omitting this dropped og:image
+    // entirely and the page shared as a card with no picture at all.
+    images: ["/images/og-image.jpg"],
+  },
+};
+
 const pricingJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Trazo Pricing | Agricultural Transparency Platform",
+  name: "Trazo Pricing — Organic Recordkeeping Software",
   description:
     "Simple, transparent pricing for specialty crop farms. The Starter plan is free permanently \u2014 no card, no expiry. Compliance is $249 per farm per year.",
   url: "https://www.trazo.io/pricing",
@@ -150,7 +173,10 @@ const comparisonFeatures: ComparisonRow[] = [
     values: ["2 GB", "25 GB", "Unlimited"],
   },
   { label: "AI event templates", values: [true, true, true] },
-  { label: "Farm records score (your dashboard)", values: [true, true, true] },
+  // Was "Farm records score (your dashboard)". The 0-100 producer score is retired to a
+  // backend-only KPI with no UI surface, so this row sold a feature nobody can open.
+  // What actually ships is the record-completeness check shown in the hero screenshot.
+  { label: "Record completeness checks", values: [true, true, true] },
   { label: "QR code and buyer page", values: [true, true, true] },
   {
     label: "Carbon calculations (EPA/USDA-sourced)",
@@ -183,6 +209,21 @@ const comparisonFeatures: ComparisonRow[] = [
   },
 ];
 
+// Built from `pricingFaqs` below rather than hand-written, so the schema can never
+// drift from the questions actually rendered on the page — Google penalises FAQ
+// markup that does not match visible content.
+function faqPageJsonLd(faqs: { q: string; a: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+}
+
 const pricingFaqs = [
   {
     q: "Is the Starter plan really free, or is it a trial?",
@@ -210,7 +251,11 @@ const pricingFaqs = [
   },
   {
     q: "Can I get my data out?",
-    a: "Yes, and this matters more than usual right now: growers are being moved off recordkeeping tools that are shutting down. Your events, photos and documents export from Trazo at any time, on any plan, including the free one. If you are leaving COG Pro, we import your CSV exports for you at no charge.",
+    // Do NOT restore "your events, photos and documents export at any time, on any
+    // plan, including the free one." `subscriptions/gating.py` is explicit that Trazo
+    // has no plain data export at all yet, and every certifier artifact sits behind
+    // Compliance. Same retraction as `components/hero.tsx:72-85`.
+    a: "Getting in is free: if you are leaving COG Pro we import your CSV exports at no charge, and Starter never expires. Being straight about the other direction — a one-click export of your whole account is not built yet. The certifier documents (OSP renewal packet and workbooks, audit exports, CA PUR export) are part of the Compliance plan. If you want your records out, email info@trazo.io and we will produce them for you.",
   },
   {
     q: "Is my data secure?",
@@ -224,6 +269,15 @@ export default function PricingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingJsonLd) }}
+      />
+      {/* The 8 pricing questions are rendered in the accordion below but carried no
+          schema, so the highest-intent page on the site was invisible to FAQ rich
+          results. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqPageJsonLd(pricingFaqs)),
+        }}
       />
       <Navbar />
       <main className="pt-32 pb-20">
@@ -403,53 +457,10 @@ export default function PricingPage() {
             How Trazo pricing compares
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
-            Public list prices for organic recordkeeping tools, as published by
-            each vendor. Trazo is one flat price per farm — it does not rise
-            with your revenue.
+            Quick Organics prices by your gross organic revenue, so the honest
+            comparison depends on your farm. Pick your band and see both numbers.
           </p>
-          <div className="mt-8 overflow-x-auto rounded-2xl border border-border">
-            <table className="w-full min-w-[560px] text-left text-sm">
-              <thead className="bg-muted/50">
-                <tr>
-                  <th className="px-5 py-3 font-semibold text-foreground">Tool</th>
-                  <th className="px-5 py-3 font-semibold text-foreground">Price per year</th>
-                  <th className="px-5 py-3 font-semibold text-foreground">How it scales</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-border">
-                <tr className="bg-primary/5">
-                  <td className="px-5 py-4 font-semibold text-foreground">Trazo Compliance</td>
-                  <td className="px-5 py-4 text-foreground">$249 flat</td>
-                  <td className="px-5 py-4 text-muted-foreground">
-                    Per farm. Same price at any revenue.
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-5 py-4 text-foreground">Quick Organics</td>
-                  <td className="px-5 py-4 text-foreground">$150 – $4,250</td>
-                  <td className="px-5 py-4 text-muted-foreground">
-                    Banded by your gross organic revenue — the more you sell,
-                    the more you pay.
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-5 py-4 text-foreground">COG Pro</td>
-                  <td className="px-5 py-4 text-foreground">Shutting down</td>
-                  <td className="px-5 py-4 text-muted-foreground">
-                    Announced shutdown December 31, 2026.{" "}
-                    <Link href="/cog-pro-migration" className="text-primary underline">
-                      See our migration guide
-                    </Link>
-                    .
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p className="mt-3 text-center text-xs text-muted-foreground">
-            Competitor prices from their public pricing pages. If they change,
-            tell us and we will update this table.
-          </p>
+          <PriceBandCompare />
         </section>
 
         <section className="mx-auto mt-24 max-w-3xl px-6 text-center">

@@ -34,8 +34,8 @@ export function ProductShowcase() {
               <div className="flex flex-col items-center gap-6">
                 <div className="relative h-[520px] w-[260px] overflow-hidden rounded-[2.5rem] border-[8px] border-foreground/10 bg-card shadow-2xl shadow-primary/10 md:h-[560px] md:w-[280px]">
                   <Image
-                    src="/images/consumer-transparency.png"
-                    alt="Trazo consumer view showing an Avocado from Solana Verde Organic Ranch, Certified Organic by CCOF, with 24 documented practices"
+                    src="/images/consumer-transparency-v3.png"
+                    alt="Trazo buyer page for walnuts from Blue Oak Orchards: Lot BO-2025-EB-01, harvested October 22 2025, 27 practices documented, above the documented growing story and the practices, origin, harvest and records row."
                     fill
                     sizes="(min-width: 768px) 280px, 260px"
                     quality={95}
@@ -57,8 +57,8 @@ export function ProductShowcase() {
               <div className="flex flex-col items-center gap-6">
                 <div className="relative h-[520px] w-[260px] overflow-hidden rounded-[2.5rem] border-[8px] border-foreground/10 bg-card shadow-2xl shadow-primary/10 md:h-[560px] md:w-[280px]">
                   <Image
-                    src="/images/consumer-journey-v3.png"
-                    alt="A Trazo farming event opened on the Production Journey: what happened, why it matters, the farmer's own field notes, and key details including area, yield and grade"
+                    src="/images/consumer-journey-v6.png"
+                    alt="A Trazo farming event opened on the buyer page: Harvest — shake and sweep, September 29 2025, what happened in plain words, a Self Reported label, the farmer's own field notes recording 8.2 percent moisture at delivery and the weigh ticket, and key details including area covered of 12.5 acres."
                     fill
                     sizes="(min-width: 768px) 280px, 260px"
                     quality={95}
