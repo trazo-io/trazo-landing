@@ -53,10 +53,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/images/og-image.jpg",
+        // ⚠️ BUMP THIS FILENAME ON EVERY RE-CUT — never overwrite in place. LinkedIn, WhatsApp
+        // and Slack cache an OG image by URL and hold it for weeks, so replacing the bytes
+        // behind a stable path leaves the OLD card live everywhere it has already been shared.
+        // The previous asset (`og-image.jpg`, a Mar 6 screenshot of the pre-pivot landing) is
+        // why this matters: it kept serving "Earn Premium Prices", "Try free for 14 days",
+        // "Plans from $69/month" and "verify it on blockchain" — four claims that are variously
+        // retired, never-existed, or on the UNSAFE list in .claude/rules/compliance.md — as the
+        // preview card for all 18 routes, months after the words on the pages were corrected.
+        url: "/images/og-renewal-2026-10.jpg",
         width: 1200,
         height: 630,
-        alt: "The Trazo farm dashboard: an organic walnut operation's season, with its renewal deadlines and record checks",
+        // Describes the CROP that actually shipped (the hero block), not the dashboard. The
+        // full-page screenshot was cropped to 1.905:1 because a whole page rendered at
+        // LinkedIn's ~552px card width puts the sub-headline at ~4px — unreadable.
+        alt: "Trazo's homepage headline: walk into renewal season with your records already assembled, above a note that the Starter plan is free permanently",
       },
     ],
   },

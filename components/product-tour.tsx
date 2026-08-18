@@ -83,12 +83,20 @@ const PANELS: Panel[] = [
     headline: "The paperwork, already written and dated",
     body: "The audit dossier, the OSP renewal packet and its module PDFs, the Common OSP workbooks, the California PUR export, lot tags — each one built from the records above, filed the moment it is generated. Your own weigh tickets and receipts sit beside them.",
     src: "/images/tour-documents-v2.png",
-    // v2: the v1 capture predated the Documents mobile fix and showed the six-column
-    // table crushed to the viewport, with "SOURCE" wrapped as a vertical S-O-U-R-C-E
-    // stack. Filename bumped because `_next/image` caches by source URL — replacing
-    // bytes under the old name serves the stale render forever.
-    srcMobile: "/images/tour-m-documents-v2.png",
-    alt: "Trazo documents page listing generated certifier artifacts with folder, source, size and date: an audit dossier, a California PUR export, an OSP renewal packet with 13 versions, an OSP module PDF, a Common OSP workbook, an OSP submission snapshot and lot tags.",
+    // v1 predated the Documents mobile fix: the six-column table was crushed to the
+    // viewport with "SOURCE" wrapped as a vertical S-O-U-R-C-E stack. v2 caught the
+    // stacked-card layout but still had it nested inside an outer card, so ~29% of a
+    // 375px screen went to chrome. v3 is the same view after that outer card came off.
+    // Filename bumped every cut because `_next/image` caches by SOURCE URL — replacing
+    // bytes under an old name serves the stale render forever.
+    // Same farm as the other two panels and as the desktop capture: a screenshot from a
+    // different establishment would put a second farm name inside one tab, visible only
+    // to whichever half of readers is on a phone.
+    srcMobile: "/images/tour-m-documents-v3.png",
+    // Describes the shelf, not a row order: desktop renders a table and phones render
+    // stacked cards, and only one is in the layout at a time, so the alt has to be true
+    // of either. Enumerating the table's rows made it wrong for every phone reader.
+    alt: "Trazo documents page for Blue Oak Orchards, a shelf of generated certifier artifacts filed by folder with source, size and date — audit dossier, California PUR export, OSP renewal packet, OSP module PDFs, Common OSP workbook and lot tags — filterable by Organic System Plan, Exports and Uploads, with the farm's own files uploaded beside them.",
   },
 ];
 

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     // Next merges metadata SHALLOWLY: a page-level `openGraph` REPLACES the
     // root object rather than extending it, so omitting this dropped og:image
     // entirely and the page shared as a card with no picture at all.
-    images: ["/images/og-image.jpg"],
+    images: ["/images/og-renewal-2026-10.jpg"],
   },
 };
 
