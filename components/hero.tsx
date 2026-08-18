@@ -6,8 +6,13 @@ import Image from "next/image";
 import { ScrollReveal } from "@/components/scroll-reveal";
 
 export function Hero() {
+  // Top padding tracks the FIXED header's measured height (`--header-h`, published by
+  // Navbar) plus breathing room, because that header GROWS as the renewal strip wraps:
+  // 109px desktop, 121px at 390, 137px at 320. The old fixed `pt-28` (112px) put the
+  // deadline badge underneath it on every phone. The 140px fallback covers the widest
+  // observed header on first paint, before the ResizeObserver reports.
   return (
-    <section className="relative overflow-hidden pt-28 pb-10 lg:pt-36 lg:pb-14">
+    <section className="relative overflow-hidden pb-10 pt-[calc(var(--header-h,140px)+2rem)] lg:pb-14 lg:pt-[calc(var(--header-h,140px)+3.5rem)]">
       {/* Subtle dot pattern */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.4]"

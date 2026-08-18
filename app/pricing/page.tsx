@@ -6,7 +6,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check, Minus, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { PriceBandCompare } from "@/components/price-band-compare";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import {
@@ -52,8 +51,12 @@ const pricingJsonLd = {
         name: "Starter",
         price: "0",
         priceCurrency: "USD",
+        // 2026-08-17: was "1 production/year, 2 GB storage". Migration 0014 moved Starter's
+        // wall from the INPUT to the OUTPUT — unlimited productions, 10 GB — and this block
+        // is what Google indexes, so the stale version advertised a weaker free tier than
+        // the one that ships, against a competitor offering twelve free months.
         description:
-          "Free forever: 1 farm, unlimited parcels, 1 production/year, 2 GB storage",
+          "Free forever: 1 farm, unlimited parcels, unlimited productions, 10 GB storage",
       },
       {
         "@type": "Offer",
@@ -66,17 +69,19 @@ const pricingJsonLd = {
       },
       {
         "@type": "Offer",
-        name: "Enterprise",
+        name: "Operation",
+        price: "1200",
         priceCurrency: "USD",
+        billingDuration: "P1Y",
         description:
-          "Unlimited farms, parcels and productions, dedicated onboarding",
+          "Every farm in one operation: unlimited farms and certifiers, OSP records, certifier link, CA PUR export per site, 100 GB storage",
       },
     ],
   },
 };
 
 const plans = [
-  // Two tiers plus Enterprise, priced ANNUALLY (2026-08-07).
+  // Three tiers, all priced ANNUALLY (2026-08-07; Operation added 2026-08-17).
   //
   // The previous $69-299/MONTH ladder was 5-8x the category: COG Pro charges $99/$155/$179 per
   // YEAR (and stops service 2026-12-31), Quick Organics $150/yr. A COG Pro refugee paying $155
@@ -98,10 +103,15 @@ const plans = [
     includesLabel: "Includes",
     features: [
       "1 farm, unlimited parcels/blocks",
-      "1 production per year",
+      // Unlimited, not "1 production per year", and 10 GB, not 2. Migration 0014 moved
+      // Starter's wall from how much it can LOG to what it can PRODUCE: log a whole season
+      // free, and buy Compliance for the documents you hand to somebody else. The old copy
+      // sold a demo; the tier that ships is a working free product.
+      "Unlimited productions per year",
       "Event logging with AI templates",
+      "Voice logging from the field",
       "QR code and buyer page",
-      "2 GB storage",
+      "10 GB storage",
     ],
   },
   {
@@ -116,8 +126,10 @@ const plans = [
     ctaLink: "https://app.trazo.io/auth/signup",
     includesLabel: "Everything in Starter, plus",
     features: [
-      "Unlimited productions per year",
-      "Voice logging from the field",
+      // "Unlimited productions per year" and "Voice logging from the field" were the first
+      // two lines here. Both moved INTO Starter with migration 0014, so listing them under
+      // "Everything in Starter, plus" claimed as an upgrade two things the free tier already
+      // has. What is left is the honest difference, and it is entirely OUTPUTS.
       "Organic System Plan (7 CFR 205.201) with Common OSP § 11 records",
       "The four required OSP attachment workbooks, filled from your records",
       "Certifier link — your certifier reviews online, with your permission",
@@ -126,21 +138,29 @@ const plans = [
       "25 GB storage",
     ],
   },
+  // Operation replaced "Enterprise" here on 2026-08-17.
+  //
+  // Enterprise was a "talk to us" column whose only distinct promise was UNLIMITED FARMS —
+  // which is now exactly what Operation is, at a published price. Two columns saying the same
+  // thing, one of them refusing to name a number, is not a tier; it is a gap where the ceiling
+  // should be. The conversation Enterprise was actually for — packers, marketers, certifier
+  // programs, i.e. buyers who are not farms — is a contact line under the table, not a plan.
   {
-    name: "Enterprise",
-    description: "Multiple farms or entities",
+    name: "Operation",
+    description: "Every farm in the business, one renewal",
     monthly: null,
-    yearly: null,
-    priceLabel: "Talk to us",
-    priceNote: "Unlimited farms",
+    yearly: 1200,
+    priceLabel: null,
+    priceNote: "per operation, per year",
     highlight: false,
-    cta: "Contact Sales",
-    ctaLink: "mailto:info@trazo.io",
+    cta: "Start free",
+    ctaLink: "https://app.trazo.io/auth/signup",
     includesLabel: "Everything in Compliance, plus",
     features: [
-      "Unlimited farms and parcels",
-      "Dedicated onboarding",
-      "Priority support",
+      "Unlimited farms and certifiers",
+      "The renewal packet and audit export for every farm",
+      "California PUR export per site",
+      "100 GB storage",
     ],
   },
 ];
@@ -157,20 +177,26 @@ type ComparisonRow = {
 const comparisonFeatures: ComparisonRow[] = [
   {
     label: "Price",
-    values: ["Free", "$249/yr per farm", "Talk to us"],
+    values: ["Free", "$249/yr per farm", "$1,200/yr per operation"],
   },
   {
     label: "Farms / Parcels per farm",
     values: ["1 / Unlimited", "1 / Unlimited", "Unlimited / Unlimited"],
   },
-  { label: "Productions / year", values: ["1", "Unlimited", "Unlimited"] },
   {
-    label: "QR scans / month",
-    values: ["1,000", "Unlimited", "Unlimited"],
+    label: "Productions / year",
+    values: ["Unlimited", "Unlimited", "Unlimited"],
   },
+  // The "QR scans / month: 1,000" row is gone, with its FAQ.
+  //
+  // That limit is enforced NOWHERE: `UsageTrackingMiddleware` fires only on a `/api/scan/`
+  // path that does not exist, requires an authenticated user while consumer QR scans are
+  // anonymous by design, and calls `logger.info` rather than blocking even then. Publishing
+  // a ceiling nobody can hit is a promise to throttle a farm's buyers — the opposite of what
+  // the buyer page is for — in exchange for a differentiator that is not real.
   {
     label: "Storage",
-    values: ["2 GB", "25 GB", "Unlimited"],
+    values: ["10 GB", "25 GB", "100 GB"],
   },
   { label: "AI event templates", values: [true, true, true] },
   // Was "Farm records score (your dashboard)". The 0-100 producer score is retired to a
@@ -187,7 +213,10 @@ const comparisonFeatures: ComparisonRow[] = [
     values: [true, true, true],
   },
   { label: "Photo documentation", values: [true, true, true] },
-  { label: "Voice recording", values: [false, true, true] },
+  // Voice is free on every tier since 0014: the measured barriers to farm software adoption
+  // are time and labour, not price, so gating the fastest gloves-on input path suppressed
+  // exactly the logging that produces the records that produce the upgrade.
+  { label: "Voice recording", values: [true, true, true] },
   {
     label: "Organic System Plan (7 CFR 205.201) + Common OSP § 11",
     values: [false, true, true],
@@ -199,13 +228,13 @@ const comparisonFeatures: ComparisonRow[] = [
     values: [false, true, true],
   },
   { label: "Free migration from COG Pro", values: [false, true, true] },
-  {
-    label: "Dedicated onboarding",
-    values: [false, false, true],
-  },
+  // "Dedicated onboarding" was true for Enterprise alone, so with that column gone the row
+  // would have read false / false / false — a line item that tells the reader nothing.
   {
     label: "Support",
-    values: ["72hr email", "24hr priority", "4hr dedicated"],
+    // "4hr dedicated" left with Enterprise. These two match the `support_response_time` and
+    // `priority_support` flags the support system actually reads (`support/models.py`).
+    values: ["72hr email", "24hr priority", "24hr priority"],
   },
 ];
 
@@ -227,7 +256,13 @@ function faqPageJsonLd(faqs: { q: string; a: string }[]) {
 const pricingFaqs = [
   {
     q: "Is the Starter plan really free, or is it a trial?",
-    a: "Free permanently. It does not expire and never asks for a card. It covers 1 farm with unlimited parcels or blocks and 1 production per year \u2014 enough to keep a real season of records and produce your certifier packet. Compliance adds unlimited productions, the OSP records and the exports; upgrade whenever you outgrow it, not when a clock runs out.",
+    // 2026-08-17: this said Starter was "enough to keep a real season of records AND PRODUCE
+    // YOUR CERTIFIER PACKET". It is not — `compliance_exports` is False on Starter, and the
+    // packet is the single thing $249 buys. The page was describing the paywall backwards, and
+    // contradicting /contact, which had it right. A grower who believed it would discover the
+    // gate at renewal with a deadline in hand: the exact ambush the app's own pricing card was
+    // rewritten to prevent.
+    a: "Free permanently. It does not expire and never asks for a card. It covers 1 farm with unlimited parcels or blocks, unlimited productions and 10 GB of storage \u2014 enough to log a whole season, every block, with photos and voice. What it does not do is produce the documents you hand to somebody else: the OSP renewal packet and workbooks, the audit exports and the CA PUR export are the Compliance plan. Upgrade when you need the paperwork, not when a clock runs out.",
   },
   {
     q: "Can I switch plans?",
@@ -235,15 +270,18 @@ const pricingFaqs = [
   },
   {
     q: 'What counts as a "production"?',
-    a: "One crop cycle from planting to harvest on a single parcel. Three parcels of avocados is three productions, and a replanted seasonal crop starts a new one each cycle. Compliance has no production limit, so on a paid plan this only affects how your records are organised, not what you are allowed to log.",
+    a: "One crop cycle from planting to harvest on a single parcel. Three parcels of avocados is three productions, and a replanted seasonal crop starts a new one each cycle. No plan limits how many you run \u2014 Starter included \u2014 so this only affects how your records are organised, not what you are allowed to log.",
   },
   {
-    q: "What if I exceed my QR scan limit?",
-    a: "Your QR codes keep working \u2014 a buyer scanning a case in a warehouse always reaches your page. Only the analytics counting pauses, and only on Starter, until the month resets. Compliance has no scan limit.",
+    q: "I run several farms. Which plan?",
+    // Answered with the arithmetic rather than a sales invitation. The crossover is a fact a
+    // grower can check on this page, and hiding it behind "contact us" is how a multi-farm
+    // operation ends up paying more than the tier built for them.
+    a: "Up to seven farms, Compliance plus an Extra Farm at $149/yr each is cheaper. From eight, Operation at $1,200/yr is \u2014 and it covers every farm and every certifier with no counting. Whichever you pick, the second farm never costs more than the first.",
   },
   {
-    q: "Discounts for cooperatives or large groups?",
-    a: "Yes. For large organizations, our Enterprise plan offers unlimited farms, parcels, and productions with dedicated support. Contact us at info@trazo.io for custom needs.",
+    q: "I am a packer, marketer or certifier program, not a farm.",
+    a: "Then the plans above are the wrong shape and we should talk. Email info@trazo.io with how many growers you work with and what records you need from them.",
   },
   {
     q: "How do I pay for a paid plan?",
@@ -305,7 +343,6 @@ export default function PricingPage() {
               Export your records anytime
             </span>
           </div>
-
         </section>
 
         {/* Plan Cards */}
@@ -347,9 +384,16 @@ export default function PricingPage() {
                   ) : (
                     <div>
                       <span className="text-4xl font-bold text-foreground">
-                        ${plan.yearly}
+                        {/* Grouped, not `${plan.yearly}`. That printed "$1200" for Operation
+                            while the comparison table, the FAQ and the one-pager all say
+                            "$1,200" — and an unseparated four-figure price reads as a typo on
+                            the one element of the card people actually stop at. */}
+                        ${plan.yearly?.toLocaleString("en-US")}
                       </span>
-                      <span className="text-sm text-muted-foreground"> /yr</span>
+                      <span className="text-sm text-muted-foreground">
+                        {" "}
+                        /yr
+                      </span>
                       <p className="mt-1 text-sm text-muted-foreground">
                         {plan.priceNote}
                       </p>
@@ -380,8 +424,8 @@ export default function PricingPage() {
                     plan.highlight
                       ? "bg-primary text-primary-foreground hover:bg-primary/90"
                       : plan.cta === "Contact Sales"
-                      ? "border-border bg-card text-foreground hover:bg-secondary"
-                      : "border-primary/30 bg-primary/5 text-primary hover:bg-primary/10"
+                        ? "border-border bg-card text-foreground hover:bg-secondary"
+                        : "border-primary/30 bg-primary/5 text-primary hover:bg-primary/10"
                   }`}
                   variant={plan.highlight ? "default" : "outline"}
                   asChild
@@ -408,14 +452,16 @@ export default function PricingPage() {
                   <th className="px-6 py-4 text-left font-semibold text-foreground">
                     Feature
                   </th>
-                  {plans.map((p) => p.name).map((h) => (
-                    <th
-                      key={h}
-                      className="px-4 py-4 text-center font-semibold text-foreground"
-                    >
-                      {h}
-                    </th>
-                  ))}
+                  {plans
+                    .map((p) => p.name)
+                    .map((h) => (
+                      <th
+                        key={h}
+                        className="px-4 py-4 text-center font-semibold text-foreground"
+                      >
+                        {h}
+                      </th>
+                    ))}
                 </tr>
               </thead>
               <tbody>
@@ -450,27 +496,31 @@ export default function PricingPage() {
           </div>
         </section>
 
-        {/* Second farm */}
-        {/* Honest price comparison (plan #67) — public list prices, checked 2026-08-08 */}
-        <section className="mx-auto mt-24 max-w-4xl px-6">
-          <h2 className="text-center text-2xl font-bold text-foreground md:text-3xl">
-            How Trazo pricing compares
-          </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
-            Quick Organics prices by your gross organic revenue, so the honest
-            comparison depends on your farm. Pick your band and see both numbers.
-          </p>
-          <PriceBandCompare />
-        </section>
+        {/* The Quick Organics price-band comparison was REMOVED on 2026-08-17.
+            It put QO's published $150–$4,250 revenue bands against our $249, which is
+            accurate — and beside the point for most of the people reading it. QO's own FAQ
+            states that NFC and CCOF customers do not pay QO at all; the certifier covers it.
+            CCOF certifies roughly 56% of California's certified operations and about 66% of
+            the state's organic crops, so for two in three readers in the home market the real
+            comparison was $249 against $0, and the table quietly argued the wrong case.
+            Competing on price against a competitor that is free to most of your market is a
+            losing frame regardless of how the numbers are drawn. The page now states what
+            Trazo costs and what it produces; the comparison that matters is with what QO does
+            NOT produce, and that belongs in the product copy, not a price table. */}
 
         <section className="mx-auto mt-24 max-w-3xl px-6 text-center">
+          {/* Was "Farming more than one operation? …we will quote it." Operation answers
+              that on the table above now, with a number. What is left for a conversation is
+              the reader who is not a farm at all — the packer, marketer, food hub or
+              certifier program that needs records FROM growers rather than for itself. */}
           <h2 className="text-2xl font-bold text-foreground md:text-3xl">
-            Farming more than one operation?
+            Buying for growers, not for a farm?
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-            Each certified operation files its own Organic System Plan, so Trazo
-            prices per farm. If you run several — or a co-op filing on behalf
-            of members — tell us how it is structured and we will quote it.
+            Packers, marketers, food hubs and certifier programs need the same
+            records from many growers at once, and the plans above are the wrong
+            shape for that. Tell us how many growers you work with and what you
+            need from them.
           </p>
           <Button className="mt-8 gap-2" variant="outline" asChild>
             <a href="mailto:info@trazo.io">
@@ -523,8 +573,8 @@ export default function PricingPage() {
                 practices. Free Starter plan, no credit card required.
               </p>
               <p className="mx-auto mt-3 max-w-2xl text-sm text-primary-foreground/60">
-                Moving from another recordkeeping tool? Send us your export and we
-                will set it up for you, free.
+                Moving from another recordkeeping tool? Send us your export and
+                we will set it up for you, free.
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Button

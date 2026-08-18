@@ -83,7 +83,11 @@ const PANELS: Panel[] = [
     headline: "The paperwork, already written and dated",
     body: "The audit dossier, the OSP renewal packet and its module PDFs, the Common OSP workbooks, the California PUR export, lot tags — each one built from the records above, filed the moment it is generated. Your own weigh tickets and receipts sit beside them.",
     src: "/images/tour-documents-v2.png",
-    srcMobile: "/images/tour-m-documents.png",
+    // v2: the v1 capture predated the Documents mobile fix and showed the six-column
+    // table crushed to the viewport, with "SOURCE" wrapped as a vertical S-O-U-R-C-E
+    // stack. Filename bumped because `_next/image` caches by source URL — replacing
+    // bytes under the old name serves the stale render forever.
+    srcMobile: "/images/tour-m-documents-v2.png",
     alt: "Trazo documents page listing generated certifier artifacts with folder, source, size and date: an audit dossier, a California PUR export, an OSP renewal packet with 13 versions, an OSP module PDF, a Common OSP workbook, an OSP submission snapshot and lot tags.",
   },
 ];

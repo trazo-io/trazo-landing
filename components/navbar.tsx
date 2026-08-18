@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ArrowRight } from "lucide-react";
@@ -19,9 +19,38 @@ const navLinks = [
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+
+  /**
+   * Publish the header's real height as `--header-h` so content below can clear it.
+   *
+   * This header is `fixed`, and its height is NOT a constant: the renewal-season strip
+   * wraps as the viewport narrows, so it measures 109px on desktop, 121px at 390px and
+   * 137px at 320px. The hero used a hardcoded `pt-28` (112px), which meant the deadline
+   * badge sat 9px under the header on a phone and 25px under it on a small phone.
+   *
+   * ResizeObserver rather than a resize listener: the strip can also reflow when the
+   * font loads or the text changes, neither of which fires `resize`.
+   */
+  useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+    const publish = () =>
+      document.documentElement.style.setProperty(
+        "--header-h",
+        `${Math.ceil(el.getBoundingClientRect().height)}px`,
+      );
+    publish();
+    const ro = new ResizeObserver(publish);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-lg">
+    <header
+      ref={headerRef}
+      className="fixed top-0 left-0 right-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-lg"
+    >
       {/* Renewal-season strip — the honest adaptation of the countdown-banner
           pattern: real external deadlines (certifier windows, COG Pro sunset),
           never an invented discount clock. The linked pages carry the full
