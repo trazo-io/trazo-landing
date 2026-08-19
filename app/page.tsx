@@ -21,8 +21,12 @@ const softwareAppJsonLd = {
   // Leads on recordkeeping and renewal, matching the visible page. It previously
   // opened "Agricultural transparency platform … QR codes for buyer-facing
   // transparency pages", which is the pre-pivot order: the certifier is output 1.
+  // ⛔ Do not restore "Trazo drafts your Organic System Plan" here. Structured data, so it is
+  // fed straight to Google, and it is false twice over: 14 of 215 OSP questions declare a
+  // `Prefill`, and a prefill is a SUGGESTION the operator must accept, never a written answer
+  // (7 CFR 205.201(a) makes the producer the author). Full note: app/layout.tsx `description`.
   description:
-    "Organic recordkeeping software for US farms. Log the season once and Trazo drafts your Organic System Plan, renewal packet and NOP audit exports (7 CFR 205.103) — and builds a buyer-facing QR page from the same records.",
+    "Organic recordkeeping software for US farms. Log the season once and Trazo drafts your renewal packet and NOP audit exports (7 CFR 205.103), backs your Organic System Plan answers with the records behind them, and builds a buyer-facing QR page from the same log.",
   offers: {
     "@type": "AggregateOffer",
     lowPrice: "0",
