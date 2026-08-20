@@ -29,7 +29,7 @@ const steps = [
     label: "STEP 3",
     title: "Walk Into Renewal Ready",
     description:
-      "Your records compile into your Organic System Plan, renewal packet, and audit exports — and when you finish a harvest, a QR buyer page is generated from the same season. Nothing goes live until you're ready.",
+      "Your records compile into your Organic System Plan, renewal packet, and audit exports — and when you finish a harvest, Trazo can build a buyer page from the same season. Publishing it is optional and reversible: one switch turns a season on, the same switch turns it off.",
     // TODO(step-3 art): interim. Wants a photograph of the RENEWAL MOMENT — see the brief in
     // `docs/step-3-photo-brief.md`. `farm-field.jpg` is on-register and on-brand but it is a
     // landscape: the copy carries the meaning, the image only sets the mood.

@@ -1,6 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, EyeOff, FileText, QrCode } from "lucide-react";
+import {
+  ArrowDown,
+  EyeOff,
+  FileText,
+  MapPin,
+  Printer,
+  QrCode,
+  ToggleRight,
+} from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { CertifierLogPreview } from "@/components/certifier-log-preview";
 
@@ -50,6 +58,46 @@ const WITHHELD = [
   "Pre-harvest interval",
   "Buffer distance",
   "Supplier & invoice",
+];
+
+/**
+ * The three facts a grower needs before the buyer page is a decision rather than a risk:
+ * it is optional and reversible, the code is something they physically print, and the page
+ * does not give their field away. Verified against the product, not assumed —
+ * `Dashboard/Buyer` (per-production publish Switch + QR and lot-tag downloads),
+ * `transparency_views.py` (anonymous reads are gated on published=True), and
+ * `history/services/privacy.py` (address, ZIP and coordinates stripped; new parcels publish
+ * a ~1 km centre and no boundary).
+ * Written here because the section previously carried only "nothing is public until you
+ * publish" — a one-directional promise that never answered "can I take it back".
+ *
+ * ⛔ Do NOT restore the earlier third bullet, "you set how precise the map is, parcel by
+ * parcel". `Parcel.location_disclosure_level` exists (exact | approximate | hidden) but is
+ * READ-ONLY on the wire (`history/serializers.py:3426`) and has no producer-side editor —
+ * grep found it in generated types and consumer render code only. Selling a control that
+ * does not ship is the orphaned-feature class. Re-add the sentence in the same change that
+ * ships the control, not before.
+ */
+const BUYER_PAGE_CONTROLS: Array<{
+  icon: typeof ToggleRight;
+  title: string;
+  body: string;
+}> = [
+  {
+    icon: ToggleRight,
+    title: "Optional, and reversible",
+    body: "A season goes public only when you finish it and confirm — clear that box and nothing publishes. One switch on your Buyer Page turns a published season off again, any time, and an unpublished season stops answering, whoever is holding the code.",
+  },
+  {
+    icon: Printer,
+    title: "Your code, on your own packaging",
+    body: "Download the QR image, or a letter-size sheet of eight lot tags — farm, crop, lot ID, harvest date and the code — and put them on the cartons or bins, the way \u00a7 205.307 asks nonretail containers to be identified. Each finished season has its own lot, so the tag matches what is in the box.",
+  },
+  {
+    icon: MapPin,
+    title: "Your field is not on the page",
+    body: "A buyer sees the farm, its city and its state. Your street address, ZIP and coordinates are stripped before the page is built, and a parcel added today publishes an approximate location — a point rounded to about a kilometer, with no field boundary and the zoom capped so it cannot be pushed in closer.",
+  },
 ];
 
 export function DualOutput() {
@@ -260,15 +308,39 @@ export function DualOutput() {
               </h3>
               <p className="mt-3 leading-relaxed text-muted-foreground">
                 The record above is one row on this page. A buyer scanning the
-                lot tag lands here: the farm, the lot, the harvest date, and
-                every practice you documented across the season &mdash; counted,
-                not graded. Trazo does not award your farm a score, and no
-                self-assigned rating appears anywhere a buyer can see.
+                tag on the carton lands here: the farm, the lot, the harvest
+                date, and every practice you documented across the season
+                &mdash; counted, not graded. Trazo does not award your farm a
+                score, and no self-assigned rating appears anywhere a buyer can
+                see.
               </p>
               <p className="mt-3 leading-relaxed text-muted-foreground">
-                Nothing is public until you finish the production and choose to
-                publish it.
+                The same page estimates the season&rsquo;s direct farm emissions
+                &mdash; fuel, fertilizer, equipment and irrigation energy,
+                calculated with published EPA and USDA factors and written the
+                way a buyer can hold it: what growing a kilogram of the crop
+                produced, and the same figure as miles driven in an average car.
+                Transport, packaging and retail sit outside that boundary, and
+                the page says so beside the number.
               </p>
+
+              <ul className="mt-8 space-y-5 text-left">
+                {BUYER_PAGE_CONTROLS.map((control) => (
+                  <li key={control.title} className="flex gap-3">
+                    <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-secondary">
+                      <control.icon className="text-primary" size={16} />
+                    </span>
+                    <div className="min-w-0">
+                      <h4 className="text-sm font-bold text-foreground">
+                        {control.title}
+                      </h4>
+                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                        {control.body}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </ScrollReveal>

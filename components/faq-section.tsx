@@ -9,7 +9,8 @@ import {
 
 const faqs = [
   {
-    question: "I was certified recently \u2014 or I am applying for 2027. Is this for me?",
+    question:
+      "I was certified recently \u2014 or I am applying for 2027. Is this for me?",
     answer:
       "That is who it is built for. In your first years the routines are still forming, and the annual update is the moment it shows. If you are applying, your certifier will ask you to describe your recordkeeping system in the OSP itself, and processing runs roughly 8\u201316 weeks \u2014 so a plan submitted around New Year is what gets you certified in time to sell as organic in spring. Starting the system before you apply means the description is something you already do rather than something you promise. Farms in transition can use it the same way: parcels carry a Transitional status and the record builds from day one.",
   },
@@ -31,17 +32,12 @@ const faqs = [
   {
     question: "How accurate are the carbon calculations?",
     answer:
-      "Trazo calculates Direct Operational Emissions, the emissions farmers actually control: fuel combustion, fertilizer application, and equipment operation. This is not a full lifecycle assessment. All emission factors are sourced from EPA (40 CFR Part 98) and USDA government-published data.",
+      "Trazo estimates Direct Operational Emissions, the emissions farmers actually control: fuel combustion, fertilizer application, equipment operation and irrigation energy. This is not a full lifecycle assessment \u2014 transport, packaging and retail are outside the boundary. All emission factors are sourced from EPA (40 CFR Part 98) and USDA government-published data, and the full method is published on our methodology page. If you publish a buyer page, the same estimate appears there in plain terms \u2014 what growing a kilogram of the crop produced, or the season\u2019s total when you have not recorded a harvest weight, and the same figure as miles driven in an average car \u2014 with that boundary stated next to the number.",
   },
   {
-    question: "Will consumers actually scan my QR codes?",
+    question: "Do I have to publish a buyer page?",
     answer:
-      "Transparency pages are designed for mobile-first quick loading. Consumers actively seek transparency, and Trazo makes it easy to provide and easy to verify. Your Buyer Page shows every scan and comment, so you can see the engagement.",
-  },
-  {
-    question: "How does Trazo help me compete for premium buyers?",
-    answer:
-      "Trazo creates transparency pages for your products that consumers access via QR codes. When buyers can see exactly how their food was grown, with documented practices, photos, and dated records, they gain the confidence to choose your product over undocumented alternatives. Specialty retailers increasingly require this kind of documentation, so Trazo makes it easy to provide.",
+      "No \u2014 it is an optional second output of the same records, and it is per season, not per farm. When you finish a production Trazo asks whether to publish it; clear that box and nothing goes public. Afterwards a single switch on your Buyer Page publishes or unpublishes any finished season at any time, and an unpublished season stops answering even for someone holding the code. If you do publish, you download the QR image or a printable sheet of eight lot tags (farm, crop, lot ID, harvest date and the code) for your cartons or bins, and a buyer who scans reaches the farm, the lot, the harvest date, the practices you documented and, when the season has enough logged to compute one, an estimate of its direct farm emissions. Your address, ZIP and coordinates are stripped before the page is built, and a parcel added today publishes an approximate location \u2014 a point rounded to about a kilometer, no field boundary. Scans are listed on the same screen and can be filtered to one season.",
   },
   {
     question: "Can I cancel anytime?",

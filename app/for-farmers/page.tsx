@@ -1,6 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowRight, CalendarCheck, Mic, PackageCheck } from "lucide-react";
+import {
+  ArrowRight,
+  CalendarCheck,
+  Mic,
+  PackageCheck,
+  QrCode,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -44,9 +50,9 @@ export default function ForFarmersPage() {
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">
             In USDA&apos;s 2021 Organic Survey (NASS), over half of organic
-            farms named recordkeeping and paperwork among their top challenges. Trazo&apos;s
-            answer: log each activity once, in the field, and let the same
-            record do every job it has to do.
+            farms named recordkeeping and paperwork among their top challenges.
+            Trazo&apos;s answer: log each activity once, in the field, and let
+            the same record do every job it has to do.
           </p>
 
           <section className="mt-12 space-y-8">
@@ -89,6 +95,27 @@ export default function ForFarmersPage() {
                   audit PDF, and the Common OSP workbooks assemble from records
                   you already made. You review, confirm, and send — and next
                   season starts from this year&apos;s answers.
+                </p>
+              </div>
+            </div>
+            {/* The buyer page had lived only in this page's <meta description> \u2014 invisible
+                to a human reader. It stays last and stays qualified: driver #7, Segment B
+                only (TRAZO-OCTOBER-2026-PLAN \u00a7 2), never the reason to sign up. */}
+            <div className="flex gap-4">
+              <QrCode className="mt-1 shrink-0 text-primary" size={22} />
+              <div>
+                <h2 className="text-lg font-bold text-foreground">
+                  A page for your buyer &mdash; only if you want one
+                </h2>
+                <p className="mt-1 text-muted-foreground">
+                  Finish a season and Trazo can build a public page from the
+                  same records: the farm, the lot, the harvest date, the
+                  practices you documented, and an estimate of that
+                  season&apos;s direct farm emissions. Print the QR or a sheet
+                  of lot tags for your cartons. One switch publishes a season
+                  and the same switch unpublishes it &mdash; and your address
+                  and coordinates never reach the page, which locates a new
+                  parcel to about a kilometer rather than drawing your field.
                 </p>
               </div>
             </div>
