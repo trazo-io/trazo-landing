@@ -117,15 +117,17 @@ export default function MethodologyPage() {
             {/* 2. Score Calculation */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                2. Documentation Completeness (Producer-Dashboard Metric)
+                2. Documentation Completeness (Internal Metric)
               </h3>
               <p className="mt-3 leading-[1.8]">
-                The producer dashboard shows a 0–100 completeness metric —
-                internally called the transparency score. It appears{" "}
-                <strong>only</strong> on the producer&apos;s own dashboard: it
-                is never displayed to consumers, never embedded in the buyer
-                page, and never presented as a sustainability rating of any
-                kind. It measures <strong>documentation completeness</strong>:
+                Trazo computes a 0–100 completeness metric internally — historically
+                called the transparency score. Since August 2026 it is{" "}
+                <strong>not displayed as a number anywhere</strong>: not to consumers,
+                not on the buyer page, and no longer as a widget on the producer
+                dashboard either, where the farmer instead sees the per-record
+                checklist of what is still missing. It is never presented as a
+                sustainability rating of any kind. It measures{" "}
+                <strong>documentation completeness</strong>:
                 what percentage of expected farming practices have been recorded
                 for a given production cycle, adjusted for documentation quality
                 (photo evidence).
@@ -982,9 +984,9 @@ export default function MethodologyPage() {
                   sustainability score shown to consumers could be classified as
                   a self-created sustainability label. For this reason the
                   transparency score is not displayed on the consumer QR page.
-                  It is a farmer-dashboard completeness metric only, and
-                  consumers see the documented practices and third-party
-                  certifications directly. Full EU substantiation may still
+                  It is an internal completeness metric only, and consumers see
+                  the documented practices and third-party certifications
+                  directly. Full EU substantiation may still
                   require external methodology audit.
                 </li>
               </ul>

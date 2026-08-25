@@ -50,8 +50,9 @@ export function Footer() {
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              The transparency platform that turns honest farming into a
-              competitive advantage. Document, verify, and share your story.
+              Organic recordkeeping for specialty-crop farms. Log the season once
+              and it becomes your certifier records, your renewal packet and —
+              only if you choose — a page your buyer can scan.
             </p>
 
             {/* Newsletter */}
@@ -60,7 +61,7 @@ export function Footer() {
                 Stay connected
               </p>
               <p className="mt-1 text-xs text-muted-foreground">
-                Get transparency insights delivered monthly
+                Renewal-season notes, monthly: certifier dates, rule changes, what inspectors ask
               </p>
               <NewsletterForm />
             </div>

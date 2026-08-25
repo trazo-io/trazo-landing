@@ -22,7 +22,7 @@ import { Footer } from "@/components/footer";
 export const metadata: Metadata = {
   title: "Trazo for farmers — renewal without the paperwork pile",
   description:
-    "Log each activity once, from the field, in English or Spanish. It becomes your certifier records, your Organic System Plan draft and your buyer's page.",
+    "Log each activity once, from the field, in English or Spanish. It becomes your certifier records, the evidence behind your Organic System Plan answers, and your buyer's page.",
   alternates: { canonical: "https://www.trazo.io/for-farmers" },
   openGraph: {
     title: "Renewal without the paperwork pile",
@@ -49,10 +49,12 @@ export default function ForFarmersPage() {
             Renewal season without the paperwork pile
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">
-            In USDA&apos;s 2021 Organic Survey (NASS), over half of organic
-            farms named recordkeeping and paperwork among their top challenges.
-            Trazo&apos;s answer: log each activity once, in the field, and let
-            the same record do every job it has to do.
+            In USDA&apos;s 2021 Certified Organic Survey (NASS), 55% of
+            organic farms named &ldquo;regulatory problems &mdash; excessive
+            paperwork/record keeping, certification costs&rdquo; a major
+            challenge, more than any other. Trazo&apos;s answer: log each
+            activity once, in the field, and let the same record do every job
+            it has to do.
           </p>
 
           <section className="mt-12 space-y-8">
@@ -91,10 +93,14 @@ export default function ForFarmersPage() {
                   Renewal becomes an export, not a weekend
                 </h2>
                 <p className="mt-1 text-muted-foreground">
-                  Your Organic System Plan modules, per-parcel applications,
-                  audit PDF, and the Common OSP workbooks assemble from records
-                  you already made. You review, confirm, and send — and next
-                  season starts from this year&apos;s answers.
+                  Your per-parcel applications, audit PDF, Common OSP
+                  workbooks and the annual update itself assemble from records
+                  you already made, and your plan answers carry forward from
+                  last year. Before you file, Trazo lists what changed in your
+                  records since you wrote each answer &mdash; new ground, a
+                  notice you sent the certifier, a material you added &mdash;
+                  so the plan you send still describes the farm you run. You
+                  review, confirm, and send.
                 </p>
               </div>
             </div>

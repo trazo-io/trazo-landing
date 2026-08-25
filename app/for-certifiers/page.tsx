@@ -56,11 +56,11 @@ export default function ForCertifiersPage() {
                   A packet that follows the Common OSP
                 </h2>
                 <p className="mt-1 text-muted-foreground">
-                  Module answers mapped to 7&nbsp;CFR&nbsp;205.201(a), one
-                  parcel application per field (location, land history,
-                  buffers, map), the four attachment workbooks, and an audit
-                  PDF with inline Part&nbsp;205 citations. N/A topics carry an
-                  explicit operator attestation instead of silence.
+                  Module answers mapped to 7&nbsp;CFR&nbsp;205.201(a), the § 205.406 annual update and
+                  the § 205.400(f) notices filed during the year, one parcel application per field
+                  (location, land history compiled from the seasons logged, buffers, incidents, map),
+                  the four attachment workbooks, and an audit PDF with inline Part&nbsp;205 citations.
+                  N/A topics carry an explicit operator attestation instead of silence.
                 </p>
               </div>
             </div>

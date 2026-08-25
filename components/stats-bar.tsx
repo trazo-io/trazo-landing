@@ -7,7 +7,7 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 // and flat price are product facts; the two-language claim covers the app
 // (activity logging, forms, module content EN/ES).
 const stats = [
-  { icon: Layers, value: "17", label: "Guided OSP Modules, Common-OSP Aligned" },
+  { icon: Layers, value: "19", label: "Guided OSP Modules, Common-OSP Aligned" },
   { icon: DollarSign, value: "$249 flat", label: "Per Farm, Per Year — Not Revenue-Banded" },
   // Absorbed from the retired FieldFeatures section, whose one non-duplicated line
   // this is: the crew logs in Spanish, you read the certifier packet in English, and

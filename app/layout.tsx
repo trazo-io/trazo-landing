@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   // The generated artifacts are real and may be claimed by name: the list is the docstring of
   // `subscriptions/gating.py`. The OSP itself is something Trazo brings evidence TO.
   description:
-    "Log the season once. Trazo drafts your renewal packet and audit exports, and backs your OSP answers with your own records. Free Starter plan, $249/farm/yr.",
+    "Log the season once. Trazo assembles your renewal packet and audit exports, backs your OSP answers with your own records, and lists what changed since you last wrote them. Free Starter plan, $249/farm/yr.",
   keywords: [
     "organic system plan",
     "OSP software",
@@ -104,7 +104,7 @@ const jsonLd = {
   // Structured data, so this is what Google is handed directly — the OSP-authoring claim was
   // worse here than in the prose. See the note on `metadata.description` above.
   description:
-    "Organic recordkeeping software for US farms. Trazo drafts the renewal packet and NOP audit exports from a farm's own activity log, brings that log to the farm's Organic System Plan answers, and builds a buyer-facing QR page from the same records.",
+    "Organic recordkeeping software for US farms. Trazo assembles the renewal packet and NOP audit exports from a farm's own activity log, brings that log to the farm's Organic System Plan answers and lists what changed since they were written, and builds a buyer-facing QR page from the same records.",
   foundingDate: "2025",
   founder: {
     "@type": "Person",

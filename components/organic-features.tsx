@@ -16,7 +16,7 @@ const organicFeatures = [
     icon: Leaf,
     title: "OMRI & NOP Input Tracking",
     description:
-      "Every chemical event classifies inputs as OMRI Listed, USDA NOP Approved, Organic Equivalent, Transitional, or Not Organic. Organic vs synthetic subtypes tracked separately across fertilizers, pesticides, herbicides, and fungicides.",
+      "Every input you log is checked against the National List (7 CFR 205.601–.602) the moment you save it, and recorded as OMRI Listed, WSDA Listed, NOP seal on the label, reviewed and approved by your certifier — or plainly not organic. Once your plan is active, an input that is not on your approved materials list is flagged on the spot, with the OMRI search a click away.",
   },
   /* THREE CARDS REMOVED — each was said better elsewhere on the page:
      · "USDA Organic Verification"      the Integrity Database claim ran FOUR times
@@ -31,19 +31,19 @@ const organicFeatures = [
     icon: Scale,
     title: "Mass-Balance & Trace-Back Reports",
     description:
-      "Generate audit-ready mass-balance reports reconciling inputs purchased against outputs harvested. One-click trace-back from any finished product to its field, inputs, and supplier records.",
+      "Every lot reconciles what you harvested against what you sold, with the balance printed, and traces from the sale back to the field, the picks, the inputs applied and the supplier records — the trail an inspector follows at the in/out audit.",
   },
   {
     icon: History,
     title: "3-Year Field History",
     description:
-      "Maintain per-parcel crop rotation and input history across seasons, the minimum NOP requires for organic certification. Always ready when your certifier asks.",
+      "Per-parcel crop, rotation and input history across seasons — the years you typed at setup plus every year compiled from the seasons you logged, inputs included, each one marked as to where it came from. Always ready when your certifier asks.",
   },
   {
     icon: ClipboardCheck,
     title: "SOE Fraud Prevention Plan (OFPP)",
     description:
-      "Document your Organic Fraud Prevention Plan including supplier verification, supply-chain risk assessment, and review cadence. Required under USDA's 2024 Strengthening Organic Enforcement final rule (88 FR 3622, effective 2024-03-19), 7 CFR 205.201(a)(3).",
+      "Document your Organic Fraud Prevention Plan including supplier verification, supply-chain risk assessment, and review cadence. Required under USDA's Strengthening Organic Enforcement final rule (88 FR 3548, January 19, 2023; compliance required since March 19, 2024), 7 CFR 205.201(a)(3).",
   },
   {
     icon: Sprout,
@@ -110,7 +110,7 @@ export function OrganicFeatures() {
 
         <ScrollReveal delay={400}>
           <p className="mt-10 text-center text-sm italic text-muted-foreground">
-            Certification is a snapshot. Trazo is continuous proof.
+            Certification is a snapshot. Trazo is the continuous record.
           </p>
         </ScrollReveal>
       </div>

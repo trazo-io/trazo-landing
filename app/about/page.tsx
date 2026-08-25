@@ -45,8 +45,8 @@ export default function AboutPage() {
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">
             Trazo is built by Oscar Munoz, a software engineer building the
-            product end-to-end and working directly with organic specialty-crop
-            growers in California. No sales team between you and the person who
+            product end-to-end and working directly with organic specialty-crop growers and certifiers in
+ California and Washington. No sales team between you and the person who
             writes the code: the questions farmers ask become the next release.
           </p>
 

@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { RenewalSeason } from "@/components/renewal-season";
 import { DualOutput } from "@/components/dual-output";
+import { PlanReview } from "@/components/plan-review";
 import { ProductTour } from "@/components/product-tour";
 import { OrganicFeatures } from "@/components/organic-features";
 import { HowItWorks } from "@/components/how-it-works";
@@ -26,21 +27,22 @@ const softwareAppJsonLd = {
   // `Prefill`, and a prefill is a SUGGESTION the operator must accept, never a written answer
   // (7 CFR 205.201(a) makes the producer the author). Full note: app/layout.tsx `description`.
   description:
-    "Organic recordkeeping software for US farms. Log the season once and Trazo drafts your renewal packet and NOP audit exports (7 CFR 205.103), backs your Organic System Plan answers with the records behind them, and builds a buyer-facing QR page from the same log.",
+    "Organic recordkeeping software for US farms. Log the season once and Trazo assembles your renewal packet and NOP audit exports (7 CFR 205.103), backs your Organic System Plan answers with the records behind them, lists what changed since you last wrote them, and builds a buyer-facing QR page from the same log.",
   offers: {
     "@type": "AggregateOffer",
     lowPrice: "0",
-    highPrice: "249",
+    highPrice: "1200",
     priceCurrency: "USD",
     offerCount: 3,
   },
   featureList: [
     "Guided Organic System Plan modules mapped to 7 CFR 205.201(a)",
     "Per-parcel application records (location, land history, buffers, field map)",
-    "32 US crop templates with USDA-sourced crop timing data",
+    "33 US crop templates with USDA-sourced crop timing data",
     "Activity log with voice and template shortcuts, English and Spanish",
     "NOP audit-ready PDF export (7 CFR 205.103)",
-    "Renewal packet: module PDFs, parcel applications, and Common OSP workbooks",
+    "Renewal packet: annual update, change notices, module PDFs, parcel applications, and Common OSP workbooks",
+    "Plan review: what changed in your records since your plan's answers were written",
     "Direct operational emission calculations using EPA/USDA emission factors",
     "QR code generation for buyer-facing product pages",
     "Certification cross-reference via the USDA Organic Integrity Database",
@@ -64,12 +66,12 @@ export default function Home() {
       />
       <Navbar />
       {/*
-        NINE SECTIONS, ORDERED FOR A VISITOR WHO ARRIVED WITH A DEADLINE.
+        ELEVEN SECTIONS, ORDERED FOR A VISITOR WHO ARRIVED WITH A DEADLINE.
         Measured before: 15 sections, 16,987px desktop / 25,197px mobile — about
         thirty phone screens, with the deadline calendar 5.5 screens down.
 
         Promise (Hero) → deadline (RenewalSeason) → the differentiator (DualOutput)
-        → the software that does it (ProductTour) → depth (OrganicFeatures) → the
+        → the thing a form-builder cannot do (PlanReview) → the software that does it (ProductTour) → depth (OrganicFeatures) → the
         three steps (HowItWorks) → price (StatsBar) → close → objections → reading.
         Proof follows the promise; it does not precede it.
 
@@ -98,6 +100,7 @@ export default function Home() {
         <Hero />
         <RenewalSeason />
         <DualOutput />
+        <PlanReview />
         <ProductTour />
         <OrganicFeatures />
         <HowItWorks />

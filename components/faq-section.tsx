@@ -25,9 +25,9 @@ const faqs = [
       "Trazo runs in any web browser on your phone or computer. No downloads needed. The interface uses simple forms, voice recording, and photo uploads. The interface is designed for field conditions, so most users are comfortable from day one.",
   },
   {
-    question: "Does Trazo verify organic certifications?",
+    question: "Does Trazo check organic certifications?",
     answer:
-      "Yes. USDA Organic certifications are automatically verified against the USDA Organic Integrity Database, which includes over 36,000 certified operations. Consumers see a green \u2018Verified\u2019 badge for farms found in the government database. Other certifications (GlobalG.A.P., Fair Trade, etc.) are displayed as \u2018Reported by Producer\u2019 with plans to add more verification sources.",
+      "It cross-references them. A USDA Organic certificate you enter is checked against the public USDA Organic Integrity Database \u2014 the government\u2019s list of certified operations \u2014 and a match is shown to buyers as \u2018Verified via USDA Organic Integrity Database\u2019. That is a database match, not an inspection: Trazo does not visit farms and does not certify anything. Other certifications (GlobalG.A.P., Fair Trade, Real Organic Project and the rest) are shown as \u2018Reported by Producer\u2019 until a public register we can check exists for them.",
   },
   {
     question: "How accurate are the carbon calculations?",

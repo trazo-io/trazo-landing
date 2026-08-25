@@ -18,6 +18,53 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "annual-update-what-changed-since-last-years-plan",
+    category: "Guides",
+    date: "August 24, 2026",
+    datePublishedISO: "2026-08-24",
+    readTime: "5 min read",
+    title:
+      "Your Annual Update Starts From Last Year's Plan. Here Is What Usually Changed.",
+    excerpt:
+      "7 CFR 205.406 asks for a summary of what changed since last year's plan — and every renewal starts by copying last year's answers forward. The gap between the two is where filings go stale. A checklist of what to re-read, and why a plan that still says “six parcels” reads badly to a reviewer.",
+    image: "/images/blog-perverse-incentive.jpg",
+    content: `
+<p>Every certified operation files a continuation each year. 7 CFR 205.406(a) spells out what goes in it: a summary, supported by documentation, of any deviations from or changes to last year&rsquo;s Organic System Plan; the additions and deletions to the plan intended for the coming year; any changes to the operation&rsquo;s contact and business information; and an update on how any noncompliances your certifier previously identified were corrected. Certifiers call it the annual update, the renewal, or the OSP update, and they open their windows between early November and April depending on who certifies you.</p>
+
+<p>Here is the tension nobody says out loud. The rule asks you to describe <em>what changed</em>. Every practical renewal process &mdash; paper, spreadsheet, or software &mdash; starts by copying <em>last year&rsquo;s answers</em> forward, because most of the plan does not change and nobody should retype forty pages. Both are right. The problem is the gap between them: the answers get copied; the changes have to be noticed, and noticing is the part that slips.</p>
+
+<h2>What a stale plan looks like to a reviewer</h2>
+
+<p>During a rehearsal on a fictional Willamette Valley farm we use for testing &mdash; 86.9 certified acres of blueberries, carrots, onions and spinach, every record written through the product the way a grower would &mdash; we generated the second-year renewal packet and read it the way a certifier would. The plan had been cloned forward from the year before. Its narratives still said &ldquo;our own six parcels&rdquo; and &ldquo;86.9 acres.&rdquo; By then the farm had leased a seventh field and stood at 96.7 acres, had filed the acreage notice with its certifier, had a first crop off the new ground, and had taken drift from a neighbor on one block. The new field&rsquo;s name appeared nowhere in the plan. Every section carried a &ldquo;last updated&rdquo; date eighteen months before the submission date.</p>
+
+<p>Nothing in that plan was a lie. Every sentence had been true when it was written. But a reviewer who reads &ldquo;six parcels&rdquo; on page one and finds a seventh on the field list reads the whole document as one nobody re-read &mdash; and then reads every other answer with that in mind.</p>
+
+<h2>The seven things that most often changed</h2>
+
+<p>If you want a short re-read list before you file, these are the categories that a year of farming most often overtakes. Each one is something your own records can tell you, if you go looking:</p>
+
+<ol>
+<li><strong>Ground you began managing.</strong> A lease, a purchase, a field brought back from fallow. It needs its own parcel application &mdash; location, three-year land history, buffers &mdash; a prior-manager affidavit if someone else farmed it inside the window, and an adjoining-land affidavit for any conventional boundary. Your certifier will not inspect it before that paperwork is in (CCOF&rsquo;s own inspection checklist says so in its first item).</li>
+<li><strong>What you actually grew.</strong> The rotation paragraph says what you intended; the closed seasons say what happened. If the plan says brassicas on Bottom Ground A and the records say onions, that is a question at inspection.</li>
+<li><strong>Notices you already filed.</strong> A &sect; 205.400(f) change notification &mdash; a new material, a widened buffer, an added field &mdash; is a change you already told the certifier about. The plan has to catch up with it, not contradict it. If your notice says 45 feet and your buffer record still says 30, the two will be read side by side.</li>
+<li><strong>Materials added or dropped.</strong> Everything that went onto the approved list after the materials module was last answered, and anything you stopped using.</li>
+<li><strong>Affidavits signed and incidents recorded.</strong> Land-history and adjoining-land attestations; any drift or commingling event, with what you did about it and when the certifier was told.</li>
+<li><strong>Fields the plan never names.</strong> The plainest check there is: a field whose name appears nowhere in the plan&rsquo;s text.</li>
+<li><strong>Sections not revisited in a year.</strong> Answered eighteen months ago is not wrong. But it is the first thing a reviewer notices, and it should be a deliberate &ldquo;still holds&rdquo; rather than an accident.</li>
+</ol>
+
+<h2>Doing it by hand</h2>
+
+<p>None of this needs software. It needs a date and a list. Write down the date each section of your plan was last changed; then pull your field list, your closed seasons, your notices, your materials list, your affidavits and your incident log, and for each one ask: did anything happen after that date? Whatever did is either a change summary item under &sect; 205.406(a)(1), a revision to the section, or a note to yourself that you re-read it and it still holds. The third outcome is fine &mdash; the rule does not ask you to rewrite a plan that is still true. It asks you to know.</p>
+
+<h2>What Trazo does with it</h2>
+
+<p>Trazo keeps a date on every answer, and before a plan is filed it lists, from dated records only, what happened after each answer was written: the ground you began managing, the seasons you started and closed, the notices, the materials, the affidavits, the incidents, the fields the plan never names, the modules not revisited in a year. It does not read your prose and it never says an answer is wrong &mdash; you may well have re-read a section and decided it still holds &mdash; so it never blocks the Submit button. It sits under the plan on the screen, prints on the first page of the renewal packet, and on an active plan it runs all year as the list of what next year&rsquo;s update will have to mention. The plan stays yours; 7 CFR 205.201(a) makes the producer its author. The list is there so the one you file describes the farm you run.</p>
+
+<p>Most certifiers&rsquo; windows for the 2027 update open in early November and close between January 1 and April 1. The re-read takes an afternoon if the records are in one place, and a weekend if they are not. Either way, do it before the packet goes &mdash; not after the reviewer&rsquo;s first question.</p>
+`,
+  },
+  {
     slug: "planting-to-harvest-documentation",
     category: "Guides",
     date: "March 3, 2026",
@@ -122,12 +169,12 @@ export const posts: BlogPost[] = [
     title:
       "The Organic Farmer's Guide to Digital Record-Keeping: What NOP Requires and How to Stay Ahead",
     excerpt:
-      "55% of organic farmers name certification paperwork, record-keeping and compliance costs as their top concern (Organic Trade Association briefing, July 2025, citing USDA NASS data). Here's what NOP actually requires, the most common mistakes that risk certification, and how digital documentation closes the gap between annual audits.",
+      "In USDA NASS's 2021 Certified Organic Survey, 55% of organic farms named regulatory problems — excessive paperwork/record keeping and certification costs, in the survey's own words — a major challenge, more than any other. Here's what NOP actually requires, the most common mistakes that risk certification, and how digital documentation closes the gap between annual audits.",
     image: "/images/blog-organic-records.jpg",
     content: `
 <p>Ask any organic farmer what the hardest part of maintaining certification is, and the answer is rarely pests, weather, or markets. It is paperwork.</p>
 
-<p>In a July 2025 Organic Trade Association briefing citing USDA NASS data, 55% of organic farmers named certification paperwork, record-keeping and compliance costs as their top concern &mdash; more than any other issue. Paperwork is not the main reason farms leave organic certification, and it would be dishonest to imply otherwise: only around one in ten exiting operations cites cost or paperwork. But for farms that stay, it is the burden they report most.</p>
+<p>In USDA NASS&rsquo;s 2021 Certified Organic Survey, 55% of organic farms named &ldquo;regulatory problems&rdquo; a major challenge &mdash; the questionnaire&rsquo;s own examples are &ldquo;excessive paperwork/record keeping, certification costs&rdquo; &mdash; more than any other category measured, and up from 54% in 2019. Paperwork is not the main reason farms leave organic certification, and it would be dishonest to imply otherwise. But for farms that stay, it is the burden they report most.</p>
 
 <p>This guide breaks down what the USDA National Organic Program actually requires for record-keeping, the most common mistakes that lead to noncompliance findings, and how digital documentation tools can close the gap between annual audits.</p>
 
@@ -348,10 +395,8 @@ export const posts: BlogPost[] = [
 
 <p>If you are certified through a smaller or regional certifier not listed here, ask directly when their window opens. Certifiers publish these dates on their own websites and can adjust them from year to year.</p>
 
-<h2>February 1: MOSA and the Stragglers</h2>
-
-<p>Midwest Organic Services Association (MOSA) has typically set its annual update deadline around February 1. If you are certified through MOSA, or you are catching up after missing an earlier window with another certifier, February is often the last realistic month to get a complete update in before inspection scheduling tightens up for the season.</p>
-
+<h2>February – April: OEFFA, NOFA-NY, WSDA and MOSA</h2>
+<p>The second cluster runs through late winter. OEFFA annual updates have typically been due February 15 and NOFA-NY February 28. Washington State Department of Agriculture (WSDA) &mdash; the certifier for most of Washington&rsquo;s organic tree fruit &mdash; has typically set March 1, and Midwest Organic Services Association (MOSA) April 1, the same day Oregon Tilth&rsquo;s second cohort falls due. If you are certified through one of these, or you are catching up after missing an earlier window with another certifier, these are the last realistic dates to get a complete update in before inspection scheduling tightens for the season. Dates move from year to year &mdash; confirm yours on your certifier&rsquo;s own page.</p>
 <h2>What a Complete Annual Update Actually Contains</h2>
 
 <p>An annual update is not just a form. Certifiers are looking for a complete picture of what changed and what stayed the same since your last inspection. A complete submission generally includes:</p>
@@ -377,8 +422,9 @@ export const posts: BlogPost[] = [
 <li><strong>November:</strong> Gather receipts and invoices for OCCSP. If your certifier's window opens this month (CCOF's has typically opened November 3), start your annual update early rather than waiting for the deadline.</li>
 <li><strong>December:</strong> Submit your OCCSP cost-share application before December 31. Finish any outstanding OSP updates.</li>
 <li><strong>January:</strong> Submit your annual update by your certifier's deadline. Pull your five-year record archive together in case an inspection is scheduled early in the year.</li>
-<li><strong>February:</strong> MOSA's deadline falls here if that is your certifier. Catch up on anything still outstanding from January.</li>
-<li><strong>March and April:</strong> OTCO's second window has typically fallen around April 1. Use this stretch to prepare for on-site inspection scheduling, which usually ramps up through the growing season.</li>
+<li><strong>February:</strong> OEFFA (February 15) and NOFA-NY (February 28) have typically fallen here. Catch up on anything still outstanding from January.</li>
+<li><strong>March:</strong> WSDA&rsquo;s annual update has typically been due March 1 &mdash; if you are certified in Washington, this is your date.</li>
+<li><strong>April:</strong> MOSA and OTCO&rsquo;s second window have typically fallen around April 1. Use this stretch to prepare for on-site inspection scheduling, which usually ramps up through the growing season.</li>
 </ol>
 
 <p>Trazo assembles a renewal packet from the season's logged events. Instead of building the update from scratch every January, the input applications, harvest records, and OSP-relevant events documented through the year are already organized by field and date. The Starter plan is free. <a href="https://app.trazo.io/auth/signup" target="_blank" rel="noopener noreferrer">See how the packet comes together</a> before this year's deadlines hit.</p>

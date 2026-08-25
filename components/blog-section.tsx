@@ -6,7 +6,9 @@ import { posts } from "@/lib/blog-data"
 
 /**
  * The four posts a renewal-season visitor should see. Order matters: the deadline
- * calendar and the COG Pro shutdown are the two pieces with an expiry date on them.
+ * calendar leads, the plan re-read piece (the differentiator) is second, and the
+ * COG Pro shutdown keeps its expiry-dated slot. The generic record-keeping guide
+ * moved off the home grid to make room (still on /blog).
  *
  * These were previously four consumer-trust posts, three of which had been deleted in
  * the pivot. `.filter(Boolean)` swallowed the misses, so a `lg:grid-cols-4` grid
@@ -15,9 +17,9 @@ import { posts } from "@/lib/blog-data"
  */
 const homepageSlugs = [
   "organic-renewal-season-calendar",
+  "annual-update-what-changed-since-last-years-plan",
   "cog-pro-shutting-down-migration-guide",
   "what-your-organic-inspector-actually-checks",
-  "organic-record-keeping-guide",
 ]
 const displayPosts = homepageSlugs.map((slug) => {
   const post = posts.find((p) => p.slug === slug)

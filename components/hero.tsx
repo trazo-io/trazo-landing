@@ -30,7 +30,7 @@ export function Hero() {
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
             <span className="text-xs font-medium text-primary">
-              Renewal packets go out November 3
+              Renewal season opens in November
             </span>
           </div>
 
@@ -42,10 +42,12 @@ export function Hero() {
 
           {/* Subheading */}
           <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            Your annual update is due between January and April. Log the season
-            on your phone as you go — in English or Spanish — and Trazo drafts
-            the records section, the attachment forms and your inspection packet
-            from what you entered. You review and sign. The same records also
+            Your annual update is due between January 1 and April 1, depending
+            on your certifier. Log the season on your phone as you go — in
+            English or Spanish — and Trazo assembles the records section, the
+            attachment forms, the annual update and your inspection packet from
+            what you entered, and lists what changed in your records since you
+            last wrote your plan. You review and sign. The same records also
             produce a page your buyer can scan.
           </p>
 

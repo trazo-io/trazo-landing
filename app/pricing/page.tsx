@@ -108,8 +108,9 @@ const plans = [
       // free, and buy Compliance for the documents you hand to somebody else. The old copy
       // sold a demo; the tier that ships is a working free product.
       "Unlimited productions per year",
-      "Event logging with AI templates",
-      "Voice logging from the field",
+      "Event logging with crop templates (33 US crops) and voice",
+      "Organic System Plan: 19 guided modules, answer at your pace",
+      "Record-completeness checks with the regulation cited",
       "QR code and buyer page",
       "10 GB storage",
     ],
@@ -130,7 +131,8 @@ const plans = [
       // two lines here. Both moved INTO Starter with migration 0014, so listing them under
       // "Everything in Starter, plus" claimed as an upgrade two things the free tier already
       // has. What is left is the honest difference, and it is entirely OUTPUTS.
-      "Organic System Plan (7 CFR 205.201) with Common OSP § 11 records",
+      "Renewal packet from your records: annual update, change notices, module PDFs, parcel applications, audit dossier",
+      "Plan review before you file — what changed in your records since you last wrote each answer",
       "The four required OSP attachment workbooks, filled from your records",
       "Certifier link — your certifier reviews online, with your permission",
       "California PUR export (DPR-PML-017C), monthly",
@@ -198,7 +200,7 @@ const comparisonFeatures: ComparisonRow[] = [
     label: "Storage",
     values: ["10 GB", "25 GB", "100 GB"],
   },
-  { label: "AI event templates", values: [true, true, true] },
+  { label: "Crop templates (33 US crops) and voice logging", values: [true, true, true] },
   // Was "Farm records score (your dashboard)". The 0-100 producer score is retired to a
   // backend-only KPI with no UI surface, so this row sold a feature nobody can open.
   // What actually ships is the record-completeness check shown in the hero screenshot.
@@ -216,9 +218,12 @@ const comparisonFeatures: ComparisonRow[] = [
   // Voice is free on every tier since 0014: the measured barriers to farm software adoption
   // are time and labour, not price, so gating the fastest gloves-on input path suppressed
   // exactly the logging that produces the records that produce the upgrade.
-  { label: "Voice recording", values: [true, true, true] },
   {
-    label: "Organic System Plan (7 CFR 205.201) + Common OSP § 11",
+    label: "Organic System Plan authoring (19 guided modules, Common OSP § 11)",
+    values: [true, true, true],
+  },
+  {
+    label: "Renewal packet & NOP audit exports (annual update, notices, module PDFs, parcel applications, dossier)",
     values: [false, true, true],
   },
   { label: "OSP attachment workbooks", values: [false, true, true] },
@@ -566,11 +571,11 @@ export default function PricingPage() {
             />
             <div className="relative">
               <h2 className="text-balance text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
-                Start proving your practices today
+                Start documenting this season today
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/80">
-                Join farmers who are building buyer trust with documented
-                practices. Free Starter plan, no credit card required.
+                Log this season once and walk into renewal with the packet
+                assembled. Free Starter plan, no credit card required.
               </p>
               <p className="mx-auto mt-3 max-w-2xl text-sm text-primary-foreground/60">
                 Moving from another recordkeeping tool? Send us your export and

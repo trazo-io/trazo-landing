@@ -62,7 +62,7 @@ export function Navbar() {
         <div className="mx-auto flex max-w-7xl items-center justify-center gap-2 px-4 py-1.5 text-center text-xs font-medium sm:text-sm">
           <span className="hidden sm:inline">Renewal season is coming:</span>
           <span>
-            CCOF annual updates open Nov 3 · COG Pro ends Dec 31, 2026
+            CCOF &amp; Oregon Tilth open in November · WSDA due March 1 · COG Pro ends Dec 31, 2026
           </span>
           <Link
             href="/cog-pro-migration"

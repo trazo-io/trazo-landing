@@ -126,7 +126,7 @@ export default function CogProMigrationPage() {
                 Do this before you decide anything else. Once a service stops,
                 your history may stop being reachable — and{" "}
                 <strong className="text-foreground">
-                  7 CFR 205.103(b)(4) requires you to keep records for five
+                  7 CFR 205.103(b)(3) requires you to keep records for five
                   years
                 </strong>
                 . Your certifier can ask for them in an inspection covering

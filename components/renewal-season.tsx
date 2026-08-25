@@ -29,13 +29,13 @@ const milestones = [
     when: "December 31",
     what: "OCCSP application deadline",
     detail:
-      "The USDA Organic Certification Cost Share Program reimburses up to 75% of your certification costs, capped at $750 per scope. Same day COG Pro stops service.",
+      "The USDA Organic Certification Cost Share Program reimburses up to 75% of your certification costs, capped at $750 per scope — and the July 2026 rule put the 2025 and 2026 program years on the same December 31, 2026 deadline, so two years can be claimed at once. Same day COG Pro stops service.",
   },
   {
     when: "January – April",
     what: "Annual updates are due",
     detail:
-      "CCOF January 1 · PCO January 15 · MOSA February 1 · Oregon Tilth January 1 or April 1 · WSDA March 1.",
+      "CCOF January 1 · Oregon Tilth January 1 or April 1 · PCO January 15 · OEFFA February 15 · NOFA-NY February 28 · WSDA March 1 · MOSA April 1.",
   },
   {
     when: "April – November",

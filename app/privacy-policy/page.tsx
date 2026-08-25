@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
               How Trazo collects, uses, and protects your personal information.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Last updated: August 6, 2026
+              Last updated: August 23, 2026
             </p>
           </header>
 
@@ -110,8 +110,8 @@ export default function PrivacyPolicyPage() {
                   agricultural practices
                 </li>
                 <li>
-                  <strong>Transparency & Carbon Data:</strong> Transparency
-                  scores, emission factors, carbon footprint estimates
+                  <strong>Records & Carbon Data:</strong> Record-completeness
+                  checks, emission factors, direct operational emission estimates
                 </li>
                 <li>
                   <strong>Production Events:</strong> Agricultural timelines,
@@ -215,8 +215,8 @@ export default function PrivacyPolicyPage() {
               </h4>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
-                  Provide transparency scores and carbon footprint estimates
-                  using published EPA/USDA emission factors
+                  Provide record-completeness checks and direct operational
+                  emission estimates using published EPA/USDA emission factors
                 </li>
                 <li>
                   Generate and manage QR codes for consumer transparency access
@@ -307,7 +307,7 @@ export default function PrivacyPolicyPage() {
                     </tr>
                     <tr>
                       <td className="py-2 pr-4">
-                        Transparency scores, carbon calculations, QR codes,
+                        Record-completeness checks, carbon calculations, QR codes,
                         production event tracking
                       </td>
                       <td className="py-2">
@@ -443,8 +443,9 @@ export default function PrivacyPolicyPage() {
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
                   QR code scanning providing documented farming practices,
-                  photos and certification status. The transparency score is a
-                  producer-dashboard metric and is not shared with consumers
+                  photos and certification status. No score, grade, tier or
+                  badge of Trazo&apos;s own is shown to consumers &mdash; practices
+                  are counted, not graded
                 </li>
                 <li>Public sustainability metrics and certification status</li>
                 <li>
@@ -790,9 +791,11 @@ export default function PrivacyPolicyPage() {
                 10. Children&apos;s Privacy and Age Verification
               </h3>
               <p className="mt-3 leading-[1.8]">
-                Our Platform is not intended for children under 18. We implement
-                age verification during registration and do not knowingly collect
-                personal information from children under 18.
+                Our Platform is a business tool and is not intended for children
+                under 18. Registration requires accepting our Terms of Service,
+                under which you represent that you are at least 18 and, where you
+                act for a business, authorized to do so. We do not knowingly
+                collect personal information from children under 18.
               </p>
               <p className="mt-3 leading-[1.8]">
                 If we become aware that we have collected information from a

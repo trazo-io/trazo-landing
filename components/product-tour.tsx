@@ -134,8 +134,8 @@ export function ProductTour() {
               <span className="text-primary">what you file</span>.
             </h2>
             <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
-              Three screens, one chain: the season you logged, the plan it fills
-              in, and the paperwork that comes out. Real app, on a 27.9-acre
+              Three screens, one chain: the season you logged, the plan your
+              answers compile into, and the paperwork that comes out. Real app, on a 27.9-acre
               certified-organic walnut operation.
             </p>
           </div>
