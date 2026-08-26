@@ -81,7 +81,7 @@ const PANELS: Panel[] = [
     label: "Your documents",
     icon: FolderDown,
     headline: "The paperwork, already written and dated",
-    body: "The audit dossier, the OSP renewal packet and its module PDFs, the Common OSP workbooks, the California PUR export, lot tags — each one built from the records above, filed the moment it is generated. Your own weigh tickets and receipts sit beside them.",
+    body: "The audit dossier, the OSP renewal packet and its module PDFs, the Common OSP workbooks, the California PUR export, lot tags — each one built from the records above, filed the moment it is generated. Your own weigh tickets and receipts sit beside them, and a receipt linked to a purchase record travels inside the packet itself.",
     src: "/images/tour-documents-v2.png",
     // v1 predated the Documents mobile fix: the six-column table was crushed to the
     // viewport with "SOURCE" wrapped as a vertical S-O-U-R-C-E stack. v2 caught the

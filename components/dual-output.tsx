@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
+import { ShieldCheck,
   ArrowDown,
   EyeOff,
   FileText,
+  Link2,
   MapPin,
   Printer,
   QrCode,
@@ -92,6 +93,24 @@ const BUYER_PAGE_CONTROLS: Array<{
     icon: Printer,
     title: "Your code, on your own packaging",
     body: "Download the QR image, or a letter-size sheet of eight lot tags — farm, crop, lot ID, harvest date and the code — and put them on the cartons or bins, the way \u00a7 205.307 asks nonretail containers to be identified. Each finished season has its own lot, so the tag matches what is in the box.",
+  },
+  {
+    // The credibility half of the withholding story. The redaction strip above shows what
+    // is withheld; this card says WHY the page still carries weight: the policy is uniform
+    // and no farm can edit it — the argument now written into ToS §8 and Privacy §4.2.
+    icon: ShieldCheck,
+    title: "Same rules for every farm",
+    body: "What a published page shows is set by one policy, identical for every farm — nobody can hide an awkward record or quietly drop a field from a published season. Your choice is the season: publish it whole, or keep it private, reversibly. That is why a buyer can take the page at face value: an absence means the same thing on every Trazo page.",
+  },
+  {
+    // The in-season surface (2026-08-25). Publish-on-finish is the shopper's consent
+    // unit; a wholesale buyer decides BEFORE harvest, and the answer is a different
+    // consent act, not a weaker one: a private link the grower mints and can revoke.
+    // Verified against the product: CertifierAccessLink audience="buyer",
+    // /buyer-review/<token>, opens logged, same claim-safe serializers as the page.
+    icon: Link2,
+    title: "Before harvest, a private link",
+    body: "A wholesale buyer deciding in June does not wait for October. On the Compliance plan you can send them a private, read-only link to the season in progress — it shows exactly what the public page would show, under the same one-policy rules, never more. You can revoke it at any time, and every open is logged so you know whether they actually looked.",
   },
   {
     icon: MapPin,

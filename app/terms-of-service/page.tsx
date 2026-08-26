@@ -22,7 +22,7 @@ export default function TermsOfServicePage() {
               Terms and conditions governing use of the Trazo platform.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Last updated: August 23, 2026
+              Last updated: August 25, 2026
             </p>
           </header>
 
@@ -73,6 +73,24 @@ export default function TermsOfServicePage() {
                 </li>
                 <li>
                   Track consumer engagement through QR code analytics
+                </li>
+                <li>
+                  Answer guided modules that assemble into an Organic System
+                  Plan &mdash; the producer remains the author of the plan
+                  (7 CFR 205.201(a)); Trazo suggests from records and never
+                  saves an answer on the producer&apos;s behalf
+                </li>
+                <li>
+                  Generate certifier-facing exports from logged records,
+                  including the renewal packet (annual update, change notices,
+                  module PDFs, parcel applications) and NOP audit
+                  documentation, on paid plans
+                </li>
+                <li>
+                  Review a list of what changed in their records since their
+                  plan&apos;s answers were written &mdash; a review aid compiled
+                  from dated records that never judges an answer and never
+                  blocks a submission
                 </li>
               </ul>
             </section>
@@ -209,7 +227,7 @@ export default function TermsOfServicePage() {
                 submit to the Platform. It includes a Compliance Snapshot,
                 citations to 7 CFR 205.x, drift detection against OMRI and
                 National List databases, photo galleries with EXIF/GPS captions,
-                Statement of Equivalence (SOE) attestations, and a 5-year change
+                Strengthening Organic Enforcement (SOE) attestations, and a 5-year change
                 history.
               </p>
               <p className="mt-3 leading-[1.8]">
@@ -242,6 +260,23 @@ export default function TermsOfServicePage() {
                 no liability for the outcome. Submit only truthful, complete
                 records, and review every page of the PDF before sharing it
                 with a certifier.
+              </p>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                6.3 Organic System Plan and Plan Review
+              </h4>
+              <p className="mt-3 leading-[1.8]">
+                The Organic System Plan you build on the Platform is your
+                document: under 7 CFR 205.201(a) the producer is its author,
+                and only your certifying agent reviews and evaluates it. Where
+                the Platform suggests an answer from your records, the
+                suggestion is not saved until you accept or edit it. The plan
+                review list shown before filing is compiled from the dates on
+                your own records; it does not read or evaluate your plan&apos;s
+                text, does not determine that any answer is right or wrong, and
+                never prevents you from submitting. Trazo does not file, submit,
+                or transmit any plan, update, or notice to a certifier on your
+                behalf.
               </p>
             </section>
 
@@ -291,6 +326,27 @@ export default function TermsOfServicePage() {
                 be unpublished at any time. Trazo shows no score, grade, tier or
                 badge of its own on consumer-facing pages: documented practices
                 are counted, never graded.
+              </p>
+              <p className="mt-3 leading-[1.8]">
+                What a public page shows is governed by a uniform withholding
+                policy that applies identically to every farm: certain record
+                categories and fields (worker-safety and regulatory data,
+                supplier and purchase records, and records that exist for
+                certifier review rather than consumers) are never published,
+                and personnel names are masked to initials unless you enable
+                full names. You cannot selectively hide individual practice
+                records or field values from a published season &mdash; the
+                unit of publication is the season, and the Platform shows you,
+                before and after logging, exactly which records and fields a
+                consumer page displays. The categories withheld are described
+                in our{" "}
+                <a
+                  href="/privacy-policy"
+                  className="text-primary hover:underline"
+                >
+                  Privacy Policy
+                </a>
+                .
               </p>
             </section>
 

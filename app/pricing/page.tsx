@@ -227,7 +227,7 @@ const comparisonFeatures: ComparisonRow[] = [
     values: [false, true, true],
   },
   { label: "OSP attachment workbooks", values: [false, true, true] },
-  { label: "Certifier review link", values: [false, true, true] },
+  { label: "Certifier & buyer review links", values: [false, true, true] },
   {
     label: "California PUR export (DPR-PML-017C)",
     values: [false, true, true],

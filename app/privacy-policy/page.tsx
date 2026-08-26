@@ -1,12 +1,12 @@
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
-import type { Metadata } from "next"
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Trazo",
   description:
     "How Trazo collects, uses, and protects your personal information.",
-}
+};
 
 export default function PrivacyPolicyPage() {
   return (
@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
               How Trazo collects, uses, and protects your personal information.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Last updated: August 23, 2026
+              Last updated: August 25, 2026
             </p>
           </header>
 
@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
                 }
               </p>
               <p className="mt-3 leading-[1.8]">
-                This policy applies to our website, mobile applications, QR code
+                This policy applies to our website, web application, QR code
                 scanning services, and all related software and services
                 (collectively, the &quot;Platform&quot;).
               </p>
@@ -80,8 +80,8 @@ export default function PrivacyPolicyPage() {
                   description, industry classification
                 </li>
                 <li>
-                  <strong>Business Address:</strong> Street address, city, state,
-                  country, postal code
+                  <strong>Business Address:</strong> Street address, city,
+                  state, country, postal code
                 </li>
                 <li>
                   <strong>Tax Information:</strong> Tax ID, EIN, RUT, or other
@@ -111,7 +111,8 @@ export default function PrivacyPolicyPage() {
                 </li>
                 <li>
                   <strong>Records & Carbon Data:</strong> Record-completeness
-                  checks, emission factors, direct operational emission estimates
+                  checks, emission factors, direct operational emission
+                  estimates
                 </li>
                 <li>
                   <strong>Production Events:</strong> Agricultural timelines,
@@ -120,6 +121,13 @@ export default function PrivacyPolicyPage() {
                 <li>
                   <strong>Environmental Data:</strong> Weather conditions, soil
                   data, irrigation information
+                </li>
+                <li>
+                  <strong>Personnel References:</strong> Names of the people
+                  recorded as having performed logged work (&quot;performed
+                  by&quot;). On public consumer pages these are masked to
+                  initials (e.g. &quot;Farm team (A.T.)&quot;) unless the
+                  producer explicitly enables full names
                 </li>
               </ul>
 
@@ -132,16 +140,20 @@ export default function PrivacyPolicyPage() {
                   duration, user interactions
                 </li>
                 <li>
-                  <strong>QR Code Analytics:</strong> Scan counts, geographic
-                  data, consumer engagement metrics
+                  <strong>QR Code Analytics:</strong> Scan counts and the
+                  approximate region of a scan, derived on our own servers from
+                  a one-way-hashed IP address using a local geolocation
+                  database. The IP address is stored only as a hash and is not
+                  sent to any third party
                 </li>
                 <li>
                   <strong>Device Information:</strong> Browser type, device
                   model, operating system, IP address
                 </li>
                 <li>
-                  <strong>Educational Engagement:</strong> Content viewed, time
-                  spent, quiz scores, course progress
+                  <strong>Educational Engagement:</strong> FAQ views and
+                  helpfulness votes, counted in aggregate per article &mdash; we
+                  do not track educational progress per user
                 </li>
               </ul>
 
@@ -172,12 +184,12 @@ export default function PrivacyPolicyPage() {
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
-                  <strong>Photo Metadata:</strong> Field photos you have uploaded
-                  may carry EXIF metadata including GPS coordinates, camera model,
-                  and capture timestamp. This metadata is embedded in the audit
-                  PDF as part of tamper-evidence captions. You can disable GPS on
-                  your camera or strip EXIF before upload if you prefer not to
-                  share precise location data with your certifier.
+                  <strong>Photo Metadata:</strong> Field photos you have
+                  uploaded may carry EXIF metadata including GPS coordinates,
+                  camera model, and capture timestamp. This metadata is embedded
+                  in the audit PDF as part of tamper-evidence captions. You can
+                  disable GPS on your camera or strip EXIF before upload if you
+                  prefer not to share precise location data with your certifier.
                 </li>
                 <li>
                   <strong>Record Change History:</strong> Every edit to a
@@ -222,7 +234,8 @@ export default function PrivacyPolicyPage() {
                   Generate and manage QR codes for consumer transparency access
                 </li>
                 <li>
-                  Track agricultural production events and sustainability metrics
+                  Track agricultural production events and sustainability
+                  metrics
                 </li>
               </ul>
 
@@ -234,12 +247,8 @@ export default function PrivacyPolicyPage() {
                   Create and maintain user accounts with role-based access
                   control
                 </li>
-                <li>
-                  Process subscription payments and manage billing cycles
-                </li>
-                <li>
-                  Send service-related notifications and account updates
-                </li>
+                <li>Process subscription payments and manage billing cycles</li>
+                <li>Send service-related notifications and account updates</li>
                 <li>Provide customer support and technical assistance</li>
               </ul>
 
@@ -307,8 +316,8 @@ export default function PrivacyPolicyPage() {
                     </tr>
                     <tr>
                       <td className="py-2 pr-4">
-                        Record-completeness checks, carbon calculations, QR codes,
-                        production event tracking
+                        Record-completeness checks, carbon calculations, QR
+                        codes, production event tracking
                       </td>
                       <td className="py-2">
                         Contract performance (Art. 6(1)(b))
@@ -316,7 +325,8 @@ export default function PrivacyPolicyPage() {
                     </tr>
                     <tr>
                       <td className="py-2 pr-4">
-                        Voice recording processing via OpenAI
+                        Voice transcription via Deepgram; transcript processing
+                        via OpenAI
                       </td>
                       <td className="py-2">
                         Consent (Art. 6(1)(a)): you initiate each recording
@@ -344,17 +354,15 @@ export default function PrivacyPolicyPage() {
                         Security monitoring, fraud prevention
                       </td>
                       <td className="py-2">
-                        Legitimate interest (Art. 6(1)(f)): protecting users
-                        and platform
+                        Legitimate interest (Art. 6(1)(f)): protecting users and
+                        platform
                       </td>
                     </tr>
                     <tr>
                       <td className="py-2 pr-4">
                         Tax records, financial compliance, legal requests
                       </td>
-                      <td className="py-2">
-                        Legal obligation (Art. 6(1)(c))
-                      </td>
+                      <td className="py-2">Legal obligation (Art. 6(1)(c))</td>
                     </tr>
                     <tr>
                       <td className="py-2 pr-4">
@@ -371,8 +379,8 @@ export default function PrivacyPolicyPage() {
                         checks against OMRI / National List on event save)
                       </td>
                       <td className="py-2">
-                        Contract performance (Art. 6(1)(b)): part of the
-                        organic documentation feature
+                        Contract performance (Art. 6(1)(b)): part of the organic
+                        documentation feature
                       </td>
                     </tr>
                   </tbody>
@@ -402,30 +410,41 @@ export default function PrivacyPolicyPage() {
                 4.1 Third-Party Service Providers
               </h4>
               <p className="mt-2 leading-[1.8]">
-                We share information with trusted service providers who assist in
-                operating our Platform:
+                We share information with trusted service providers who assist
+                in operating our Platform:
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
-                  <strong>USDA APIs</strong>: Crop types, production methods for
-                  emission factor validation and compliance
+                  <strong>USDA APIs</strong>: Crop type and state only, to look
+                  up published emission-factor data. No farm identity, location,
+                  or personal data is included in these requests. Organic
+                  certification cross-checks run against a locally stored copy
+                  of the USDA Organic Integrity Database, not by sending your
+                  data to USDA
                 </li>
                 <li>
                   <strong>Stripe</strong>: Billing information, usage metrics
                   for payment processing and subscription management
                 </li>
                 <li>
-                  <strong>DigitalOcean</strong>: Application hosting and
-                  managed database services
+                  <strong>DigitalOcean</strong>: Application hosting and managed
+                  database services
                 </li>
                 <li>
                   <strong>AWS</strong>: Media file storage (S3) for images,
                   documents, and QR codes
                 </li>
                 <li>
-                  <strong>OpenAI</strong>: Voice recordings, text data for
-                  AI-powered data processing (Trazo has opted out of model
-                  training; your data is not used to train OpenAI models)
+                  <strong>Deepgram</strong>: Voice audio, streamed from your
+                  browser for speech-to-text transcription when you use voice
+                  logging. Audio is sent directly from your device to Deepgram
+                  and is not stored by Trazo
+                </li>
+                <li>
+                  <strong>OpenAI</strong>: The <em>text transcript</em> of a
+                  voice entry, plus text data, for AI-powered field extraction.
+                  OpenAI does not receive voice audio (Trazo has opted out of
+                  model training; your data is not used to train OpenAI models)
                 </li>
                 <li>
                   <strong>Vercel Analytics</strong>: Anonymized page view and
@@ -437,24 +456,43 @@ export default function PrivacyPolicyPage() {
                 4.2 Consumer Transparency Sharing
               </h4>
               <p className="mt-2 leading-[1.8]">
-                As directed by Producer users, we share specific carbon and
-                sustainability data with consumers through:
+                A production becomes publicly visible only when its producer
+                explicitly publishes it; a published season can be unpublished
+                at any time. Public consumer pages then show:
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
-                  QR code scanning providing documented farming practices,
-                  photos and certification status. No score, grade, tier or
-                  badge of Trazo&apos;s own is shown to consumers &mdash; practices
-                  are counted, not graded
-                </li>
-                <li>Public sustainability metrics and certification status</li>
-                <li>
-                  Agricultural practice information for transparency
+                  Documented farming practices with dates, photos, and
+                  certification status. No score, grade, tier or badge of
+                  Trazo&apos;s own is shown to consumers &mdash; practices are
+                  counted, not graded
                 </li>
                 <li>
-                  Farm location and establishment information as authorized
+                  Direct operational emission estimates, in expandable sections
+                </li>
+                <li>
+                  Farm location at the precision level the producer selects
+                  (exact, approximate, or hidden)
                 </li>
               </ul>
+              <p className="mt-3 leading-[1.8]">
+                <strong>What consumer pages never show.</strong> A uniform
+                withholding policy applies to every farm on the Platform and
+                cannot be altered per account. Public pages never include:
+                worker-safety and regulatory compliance fields (such as
+                restricted-entry intervals, applicator identities and
+                certification numbers, or permit numbers); supplier and purchase
+                records (supplier names, invoices, lot numbers), with supplier
+                names also removed from free-text notes; the full names of farm
+                personnel unless the producer has expressly enabled them; and
+                internal record categories that exist for certifier review
+                rather than consumers (input-sourcing searches, transport
+                logistics, buffer-strip disposition, and equipment-cleanout
+                logs). Because the policy is uniform, producers cannot
+                selectively hide individual practice records or field values
+                from published seasons &mdash; what a consumer page shows means
+                the same thing for every farm.
+              </p>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
                 4.3 Legal Requirements
@@ -479,14 +517,14 @@ export default function PrivacyPolicyPage() {
                 4.5 Certifier Sharing (NOP Audit PDF)
               </h4>
               <p className="mt-2 leading-[1.8]">
-                When you export a NOP Audit PDF, the Platform produces a file you
-                control. Trazo does not transmit the PDF to any certifier on your
-                behalf. You choose when, how, and to whom you share it (typically
-                by uploading to your certifier&apos;s portal such as MyCCOF or
-                emailing it directly). Once you share the PDF, the recipient will
-                have access to the data described in Section 2.6, including
-                photo EXIF/GPS metadata, change-history attribution, drift
-                findings, and the compliance snapshot.
+                When you export a NOP Audit PDF, the Platform produces a file
+                you control. Trazo does not transmit the PDF to any certifier on
+                your behalf. You choose when, how, and to whom you share it
+                (typically by uploading to your certifier&apos;s portal such as
+                MyCCOF or emailing it directly). Once you share the PDF, the
+                recipient will have access to the data described in Section 2.6,
+                including photo EXIF/GPS metadata, change-history attribution,
+                drift findings, and the compliance snapshot.
               </p>
               <p className="mt-2 leading-[1.8]">
                 Trazo is a documentation platform and is not a USDA-accredited
@@ -526,16 +564,15 @@ export default function PrivacyPolicyPage() {
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
                   <strong>Authentication:</strong> JWT tokens with 15-minute
-                  access and 7-day refresh periods (30 days with Remember
-                  Me)
+                  access and 7-day refresh periods (30 days with Remember Me)
                 </li>
                 <li>
                   <strong>Access Control:</strong> Role-based permissions with
                   granular user roles
                 </li>
                 <li>
-                  <strong>Rate Limiting:</strong> 100 requests/hour for anonymous
-                  users, 1000/hour for authenticated users
+                  <strong>Rate Limiting:</strong> 100 requests/hour for
+                  anonymous users, 1000/hour for authenticated users
                 </li>
                 <li>
                   <strong>Encryption:</strong> HTTPS for all data transmission,
@@ -561,8 +598,8 @@ export default function PrivacyPolicyPage() {
                   adequacy decisions where applicable
                 </li>
                 <li>
-                  <strong>Standard Contractual Clauses (SCCs):</strong>{" "}
-                  EU Commission-approved transfer mechanisms
+                  <strong>Standard Contractual Clauses (SCCs):</strong> EU
+                  Commission-approved transfer mechanisms
                 </li>
                 <li>
                   <strong>Technical Safeguards:</strong> Encryption, access
@@ -585,8 +622,8 @@ export default function PrivacyPolicyPage() {
                 6. Data Retention
               </h3>
               <p className="mt-3 leading-[1.8]">
-                We retain your information for different periods depending on the
-                type of data and legal requirements:
+                We retain your information for different periods depending on
+                the type of data and legal requirements:
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
@@ -661,12 +698,10 @@ export default function PrivacyPolicyPage() {
                   Right to delete personal information (with certain exceptions)
                 </li>
                 <li>
-                  Right to opt out of the sale of personal information (we do not
-                  sell personal information)
+                  Right to opt out of the sale of personal information (we do
+                  not sell personal information)
                 </li>
-                <li>
-                  Right to non-discrimination for exercising CCPA rights
-                </li>
+                <li>Right to non-discrimination for exercising CCPA rights</li>
               </ul>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
@@ -732,8 +767,8 @@ export default function PrivacyPolicyPage() {
                   functionality and security
                 </li>
                 <li>
-                  <strong>Analytics Cookies:</strong> Help us understand how
-                  the Platform is used (opt-in only)
+                  <strong>Analytics Cookies:</strong> Help us understand how the
+                  Platform is used (opt-in only)
                 </li>
                 <li>
                   <strong>Functional Cookies:</strong> Remember your preferences
@@ -793,8 +828,8 @@ export default function PrivacyPolicyPage() {
               <p className="mt-3 leading-[1.8]">
                 Our Platform is a business tool and is not intended for children
                 under 18. Registration requires accepting our Terms of Service,
-                under which you represent that you are at least 18 and, where you
-                act for a business, authorized to do so. We do not knowingly
+                under which you represent that you are at least 18 and, where
+                you act for a business, authorized to do so. We do not knowingly
                 collect personal information from children under 18.
               </p>
               <p className="mt-3 leading-[1.8]">
@@ -878,7 +913,8 @@ export default function PrivacyPolicyPage() {
               <p className="mt-4 leading-[1.8]">
                 We will respond to your privacy requests within 30 days (or as
                 required by applicable law). For verification purposes, we may
-                need to confirm your identity before processing certain requests.
+                need to confirm your identity before processing certain
+                requests.
               </p>
             </section>
           </div>
@@ -886,5 +922,5 @@ export default function PrivacyPolicyPage() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }

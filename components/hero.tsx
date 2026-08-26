@@ -87,12 +87,15 @@ export function Hero() {
             a whole season, every block, at no cost. The app's signup screen carries the same
             line and was corrected in the same pass.
 
-            Do NOT re-add an export claim here until a free data-portability export exists —
-            today the only exports in the product are the certifier artifacts.
+            2026-08-25: that export now EXISTS — a free, ungated ZIP of raw CSVs
+            (every record family, JSON pockets included) at
+            .../records-export/, pinned by history/tests/test_records_export.py.
+            The claim below is therefore true again — scoped to RECORDS, not the
+            certifier artifacts, which stay on Compliance.
           */}
           <p className="mt-4 text-sm text-muted-foreground">
             Starter plan free permanently &middot; No credit card &middot; Log a
-            whole season, unlimited
+            whole season, unlimited &middot; Export your records anytime
           </p>
 
           {/* Hero Image - Real App Screenshot (below fold; lazy + reveal on scroll) */}
