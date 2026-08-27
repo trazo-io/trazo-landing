@@ -90,7 +90,7 @@ export function ContactPageContent() {
         }}
       />
       <Navbar />
-      <main className="pt-32 pb-20">
+      <main className="pt-[calc(var(--header-h,140px)+1.25rem)] pb-20">
         {/* Header */}
         <section className="mx-auto max-w-7xl px-6 text-center">
           <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">

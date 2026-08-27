@@ -120,7 +120,9 @@ export function ProductTour() {
   return (
     <section
       id="product-tour"
-      className="scroll-mt-24 border-b border-border bg-background pb-16 pt-12 lg:pb-24 lg:pt-16"
+      // `scroll-mt` tracks the measured header — see the note in how-it-works.tsx.
+      // The old fixed 96px offset left this section 41px under the header on a phone.
+      className="scroll-mt-[calc(var(--header-h,140px)+0.5rem)] border-b border-border bg-background pb-16 pt-12 lg:pb-24 lg:pt-16"
       aria-labelledby="product-tour-heading"
     >
       <div className="mx-auto max-w-7xl px-6">

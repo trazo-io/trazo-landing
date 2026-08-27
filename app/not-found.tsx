@@ -7,7 +7,7 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <main className="flex flex-col items-center justify-center px-6 py-32 text-center lg:py-48">
+      <main className="flex flex-col items-center justify-center px-6 pt-[calc(var(--header-h,140px)+1.25rem)] pb-32 text-center lg:pb-48">
         <p className="text-sm font-semibold uppercase tracking-widest text-primary">
           404
         </p>

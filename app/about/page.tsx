@@ -35,7 +35,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <main className="pt-32 pb-20">
+      <main className="pt-[calc(var(--header-h,140px)+1.25rem)] pb-20">
         <article className="mx-auto max-w-3xl px-6">
           <p className="text-sm font-semibold uppercase tracking-wide text-primary">
             About

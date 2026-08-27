@@ -51,9 +51,15 @@ export function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      // The navbar's "How it Works" links straight here, and the header is FIXED at 109px, so
-      // without an offset the "HOW IT WORKS" eyebrow lands underneath it. scroll-mt-28 = 112px.
-      className="relative scroll-mt-28 border-b border-border bg-background py-16 lg:py-24"
+      // The navbar's "How it Works" links straight here, and the header is FIXED, so without
+      // an offset the "HOW IT WORKS" eyebrow lands underneath it.
+      //
+      // The old fixed 112px offset was the DESKTOP header (109px) plus a little. MEASURED
+      // 2026-08-26: the header grows to 137px once the renewal strip wraps (430px and below),
+      // so an anchor jump left the eyebrow 25px UNDER it — the same defect the page paddings
+      // had, in its scroll form.
+      // Track the measured height like everything else.
+      className="relative scroll-mt-[calc(var(--header-h,140px)+0.5rem)] border-b border-border bg-background py-16 lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Header */}

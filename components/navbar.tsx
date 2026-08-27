@@ -31,6 +31,19 @@ export function Navbar() {
    *
    * ResizeObserver rather than a resize listener: the strip can also reflow when the
    * font loads or the text changes, neither of which fires `resize`.
+   *
+   * ⚠️ EVERY page below this header must clear it with
+   *   pt-[calc(var(--header-h,140px)+1.25rem)]
+   * and NOT a hardcoded padding. When this variable was introduced only `hero.tsx` was
+   * converted; the other THIRTEEN pages kept `pt-32` (128px), which is the desktop header
+   * (109px) plus 19px of breathing room and nothing more. MEASURED 2026-08-26 at 430px and
+   * 320px, where the strip wraps and the header becomes 137px: the page title rendered 9px
+   * UNDER the header on all of them — the pricing h1 and the COG Pro deadline badge among
+   * them. Desktop was fine, which is why it survived.
+   *
+   * The `140px` fallback is deliberately the LARGEST header, not the smallest: it is what
+   * the server-rendered paint uses before the effect runs, and being too generous for one
+   * frame is recoverable while being too small hides the title.
    */
   useEffect(() => {
     const el = headerRef.current;
