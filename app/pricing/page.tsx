@@ -595,7 +595,26 @@ export default function PricingPage() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+                  /*
+                    `bg-transparent` and the `!` are both load-bearing, and this button had
+                    NEITHER — it rendered as a blank white pill on the green panel.
+
+                    MEASURED 2026-08-26: shadcn's `outline` variant is `border bg-background
+                    …`, and in this theme `--background` and `--primary-foreground` are the
+                    SAME token value (oklch(0.99 0.002 120)). So `text-primary-foreground` on
+                    top of the variant's `bg-background` put the label at exactly its own
+                    background colour — computed `color` and `background-color` came back byte
+                    -identical, a contrast ratio of **1.0**. The text was there; it was
+                    invisible.
+
+                    The `!` also beats the variant's `hover:text-accent-foreground`, which
+                    would otherwise flip the label to a dark colour on hover over a green panel.
+
+                    `components/cta-banner.tsx` already carries exactly this pairing — it is
+                    the same button on the same green ground, and it was fixed there and not
+                    here.
+                  */
+                  className="border-primary-foreground/30 bg-transparent !text-primary-foreground hover:bg-primary-foreground/10"
                   asChild
                 >
                   <a href="mailto:info@trazo.io">
