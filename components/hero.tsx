@@ -26,11 +26,25 @@ export function Hero() {
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-center text-center">
-          {/* Badge */}
+          {/*
+            Badge.
+
+            ⚠️ 2026-08-28: this read "Renewal season opens in November", which is CCOF and Oregon
+            Tilth timing stated as if it were universal. WSDA — the certifier behind most of the
+            Washington outreach list, and the state Trazo expands into — renews against a single
+            March 1 deadline. A WA grower reading "opens in November" in December concludes either
+            that they have missed it or that the product is not for them; both are wrong.
+
+            The navbar already carries the accurate multi-certifier line; this now matches it.
+            ⛔ Do not add a WSDA "opens" date: we have verified the March 1 DEADLINE from WSDA's
+            own Site Application PDF, but not when their renewal packet goes out
+            (`documentation/gtm-v3/CERTIFIER-CALENDAR-2026-08-19.md` §WSDA).
+          */}
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
             <span className="text-xs font-medium text-primary">
-              Renewal season opens in November
+              CCOF &amp; Oregon Tilth renewals open in November &middot; WSDA
+              due March 1
             </span>
           </div>
 

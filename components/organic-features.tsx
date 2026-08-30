@@ -15,8 +15,21 @@ const organicFeatures = [
   {
     icon: Leaf,
     title: "OMRI & NOP Input Tracking",
+    /*
+      ⚠️ 2026-08-28: this used to end the list of outcomes with "— or plainly not organic",
+      which was wrong in two directions once operator-authored materials shipped.
+
+      (a) NOT MATCHING A CATALOG IS NOT A FINDING. Trazo's OMRI copy is a licensed reference
+          subset, and a National List entry is a SUBSTANCE while a label carries a BRAND, so a
+          no-match means unmatched, never unapproved — the rule the materials service is built
+          on (`certifications/services/plan_materials.py`).
+      (b) A fifth outcome now exists and the sentence has to name it: the producer can put a
+          material on the plan in their own words with no third-party listing at all — compost,
+          manure, a home-formulated spray, the things CCOF's own form asks for by name — and it
+          prints as "no third-party listing on file", for the certifier to review.
+    */
     description:
-      "Every input you log is checked against the National List (7 CFR 205.601–.602) the moment you save it, and recorded as OMRI Listed, WSDA Listed, NOP seal on the label, reviewed and approved by your certifier — or plainly not organic. Once your plan is active, an input that is not on your approved materials list is flagged on the spot, with the OMRI search a click away.",
+      "Every input you log is checked against the National List (7 CFR 205.601–.602) the moment you save it, and recorded with the basis it actually has: OMRI Listed, WSDA Listed, NOP seal on the label, approved by your certifier in writing — or entered by you with no third-party listing, which is exactly how compost, manure and a home-formulated spray reach the list your certifier asks for. A name Trazo cannot match is reported as unmatched, never as unapproved. Once your plan is active, an input that is not on your approved materials list is flagged on the spot, with the OMRI search a click away.",
   },
   /* THREE CARDS REMOVED — each was said better elsewhere on the page:
      · "USDA Organic Verification"      the Integrity Database claim ran FOUR times

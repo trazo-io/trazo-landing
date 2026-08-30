@@ -129,6 +129,18 @@ export default function PrivacyPolicyPage() {
                   initials (e.g. &quot;Farm team (A.T.)&quot;) unless the
                   producer explicitly enables full names
                 </li>
+                <li>
+                  <strong>Third-Party Business Records:</strong> Information a
+                  producer records about other businesses in order to complete
+                  their organic system plan &mdash; off-farm handlers and
+                  storage facilities (name, address, certifying agent,
+                  certificate number and dates), input manufacturers, and
+                  suppliers. Certifiers require these on their own forms (for
+                  example CCOF G6.1 and G6.2, WSDA sections K and L). This
+                  information appears in the producer&rsquo;s certifier packet
+                  and audit exports. It is{" "}
+                  <strong>not shown on public consumer pages</strong>
+                </li>
               </ul>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
