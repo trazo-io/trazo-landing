@@ -25,5 +25,9 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Failed to process subscription" }, { status: 500 })
   }
 
+  // See the note in app/api/contact/route.ts: a 200 from Resend does not mean
+  // the message was delivered, so log the id to keep the send traceable.
+  console.log(`Newsletter subscribe sent, resend_id=${result.id} from=${email}`)
+
   return NextResponse.json({ success: true })
 }
