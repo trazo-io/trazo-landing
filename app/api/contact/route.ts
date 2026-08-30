@@ -11,7 +11,10 @@ export async function POST(request: Request) {
 
   const result = await sendEmail({
     to: "info@trazo.io",
-    from: "info@trazo.io",
+    // Not info@ -> info@: Workspace treats mail claiming to be from its own
+    // domain but arriving via an outside server as spoofing. reply_to still
+    // carries the submitter, so hitting reply answers the person.
+    from: "Trazo <noreply@trazo.io>",
     replyTo: email,
     subject: `Contact Form: ${subject}`,
     text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`,
