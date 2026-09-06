@@ -65,14 +65,14 @@ export function VideoSection() {
                 <video
                   ref={videoRef}
                   className="h-full w-full object-cover"
-                  poster="/videos/trazo-demo-poster.jpg"
+                  poster="/videos/trazo-demo-2026-09-poster.jpg"
                   playsInline
                   preload="metadata"
                   onEnded={handleEnded}
                   onPause={() => setIsPlaying(false)}
                   onPlay={() => setIsPlaying(true)}
                 >
-                  <source src="/videos/trazo-demo.mp4" type="video/mp4" />
+                  <source src="/videos/trazo-demo-2026-09.mp4" type="video/mp4" />
                 </video>
 
                 {/* Play/Pause overlay */}

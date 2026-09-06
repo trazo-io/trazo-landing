@@ -83,9 +83,12 @@ export function Hero() {
               className="w-full gap-2 border-border px-8 text-base text-foreground hover:bg-secondary sm:w-auto"
               asChild
             >
-              <a href="/#how-it-works">
+              {/* 2026-09-06: this used to anchor to #how-it-works, a play icon that played nothing.
+                  The September master (four minutes, real screens) lives on /demo, which is also the
+                  URL every LinkedIn first comment and email reply points at. */}
+              <a href="/demo">
                 <Play size={16} />
-                See How It Works
+                Watch the demo · 4 min
               </a>
             </Button>
           </div>

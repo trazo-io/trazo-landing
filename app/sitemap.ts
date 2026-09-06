@@ -21,6 +21,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      // the four-minute walkthrough: the URL every LinkedIn first comment and email reply carries
+      url: "https://www.trazo.io/demo",
+      lastModified: new Date("2026-09-06"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: "https://www.trazo.io/pricing",
       lastModified: new Date(),
       changeFrequency: "monthly",

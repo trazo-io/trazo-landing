@@ -26,7 +26,7 @@ const fieldFeatures = [
     icon: DoorOpen,
     title: "Cancellation Is Available At Any Time",
     description:
-      "No contract, no lock-in. The Starter plan is free permanently rather than a trial that expires, every record exports as CSV, and your complete inspection binder prints as a PDF whenever you want it. If Trazo stops being the right fit you leave with your records intact.",
+      "No contract, no lock-in. The Starter plan is free permanently rather than a trial that expires, every record exports as CSV on any plan, and on Compliance your complete inspection binder prints as a PDF whenever you want it. If Trazo stops being the right fit you leave with your records intact.",
   },
 ]
 
