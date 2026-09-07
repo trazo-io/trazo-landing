@@ -1,0 +1,71 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // WHY THIS EXISTS (2026-09-07)
+  //
+  // This repo is the CURRENT one — Next 16.1.6, React 19.2.4, Tailwind 4.2, TS 5.7. Nothing
+  // here is behind. Renovate is here to keep it that way, not to catch it up: the failure
+  // mode being prevented is trazo-back's (exact pins, no channel, 33 months of drift found
+  // by accident), and a repo that is current today is exactly when the channel is cheapest
+  // to install.
+  //
+  // One thing this must never quietly change: `app/globals.css` --primary is required to
+  // stay byte-identical to the app's green.700 #2E7D32. That is a brand invariant, not a
+  // dependency, so no bot touches it — but a Tailwind major can rewrite how tokens resolve,
+  // which is why Tailwind majors need approval below.
+  // See documentation/adr/010-platform-tooling-and-dependency-currency.md
+  // ─────────────────────────────────────────────────────────────────────────────
+
+  extends: ['config:recommended'],
+
+  timezone: 'America/Montevideo',
+  schedule: ['before 6am on monday'],
+
+  automerge: false,
+
+  prConcurrentLimit: 3,
+  prHourlyLimit: 2,
+
+  labels: ['dependencies'],
+  rangeStrategy: 'bump',
+  semanticCommits: 'enabled',
+
+  vulnerabilityAlerts: {
+    enabled: true,
+    schedule: ['at any time'],
+    labels: ['dependencies', 'security'],
+  },
+
+  lockFileMaintenance: {
+    enabled: true,
+    schedule: ['before 6am on the first day of the month'],
+  },
+
+  packageRules: [
+    {
+      groupName: 'next and react',
+      matchPackageNames: ['next', 'react', 'react-dom', '@types/react', '@types/react-dom', 'eslint-config-next'],
+    },
+    {
+      // A Tailwind major can change how CSS custom properties resolve, and --primary carries
+      // the cross-repo brand green. Approval required so the colour is re-verified by eye.
+      groupName: 'tailwind',
+      matchPackageNames: ['tailwindcss', '@tailwindcss/postcss'],
+      matchUpdateTypes: ['major'],
+      dependencyDashboardApproval: true,
+      labels: ['dependencies', 'major', 'brand-check'],
+    },
+    {
+      matchUpdateTypes: ['major'],
+      dependencyDashboardApproval: true,
+      labels: ['dependencies', 'major'],
+      minimumReleaseAge: '7 days',
+    },
+    {
+      matchUpdateTypes: ['patch', 'minor'],
+      groupName: 'npm patch and minor',
+      minimumReleaseAge: '3 days',
+    },
+  ],
+}
