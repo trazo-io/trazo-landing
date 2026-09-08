@@ -623,14 +623,14 @@ export default function MethodologyPage() {
                       <td className="py-2 pr-4">
                         1.19 kg CO&#8322;/kg P&#8322;O&#8325;
                       </td>
-                      <td className="py-2">Under re-verification</td>
+                      <td className="py-2">Trazo estimate (see note)</td>
                     </tr>
                     <tr>
                       <td className="py-2 pr-4">Potassium (K&#8322;O)</td>
                       <td className="py-2 pr-4">
                         0.65 kg CO&#8322;/kg K&#8322;O
                       </td>
-                      <td className="py-2">Under re-verification</td>
+                      <td className="py-2">Trazo estimate (see note)</td>
                     </tr>
                   </tbody>
                 </table>
@@ -639,9 +639,14 @@ export default function MethodologyPage() {
                 Note (2026-09-07): the phosphorus and potassium factors were
                 previously attributed on this page to EPA 40 CFR Part 98. That
                 publication carries no fertilizer manufacturing factors, so the
-                attribution was withdrawn. The two factors remain in use and are
-                shown here for transparency while their source is re-verified;
-                the nitrogen and fuel factors are unaffected.
+                attribution was withdrawn. These two are Trazo estimates, not
+                agency figures, and they are deliberately set at the
+                conservative end: published work puts phosphorus production at
+                1.0&ndash;1.5 kg CO&#8322;e per kg P&#8322;O&#8325; (Walling
+                &amp; Vaneeckhaute 2020), and European figures for both run
+                lower still (Brentrup et al. 2018). We would rather overstate
+                our own footprint than understate it. The nitrogen and fuel
+                factors are unaffected and remain agency-published.
               </p>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
