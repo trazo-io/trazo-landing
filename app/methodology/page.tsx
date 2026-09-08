@@ -574,12 +574,15 @@ export default function MethodologyPage() {
                 Electricity (EPA eGRID 2023)
               </h4>
               <p className="mt-2 leading-[1.8]">
-                US Average: <strong>0.365 kg CO&#8322;e/kWh</strong> (delivered
-                electricity: 770.9 lb CO&#8322;e/MWh at the generator, divided by
-                1 &minus; 4.2% grid gross loss, both published in the eGRID2023
-                Summary Tables). Country-specific factors available for Uruguay (0.04),
-                Brazil (0.07), Colombia (0.13), Peru (0.19), Chile (0.31),
-                Argentina (0.35), and Mexico (0.42).
+                US Average: <strong>0.365 kg CO&#8322;e/kWh</strong> delivered.
+                The eGRID2023 Summary Tables publish 770.9 lb CO&#8322;e/MWh at the
+                generator and a 4.2% U.S. grid gross loss; converting that to
+                kilograms per kilowatt-hour gives 0.350, and dividing by 0.958 to
+                account for what is lost in transmission gives 0.365.
+                Country-specific factors are used where we have the grid operator&#39;s
+                own published intensity: Uruguay (0.006), Brazil (0.07),
+                Colombia (0.13), Peru (0.19), Chile (0.31), Argentina (0.35),
+                and Mexico (0.42).
               </p>
               <p className="mt-2 text-sm text-muted-foreground">
                 Correction note (2025-12-03): corrected from 0.821 to 0.39 kg
