@@ -32,9 +32,11 @@ interface ApiResponse {
   product?: { name?: string };
   product_info?: { name?: string };
   farmer?: { name?: string };
-  // Claim-safety (2026-06): the self-graded transparency SCORE is gated out of
-  // the anonymous payload and is a farmer-dashboard KPI, not a consumer claim.
-  // The share image leads with the FACTUAL documented-practices count instead.
+  // Claim-safety: the share image leads with the FACTUAL documented-practices count.
+  // ⚠️ Updated 2026-09-08: this said the self-graded transparency score "is a
+  // farmer-dashboard KPI, not a consumer claim". Trazo no longer assigns a score of
+  // any kind, to anyone — the concept is retired, not hidden. Do not reintroduce a
+  // number here on the grounds that it is internal.
   standard_view?: { transparency_details?: { actual_events?: number } };
   timeline?: unknown[];
 }

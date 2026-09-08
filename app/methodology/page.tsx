@@ -55,10 +55,9 @@ export default function MethodologyPage() {
                 the Common OSP structure — authored and confirmed by the
                 operator, as § 205.201(a) requires. Second,{" "}
                 <strong>readiness checks</strong>: completeness measurements
-                computed over those records (including a 0–100 documentation
-                completeness metric shown only on the producer&apos;s own
-                dashboard — never to consumers, and never as any form of
-                sustainability grade). Third, the{" "}
+                computed over those records — each one naming a specific
+                document or record that is missing, never a score or grade.
+                Third, the{" "}
                 <strong>emission calculations</strong>: emissions from the
                 operation&apos;s own activity — the fuel and electricity it burns
                 — plus the manufacturing of the fertiliser and crop-protection
@@ -121,162 +120,17 @@ export default function MethodologyPage() {
               </p>
             </section>
 
-            {/* 2. Score Calculation */}
-            <section>
-              <h3 className="text-xl font-bold text-foreground">
-                2. Documentation Completeness (Internal Metric)
-              </h3>
-              <p className="mt-3 leading-[1.8]">
-                Trazo computes a 0–100 completeness metric internally — historically
-                called the transparency score. Since August 2026 it is{" "}
-                <strong>not displayed as a number anywhere</strong>: not to consumers,
-                not on the buyer page, and no longer as a widget on the producer
-                dashboard either, where the farmer instead sees the per-record
-                checklist of what is still missing. It is never presented as a
-                sustainability rating of any kind. It measures{" "}
-                <strong>documentation completeness</strong>:
-                what percentage of expected farming practices have been recorded
-                for a given production cycle, adjusted for documentation quality
-                (photo evidence).
-              </p>
-
-              <h4 className="mt-6 text-lg font-semibold text-foreground">
-                Seven Weighted Categories
-              </h4>
-              <div className="mt-4 overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-border">
-                      <th className="py-2 pr-4 text-left font-semibold text-foreground">
-                        Category
-                      </th>
-                      <th className="py-2 pr-4 text-left font-semibold text-foreground">
-                        Weight
-                      </th>
-                      <th className="py-2 text-left font-semibold text-foreground">
-                        Examples
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 pr-4 font-medium">Production</td>
-                      <td className="py-3 pr-4">30%</td>
-                      <td className="py-3">
-                        Planting, irrigation, harvest, pruning, transplanting
-                      </td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 pr-4 font-medium">
-                        Chemical Applications
-                      </td>
-                      <td className="py-3 pr-4">20%</td>
-                      <td className="py-3">
-                        Fertilizer (NPK), pesticides, herbicides, fungicides
-                      </td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 pr-4 font-medium">Soil Management</td>
-                      <td className="py-3 pr-4">18%</td>
-                      <td className="py-3">
-                        Soil testing, cover crops, composting, pH adjustment
-                      </td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 pr-4 font-medium">Pest Management</td>
-                      <td className="py-3 pr-4">12%</td>
-                      <td className="py-3">
-                        Scouting, beneficial insects, trap monitoring, IPM
-                      </td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 pr-4 font-medium">
-                        Business &amp; Certifications
-                      </td>
-                      <td className="py-3 pr-4">10%</td>
-                      <td className="py-3">
-                        Organic certification, sustainability audits, compliance
-                      </td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 pr-4 font-medium">Weather</td>
-                      <td className="py-3 pr-4">5%</td>
-                      <td className="py-3">
-                        Frost, drought, hailstorm, temperature events
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="py-3 pr-4 font-medium">General</td>
-                      <td className="py-3 pr-4">5%</td>
-                      <td className="py-3">
-                        Training, meetings, maintenance records
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <p className="mt-3 text-xs text-muted-foreground">
-                Category weights were determined by the Trazo team based on
-                consumer concern analysis and documentation impact assessment.
-                Production activities receive the highest weight (30%) as they
-                represent core farming practices. Weights have not been
-                externally validated and may be adjusted in future versions
-                based on peer feedback.
-              </p>
-
-              <h4 className="mt-6 text-lg font-semibold text-foreground">
-                Formula
-              </h4>
-              <div className="mt-3 overflow-x-auto rounded-lg border border-border bg-secondary/30 p-4 font-mono text-sm">
-                transparency_score = &Sigma; (category_weight &times;
-                min(actual_events / expected_events, 1.0) &times;
-                photo_penalty_multiplier)
-              </div>
-              <p className="mt-3 leading-[1.8]">
-                Expected event counts vary by crop type and farming approach
-                (conventional, organic, biodynamic). For example, tree fruit
-                crops expect 12 events for conventional farming, 15 for organic,
-                and 18 for biodynamic.
-              </p>
-
-              <h4 className="mt-6 text-lg font-semibold text-foreground">
-                Why there is no grade
-              </h4>
-              <p className="mt-3 leading-[1.8]">
-                Trazo does not assign a letter grade, tier, medal or badge to a
-                farm. An earlier version of this document published an A+ to F
-                scale; that construct was removed from the product in August
-                2026 and is no longer published here. A self-created rating
-                shown to consumers is the label class restricted by EU Directive
-                2024/825 and carries general-environmental-benefit risk under
-                FTC 16 CFR 260.6 — and a grade Trazo invented says more about
-                our thresholds than about the farm. The score below is a
-                completeness measure on the producer&apos;s own dashboard;
-                consumers see the documented practices, photos and third-party
-                certifications themselves.
-              </p>
-            </section>
-
             {/* 3. Anti-Gaming */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                3. Anti-Gaming Protections
+                2. Anti-Gaming Protections
               </h3>
               <p className="mt-3 leading-[1.8]">
-                A scoring system is only as credible as its resistance to
-                manipulation. The following rules were implemented after a
-                comprehensive gaming vector audit (March 2026):
+                A record is only as credible as its resistance to manipulation.
+                The following rules were implemented after a comprehensive gaming
+                vector audit (March 2026):
               </p>
               <ul className="mt-3 list-disc space-y-3 pl-6 leading-[1.8]">
-                <li>
-                  <strong>Zero-event protection:</strong> A production with zero
-                  logged events always receives 0%, regardless of any other
-                  factors.
-                </li>
-                <li>
-                  <strong>Minimum events threshold:</strong> Productions with
-                  fewer than 3 events are capped at a maximum score of 30%.
-                </li>
                 <li>
                   <strong>USDA Organic verification:</strong> Organic
                   certification claims are cross-referenced against the USDA
@@ -297,7 +151,7 @@ export default function MethodologyPage() {
             {/* 4. Photo Verification */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                4. Photo Verification System
+                3. Photo Verification System
               </h3>
               <p className="mt-3 leading-[1.8]">
                 Photos provide accountability beyond text-only logging. A
@@ -357,7 +211,7 @@ export default function MethodologyPage() {
             {/* 5. Carbon Calculation */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                5. Carbon Calculation Methodology
+                4. Carbon Calculation Methodology
               </h3>
               <p className="mt-3 leading-[1.8]">
                 Trazo calculates <strong>Direct Operational Emissions</strong>,
@@ -526,7 +380,7 @@ export default function MethodologyPage() {
             {/* 6. Emission Factors */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                6. Emission Factor Sources
+                5. Emission Factor Sources
               </h3>
               <p className="mt-3 leading-[1.8]">
                 All emission factors are sourced from government publications
@@ -799,7 +653,7 @@ export default function MethodologyPage() {
             {/* 7. NOP Audit PDF Methodology */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                7. NOP Audit PDF Methodology
+                6. NOP Audit PDF Methodology
               </h3>
               <p className="mt-3 leading-[1.8]">
                 For organic operations, Trazo generates a 24-page Audit PDF
@@ -967,7 +821,7 @@ export default function MethodologyPage() {
             {/* 8. Known Limitations */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                8. Known Limitations
+                7. Known Limitations
               </h3>
               <p className="mt-3 leading-[1.8]">
                 Transparency about limitations is fundamental to this{" "}
@@ -975,10 +829,9 @@ export default function MethodologyPage() {
               </p>
               <ul className="mt-3 list-disc space-y-3 pl-6 leading-[1.8]">
                 <li>
-                  <strong>Self-reported data:</strong> The transparency score is
-                  entirely based on farmer-reported data. There is no
-                  independent verification of event accuracy. The
-                  consumer-facing disclaimer reads:{" "}
+                  <strong>Self-reported data:</strong> Every practice record is
+                  farmer-reported. There is no independent verification of event
+                  accuracy. The consumer-facing disclaimer reads:{" "}
                   <em>
                     &quot;Based on farmer-reported documentation. Not
                     independently audited.&quot;
@@ -1016,12 +869,11 @@ export default function MethodologyPage() {
                   <strong>EU regulatory status:</strong> Under the EU Directive
                   2024/825 (effective September 2026), a self-created
                   sustainability score shown to consumers could be classified as
-                  a self-created sustainability label. For this reason the
-                  transparency score is not displayed on the consumer QR page.
-                  It is an internal completeness metric only, and consumers see
-                  the documented practices and third-party certifications
-                  directly. Full EU substantiation may still
-                  require external methodology audit.
+                  a self-created sustainability label. Trazo therefore assigns no
+                  score, grade or rating of any kind — there is no number to
+                  publish or withhold. Consumers see the documented practices and
+                  third-party certifications directly. Full EU substantiation may
+                  still require external methodology audit.
                 </li>
               </ul>
             </section>
@@ -1029,7 +881,7 @@ export default function MethodologyPage() {
             {/* 9. Regulatory Alignment */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                9. Regulatory Context
+                8. Regulatory Context
               </h3>
               <p className="mt-3 leading-[1.8]">
                 This methodology was developed with reference to the following
@@ -1078,7 +930,7 @@ export default function MethodologyPage() {
             {/* 10. References */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                10. References
+                9. References
               </h3>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
