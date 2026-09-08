@@ -494,8 +494,8 @@ export default function PrivacyPolicyPage() {
                 worker-safety and regulatory compliance fields (such as
                 restricted-entry intervals, applicator identities and
                 certification numbers, or permit numbers); supplier and purchase
-                records (supplier names, invoices, lot numbers), with supplier
-                names also removed from free-text notes; the full names of farm
+                records entered in their own fields (supplier names, invoices,
+                supplier lot numbers); the full names of farm
                 personnel unless the producer has expressly enabled them; and
                 internal record categories that exist for certifier review
                 rather than consumers (input-sourcing searches, transport
@@ -504,6 +504,18 @@ export default function PrivacyPolicyPage() {
                 selectively hide individual practice records or field values
                 from published seasons &mdash; what a consumer page shows means
                 the same thing for every farm.
+              </p>
+              <p className="mt-3 leading-[1.8]">
+                <strong>Notes a producer writes.</strong> One box on each
+                activity record is labelled as public, and what a producer types
+                there is published in their own words. Every other note field is
+                for their certifier and their team and is not published. As an
+                additional safeguard, if a supplier name the producer recorded in
+                a supplier field also appears in that public box, it is removed
+                there. That check is an exact match on a name already in the
+                record, so it is a safeguard rather than a guarantee: it cannot
+                recognise every abbreviation or spelling, which is why the box is
+                labelled as public where it is written.
               </p>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
