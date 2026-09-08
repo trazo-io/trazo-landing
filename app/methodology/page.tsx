@@ -59,10 +59,17 @@ export default function MethodologyPage() {
                 completeness metric shown only on the producer&apos;s own
                 dashboard — never to consumers, and never as any form of
                 sustainability grade). Third, the{" "}
-                <strong>emission calculations</strong>: direct operational
-                emissions computed from EPA/USDA-published factors, kept as
-                background data for business reporting — not a consumer-facing
-                claim.
+                <strong>emission calculations</strong>: emissions from the
+                operation&apos;s own activity — the fuel and electricity it burns
+                — plus the manufacturing of the fertiliser and crop-protection
+                products it buys, kept as background data for business reporting
+                and not a consumer-facing claim. Factor sources differ by input
+                and each one is stated with its own: fuel and electricity are
+                EPA-published, nitrogen combines EPA and IPCC guideline values,
+                crop-protection manufacturing comes from peer-reviewed LCA
+                literature, and the phosphorus and potassium figures are
+                Trazo&apos;s own conservative estimates where published values
+                are sparse.
               </p>
               <p className="mt-3 leading-[1.8]">
                 All records are farmer-reported and not independently audited;
@@ -990,9 +997,14 @@ export default function MethodologyPage() {
                 </li>
                 <li>
                   <strong>Carbon scope:</strong> Carbon calculations cover
-                  direct operational emissions only (Scope 1 equivalent). This
-                  is deliberately narrower than a full Life Cycle Assessment per
-                  ISO 14067.
+                  the operation&apos;s direct emissions plus the upstream
+                  manufacturing of the fertiliser and crop-protection products it
+                  purchases — so mostly Scope 1, with that one Scope 3 category
+                  included because it is the largest number a grower can actually
+                  change. It is deliberately narrower than a full Life Cycle
+                  Assessment per ISO 14067: transport to the farm, packaging,
+                  equipment manufacturing, distribution and retail are all
+                  excluded.
                 </li>
                 <li>
                   <strong>Emission factor age:</strong> Some factors derive from
