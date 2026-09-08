@@ -1,12 +1,12 @@
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
-import type { Metadata } from "next"
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Cookie Policy | Trazo",
   description:
     "How Trazo uses cookies and similar technologies on our platform.",
-}
+};
 
 export default function CookiePolicyPage() {
   return (
@@ -22,7 +22,7 @@ export default function CookiePolicyPage() {
               How Trazo uses cookies and similar technologies.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Last updated: March 21, 2026
+              Last updated: September 8, 2026
             </p>
           </header>
 
@@ -33,11 +33,11 @@ export default function CookiePolicyPage() {
                 1. What Are Cookies
               </h3>
               <p className="mt-3 leading-[1.8]">
-                Cookies are small text files stored on your device when you visit
-                a website. They help the site remember your preferences, analyze
-                usage patterns, and provide a better experience. Some cookies are
-                set by the site you visit (first-party), while others are set by
-                third-party services integrated into the site.
+                Cookies are small text files stored on your device when you
+                visit a website. They help the site remember your preferences,
+                analyze usage patterns, and provide a better experience. Some
+                cookies are set by the site you visit (first-party), while
+                others are set by third-party services integrated into the site.
               </p>
             </section>
 
@@ -89,24 +89,18 @@ export default function CookiePolicyPage() {
                       <td className="py-2 pr-4 font-mono text-xs">
                         refresh_token
                       </td>
-                      <td className="py-2 pr-4">
-                        Session renewal (httpOnly)
-                      </td>
+                      <td className="py-2 pr-4">Session renewal (httpOnly)</td>
                       <td className="py-2">7-30 days</td>
                     </tr>
                     <tr>
-                      <td className="py-2 pr-4 font-mono text-xs">
-                        logged_in
-                      </td>
+                      <td className="py-2 pr-4 font-mono text-xs">logged_in</td>
                       <td className="py-2 pr-4">
                         Session status indicator for frontend
                       </td>
                       <td className="py-2">Session / 30 days</td>
                     </tr>
                     <tr>
-                      <td className="py-2 pr-4 font-mono text-xs">
-                        csrftoken
-                      </td>
+                      <td className="py-2 pr-4 font-mono text-xs">csrftoken</td>
                       <td className="py-2 pr-4">
                         Cross-site request forgery protection
                       </td>
@@ -168,6 +162,29 @@ export default function CookiePolicyPage() {
                         </a>
                       </td>
                     </tr>
+                    <tr>
+                      <td className="py-2 pr-4">PostHog</td>
+                      <td className="py-2 pr-4">
+                        Which screens are opened and which actions are taken,
+                        plus a masked session replay of the interface. All text
+                        and all form input are hidden before the recording
+                        leaves your browser, so it shows layout and clicks and
+                        never the content on screen. On consumer QR pages this
+                        is set only after you accept; inside the signed-in
+                        application it is set for account holders under
+                        legitimate interest
+                      </td>
+                      <td className="py-2">
+                        <a
+                          href="https://posthog.com/privacy"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline"
+                        >
+                          PostHog Privacy
+                        </a>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -196,21 +213,13 @@ export default function CookiePolicyPage() {
                   </thead>
                   <tbody className="divide-y divide-border">
                     <tr>
-                      <td className="py-2 pr-4 font-mono text-xs">
-                        language
-                      </td>
-                      <td className="py-2 pr-4">
-                        Preferred language (EN/ES)
-                      </td>
+                      <td className="py-2 pr-4 font-mono text-xs">language</td>
+                      <td className="py-2 pr-4">Preferred language (EN/ES)</td>
                       <td className="py-2">1 year</td>
                     </tr>
                     <tr>
-                      <td className="py-2 pr-4 font-mono text-xs">
-                        theme
-                      </td>
-                      <td className="py-2 pr-4">
-                        Light/dark mode preference
-                      </td>
+                      <td className="py-2 pr-4 font-mono text-xs">theme</td>
+                      <td className="py-2 pr-4">Light/dark mode preference</td>
                       <td className="py-2">1 year</td>
                     </tr>
                   </tbody>
@@ -239,11 +248,11 @@ export default function CookiePolicyPage() {
                 3.2 Browser Settings
               </h4>
               <p className="mt-2 leading-[1.8]">
-                Most browsers allow you to control cookies through their settings.
-                You can typically find these options under
+                Most browsers allow you to control cookies through their
+                settings. You can typically find these options under
                 &quot;Privacy&quot; or &quot;Security&quot; in your browser
-                preferences. Note that blocking essential cookies may prevent the
-                Platform from functioning correctly.
+                preferences. Note that blocking essential cookies may prevent
+                the Platform from functioning correctly.
               </p>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
@@ -251,9 +260,9 @@ export default function CookiePolicyPage() {
               </h4>
               <p className="mt-2 leading-[1.8]">
                 We aim to honor Do Not Track (DNT) browser signals where
-                technically feasible. When a DNT signal is detected, we
-                disable non-essential analytics where supported by our
-                third-party analytics providers.
+                technically feasible. When a DNT signal is detected, we disable
+                non-essential analytics where supported by our third-party
+                analytics providers.
               </p>
             </section>
 
@@ -268,6 +277,21 @@ export default function CookiePolicyPage() {
                 services that may set cookies include:
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>PostHog:</strong> Product analytics and masked session
+                  replay, used to find out where the application is confusing.
+                  Does not track users across sites, and no advertising profile
+                  is built. See{" "}
+                  <a
+                    href="https://posthog.com/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    PostHog&apos;s Privacy Policy
+                  </a>
+                  .
+                </li>
                 <li>
                   <strong>Vercel Analytics:</strong> Privacy-focused page view
                   analytics. Does not track users across sites. See{" "}
@@ -353,5 +377,5 @@ export default function CookiePolicyPage() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }
