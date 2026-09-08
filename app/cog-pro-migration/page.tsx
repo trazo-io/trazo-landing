@@ -296,19 +296,26 @@ export default function CogProMigrationPage() {
                 delete the account on request.
               </p>
               <p className="mt-3 leading-[1.8]">
-                {/* Do NOT restore the old "everything exports back out as CSV …
-                    at any time" wording. Every export — audit dossier, OSP renewal
-                    packet, PUR — sits behind Compliance in `subscriptions/gating.py`;
-                    Starter has no export at all. Worded as a written guarantee to
-                    people who just lost a vendor, that was the site's largest trust
-                    exposure. Same retraction as `components/hero.tsx:72-85`. */}
+                {/* ⚠️ 2026-09-08. The comment here used to forbid promising an export, on the
+                    grounds that "Starter has no export at all" — true when written, false since
+                    2026-08-25, when the free ungated records export shipped
+                    (`.../records-export/`, pinned by `test_no_compliance_gate_in_the_view`).
+                    The retraction outlived the limitation it described, so the page aimed
+                    squarely at people who just lost a vendor was still volunteering that their
+                    records could get stuck here. That is the opposite of this page's job.
+
+                    The line that must NOT come back is the old conflation: "everything exports
+                    back out as CSV" covering the certifier ARTEFACTS too. Raw records are free;
+                    the audit dossier, OSP renewal packet and PUR export are Compliance. State
+                    both halves, never one. */}
                 The Starter plan is free permanently, not a trial that expires,
                 and you can log a whole season on it. Importing your COG Pro CSVs
-                costs nothing. The certifier documents — audit dossier, OSP
-                renewal packet, PUR export — are part of the Compliance plan.
-                And the part we will not dress up after what you have just been
-                through: a one-click export of your whole account is not built
-                yet. If you want your records out, ask and we will produce them.
+                costs nothing. And leaving is not a favour you have to ask us for:
+                on every plan, including the free one, one click in Documents
+                downloads a ZIP of plain CSV files with every activity record,
+                production, parcel and sale in your account. The certifier
+                documents built from those records — audit dossier, OSP renewal
+                packet, PUR export — are the part that is Compliance.
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg">

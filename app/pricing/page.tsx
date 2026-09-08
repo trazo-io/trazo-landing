@@ -294,11 +294,20 @@ const pricingFaqs = [
   },
   {
     q: "Can I get my data out?",
-    // Do NOT restore "your events, photos and documents export at any time, on any
-    // plan, including the free one." `subscriptions/gating.py` is explicit that Trazo
-    // has no plain data export at all yet, and every certifier artifact sits behind
-    // Compliance. Same retraction as `components/hero.tsx:72-85`.
-    a: "Getting in is free: if you are leaving COG Pro we import your CSV exports at no charge, and Starter never expires. Being straight about the other direction — a one-click export of your whole account is not built yet. The certifier documents (OSP renewal packet and workbooks, audit exports, CA PUR export) are part of the Compliance plan. If you want your records out, email info@trazo.io and we will produce them for you.",
+    // ⚠️ 2026-09-08: this answer said "a one-click export of your whole account is not built
+    // yet" for three weeks AFTER it was built. The comment that used to sit here forbade fixing
+    // it, citing `subscriptions/gating.py` as proof that "Trazo has no plain data export at all"
+    // — a claim that stopped being true on 2026-08-25 when the free, ungated records export
+    // shipped. `components/hero.tsx` was corrected the same day; this page was not, and the
+    // comment pointing AT hero.tsx as the precedent is what made the omission look deliberate.
+    // Meanwhile `components/faq-section.tsx` answered "Yes, on every plan including the free
+    // one", so the site contradicted itself on its highest-intent page.
+    //
+    // The live contract, if you are checking before editing: `.../records-export/` in
+    // `company/urls.py`, ungated by `history/tests/test_records_export.py`'s
+    // `test_no_compliance_gate_in_the_view`, and listed in the compliance-door inventory as
+    // "the farm's own raw records — free by design, never a paid artifact".
+    a: "Yes, on every plan including the free one. One click in Documents downloads a ZIP of plain CSV files — every activity record with all its fields, plus your productions, parcels, sales and photo references. What the Compliance plan adds is the certifier-ready paperwork built from those records (OSP renewal packet and workbooks, audit exports, CA PUR export), not access to the records themselves. Coming from COG Pro, we also import your CSV exports at no charge.",
   },
   {
     q: "Is my data secure?",

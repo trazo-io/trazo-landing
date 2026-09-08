@@ -23,7 +23,7 @@ const contactFaqs = [
   },
   {
     q: "Who owns my data?",
-    a: "You do. Trazo is the platform, not the data owner, and you control what gets published — nothing goes live until you finish a production and choose to publish it. Being straight about the limit: a one-click export of your whole account is not built yet, so if you want your records out, email us and we will produce them.",
+    a: "You do. Trazo is the platform, not the data owner, and you control what gets published — nothing goes live until you finish a production and choose to publish it. Your records are also portable on every plan, including the free one: one click in Documents downloads a ZIP of plain CSV files covering every activity record, production, parcel and sale.",
   },
   {
     q: "How do I get started?",
