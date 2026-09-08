@@ -423,8 +423,8 @@ export default function MethodologyPage() {
                   <p className="mt-1 font-mono text-sm">
                     Pumping energy: (2,471 / 1,000) &times; 3.5 kWh = 8.65 kWh
                     <br />
-                    CO&#8322; emissions: 8.65 &times; 0.39 kg/kWh ={" "}
-                    <strong>3.37 kg CO&#8322;e</strong>
+                    CO&#8322;e emissions: 8.65 &times; 0.365 kg/kWh ={" "}
+                    <strong>3.16 kg CO&#8322;e</strong>
                   </p>
                 </div>
                 <div className="rounded-lg border border-border bg-secondary/30 p-4">
@@ -574,16 +574,25 @@ export default function MethodologyPage() {
                 Electricity (EPA eGRID 2023)
               </h4>
               <p className="mt-2 leading-[1.8]">
-                US Average: <strong>0.39 kg CO&#8322;/kWh</strong> (delivered
-                electricity, including 5.12% transmission &amp; distribution
-                losses). Country-specific factors available for Uruguay (0.04),
-                Brazil (0.07), Colombia (0.13), Peru (0.19), Chile (0.31),
-                Argentina (0.35), and Mexico (0.42).
+                US Average: <strong>0.365 kg CO&#8322;e/kWh</strong> delivered.
+                The eGRID2023 Summary Tables publish 770.9 lb CO&#8322;e/MWh at the
+                generator and a 4.2% U.S. grid gross loss; converting that to
+                kilograms per kilowatt-hour gives 0.350, and dividing by 0.958 to
+                account for what is lost in transmission gives 0.365.
+                Country-specific factors are used where we have the grid operator&#39;s
+                own published intensity: Uruguay (0.006), Brazil (0.07),
+                Colombia (0.13), Peru (0.19), Chile (0.31), Argentina (0.35),
+                and Mexico (0.42).
               </p>
               <p className="mt-2 text-sm text-muted-foreground">
-                Correction note (2025-12-03): This factor was corrected from
-                0.821 to 0.39 kg CO&#8322;/kWh after discovering the previous
-                value was 2.1x too high due to a unit conversion error.
+                Correction note (2025-12-03): corrected from 0.821 to 0.39 kg
+                CO&#8322;/kWh after the previous value was found to be 2.1x too
+                high due to a unit conversion error. Correction note
+                (2026-09-07): corrected again, from 0.39 to 0.365 kg
+                CO&#8322;e/kWh. 0.39 was EPA&#39;s Equivalencies Calculator
+                figure, which uses eGRID2022 data and a 5.12% loss rate; this
+                page cites eGRID2023, whose published U.S. rate and 4.2% grid
+                gross loss give 0.365.
               </p>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
@@ -617,18 +626,31 @@ export default function MethodologyPage() {
                       <td className="py-2 pr-4">
                         1.19 kg CO&#8322;/kg P&#8322;O&#8325;
                       </td>
-                      <td className="py-2">EPA 40 CFR Part 98</td>
+                      <td className="py-2">Trazo estimate (see note)</td>
                     </tr>
                     <tr>
                       <td className="py-2 pr-4">Potassium (K&#8322;O)</td>
                       <td className="py-2 pr-4">
                         0.65 kg CO&#8322;/kg K&#8322;O
                       </td>
-                      <td className="py-2">EPA 40 CFR Part 98</td>
+                      <td className="py-2">Trazo estimate (see note)</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Note (2026-09-07): the phosphorus and potassium factors were
+                previously attributed on this page to EPA 40 CFR Part 98. That
+                publication carries no fertilizer manufacturing factors, so the
+                attribution was withdrawn. These two are Trazo estimates, not
+                agency figures, and they are deliberately set at the
+                conservative end: published work puts phosphorus production at
+                1.0&ndash;1.5 kg CO&#8322;e per kg P&#8322;O&#8325; (Walling
+                &amp; Vaneeckhaute 2020), and European figures for both run
+                lower still (Brentrup et al. 2018). We would rather overstate
+                our own footprint than understate it. The nitrogen and fuel
+                factors are unaffected and remain agency-published.
+              </p>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
                 Chemical Manufacturing
