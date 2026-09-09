@@ -690,7 +690,14 @@ export default function PrivacyPolicyPage() {
                   compliance)
                 </li>
                 <li>
-                  <strong>Usage Analytics:</strong> 2 years
+                  <strong>Product Analytics:</strong> 1 year &mdash; which
+                  screens were opened and which actions were taken, held by
+                  PostHog
+                </li>
+                <li>
+                  <strong>Session Replay:</strong> 30 days &mdash; masked
+                  recordings, deleted automatically by PostHog once the period
+                  ends
                 </li>
                 <li>
                   <strong>Security Logs:</strong> 1 year
