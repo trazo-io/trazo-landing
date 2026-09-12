@@ -1,0 +1,41 @@
+name: Claude Code Review
+
+# COST NOTE: this repo merges ~2 PRs/day. `synchronize` is deliberately NOT a trigger —
+# reviewing every push multiplies runs by the number of pushes per PR (3-5x here) and
+# programmatic Claude usage bills at API rates against a separate monthly credit pool
+# (Anthropic, 2026-06-15), not against interactive plan limits. One review per PR.
+# Add the `skip-review` label to a PR to suppress it. Re-review on demand with
+# `@claude review this` (claude.yml), which costs nothing when you don't ask.
+
+on:
+  pull_request:
+    types: [opened, ready_for_review, reopened]
+
+jobs:
+  review:
+    if: "!contains(github.event.pull_request.labels.*.name, 'skip-review')"
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    concurrency:
+      group: claude-review-${{ github.event.pull_request.number }}
+      cancel-in-progress: true
+    permissions:
+      contents: read
+      pull-requests: read
+      issues: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 1
+
+      - uses: anthropics/claude-code-action@4169884de317bc1b4cb1b47f4476d76fed92b384 # v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          plugin_marketplaces: "https://github.com/anthropics/claude-code.git"
+          plugins: "code-review@claude-code-plugins"
+          prompt: "/code-review:code-review --comment ${{ github.repository }}/pull/${{ github.event.pull_request.number }}"
+          claude_args: >-
+            --model claude-sonnet-5
+            --max-budget-usd 1.50
+            --allowedTools "mcp__github_inline_comment__create_inline_comment"
