@@ -34,6 +34,14 @@ jobs:
           fetch-depth: 1
 
       - uses: anthropics/claude-code-action@4169884de317bc1b4cb1b47f4476d76fed92b384 # v1
+        env:
+          # The review skill delegates its gating checks and its 5 parallel reviewers to
+          # subagents. By default those run as BACKGROUND tasks, and a non-interactive turn
+          # ends without waiting for them: measured 2026-09-24, the run reported success in
+          # 16.5s for $0.09 after saying "I'll wait for those", with 2 task_started and
+          # 2 background_tasks_changed events and no review produced. This forces every
+          # subagent into the foreground so the turn waits for its own work.
+          CLAUDE_CODE_DISABLE_BACKGROUND_TASKS: "1"
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           plugin_marketplaces: "https://github.com/anthropics/claude-code.git"
