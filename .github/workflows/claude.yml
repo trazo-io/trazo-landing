@@ -39,6 +39,6 @@ jobs:
       - uses: anthropics/claude-code-action@4169884de317bc1b4cb1b47f4476d76fed92b384 # v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # `--max-budget-usd` removed here too: same unverified flag. See claude-code-review.yml.
           claude_args: >-
             --max-turns 40
-            --max-budget-usd 5.00
