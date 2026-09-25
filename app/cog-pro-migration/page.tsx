@@ -171,10 +171,10 @@ export default function CogProMigrationPage() {
               </p>
               <ul className="mt-4 space-y-3 leading-[1.8]">
                 <li>
-                  <strong className="text-foreground">Early November</strong> —
-                  renewal packets and annual-update forms go out. CCOF begins
-                  renewals November 3; Oregon Tilth posts renewal forms at the
-                  start of November.
+                  <strong className="text-foreground">Early November</strong>:
+                  renewal packets and annual-update forms go out. CCOF sent its
+                  renewal packages on November 3 last year; Oregon Tilth posts
+                  renewal forms at the start of November.
                 </li>
                 <li>
                   <strong className="text-foreground">December 31</strong> — COG
@@ -184,9 +184,9 @@ export default function CogProMigrationPage() {
                   at $750 per scope.
                 </li>
                 <li>
-                  <strong className="text-foreground">January–February</strong>{" "}
-                  — annual updates are due. CCOF January 1, PCO January 15, MOSA
-                  February 1, WSDA March 1.
+                  <strong className="text-foreground">January–March</strong>:
+                  annual updates are due. CCOF January 1, PCO January 15, WSDA
+                  March 1.
                 </li>
               </ul>
               <p className="mt-4 leading-[1.8]">
