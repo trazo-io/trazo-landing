@@ -10,8 +10,12 @@ import { CalendarClock } from "lucide-react"
  * with a date on it, so this section leads with dates rather than benefits.
  *
  * Every date below is published by the certifier or agency named. They vary by operation and
- * change year to year, so the closing line tells growers to confirm their own — a wrong date
+ * change year to year, so the closing line tells growers to confirm their own: a wrong date
  * presented confidently is worse than no date at all.
+ *
+ * 2026-09-25: "CCOF begins renewals November 3" was CCOF's 2025 date (its notice was published
+ * 2025-10-29 for the 2026 cycle), so it now reads "early November" with the year stated. MOSA is
+ * left out because it publishes two conflicting deadlines; add it back only once one is confirmed.
  *
  * The Common OSP paragraph uses the only permitted claim shape: USDA posted an OPTIONAL standard,
  * adoption is each certifier's decision, so we say "if your certifier adopts it — ask them" and
@@ -23,19 +27,19 @@ const milestones = [
     when: "Early November",
     what: "Renewal packets and annual-update forms go out",
     detail:
-      "CCOF begins renewals November 3. Oregon Tilth posts renewal forms at the start of November — for OTCO the renewal application is the OSP update.",
+      "CCOF renewal packages arrive in early November (November 3 in 2025). Oregon Tilth posts renewal forms at the start of November, and for OTCO the renewal application is the OSP update.",
   },
   {
     when: "December 31",
     what: "OCCSP application deadline",
     detail:
-      "The USDA Organic Certification Cost Share Program reimburses up to 75% of your certification costs, capped at $750 per scope — and the July 2026 rule put the 2025 and 2026 program years on the same December 31, 2026 deadline, so two years can be claimed at once. Same day COG Pro stops service.",
+      "The USDA Organic Certification Cost Share Program reimburses up to 75% of your certification costs, capped at $750 per scope. The July 2026 rule put the 2025 and 2026 program years (fees paid October 1, 2024 through September 30, 2026) on the same December 31, 2026 deadline, so two years can be claimed at once. Same day COG Pro stops service.",
   },
   {
     when: "January – April",
     what: "Annual updates are due",
     detail:
-      "CCOF January 1 · Oregon Tilth January 1 or April 1 · PCO January 15 · OEFFA February 15 · NOFA-NY February 28 · WSDA March 1 · MOSA April 1.",
+      "CCOF January 1 · Oregon Tilth January 1 or April 1 (assigned by Tilth) · PCO January 15 · OEFFA February 15 · NOFA-NY February 28 · WSDA March 1.",
   },
   {
     when: "April – November",

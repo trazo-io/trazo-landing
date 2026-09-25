@@ -388,15 +388,15 @@ export const posts: BlogPost[] = [
 <p>January is when most annual update deadlines land, though the exact date depends entirely on your certifying agent. As typical recent deadlines, several major certifiers have followed a pattern like this, though you should confirm your own certifier's current dates directly:</p>
 
 <ul>
-<li><strong>CCOF:</strong> the annual update window has typically opened November 3, with updates due January 1.</li>
+<li><strong>CCOF:</strong> renewal packages arrive in early November (November 3 in 2025), with renewals due January 1.</li>
 <li><strong>Pennsylvania Certified Organic (PCO):</strong> annual updates have typically been due January 15.</li>
-<li><strong>Oregon Tilth Certified Organic (OTCO):</strong> deadlines have typically fallen around January 1 or April 1, depending on the program and scope.</li>
+<li><strong>Oregon Tilth Certified Organic (OTCO):</strong> each operation is assigned a renewal date of either January 1 or April 1.</li>
 </ul>
 
 <p>If you are certified through a smaller or regional certifier not listed here, ask directly when their window opens. Certifiers publish these dates on their own websites and can adjust them from year to year.</p>
 
 <h2>February – April: OEFFA, NOFA-NY, WSDA and MOSA</h2>
-<p>The second cluster runs through late winter. OEFFA annual updates have typically been due February 15 and NOFA-NY February 28. Washington State Department of Agriculture (WSDA) &mdash; the certifier for most of Washington&rsquo;s organic tree fruit &mdash; has typically set March 1, and Midwest Organic Services Association (MOSA) April 1, the same day Oregon Tilth&rsquo;s second cohort falls due. If you are certified through one of these, or you are catching up after missing an earlier window with another certifier, these are the last realistic dates to get a complete update in before inspection scheduling tightens for the season. Dates move from year to year &mdash; confirm yours on your certifier&rsquo;s own page.</p>
+<p>The second cluster runs through late winter. OEFFA annual updates have typically been due February 15 and NOFA-NY February 28. Washington State Department of Agriculture (WSDA) &mdash; the certifier for most of Washington&rsquo;s organic tree fruit &mdash; has typically set March 1 for every operation it certifies. Midwest Organic Services Association (MOSA) has published more than one deadline, so confirm yours with MOSA directly. Oregon Tilth&rsquo;s second cohort falls due April 1. If you are certified through one of these, or you are catching up after missing an earlier window with another certifier, these are the last realistic dates to get a complete update in before inspection scheduling tightens for the season. Dates move from year to year &mdash; confirm yours on your certifier&rsquo;s own page.</p>
 <h2>What a Complete Annual Update Actually Contains</h2>
 
 <p>An annual update is not just a form. Certifiers are looking for a complete picture of what changed and what stayed the same since your last inspection. A complete submission generally includes:</p>
@@ -419,12 +419,12 @@ export const posts: BlogPost[] = [
 
 <ol>
 <li><strong>October:</strong> Reconcile harvest and sales. Close out chemical and input logs for the season. Attach receipts.</li>
-<li><strong>November:</strong> Gather receipts and invoices for OCCSP. If your certifier's window opens this month (CCOF's has typically opened November 3), start your annual update early rather than waiting for the deadline.</li>
+<li><strong>November:</strong> Gather receipts and invoices for OCCSP. If your certifier's window opens this month (CCOF's renewal packages arrived November 3 in 2025), start your annual update early rather than waiting for the deadline.</li>
 <li><strong>December:</strong> Submit your OCCSP cost-share application before December 31. Finish any outstanding OSP updates.</li>
 <li><strong>January:</strong> Submit your annual update by your certifier's deadline. Pull your five-year record archive together in case an inspection is scheduled early in the year.</li>
 <li><strong>February:</strong> OEFFA (February 15) and NOFA-NY (February 28) have typically fallen here. Catch up on anything still outstanding from January.</li>
-<li><strong>March:</strong> WSDA&rsquo;s annual update has typically been due March 1 &mdash; if you are certified in Washington, this is your date.</li>
-<li><strong>April:</strong> MOSA and OTCO&rsquo;s second window have typically fallen around April 1. Use this stretch to prepare for on-site inspection scheduling, which usually ramps up through the growing season.</li>
+<li><strong>March:</strong> WSDA&rsquo;s annual update has typically been due March 1. If WSDA certifies you, this is your date.</li>
+<li><strong>April:</strong> Oregon Tilth&rsquo;s second cohort falls due April 1. Use this stretch to prepare for on-site inspection scheduling, which usually ramps up through the growing season.</li>
 </ol>
 
 <p>Trazo assembles a renewal packet from the season's logged events. Instead of building the update from scratch every January, the input applications, harvest records, and OSP-relevant events documented through the year are already organized by field and date. The Starter plan is free. <a href="https://app.trazo.io/auth/signup" target="_blank" rel="noopener noreferrer">See how the packet comes together</a> before this year's deadlines hit.</p>
