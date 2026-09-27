@@ -76,8 +76,9 @@ single claim is checked.
   each file.
 - **No booster adjectives without a measurement**: robust, seamless, comprehensive, powerful,
   cutting-edge, game-changing, elevate, unlock, streamline, leverage, "navigate the
-  complexities", "landscape", "realm", "testament to". Most are also unquantified benefit
-  claims, which is the 16 CFR 260.4 shape banned above.
+  complexities", "landscape", "realm", "testament to". When one of these describes a
+  sustainability/environmental claim, it's the unquantified 16 CFR 260.4 shape banned above;
+  elsewhere it's still weak, unsubstantiated marketing copy.
 - **No "not just X, it's Y"** construction. No "In today's fast-paced world".
 - **No tricolon padding**: three adjectives where one is true and sourced.
 
