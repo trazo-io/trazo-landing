@@ -67,6 +67,21 @@ Operation lands at 8 farms.
 - Use **™** (not ® until registered). Entity name is **"Trazo"** only — no Inc./LLC until formed.
   Contact emails are @trazo.io (legal@, privacy@, support@).
 
+## Prose style: no AI tells
+This is public marketing copy, so prose that reads as machine-written costs trust before a
+single claim is checked.
+- **NEVER the em dash `—`** in shipped copy. Use a comma, a colon, parentheses, or a full
+  stop. (En dash `–` stays legal inside numeric ranges.) MEASURED 2026-09-12: **219 em
+  dashes across 34 files** in `app/` + `components/`. Do not add more; fix them as you touch
+  each file.
+- **No booster adjectives without a measurement**: robust, seamless, comprehensive, powerful,
+  cutting-edge, game-changing, elevate, unlock, streamline, leverage, "navigate the
+  complexities", "landscape", "realm", "testament to". When one of these describes a
+  sustainability/environmental claim, it's the unquantified 16 CFR 260.4 shape banned above;
+  elsewhere it's still weak, unsubstantiated marketing copy.
+- **No "not just X, it's Y"** construction. No "In today's fast-paced world".
+- **No tricolon padding**: three adjectives where one is true and sourced.
+
 ## Legal pages
 Privacy Policy, Terms of Service, Cookie Policy all live here. Cookie consent banner on all
 pages; the footer "Cookie Preferences" link re-triggers it. Cookie Policy at `/cookie-policy`.
