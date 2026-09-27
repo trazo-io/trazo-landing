@@ -13,7 +13,8 @@ positioning": there is no score, and "premium positioning" is a pricing-outcome 
 ### Mandatory checklist before ANY sustainability claim
 1. Is the statistic sourced (publication, year, author)? No fabricated attributions.
 2. Does it imply third-party verification? Only claim "verified" for USDA Organic DB matches.
-3. Does it promise pricing outcomes? "positioning", never "earn premium prices" / "20-40% premium".
+3. Does it promise pricing outcomes? No price or premium claims: never "premium positioning",
+   "earn premium prices" or "20-40% premium".
 4. Would it survive FTC scrutiny — **16 CFR 260.4** (the catch-all for any unquantified
    "sustainable/eco/green" claim), **260.6** for certifications and seals, **260.6(d)** for a seal
    that does not convey its own basis?
@@ -23,7 +24,7 @@ positioning": there is no score, and "premium positioning" is a pricing-outcome 
 | Emission factors | per input class (see below) | "USDA Verified", "USDA Certified", a blanket "EPA/USDA-sourced" |
 | Blockchain | "blockchain-recorded", "tamper-proof" | "blockchain-verified" |
 | Certifications | "Verified via USDA Organic Integrity Database" (DB matches only) | "Certified by Trazo" |
-| Market positioning | "premium positioning through transparency" | "earn premium prices" |
+| Market positioning | product outcomes: "less time at inspection" | "premium positioning", "earn premium prices" |
 | Carbon | "direct operational emissions" + the manufacturing half | "carbon footprint" (implies full LCA), "carbon neutral" |
 
 Regulators: **FTC Green Guides** 16 CFR 260, $50K+/violation (Truly Organic precedent $1.76M) ·
