@@ -22,7 +22,7 @@ export default function TermsOfServicePage() {
               Terms and conditions governing use of the Trazo platform.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Last updated: August 25, 2026
+              Last updated: September 27, 2026
             </p>
           </header>
 
@@ -305,6 +305,19 @@ export default function TermsOfServicePage() {
                 <li>
                   Use automated tools to scrape or access the Platform without
                   permission
+                </li>
+                <li>
+                  Access or use the Platform to build, benchmark or support a
+                  competing product or service, or to copy its features,
+                  content, workflows or design for that purpose. Employees,
+                  contractors and agents of a business that offers a competing
+                  product may not open or use an account without our prior
+                  written consent
+                </li>
+                <li>
+                  Reverse engineer, decompile or disassemble any part of the
+                  Platform, except to the extent applicable law expressly
+                  permits it
                 </li>
                 <li>
                   Violate any applicable laws or regulations
