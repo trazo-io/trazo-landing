@@ -696,6 +696,14 @@ export default function TermsOfServicePage() {
                 For questions about these Terms, contact us at:
               </p>
               <div className="mt-4 rounded-xl border border-border bg-secondary/30 p-6">
+                <p className="font-semibold text-foreground">Contracting Entity</p>
+                <p className="mt-1 leading-[1.8]">
+                  Trazo is operated by Oscar Mu&ntilde;oz SAS, a{" "}
+                  <em>sociedad por acciones simplificada</em> registered in
+                  Uruguay, RUT 219072920010.
+                </p>
+              </div>
+              <div className="mt-4 rounded-xl border border-border bg-secondary/30 p-6">
                 <p className="font-semibold text-foreground">Legal Inquiries</p>
                 <p className="mt-1 leading-[1.8]">
                   Email:{" "}

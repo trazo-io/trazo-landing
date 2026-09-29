@@ -99,6 +99,13 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Trazo",
+  // The REGISTERED entity behind the brand, machine-readable. `name` is the trademark and is not a
+  // legal person; `legalName` and `taxID` are the schema.org properties for the company that
+  // actually contracts with users, and automated checks read structured data before prose.
+  // NOTE: no `address` on purpose. The SAS is registered at a residential address, an email is an
+  // accepted contact element, and the RUT is what ties this site to the registration document.
+  legalName: "Oscar Mu\u00f1oz SAS",
+  taxID: "219072920010",
   url: "https://www.trazo.io",
   logo: "https://www.trazo.io/images/logo-green.png",
   // Structured data, so this is what Google is handed directly — the OSP-authoring claim was

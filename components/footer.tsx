@@ -123,8 +123,29 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row">
+          {/*
+            WHO YOU ARE CONTRACTING WITH, named on every page.
+
+            The site identified nobody: "Trazo" is a trademark, not a legal person, so the Terms
+            were an agreement with no counterparty and the Privacy Policy named no data controller.
+            GDPR Art. 13 requires the controller's identity and contact details, and Meta's business
+            verification checks that the legal name on the registration document is visible on the
+            website being matched against it.
+
+            NO POSTAL ADDRESS, deliberately. The SAS is registered at a residential address, an
+            email is an accepted contact element, and the RUT is what ties this site to the
+            registration document without publishing where somebody lives. The address still has to
+            match inside Meta Business Manager, which is a private field.
+          */}
           <p className="text-xs text-muted-foreground">
-            &copy; 2026 Trazo&trade;. All rights reserved.
+            &copy; 2026 Trazo&trade;. A product of Oscar Mu&ntilde;oz SAS, RUT
+            219072920010.{" "}
+            <a
+              href="mailto:support@trazo.io"
+              className="transition-colors hover:text-primary"
+            >
+              support@trazo.io
+            </a>
           </p>
           <div className="flex items-center gap-6">
             <a

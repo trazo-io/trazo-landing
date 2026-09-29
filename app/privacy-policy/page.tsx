@@ -946,6 +946,14 @@ export default function PrivacyPolicyPage() {
                 exercise your privacy rights, please contact us:
               </p>
               <div className="mt-4 rounded-xl border border-border bg-secondary/30 p-6">
+                <p className="font-semibold text-foreground">Data Controller</p>
+                <p className="mt-1 leading-[1.8]">
+                  Trazo is operated by Oscar Mu&ntilde;oz SAS, a{" "}
+                  <em>sociedad por acciones simplificada</em> registered in
+                  Uruguay, RUT 219072920010.
+                </p>
+              </div>
+              <div className="mt-4 rounded-xl border border-border bg-secondary/30 p-6">
                 <p className="font-semibold text-foreground">
                   Privacy Inquiries
                 </p>
