@@ -25,7 +25,7 @@ export const posts: BlogPost[] = [
     readTime: "9 min read",
     title: "Who Writes It Down: The Relay Between the Block and Your Records",
     excerpt:
-      "On most farms the first record of the day is a message from someone in the field, retyped into a spreadsheet at night and retyped again at renewal. Two federal rules and one state rule decide who has to sign it, and they are not the ones usually quoted. What the relay can carry, what it cannot, and the one field that goes wrong every time.",
+      "On most farms the first record of the day is a message from someone in the field, retyped into a spreadsheet at night and retyped again at renewal. One federal rule and one state rule decide who has to sign it, and it is not the one usually quoted. What the relay can carry, what it cannot, and the one field that goes wrong every time.",
     image: "/images/blog-organic-records.jpg",
     content: `
 <p>Ask a grower how yesterday&rsquo;s irrigation got into their records and you rarely hear about software. You hear about a chain. Someone in the block finishes a task and sends a message. A supervisor reads it that evening and types it into a spreadsheet. Months later, at renewal, somebody reads the spreadsheet and types the relevant parts into a plan or a workbook.</p>
@@ -42,7 +42,7 @@ export const posts: BlogPost[] = [
 
 <p>Read those two paragraphs together and something useful falls out. The relay is not a workaround the rule tolerates. It is roughly the shape the rule expects: the person who did the work attests, and a supervisor reviews. What the rule does not tolerate is the retyping in the middle, where the attestation quietly becomes the supervisor&rsquo;s recollection of somebody else&rsquo;s message.</p>
 
-<p>The records Part 112 binds this way are a bounded set, and they line up closely with what a crew can report: worker training (112.30), agricultural water (112.50), animal intrusion (112.60), and equipment and tool cleaning and sanitizing (112.140).</p>
+<p>The records Part 112 binds this way are a bounded set, and they line up closely with what a crew can report: worker training (112.30), agricultural water (112.50), biological soil amendments of animal origin such as compost and manure (112.60), and equipment and tool cleaning and sanitizing (112.140).</p>
 
 <h3>Whether it applies to you, which surprises people</h3>
 
@@ -66,7 +66,7 @@ export const posts: BlogPost[] = [
 
 <p>Messaging is where the first honest account of the day already lives on a great many farms. It is worth being precise about what that means.</p>
 
-<p><strong>It is transport, never the file.</strong> Meta retains WhatsApp messages on the order of 30 days. Organic records need five years and Washington spray records need seven. A message thread is where a record starts, in exactly the way speech is where a dictated record starts. Whatever has to survive an inspection has to be somewhere else by the time the thread rolls over.</p>
+<p><strong>It is transport, never the file.</strong> WhatsApp deletes a message from its servers as soon as it is delivered, and holds it at most 30 days only while it is still trying. So the only lasting copy is the one on the two phones. Organic records need five years and Washington spray records need seven. A message thread is where a record starts, in exactly the way speech is where a dictated record starts, and whatever has to survive an inspection has to be somewhere else before that phone is lost, replaced or wiped.</p>
 
 <p><strong>Photos lose the part that made them worth having.</strong> A camera writes the capture time and often the GPS position into the image file as EXIF data. Messaging apps re-compress photos on the way out and the new file does not carry that metadata forward. A photo texted to the office is still a photo, but it is no longer evidence of when and where. If a photo is doing real work in your records, move the original file, not a forwarded copy.</p>
 
@@ -95,7 +95,7 @@ export const posts: BlogPost[] = [
 
 <h2>Where Trazo sits in this</h2>
 
-<p>Trazo is where the chain ends: one entry, logged by voice or a short form, in English or Spanish, on a phone in the block or at a desk. The same entry becomes the certifier record, the evidence behind the plan&rsquo;s answers, and the buyer&rsquo;s page, so nothing is retyped to make the next document.</p>
+<p>Trazo is where the chain ends: one entry, logged by voice or a short form, in English or Spanish, on a phone in the block or at a desk. The same entry becomes the certifier record, the evidence behind the plan&rsquo;s answers, and, only if you publish the season, the page a buyer can scan. Nothing is retyped to make the next document.</p>
 
 <p>Two things it does on purpose. A suggestion is never a record: anything read out of speech or text is offered, and a person picks the activity and the date and saves it under their own name. And the date is never filled in for you on an entry that came from somebody else&rsquo;s words. Those are not features so much as the only defensible way to build the thing.</p>
 
