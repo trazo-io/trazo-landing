@@ -329,9 +329,8 @@ export function DualOutput() {
                 The record above is one row on this page. A buyer scanning the
                 tag on the carton lands here: the farm, the lot, the harvest
                 date, and every practice you documented across the season
-                &mdash; counted, not graded. Trazo does not award your farm a
-                score, and no self-assigned rating appears anywhere a buyer can
-                see.
+                &mdash; counted, not graded. Trazo does not grade your farm, and
+                no self-assigned rating appears anywhere a buyer can see.
               </p>
               <p className="mt-3 leading-relaxed text-muted-foreground">
                 The same page estimates the season&rsquo;s direct farm emissions

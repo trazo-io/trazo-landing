@@ -32,10 +32,13 @@ const RULES = [
     find: (text) => [...text.matchAll(/\bthe score\b/gi)].map((m) => m.index),
   },
   {
-    name: '"transparency score" / "carbon score"',
+    name: '"score"',
     reason:
-      "Retired concepts, not hidden ones. Naming them, even to say they were removed, keeps them alive on the site.",
-    find: (text) => [...text.matchAll(/\b(transparency|carbon) scores?\b/gi)].map((m) => m.index),
+      "The transparency and carbon scores are retired concepts, not hidden ones. Naming them, even to deny or to say they were removed, keeps them alive on the site. Say what Trazo shows (counts, documents), or use grade/rating for the denial.",
+    find: (text) => [...text.matchAll(/\bscor(e|es|ed|ing)\b/gi)].map((m) => m.index),
+    // The legal pages' "no score, grade, tier or badge" lists wait on a Terms-version decision
+    // (the backend records terms_version at sign-up). Remove these once that wording changes.
+    allow: ["app/terms-of-service/page.tsx", "app/privacy-policy/page.tsx"],
     // Code comments explaining a removal are for maintainers and never render.
     skipComments: true,
   },

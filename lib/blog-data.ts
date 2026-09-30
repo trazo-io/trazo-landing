@@ -236,7 +236,7 @@ export const posts: BlogPost[] = [
 
 <h2>How Your Documenting Leads to Transparency</h2>
 
-<p>Each entry you make fills in more of the record your certifier will ask for at renewal — and more of the story a buyer can read. There is no grade attached to it: Trazo does not assign your farm a score, and no self-assigned rating appears on the page a buyer sees.</p>
+<p>Each entry you make fills in more of the record your certifier will ask for at renewal — and more of the story a buyer can read. There is no grade attached to it, and no self-assigned rating appears on the page a buyer sees.</p>
 
 <p>A consumer who scans your QR code sees your documented farming practices, photos, and certifications alongside your farm and product information — the facts you recorded, not a verdict we invented about them.</p>
 

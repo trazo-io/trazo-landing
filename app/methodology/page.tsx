@@ -56,7 +56,7 @@ export default function MethodologyPage() {
                 operator, as § 205.201(a) requires. Second,{" "}
                 <strong>readiness checks</strong>: completeness measurements
                 computed over those records — each one naming a specific
-                document or record that is missing, never a score or grade.
+                document or record that is missing, never a grade.
                 Third, the{" "}
                 <strong>emission calculations</strong>: emissions from the
                 operation&apos;s own activity — the fuel and electricity it burns
@@ -869,11 +869,11 @@ export default function MethodologyPage() {
                 </li>
                 <li>
                   <strong>EU regulatory status:</strong> Under the EU Directive
-                  2024/825 (effective September 2026), a self-created
-                  sustainability score shown to consumers could be classified as
-                  a self-created sustainability label. Trazo therefore assigns no
-                  score, grade or rating of any kind — there is no number to
-                  publish or withhold. Consumers see the documented practices and
+                  2024/825 (effective September 2026), a self-assigned grade or
+                  rating shown to consumers could be classified as a
+                  self-created sustainability label. Trazo therefore assigns no
+                  grade or rating of any kind: there is no number to publish or
+                  withhold. Consumers see the documented practices and
                   third-party certifications directly. Full EU substantiation may
                   still require external methodology audit.
                 </li>
