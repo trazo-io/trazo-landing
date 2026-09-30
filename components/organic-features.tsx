@@ -44,7 +44,7 @@ const organicFeatures = [
     icon: Scale,
     title: "Mass-Balance & Trace-Back Reports",
     description:
-      "Every lot reconciles what you harvested against what you sold, with the balance printed, and traces from the sale back to the field, the picks, the inputs applied and the supplier records — the trail an inspector follows at the in/out audit.",
+      "Each lot shows what you harvested against what you sold, with the balance printed, and links the sale back to the field, the picks and the inputs you logged. That is the trail an inspector follows at the in/out audit.",
   },
   {
     icon: History,
@@ -74,9 +74,9 @@ const organicFeatures = [
     icon: Archive,
     title: "5-Year Record Retention",
     description:
-      // Five years IS the NOP minimum (7 CFR 205.103(b)(3)) — claiming to exceed it
+      // Five years IS the NOP minimum (7 CFR 205.103(b)(4)) — claiming to exceed it
       // was a wrong compliance claim on the block a certifier-literate reader trusts most.
-      "All event data, photos, and reports retained for 5 years, matching the NOP retention requirement at 7 CFR 205.103(b)(3) and aligned with USDA audit windows.",
+      "All event data, photos, and reports retained for 5 years, matching the NOP retention requirement at 7 CFR 205.103(b)(4) and aligned with USDA audit windows.",
   },
 ];
 
@@ -94,8 +94,8 @@ export function OrganicFeatures() {
             </h2>
             <p className="mt-4 text-base text-muted-foreground">
               Designed to meet NOP recordkeeping requirements (7 CFR 205.103).
-              The records you already keep become inspection-ready
-              documentation. What used to take a binder week now takes an
+              The records you already keep become documentation you can
+              hand to your inspector. What used to take a binder week now takes an
               afternoon.
             </p>
           </div>

@@ -78,7 +78,7 @@ export default function DemoPage() {
 
           <p className="mt-6 text-sm text-muted-foreground">
             Trazo doesn&apos;t certify your farm. Your certifier does. Trazo gets you to the table
-            with complete records: the readiness checks are ours, the findings are your
+            with the records you logged: the readiness checks are ours, the findings are your
             certifier&apos;s.
           </p>
 

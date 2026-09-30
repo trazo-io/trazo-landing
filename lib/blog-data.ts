@@ -305,7 +305,7 @@ export const posts: BlogPost[] = [
 
 <p>Under SOE, certifiers must now conduct unannounced inspections of at least 5 percent of certified operations, with no more than four hours notice. Mass-balance audits and traceback audits are now standard. Penalties can reach over $20,000 per violation.</p>
 
-<p>This means record-keeping is no longer something you prepare for once a year before your inspector arrives. It must be continuous, consistent, and audit-ready at any time.</p>
+<p>This means record-keeping is no longer something you prepare for once a year before your inspector arrives. It must be continuous, consistent, and ready to show at any time.</p>
 
 <h2>How Digital Documentation Changes the Equation</h2>
 
@@ -364,7 +364,7 @@ export const posts: BlogPost[] = [
 
 <h2>What the Shutdown Actually Means for Your Records</h2>
 
-<p>Under 7 CFR 205.103, certified operations must maintain records that fully disclose all activities and transactions, and those records must be kept for not less than five years beyond their creation (7 CFR 205.103(b)(3)). That requirement does not pause because a software vendor closes its doors. If an inspector asks for an input application from three years ago and your only copy lived inside a platform that no longer exists, "the software shut down" is not an exemption.</p>
+<p>Under 7 CFR 205.103, certified operations must maintain records that fully disclose all activities and transactions, and those records must be kept for not less than five years beyond their creation (7 CFR 205.103(b)(4)). That requirement does not pause because a software vendor closes its doors. If an inspector asks for an input application from three years ago and your only copy lived inside a platform that no longer exists, "the software shut down" is not an exemption.</p>
 
 <p>That makes this a five-year problem, not a one-year problem. Every application log, harvest record, and sales record that falls inside your rolling five-year window needs to come out, and needs to land somewhere you control, in a format you can still read after the account is closed.</p>
 
@@ -385,7 +385,7 @@ export const posts: BlogPost[] = [
 
 <h2>Step 2: Verify Your Date Ranges Cover Five Years</h2>
 
-<p>This is the step most growers skip. It is common to export "this year" or "the last 12 months" and assume that is enough. It is not. Because 7 CFR 205.103(b)(3) requires five years of retrievable records, your export needs to reach back five full years from today, not just cover the current certification cycle.</p>
+<p>This is the step most growers skip. It is common to export "this year" or "the last 12 months" and assume that is enough. It is not. Because 7 CFR 205.103(b)(4) requires five years of retrievable records, your export needs to reach back five full years from today, not just cover the current certification cycle.</p>
 
 <p>If your farm has used COG Pro for fewer than five years, export everything from day one. If you have used it longer, pull the full five-year trailing window at minimum. A gap in your export is a gap you will have to explain to an inspector later, and "the export tool only defaulted to one year" is a weak answer to give.</p>
 
@@ -493,7 +493,7 @@ export const posts: BlogPost[] = [
 <li><strong>A current input list.</strong> Every product you intend to use this season, checked against the National List.</li>
 <li><strong>Land-history changes.</strong> New leases, new acreage, or changes to how adjoining land is used.</li>
 <li><strong>New parcels and buffer documentation.</strong> If you added ground, or your neighbors changed what they are growing next to you, your buffer zone documentation under 7 CFR 205.202(c) needs to reflect it.</li>
-<li><strong>Records ready for inspection.</strong> Not summarized, not reconstructed from memory: the actual application logs, harvest records, and sales records an inspector can review, kept on file per the five-year retention requirement at 7 CFR 205.103(b)(3). For a deeper look at what inspectors actually review, see our guide to <a href="/blog/what-your-organic-inspector-actually-checks">what your organic inspector checks</a>.</li>
+<li><strong>Records ready for inspection.</strong> Not summarized, not reconstructed from memory: the actual application logs, harvest records, and sales records an inspector can review, kept on file per the five-year retention requirement at 7 CFR 205.103(b)(4). For a deeper look at what inspectors actually review, see our guide to <a href="/blog/what-your-organic-inspector-actually-checks">what your organic inspector checks</a>.</li>
 </ul>
 
 <h2>Why Updates Get Delayed</h2>
@@ -565,13 +565,13 @@ export const posts: BlogPost[] = [
 
 <h2>The Five-Year Rule Behind All of It</h2>
 
-<p>Every record above is only useful if it is still there when someone asks for it. 7 CFR 205.103 requires certified operations to keep records that fully disclose all activities and transactions, and 205.103(b)(3) sets the retention period at not less than five years beyond their creation. Records also have to be "readily auditable," meaning organized enough that anyone reviewing them can actually find what is being asked for. A drawer of receipts in date order counts. A box nobody has sorted since last season does not, even if every piece of paper is technically in it somewhere. Our guide to <a href="/blog/organic-record-keeping-guide">organic record-keeping under NOP</a> covers the full recordkeeping requirement in more depth.</p>
+<p>Every record above is only useful if it is still there when someone asks for it. 7 CFR 205.103 requires certified operations to keep records that fully disclose all activities and transactions, and 205.103(b)(4) sets the retention period at not less than five years beyond their creation. Records also have to be "readily auditable," meaning organized enough that anyone reviewing them can actually find what is being asked for. A drawer of receipts in date order counts. A box nobody has sorted since last season does not, even if every piece of paper is technically in it somewhere. Our guide to <a href="/blog/organic-record-keeping-guide">organic record-keeping under NOP</a> covers the full recordkeeping requirement in more depth.</p>
 
 <h2>A Simple Way to Prepare</h2>
 
 <p>Before your next inspection, walk through the five areas above and pull the relevant records into one place for each: input applications, seed sourcing, buffer documentation, harvest-to-sale records, and equipment cleanout logs. Doing this the same week you close out your <a href="/blog/organic-renewal-season-calendar">annual update</a> means you are not repeating the work twice. If you can hand over the record that answers each question without reconstructing it on the spot, the inspection moves fast. If you are searching for one of these mid-inspection, that gap is exactly what a finding looks like.</p>
 
-<p>Trazo's event forms are built around these same five questions. Each entry asks for the field, the date, and the specific details a certifier will look for, so the record exists in the form an inspector wants it, not just in a form you happen to remember writing. The Starter plan is free. <a href="https://app.trazo.io/auth/signup" target="_blank" rel="noopener noreferrer">See how a logged event becomes an inspection-ready record</a>.</p>
+<p>Trazo's event forms are built around these same five questions. Each entry asks for the field, the date, and the specific details a certifier will look for, so the record exists in the form an inspector wants it, not just in a form you happen to remember writing. The Starter plan is free. <a href="https://app.trazo.io/auth/signup" target="_blank" rel="noopener noreferrer">See how a logged event becomes a record your inspector can read</a>.</p>
     `,
   },
 ];

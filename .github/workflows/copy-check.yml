@@ -1,0 +1,25 @@
+name: Copy check
+
+# The site has no tests. This runs scripts/check-copy.mjs, a list of phrases the site must not
+# publish, each with the reason it was removed (OSP alignment audit 2026-10, T30). No install
+# step: the script uses only Node's standard library, so the job takes seconds.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  copy:
+    name: Copy check
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/check-copy.mjs

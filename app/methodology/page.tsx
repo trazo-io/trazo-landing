@@ -39,7 +39,7 @@ export default function MethodologyPage() {
               scrutiny and reproducibility.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Version 2.0 &middot; August 2026 &middot; License: CC BY 4.0
+              Version 2.1 &middot; September 2026 &middot; License: CC BY 4.0
             </p>
           </header>
 
@@ -137,7 +137,9 @@ export default function MethodologyPage() {
                   Organic Integrity Database (36,000+ operations) using fuzzy
                   string matching at a 90% confidence threshold. Results display
                   as &quot;Verified via USDA Organic Integrity Database&quot;
-                  (green badge) or &quot;Self-Reported&quot; (gray badge).
+                  (green badge) or &quot;Self-Reported&quot; (gray badge). A
+                  verified badge is a name match against the database at a 90%
+                  threshold, not an inspection.
                 </li>
                 <li>
                   <strong>Regional irrigation defaults:</strong> Irrigation
@@ -838,8 +840,8 @@ export default function MethodologyPage() {
                   </em>
                 </li>
                 <li>
-                  <strong>Documentation completeness, not quality:</strong> The
-                  score measures how many events were documented, not whether
+                  <strong>Documentation completeness, not quality:</strong> These
+                  counts measure how many events were documented, not whether
                   the documented practices are good or sustainable.
                 </li>
                 <li>
@@ -1070,7 +1072,7 @@ export default function MethodologyPage() {
                   with attribution
                 </li>
                 <li>
-                  <strong>Version:</strong> 1.1 (April 2026)
+                  <strong>Version:</strong> 2.1 (September 2026)
                 </li>
               </ul>
               <p className="mt-4 leading-[1.8]">
@@ -1094,9 +1096,8 @@ export default function MethodologyPage() {
                 </p>
                 <p className="mt-1 text-sm leading-[1.8]">
                   Emission factors are reviewed annually against updated
-                  EPA/USDA publications. Scoring methodology undergoes review on
-                  a semi-annual basis. All updates are documented in the version
-                  history below.
+                  EPA/USDA publications. All updates are documented in the
+                  version history below.
                 </p>
               </div>
               <div className="mt-4 border-t border-border pt-4">
@@ -1119,6 +1120,25 @@ export default function MethodologyPage() {
                       </tr>
                     </thead>
                     <tbody>
+                      <tr className="border-b border-border/50">
+                        <td className="py-1 pr-4">2.1</td>
+                        <td className="py-1 pr-4">September 2026</td>
+                        <td className="py-1">
+                          Transparency score, its weights and formula removed;
+                          carbon boundary restated to include the manufacturing
+                          of purchased fertilizer and chemicals; electricity
+                          factor corrected; the limit of a USDA database match
+                          stated beside the badge
+                        </td>
+                      </tr>
+                      <tr className="border-b border-border/50">
+                        <td className="py-1 pr-4">2.0</td>
+                        <td className="py-1 pr-4">August 2026</td>
+                        <td className="py-1">
+                          Rewritten around the records model: dated,
+                          parcel-linked activity records following 7 CFR 205.103
+                        </td>
+                      </tr>
                       <tr className="border-b border-border/50">
                         <td className="py-1 pr-4">1.1</td>
                         <td className="py-1 pr-4">April 2026</td>

@@ -206,7 +206,7 @@ export function DualOutput() {
                   </span>
                 </div>
                 <h3 className="text-lg font-bold text-foreground">
-                  The full regulated record
+                  The regulated record, as you logged it
                 </h3>
                 <p className="mx-auto mt-1 max-w-[300px] text-sm text-muted-foreground">
                   Rate, area, target pest, re-entry and pre-harvest intervals,
