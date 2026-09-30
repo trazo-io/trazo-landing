@@ -32,6 +32,14 @@ const RULES = [
     find: (text) => [...text.matchAll(/\bthe score\b/gi)].map((m) => m.index),
   },
   {
+    name: '"transparency score" / "carbon score"',
+    reason:
+      "Retired concepts, not hidden ones. Naming them, even to say they were removed, keeps them alive on the site.",
+    find: (text) => [...text.matchAll(/\b(transparency|carbon) scores?\b/gi)].map((m) => m.index),
+    // Code comments explaining a removal are for maintainers and never render.
+    skipComments: true,
+  },
+  {
     name: '"complete records"',
     reason: "Trazo holds the records the operator logged. Completeness is the certifier's call, not a product claim.",
     find: (text) => [...text.matchAll(/\bcomplete records\b/gi)].map((m) => m.index),
@@ -54,6 +62,13 @@ const RULES = [
         .map((m) => m.index),
   },
 ];
+
+/** True when raw[index] sits inside a // line comment or a /* block comment *\/. */
+function inComment(raw, index) {
+  const lineStart = raw.lastIndexOf("\n", index) + 1;
+  if (raw.slice(lineStart, index).includes("//")) return true;
+  return raw.lastIndexOf("/*", index) > raw.lastIndexOf("*/", index);
+}
 
 function* files(dir) {
   for (const name of readdirSync(dir)) {
@@ -83,6 +98,7 @@ for (const top of SCAN) {
     for (const rule of RULES) {
       if (rule.allow?.includes(relative(ROOT, path))) continue;
       for (const at of rule.find(text)) {
+        if (rule.skipComments && inComment(raw, map[at])) continue;
         const line = raw.slice(0, map[at]).split("\n").length;
         findings.push(`${relative(ROOT, path)}:${line}  ${rule.name}\n    ${rule.reason}`);
       }

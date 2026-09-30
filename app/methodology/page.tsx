@@ -113,7 +113,7 @@ export default function MethodologyPage() {
               </p>
               <p className="mt-3 leading-[1.8]">
                 A design consequence worth stating: because Trazo measures{" "}
-                <em>documentation completeness</em> rather than scoring
+                <em>documentation completeness</em> rather than rating
                 environmental impact, a farm is never penalized for logging
                 more. More records mean a more complete file — for the
                 inspector, and for the buyer.
@@ -1124,8 +1124,8 @@ export default function MethodologyPage() {
                         <td className="py-1 pr-4">2.1</td>
                         <td className="py-1 pr-4">September 2026</td>
                         <td className="py-1">
-                          Transparency score, its weights and formula removed;
-                          carbon boundary restated to include the manufacturing
+                          Documentation shown as counts only; carbon boundary
+                          restated to include the manufacturing
                           of purchased fertilizer and chemicals; electricity
                           factor corrected; the limit of a USDA database match
                           stated beside the badge
