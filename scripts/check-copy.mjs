@@ -20,7 +20,7 @@ const RULES = [
   {
     name: "retention cited as 205.103(b)(3)",
     reason:
-      "Five-year retention is 7 CFR 205.103(b)(4). (b)(3) is audit-trail documentation and the labeling category (eCFR, read 2026-09-30).",
+      "Five-year retention is 7 CFR 205.103(b)(4). (b)(3) is audit-trail documentation and the labeling category. The Strengthening Organic Enforcement rule (88 FR 3621, Jan. 19, 2023) inserted that (b)(3) and renumbered the rest; copies of the CFR from before 2023 still show retention at (b)(3). Current eCFR read 2026-09-30.",
     find: (text) =>
       [...text.matchAll(/205\.103\(b\)\(3\)/g)]
         .filter((m) => RETENTION.test(text.slice(Math.max(0, m.index - 150), m.index + 150)))
