@@ -18,6 +18,93 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "who-writes-it-down-crew-records-relay",
+    category: "Guides",
+    date: "September 29, 2026",
+    datePublishedISO: "2026-09-29",
+    readTime: "9 min read",
+    title: "Who Writes It Down: The Relay Between the Block and Your Records",
+    excerpt:
+      "On most farms the first record of the day is a message from someone in the field, retyped into a spreadsheet at night and retyped again at renewal. Two federal rules and one state rule decide who has to sign it, and they are not the ones usually quoted. What the relay can carry, what it cannot, and the one field that goes wrong every time.",
+    image: "/images/blog-organic-records.jpg",
+    content: `
+<p>Ask a grower how yesterday&rsquo;s irrigation got into their records and you rarely hear about software. You hear about a chain. Someone in the block finishes a task and sends a message. A supervisor reads it that evening and types it into a spreadsheet. Months later, at renewal, somebody reads the spreadsheet and types the relevant parts into a plan or a workbook.</p>
+
+<p>Three hops, two retypings, and the only person who saw the work is at the far end of it. A certifier quoted in the OATS project put the middle of that chain plainly: spreadsheets are the most common form of recordkeeping seen on inspections.</p>
+
+<p>The chain is not sloppiness. It is what happens when the person who does the work and the person who owns the paperwork are different people, which on any operation with a crew they always are. What follows is what the rules actually require of that chain, what a messaging app can and cannot be inside it, and the one field that goes wrong nearly every time.</p>
+
+<h2>The rule that decides who signs is probably not the one you have been quoted</h2>
+
+<p>For organic, people reach for 7 CFR 205.201(a). That section is about the Organic System Plan and who authors it: the producer or handler. It does not say who may key a record. The recordkeeping section, 7 CFR 205.103(b), asks that records &ldquo;fully disclose all activities and transactions of the certified operation in sufficient detail as to be readily understood and audited,&rdquo; and that they &ldquo;be maintained for not less than 5 years beyond their creation.&rdquo; Detail, auditability, five years. Nothing about whose hands typed it.</p>
+
+<p>The rule that does bind authorship is the produce safety rule, 21 CFR 112.161. Its paragraph (a) requires records to be created when the activity is performed or observed, and to carry the date and the signature or initials of the person who performed the activity. Its paragraph (b) requires certain records to be reviewed, dated and signed within a reasonable time by a supervisor or responsible party.</p>
+
+<p>Read those two paragraphs together and something useful falls out. The relay is not a workaround the rule tolerates. It is roughly the shape the rule expects: the person who did the work attests, and a supervisor reviews. What the rule does not tolerate is the retyping in the middle, where the attestation quietly becomes the supervisor&rsquo;s recollection of somebody else&rsquo;s message.</p>
+
+<p>The records Part 112 binds this way are a bounded set, and they line up closely with what a crew can report: worker training (112.30), agricultural water (112.50), animal intrusion (112.60), and equipment and tool cleaning and sanitizing (112.140).</p>
+
+<h3>Whether it applies to you, which surprises people</h3>
+
+<p>Part 112 covers produce, with exemptions for the smallest operations and for produce on the rule&rsquo;s own &ldquo;rarely consumed raw&rdquo; list at 112.2(a)(1). That list is explicitly exhaustive, and it is worth reading before assuming you are outside it. Pecans, peanuts, hazelnuts and cashews are on it. <strong>Almonds, walnuts, apples and blueberries are not.</strong> A California walnut operation and a Washington apple operation are both looking at a rule many of their neighbours assume is somebody else&rsquo;s problem.</p>
+
+<h3>And one state rule that narrows the chain sharply</h3>
+
+<p>Spray records are different, and in Washington they are very different. WAC 16-228-1320 requires the licensed applicator&rsquo;s full name, certified applicator licence number, address and telephone number, the names of the individuals who performed the application, the product and EPA registration number, the amount and concentration, the acres treated, the crop or site, and the date, time, wind direction, wind velocity and temperature. Those records &ldquo;shall be kept for a period of seven years from the date of the application of the pesticide to which such records refer.&rdquo;</p>
+
+<p>That is an applicator-authored record with a licence number on it, retained two years longer than the organic file. It is not a thing to relay. Whoever holds the licence writes it, the same day, in whatever system holds it for seven years.</p>
+
+<h2>What the relay costs, honestly</h2>
+
+<p>We do not know, and we would rather say so than quote a number we cannot stand behind.</p>
+
+<p>The only public figure with a real methodology behind it is USDA&rsquo;s own Paperwork Reduction Act filing for the National Organic Program, which estimates on the order of 61 to 113 hours per respondent per year across its 2019 and 2023 submissions. Read the caveat with the number: respondents there include certifiers, inspectors, handlers and petitioners, not just farms. It is not hours per farm and nobody should present it as such.</p>
+
+<p>The other figures in circulation are from vendors, including ours, describing their own customers. Treat all of them the way you would treat any seller&rsquo;s arithmetic about your time.</p>
+
+<h2>What a messaging app can be in the chain, and what it cannot</h2>
+
+<p>Messaging is where the first honest account of the day already lives on a great many farms. It is worth being precise about what that means.</p>
+
+<p><strong>It is transport, never the file.</strong> Meta retains WhatsApp messages on the order of 30 days. Organic records need five years and Washington spray records need seven. A message thread is where a record starts, in exactly the way speech is where a dictated record starts. Whatever has to survive an inspection has to be somewhere else by the time the thread rolls over.</p>
+
+<p><strong>Photos lose the part that made them worth having.</strong> A camera writes the capture time and often the GPS position into the image file as EXIF data. Messaging apps re-compress photos on the way out and the new file does not carry that metadata forward. A photo texted to the office is still a photo, but it is no longer evidence of when and where. If a photo is doing real work in your records, move the original file, not a forwarded copy.</p>
+
+<p><strong>An automatic transcript is a working aid, not testimony.</strong> Speech recognition drops words, and the word it drops is sometimes the one that inverts the sentence. &ldquo;I applied nothing in block 4&rdquo; and &ldquo;I applied in block 4&rdquo; differ by one word that no reviewer downstream can detect, because they were not there. Anyone confirming a transcribed note should be able to hear the original, and typed text should be treated as verbatim in a way a transcript never is.</p>
+
+<h2>The field that goes wrong every time is the date</h2>
+
+<p>This is the one to take away even if you ignore everything else.</p>
+
+<p>A message from the field usually carries no date, because both people know what day it is. The record it becomes does carry a date, and whatever fills that field when nobody is watching is today. Clear three messages from Tuesday&rsquo;s work on a Friday evening and you now hold three records dated Friday.</p>
+
+<p>That is not a tidiness problem. It moves the re-entry interval and the pre-harvest interval. In California it moves the day on the Pesticide Use Report. And it puts a line in a certifier packet saying work happened on a day nobody was in the field, which is the single worst sentence a record can contain, because it is the one an inspector can disprove without leaving the room.</p>
+
+<p>The fix is unglamorous and it works: whoever authors the record answers the date deliberately, every time, and the system never answers it for them. If the message arrived Friday about Tuesday, someone types Tuesday.</p>
+
+<h2>Shortening the relay without buying anything</h2>
+
+<p>Four habits, worth more than most software:</p>
+
+<ol>
+<li><strong>One thing per message.</strong> A message covering three tasks on two blocks gets split by whoever retypes it, and splitting is where detail is lost.</li>
+<li><strong>Say the block, in the name the paperwork uses.</strong> Block names are the most common thing missing from a field report and the hardest to reconstruct later. In California the block is also what fills box 22 on the Pesticide Use Report.</li>
+<li><strong>Say the day if it is not today.</strong> See above. It is one word and it prevents the worst class of error in the file.</li>
+<li><strong>Review the same week, not the same season.</strong> 112.161(b) asks for supervisor review within a reasonable time after the records are made. A month-end catch-up is how Friday ends up on everything.</li>
+</ol>
+
+<h2>Where Trazo sits in this</h2>
+
+<p>Trazo is where the chain ends: one entry, logged by voice or a short form, in English or Spanish, on a phone in the block or at a desk. The same entry becomes the certifier record, the evidence behind the plan&rsquo;s answers, and the buyer&rsquo;s page, so nothing is retyped to make the next document.</p>
+
+<p>Two things it does on purpose. A suggestion is never a record: anything read out of speech or text is offered, and a person picks the activity and the date and saves it under their own name. And the date is never filled in for you on an entry that came from somebody else&rsquo;s words. Those are not features so much as the only defensible way to build the thing.</p>
+
+<h2>The question we are actually asking</h2>
+
+<p>We have opinions about the relay and very little data. So if you run a certified operation: when someone finishes a task in your field, how does it end up written down, who types it, and how many times does it get typed? Short answers are the useful ones. <a href="/contact">Tell us</a>, and we will keep publishing what we learn, including the parts that contradict this page.</p>
+`,
+  },
+  {
     slug: "annual-update-what-changed-since-last-years-plan",
     category: "Guides",
     date: "August 24, 2026",
