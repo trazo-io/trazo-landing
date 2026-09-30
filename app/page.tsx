@@ -40,7 +40,7 @@ const softwareAppJsonLd = {
     "Per-parcel application records (location, land history, buffers, field map)",
     "33 US crop templates with USDA-sourced crop timing data",
     "Activity log with voice and template shortcuts, English and Spanish",
-    "NOP audit-ready PDF export (7 CFR 205.103)",
+    "PDF export of your NOP records (7 CFR 205.103)",
     "Renewal packet: annual update, change notices, module PDFs, parcel applications, and Common OSP workbooks",
     "Plan review: what changed in your records since your plan's answers were written",
     "Direct operational emission calculations using EPA/USDA emission factors",

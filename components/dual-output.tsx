@@ -206,7 +206,7 @@ export function DualOutput() {
                   </span>
                 </div>
                 <h3 className="text-lg font-bold text-foreground">
-                  The full regulated record
+                  The regulated record, as you logged it
                 </h3>
                 <p className="mx-auto mt-1 max-w-[300px] text-sm text-muted-foreground">
                   Rate, area, target pest, re-entry and pre-harvest intervals,
@@ -329,9 +329,8 @@ export function DualOutput() {
                 The record above is one row on this page. A buyer scanning the
                 tag on the carton lands here: the farm, the lot, the harvest
                 date, and every practice you documented across the season
-                &mdash; counted, not graded. Trazo does not award your farm a
-                score, and no self-assigned rating appears anywhere a buyer can
-                see.
+                &mdash; counted, not graded. Trazo does not grade your farm, and
+                no self-assigned rating appears anywhere a buyer can see.
               </p>
               <p className="mt-3 leading-relaxed text-muted-foreground">
                 The same page estimates the season&rsquo;s direct farm emissions
