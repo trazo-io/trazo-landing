@@ -333,10 +333,10 @@ export function DualOutput() {
                 no self-assigned rating appears anywhere a buyer can see.
               </p>
               <p className="mt-3 leading-relaxed text-muted-foreground">
-                The same page estimates the season&rsquo;s direct farm emissions
-                &mdash; fuel, fertilizer, equipment and irrigation energy,
-                calculated with published EPA and USDA factors and written the
-                way a buyer can hold it: what growing a kilogram of the crop
+                The same page estimates the season&rsquo;s emissions: fuel,
+                equipment and irrigation energy on the farm, plus the
+                manufacturing of the fertilizer and chemicals applied. It is
+                written the way a buyer can hold it: what growing a kilogram of the crop
                 produced, and the same figure as miles driven in an average car.
                 Transport, packaging and retail sit outside that boundary, and
                 the page says so beside the number.

@@ -36,6 +36,8 @@ export function Hero() {
             that they have missed it or that the product is not for them; both are wrong.
 
             The navbar already carries the accurate multi-certifier line; this now matches it.
+            2026-10-02: CCOF dropped from both, WSDA first, Oregon Tilth's two due dates second
+            (see the navbar strip comment).
             ⛔ Do not add a WSDA "opens" date: we have verified the March 1 DEADLINE from WSDA's
             own Site Application PDF, but not when their renewal packet goes out
             (`documentation/gtm-v3/CERTIFIER-CALENDAR-2026-08-19.md` §WSDA).
@@ -43,8 +45,7 @@ export function Hero() {
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
             <span className="text-xs font-medium text-primary">
-              CCOF &amp; Oregon Tilth renewals open in November &middot; WSDA
-              due March 1
+              WSDA due March 1 &middot; Oregon Tilth due Jan 1 or Apr 1
             </span>
           </div>
 

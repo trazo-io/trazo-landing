@@ -68,14 +68,17 @@ export function Navbar() {
           pattern: real external deadlines (certifier windows, COG Pro sunset),
           never an invented discount clock. The linked pages carry the full
           confirm-with-your-certifier hedges.
+          2026-10-02: WSDA leads and CCOF is out of the strip. Outreach goes WA first and
+          CCOF last (CCOF and NFC cover Quick Organics for their growers), so a CCOF date
+          on every page pointed the reader we are not courting at the window we skip.
           MAINTENANCE: this copy is true through Dec 31, 2026. After the COG Pro
-          sunset passes, swap the second fact for the next real deadline
+          sunset passes, swap the third fact for the next real deadline
           (OCCSP Dec 31 → certifier due dates Jan–Apr) or remove the strip. */}
       <div className="bg-primary text-primary-foreground">
         <div className="mx-auto flex max-w-7xl items-center justify-center gap-2 px-4 py-1.5 text-center text-xs font-medium sm:text-sm">
           <span className="hidden sm:inline">Renewal season is coming:</span>
           <span>
-            CCOF &amp; Oregon Tilth open in November · WSDA due March 1 · COG Pro ends Dec 31, 2026
+            WSDA due March 1 · Oregon Tilth Jan 1 or Apr 1 · COG Pro ends Dec 31, 2026
           </span>
           <Link
             href="/cog-pro-migration"

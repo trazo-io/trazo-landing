@@ -117,7 +117,7 @@ export default function ForFarmersPage() {
                   Finish a season and Trazo can build a public page from the
                   same records: the farm, the lot, the harvest date, the
                   practices you documented, and an estimate of that
-                  season&apos;s direct farm emissions. Print the QR or a sheet
+                  season&apos;s emissions. Print the QR or a sheet
                   of lot tags for your cartons. One switch publishes a season
                   and the same switch unpublishes it &mdash; and your address
                   and coordinates never reach the page, which locates a new

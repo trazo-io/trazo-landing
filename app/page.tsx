@@ -43,7 +43,7 @@ const softwareAppJsonLd = {
     "PDF export of your NOP records (7 CFR 205.103)",
     "Renewal packet: annual update, change notices, module PDFs, parcel applications, and Common OSP workbooks",
     "Plan review: what changed in your records since your plan's answers were written",
-    "Direct operational emission calculations using EPA/USDA emission factors",
+    "Emission estimates covering the operation's own activity plus the manufacturing of the fertilizer and chemicals it buys, each factor with its source named",
     "QR code generation for buyer-facing product pages",
     "Certification cross-reference via the USDA Organic Integrity Database",
   ],

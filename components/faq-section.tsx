@@ -22,7 +22,7 @@ const faqs = [
   {
     question: "What if I'm not tech-savvy?",
     answer:
-      "Trazo runs in any web browser on your phone or computer. No downloads needed. The interface uses simple forms, voice recording, and photo uploads. The interface is designed for field conditions, so most users are comfortable from day one.",
+      "Trazo runs in any web browser on your phone or computer. No downloads needed. The interface uses simple forms, voice recording, and photo uploads. The forms are built for a phone in the field, and if something is unclear, email us: the person who builds Trazo answers.",
   },
   {
     question: "Does Trazo check organic certifications?",
@@ -32,12 +32,12 @@ const faqs = [
   {
     question: "How accurate are the carbon calculations?",
     answer:
-      "Trazo estimates Direct Operational Emissions, the emissions farmers actually control: fuel combustion, fertilizer application, equipment operation and irrigation energy. This is not a full lifecycle assessment \u2014 transport, packaging and retail are outside the boundary. All emission factors are sourced from EPA (40 CFR Part 98) and USDA government-published data, and the full method is published on our methodology page. If you publish a buyer page, the same estimate appears there in plain terms \u2014 what growing a kilogram of the crop produced, or the season\u2019s total when you have not recorded a harvest weight, and the same figure as miles driven in an average car \u2014 with that boundary stated next to the number.",
+      "Trazo estimates the operation\u2019s own emissions (fuel, equipment and irrigation energy) plus the emissions from manufacturing the fertilizer and chemicals it buys. This is not a full lifecycle assessment: transport, packaging and retail are outside the boundary. Each factor names its own source. Fuel, electricity and nitrogen use EPA-published values (nitrogen with IPCC guideline values), pesticide and herbicide factors come from published academic studies, and phosphate and potash are Trazo\u2019s own conservative estimates, labelled as such. Every factor and the full method are on our methodology page. If you publish a buyer page, the same estimate appears there in plain terms: what growing a kilogram of the crop produced, or the season\u2019s total when you have not recorded a harvest weight, and the same figure as miles driven in an average car, with that boundary stated next to the number.",
   },
   {
     question: "Do I have to publish a buyer page?",
     answer:
-      "No \u2014 it is an optional second output of the same records, and it is per season, not per farm. When you finish a production Trazo asks whether to publish it; clear that box and nothing goes public. Afterwards a single switch on your Buyer Page publishes or unpublishes any finished season at any time, and an unpublished season stops answering even for someone holding the code. If you do publish, you download the QR image or a printable sheet of eight lot tags (farm, crop, lot ID, harvest date and the code) for your cartons or bins, and a buyer who scans reaches the farm, the lot, the harvest date, the practices you documented and, when the season has enough logged to compute one, an estimate of its direct farm emissions. Your address, ZIP and coordinates are stripped before the page is built, and a parcel added today publishes an approximate location \u2014 a point rounded to about a kilometer, no field boundary. Scans are listed on the same screen and can be filtered to one season.",
+      "No. It is an optional second output of the same records, and it is per season, not per farm. When you finish a production Trazo asks whether to publish it; clear that box and nothing goes public. Afterwards a single switch on your Buyer Page publishes or unpublishes any finished season at any time, and an unpublished season stops answering even for someone holding the code. If you do publish, you download the QR image or a printable sheet of eight lot tags (farm, crop, lot ID, harvest date and the code) for your cartons or bins, and a buyer who scans reaches the farm, the lot, the harvest date, the practices you documented and, when the season has enough logged to compute one, an estimate of its emissions. Your address, ZIP and coordinates are stripped before the page is built, and a parcel added today publishes an approximate location (a point rounded to about a kilometer, no field boundary). Scans are listed on the same screen and can be filtered to one season.",
   },
   {
     question: "Can I hide a record or a field from the buyer page?",

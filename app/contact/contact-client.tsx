@@ -27,7 +27,7 @@ const contactFaqs = [
   },
   {
     q: "How do I get started?",
-    a: "Sign up at app.trazo.io, add your farm, and start documenting practices. Most farms are fully configured in 15 minutes.",
+    a: "Sign up at app.trazo.io, add your farm, and start documenting practices. If your records live in COG Pro, a spreadsheet or a binder, send them and we set the account up with you, free.",
   },
   {
     q: "Do you offer demos?",
@@ -145,7 +145,7 @@ export function ContactPageContent() {
             <div>
               <h2 className="text-2xl font-bold text-foreground">Contact Us</h2>
               <p className="mt-2 text-muted-foreground">
-                Let&apos;s talk about your farm&apos;s transparency
+                Questions about your records, your renewal or moving off COG Pro
               </p>
 
               {status === "success" ? (

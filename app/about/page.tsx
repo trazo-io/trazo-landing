@@ -17,7 +17,7 @@ import { Footer } from "@/components/footer";
 export const metadata: Metadata = {
   title: "About Trazo — who builds this and how",
   description:
-    "Built by a software engineer working directly with organic growers, on the Common OSP structure, EPA/USDA-published factors and a published methodology.",
+    "Built by a software engineer working directly with organic growers, on the Common OSP structure and a published methodology that names the source of every emission factor.",
   alternates: { canonical: "https://www.trazo.io/about" },
   openGraph: {
     title: "About Trazo",
@@ -44,9 +44,9 @@ export default function AboutPage() {
             Who builds Trazo, and how
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">
-            Trazo is built by Oscar Munoz, a software engineer building the
-            product end-to-end and working directly with organic specialty-crop growers and certifiers in
- California and Washington. No sales team between you and the person who
+            Trazo is built by Oscar Mu&ntilde;oz, a software engineer who
+            builds the product end-to-end for certified organic
+            specialty-crop growers. No sales team between you and the person who
             writes the code: the questions farmers ask become the next release.
           </p>
 
@@ -74,8 +74,10 @@ export default function AboutPage() {
                 </h2>
                 <p className="mt-1 text-muted-foreground">
                   The guided plan follows the USDA-supported Common OSP
-                  structure. Emission calculations use EPA/USDA-published
-                  factors. Record checks cite the actual regulation (7&nbsp;CFR
+                  structure. Every emission factor names its source: EPA
+                  for fuel, electricity and nitrogen, academic studies for
+                  pesticides, and Trazo&apos;s own estimate, labelled as one,
+                  where no public figure fits. Record checks cite the actual regulation (7&nbsp;CFR
                   Part&nbsp;205) line by line. The full{" "}
                   <Link
                     href="/methodology"
