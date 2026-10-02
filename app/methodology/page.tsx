@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "Methodology: records and readiness checks | Trazo",
   description:
-    "How Trazo turns activity logs into certifier-ready records, runs documentation readiness checks and estimates direct operational emissions. CC BY 4.0.",
+    "How Trazo turns activity logs into certifier-ready records, runs documentation readiness checks and estimates emissions. CC BY 4.0.",
   openGraph: {
     title: "How Trazo's records and readiness checks work",
     description:
@@ -34,8 +34,8 @@ export default function MethodologyPage() {
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
               How field activity logs become certifier-ready records, how
-              documentation readiness checks are computed, and how direct
-              operational emissions are calculated — published openly for
+              documentation readiness checks are computed, and how emissions
+              are estimated — published openly for
               scrutiny and reproducibility.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
@@ -216,12 +216,13 @@ export default function MethodologyPage() {
                 4. Carbon Calculation Methodology
               </h3>
               <p className="mt-3 leading-[1.8]">
-                Trazo calculates <strong>Direct Operational Emissions</strong>,
-                meaning emissions from activities that farmers directly control
-                during the production cycle. This is not a full Life Cycle
-                Assessment (LCA). It covers only emissions under direct farmer
-                control and excludes supply chain, transportation, retail, and
-                end-of-life emissions.
+                Trazo estimates <strong>the operation&apos;s own emissions plus
+                the manufacturing of the fertilizer and chemicals it buys</strong>.
+                The second half happens off the farm, before purchase, and is
+                counted because the farmer chooses the input and the rate. This
+                is not a full Life Cycle Assessment (LCA): fertilizer transport,
+                equipment manufacturing, infrastructure, distribution, retail
+                and end-of-life are excluded.
               </p>
 
               <div className="mt-4 overflow-x-auto">
@@ -229,10 +230,10 @@ export default function MethodologyPage() {
                   <thead>
                     <tr className="border-b border-border">
                       <th className="py-2 pr-4 text-left font-semibold text-foreground">
-                        Included (Farmer-Controlled)
+                        Included
                       </th>
                       <th className="py-2 text-left font-semibold text-foreground">
-                        Excluded (Beyond Farm Gate)
+                        Excluded
                       </th>
                     </tr>
                   </thead>
@@ -1095,8 +1096,8 @@ export default function MethodologyPage() {
                   Update Schedule
                 </p>
                 <p className="mt-1 text-sm leading-[1.8]">
-                  Emission factors are reviewed annually against updated
-                  EPA/USDA publications. All updates are documented in the
+                  Emission factors are reviewed annually against the newest
+                  edition of each factor&apos;s own source. All updates are documented in the
                   version history below.
                 </p>
               </div>

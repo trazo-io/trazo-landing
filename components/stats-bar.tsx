@@ -1,6 +1,6 @@
 "use client";
 
-import { Timer, Layers, DollarSign, Languages } from "lucide-react";
+import { Sprout, Layers, DollarSign, Languages } from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
 
 // Every number here must be flat-out true and stay true: guided-OSP module count
@@ -13,7 +13,7 @@ const stats = [
   // this is: the crew logs in Spanish, you read the certifier packet in English, and
   // it is the same record. Quick Organics has no Spanish marketing at all.
   { icon: Languages, value: "EN + ES", label: "Crew Logs in Spanish, You File in English" },
-  { icon: Timer, value: "<2 min", label: "Per Activity Logged" },
+  { icon: Sprout, value: "33", label: "US Crop Templates" },
 ];
 
 export function StatsBar() {

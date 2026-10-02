@@ -141,10 +141,10 @@ export function Footer() {
             &copy; 2026 Trazo&trade;. A product of Oscar Mu&ntilde;oz SAS, RUT
             219072920010.{" "}
             <a
-              href="mailto:support@trazo.io"
+              href="mailto:info@trazo.io"
               className="transition-colors hover:text-primary"
             >
-              support@trazo.io
+              info@trazo.io
             </a>
           </p>
           <div className="flex items-center gap-6">

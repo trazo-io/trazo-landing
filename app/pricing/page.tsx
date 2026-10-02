@@ -112,6 +112,7 @@ const plans = [
       "Organic System Plan: 19 guided modules, answer at your pace",
       "Record-completeness checks with the regulation cited",
       "QR code and buyer page",
+      "Free migration from COG Pro or spreadsheets",
       "10 GB storage",
     ],
   },
@@ -136,7 +137,6 @@ const plans = [
       "The four required OSP attachment workbooks, filled from your records",
       "Certifier link — your certifier reviews online, with your permission",
       "California PUR export (DPR-PML-017C), monthly",
-      "Free migration from COG Pro or spreadsheets",
       "25 GB storage",
     ],
   },
@@ -207,7 +207,7 @@ const comparisonFeatures: ComparisonRow[] = [
   { label: "Record completeness checks", values: [true, true, true] },
   { label: "QR code and buyer page", values: [true, true, true] },
   {
-    label: "Carbon calculations (EPA/USDA-sourced)",
+    label: "Emission estimates (source named per factor)",
     values: [true, true, true],
   },
   {
@@ -232,7 +232,7 @@ const comparisonFeatures: ComparisonRow[] = [
     label: "California PUR export (DPR-PML-017C)",
     values: [false, true, true],
   },
-  { label: "Free migration from COG Pro", values: [false, true, true] },
+  { label: "Free migration from COG Pro", values: [true, true, true] },
   // "Dedicated onboarding" was true for Enterprise alone, so with that column gone the row
   // would have read false / false / false — a line item that tells the reader nothing.
   {
@@ -311,7 +311,7 @@ const pricingFaqs = [
   },
   {
     q: "Is my data secure?",
-    a: "Yes. Trazo uses industry-standard encryption, secure authentication with JWT tokens, and role-based access controls. Your farm data is stored securely on AWS infrastructure.",
+    a: "Connections are encrypted (HTTPS), sign-in uses httpOnly cookies, and what each person can see is set by their role on your account. Records sit in a managed PostgreSQL database on DigitalOcean; photos and documents are stored on AWS S3, and a document opens through a link that expires after 15 minutes. Nothing reaches the public buyer page unless you publish a season.",
   },
 ];
 
@@ -372,8 +372,8 @@ export default function PricingPage() {
                 }`}
               >
                 {plan.highlight && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-semibold text-primary-foreground">
-                    Most Popular
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-primary px-4 py-1 text-xs font-semibold text-primary-foreground">
+                    Includes the renewal packet
                   </div>
                 )}
                 <div>

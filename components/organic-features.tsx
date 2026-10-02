@@ -95,8 +95,7 @@ export function OrganicFeatures() {
             <p className="mt-4 text-base text-muted-foreground">
               Designed to meet NOP recordkeeping requirements (7 CFR 205.103).
               The records you already keep become documentation you can
-              hand to your inspector. What used to take a binder week now takes an
-              afternoon.
+              hand to your inspector.
             </p>
           </div>
         </ScrollReveal>

@@ -160,7 +160,7 @@ export const posts: BlogPost[] = [
     title:
       "From Planting to Harvest: A Complete Guide to Agricultural Event Documentation",
     excerpt:
-      "A step-by-step guide to documenting every farming event from soil preparation through harvest, building a complete transparency record.",
+      "A step-by-step guide to documenting every farming event from soil preparation through harvest, so the season is on record when your inspector asks.",
     image: "/images/blog-planting-harvest.jpg",
     content: `
 <p>Every farming practice has a story behind it; the issue is who is recording it?</p>
@@ -185,7 +185,7 @@ export const posts: BlogPost[] = [
 
 <h3>1. Production Events</h3>
 <p><strong>Document</strong>: Planting, irrigation, pruning, harvest, transplanting, cultivation, thinning, pollination, and post-harvest processing. Include date, crop variety, method, and quantities.</p>
-<p><strong>Why</strong>: Production events are the backbone of your transparency record. They document everything from planting through harvest, the complete story of how your crop was grown.</p>
+<p><strong>Why</strong>: Production events are the backbone of your season record. They document everything from planting through harvest, the complete story of how your crop was grown.</p>
 <p><strong>Document Time</strong>: ~90 Seconds</p>
 
 <h3>2. Chemical Applications</h3>

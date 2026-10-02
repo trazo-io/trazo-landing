@@ -22,7 +22,7 @@ export function CtaBanner() {
               Your records, doing double duty.
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-primary-foreground/80">
-              Start documenting your farm in under 15 minutes. The Starter plan is
+              Add your farm and log today&apos;s work. The Starter plan is
               free permanently — no card, no expiry.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">

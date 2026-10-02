@@ -64,6 +64,50 @@ const RULES = [
         .filter((m) => !/not an inspection/i.test(text.slice(m.index, m.index + 300)))
         .map((m) => m.index),
   },
+  // Added 2026-10-02 from a read of the live site against compliance.md and
+  // carbon-methodology.md. The legal pages are allowed because their wording waits on the same
+  // Terms-version decision as the "score" rule above.
+  {
+    name: '"direct" emissions',
+    reason:
+      "The estimate includes the manufacturing of purchased fertilizer and chemicals, which happens off the farm. Calling it direct, operational or on-farm states half the boundary. Say: the operation's own emissions plus the manufacturing of the fertilizer and chemicals it buys.",
+    find: (text) =>
+      [...text.matchAll(/\bdirect (operational|farm|on-farm) emissions?\b/gi)].map((m) => m.index),
+    allow: ["app/terms-of-service/page.tsx", "app/privacy-policy/page.tsx"],
+    skipComments: true,
+  },
+  {
+    name: "blanket EPA/USDA factor provenance",
+    reason:
+      "Factor provenance differs per input class: EPA for fuel, electricity and nitrogen, academic LCA for pesticides, Trazo's own estimate for P2O5 and K2O. A blanket EPA/USDA attribution credits an agency with Trazo's numbers (compliance.md).",
+    find: (text) =>
+      [...text.matchAll(/EPA\s*\/\s*USDA|EPA and USDA (factors|sources|data|publications)|EPA \([^)]*\) and USDA/gi)].map((m) => m.index),
+    allow: ["app/terms-of-service/page.tsx", "app/privacy-policy/page.tsx"],
+    skipComments: true,
+  },
+  {
+    name: '"Most Popular"',
+    reason: "Popularity is a claim about customers. Trazo has none paying yet, so the badge is invented.",
+    find: (text) => [...text.matchAll(/\bmost popular\b/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: "unmeasured setup or time-saving claim",
+    reason:
+      "No user has been timed. The pilot rehearsal measured about one workday to set up a paper-records farm, so a minutes figure or a before/after saving is invented until it is measured on real farms.",
+    find: (text) =>
+      [...text.matchAll(/\b(under|in) 15 minutes\b|comfortable from day one|binder week/gi)].map((m) => m.index),
+    allow: ["app/cookie-policy/page.tsx"],
+    skipComments: true,
+  },
+  {
+    name: '"transparency" as the product frame',
+    reason:
+      "The product outcome is the renewal packet and less time at inspection. A farm's transparency, or a transparency record, is the retired framing.",
+    find: (text) =>
+      [...text.matchAll(/transparency record|farm(&apos;|')s transparency/gi)].map((m) => m.index),
+    skipComments: true,
+  },
 ];
 
 /** True when raw[index] sits inside a // line comment or a /* block comment *\/. */
