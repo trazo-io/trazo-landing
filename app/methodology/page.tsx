@@ -35,7 +35,7 @@ export default function MethodologyPage() {
             <p className="mt-4 text-lg text-muted-foreground">
               How field activity logs become certifier-ready records, how
               documentation readiness checks are computed, and how emissions
-              are estimated — published openly for
+              are estimated, published openly for
               scrutiny and reproducibility.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
