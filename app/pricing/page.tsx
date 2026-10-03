@@ -18,7 +18,7 @@ import {
 export const metadata: Metadata = {
   // Under the ~60-char SERP limit, leading with the term a farmer comparing tools
   // would type, and with the number that beats a revenue-banded competitor.
-  title: "Organic Recordkeeping Pricing — $249/yr | Trazo",
+  title: "Organic Recordkeeping Pricing: $249/yr | Trazo",
   description:
     "Free Starter plan, no card and no expiry. Compliance is $249 per farm per year, flat — not banded by your revenue like other organic software.",
   alternates: { canonical: "/pricing" },

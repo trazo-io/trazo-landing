@@ -21,7 +21,8 @@ export const metadata: Metadata = {
   // "One Entry, Two Outputs" to truncation anyway, so the tagline paid rent it never
   // earned. Leads with the term a grower would type; the brand goes last because
   // nobody searches it ("trazo" is also a common Spanish word, and a competitor owns
-  // trazo.ag). Keep title <= 60 chars and description <= 160.
+  // trazo.ag). Keep title <= 60 chars and description <= 160: past ~160 Google drops the
+  // description and quotes page text instead, which is what the homepage was getting.
   title: "Organic Recordkeeping Software for US Farms | Trazo",
   // ⛔ NEVER write that Trazo "drafts"/"fills"/"writes" the Organic System Plan. This string,
   // the og: description below, and both JSON-LD blocks all said it. MEASURED: 14 of 215 OSP
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   // The generated artifacts are real and may be claimed by name: the list is the docstring of
   // `subscriptions/gating.py`. The OSP itself is something Trazo brings evidence TO.
   description:
-    "Log the season once. Trazo assembles your renewal packet and audit exports, backs your OSP answers with your own records, and lists what changed since you last wrote them. Free Starter plan, $249/farm/yr.",
+    "Log the season once. Trazo assembles your renewal packet and audit exports and backs your OSP answers with your own records. Free Starter plan, $249/farm/yr.",
   keywords: [
     "organic system plan",
     "OSP software",

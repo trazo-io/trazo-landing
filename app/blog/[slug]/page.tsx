@@ -23,8 +23,8 @@ export async function generateMetadata({
     // "| Trazo", not "| Trazo Blog" — these post titles already run 60-95 chars, so
     // the suffix is the first thing SERP truncation eats; five wasted characters on
     // a word that adds nothing is five characters of headline lost.
-    title: `${post.title} | Trazo`,
-    description: post.excerpt,
+    title: post.seoTitle ?? `${post.title} | Trazo`,
+    description: post.metaDescription ?? post.excerpt,
     // Required explicitly. Next inherits the ROOT `openGraph` object wholesale when a
     // page does not declare one — it does NOT fold this page's `title`/`description`
     // into it. Without this block every post shared as the homepage card, which is

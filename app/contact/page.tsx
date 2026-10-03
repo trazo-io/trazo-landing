@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import { ContactPageContent } from "./contact-client";
 
 export const metadata: Metadata = {
-  title: "Contact Trazo — Organic Recordkeeping Support",
+  title: "Contact Trazo: Organic Recordkeeping Support",
   description:
     "Questions about organic recordkeeping, renewal packets or moving off COG Pro? Email info@trazo.io and we reply with a walkthrough and a sample farm.",
   alternates: { canonical: "/contact" },
