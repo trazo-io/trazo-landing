@@ -55,10 +55,10 @@ const trazoDoes = [
 ];
 
 const trazoDoesNot = [
-  "Livestock records — COG Pro's livestock module has no equivalent here",
-  "GAP / food-safety audits — if you bought COG Pro's GAP module, Trazo does not replace it",
+  "Livestock records: COG Pro's livestock module has no equivalent here",
+  "GAP / food-safety audits: if you bought COG Pro's GAP module, Trazo does not replace it",
   "Handler or processor certification scopes",
-  "Filing your PUR for you — Trazo compiles the data; you submit it in CalAgPermits",
+  "Filing your PUR for you: Trazo compiles the data; you submit it in CalAgPermits",
 ];
 
 export default function CogProMigrationPage() {
@@ -79,7 +79,7 @@ export default function CogProMigrationPage() {
             <p className="mt-5 text-lg leading-[1.8] text-muted-foreground">
               If you keep your organic records in COG Pro, you need to export
               them before the end of the year. This guide explains what was
-              announced, what to do first, and how to choose a replacement —
+              announced, what to do first, and how to choose a replacement,
               including the parts Trazo does not cover.
             </p>
           </header>
@@ -103,7 +103,7 @@ export default function CogProMigrationPage() {
               <p className="mt-3 leading-[1.8]">
                 They attribute the closure to actions by their web hosting
                 provider. We are not affiliated with COG Pro and have no inside
-                knowledge of their plans — this page simply reflects what is
+                knowledge of their plans; this page simply reflects what is
                 published on{" "}
                 <a
                   href="https://cog-pro.com/signup.html"
@@ -124,7 +124,7 @@ export default function CogProMigrationPage() {
               </h2>
               <p className="mt-3 leading-[1.8]">
                 Do this before you decide anything else. Once a service stops,
-                your history may stop being reachable — and{" "}
+                your history may stop being reachable, and{" "}
                 <strong className="text-foreground">
                   7 CFR 205.103(b)(4) requires you to keep records for five
                   years
@@ -146,7 +146,7 @@ export default function CogProMigrationPage() {
                       COG Pro&apos;s reports support an Export option that
                       downloads your records as CSV files. Export every year you
                       have, not just the current one, and keep the files
-                      somewhere you control — your own drive, not a
+                      somewhere you control: your own drive, not a
                       vendor&apos;s. Save the generated PDFs of your past
                       regulatory reports too; they are the version your
                       inspector already saw.
@@ -184,7 +184,7 @@ export default function CogProMigrationPage() {
                   renewal forms at the start of November.
                 </li>
                 <li>
-                  <strong className="text-foreground">December 31</strong> — COG
+                  <strong className="text-foreground">December 31</strong>: COG
                   Pro stops. The same day the USDA Organic Certification Cost
                   Share Program (OCCSP) application deadline falls, for
                   reimbursement of up to 75% of your certification costs, capped
@@ -214,16 +214,16 @@ export default function CogProMigrationPage() {
               </p>
               <ul className="mt-4 space-y-3 leading-[1.8]">
                 <li>
-                  <strong className="text-foreground">Crops only</strong> — you
+                  <strong className="text-foreground">Crops only</strong>: you
                   have the most choices, Trazo among them.
                 </li>
                 <li>
-                  <strong className="text-foreground">Crops + Livestock</strong>{" "}
-                  — Trazo does not do livestock. Look at Quick Organics or ask
+                  <strong className="text-foreground">Crops + Livestock</strong>:
+                  Trazo does not do livestock. Look at Quick Organics or ask
                   your certifier what their other clients use.
                 </li>
                 <li>
-                  <strong className="text-foreground">Crops + GAP</strong> — GAP
+                  <strong className="text-foreground">Crops + GAP</strong>: GAP
                   is food safety, not organic certification, and it is a
                   separate audit. Trazo does not replace a GAP module.
                 </li>
@@ -284,7 +284,7 @@ export default function CogProMigrationPage() {
                 <p className="mt-4 text-sm leading-[1.7] text-muted-foreground">
                   Trazo is a recordkeeping and documentation tool. It does not
                   certify farms, and using it does not guarantee any
-                  certification outcome — your certifier makes every compliance
+                  certification outcome; your certifier makes every compliance
                   determination.
                 </p>
               </div>
@@ -297,7 +297,7 @@ export default function CogProMigrationPage() {
               </h2>
               <p className="mt-3 leading-[1.8]">
                 Send us your COG Pro CSV export and we will import it into a
-                Trazo account for you — free, and without a card on file. You
+                Trazo account for you, free, and without a card on file. You
                 look at your own records in the new system and decide from
                 there. If you decide against it, you keep the export and we
                 delete the account on request.
@@ -321,8 +321,8 @@ export default function CogProMigrationPage() {
                 us for: on every plan, including the free one, one click in
                 Documents downloads a ZIP of plain CSV files with every activity
                 record, production, parcel and sale in your account. The
-                certifier documents built from those records — audit dossier,
-                OSP renewal packet, PUR export — are the part that is
+                certifier documents built from those records (audit dossier,
+                OSP renewal packet, PUR export) are the part that is
                 Compliance.
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
@@ -343,7 +343,7 @@ export default function CogProMigrationPage() {
                 Trazo is not affiliated with, endorsed by, or connected to COG
                 Pro or Certified Organic Business Solutions. Statements about
                 COG Pro on this page are quoted from their public website as of
-                August 2026 and may change — verify directly with them.
+                August 2026 and may change; verify directly with them.
                 Certifier deadlines are as published by each certifier and can
                 differ for your operation; confirm yours with your certifier.
               </p>
