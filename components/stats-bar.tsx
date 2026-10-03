@@ -3,12 +3,19 @@
 import { Sprout, Layers, DollarSign, Languages } from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
 
-// Every number here must be flat-out true and stay true: guided-OSP module count
-// and flat price are product facts; the two-language claim covers the app
-// (activity logging, forms, module content EN/ES).
+// Every number here must be flat-out true and stay true: flat price and crop count
+// are product facts; the two-language claim covers the app (activity logging, forms,
+// module content EN/ES).
+//
+// The first tile used to be "19 Guided OSP Modules". True (MODULE_REGISTRY has 19), but
+// a feature count says nothing a grower can use, and Google's AI overview read it as
+// "auto-assembles OSP modules": the OSP-authoring claim this site must never make
+// (7 CFR 205.201(a): the producer writes the plan). The tile now states the product's
+// own formula, log once and the documents are built from it, naming only artifacts
+// that are generated (subscriptions/gating.py).
 const stats = [
-  { icon: Layers, value: "19", label: "Guided OSP Modules, Common-OSP Aligned" },
-  { icon: DollarSign, value: "$249 flat", label: "Per Farm, Per Year — Not Revenue-Banded" },
+  { icon: Layers, value: "1 entry", label: "Feeds Your Renewal Packet and Audit Exports" },
+  { icon: DollarSign, value: "$249 flat", label: "Per Farm, Per Year, Not Revenue-Banded" },
   // Absorbed from the retired FieldFeatures section, whose one non-duplicated line
   // this is: the crew logs in Spanish, you read the certifier packet in English, and
   // it is the same record. Quick Organics has no Spanish marketing at all.
