@@ -156,7 +156,14 @@ export default function CogProMigrationPage() {
               </div>
               <p className="mt-4 leading-[1.8]">
                 This advice stands whether you move to Trazo, to another tool,
-                or back to a binder. Get your data out first.
+                or back to a binder. Get your data out first. The{" "}
+                <Link
+                  href="/blog/cog-pro-shutting-down-migration-guide"
+                  className="font-medium text-primary underline underline-offset-4"
+                >
+                  full migration checklist
+                </Link>{" "}
+                covers field mapping and the questions to ask any vendor.
               </p>
             </section>
 
@@ -309,13 +316,14 @@ export default function CogProMigrationPage() {
                     the audit dossier, OSP renewal packet and PUR export are Compliance. State
                     both halves, never one. */}
                 The Starter plan is free permanently, not a trial that expires,
-                and you can log a whole season on it. Importing your COG Pro CSVs
-                costs nothing. And leaving is not a favour you have to ask us for:
-                on every plan, including the free one, one click in Documents
-                downloads a ZIP of plain CSV files with every activity record,
-                production, parcel and sale in your account. The certifier
-                documents built from those records — audit dossier, OSP renewal
-                packet, PUR export — are the part that is Compliance.
+                and you can log a whole season on it. Importing your COG Pro
+                CSVs costs nothing. And leaving is not a favour you have to ask
+                us for: on every plan, including the free one, one click in
+                Documents downloads a ZIP of plain CSV files with every activity
+                record, production, parcel and sale in your account. The
+                certifier documents built from those records — audit dossier,
+                OSP renewal packet, PUR export — are the part that is
+                Compliance.
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg">

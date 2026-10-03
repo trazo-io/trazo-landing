@@ -16,7 +16,7 @@ import { Footer } from "@/components/footer";
 export const metadata: Metadata = {
   title: "Trazo for organic certifiers and reviewers",
   description:
-    "Clients arrive with dated activity records, per-parcel applications, purchase records with the receipt file attached, Common OSP module answers and an online review link, organized as your checklist reads.",
+    "Clients arrive with dated activity records, per-parcel applications, purchase records with receipts attached and an online review link, in your checklist's order.",
   alternates: { canonical: "https://www.trazo.io/for-certifiers" },
   openGraph: {
     title: "Trazo for organic certifiers and reviewers",

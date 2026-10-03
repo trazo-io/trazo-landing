@@ -10,7 +10,17 @@ export interface BlogPost {
    */
   datePublishedISO: string;
   title: string;
+  /**
+   * Search-result title, used verbatim (no suffix added). Set it when `title` + " | Trazo"
+   * passes ~60 chars: Google cuts the rest, and the cut usually lands mid-headline.
+   */
+  seoTitle?: string;
   excerpt: string;
+  /**
+   * Meta description, <= 160 chars. Set it when `excerpt` is longer: past ~160 Google drops
+   * the description and quotes page text of its own choosing instead.
+   */
+  metaDescription?: string;
   image: string;
   readTime: string;
   content: string;
@@ -24,8 +34,11 @@ export const posts: BlogPost[] = [
     datePublishedISO: "2026-09-29",
     readTime: "9 min read",
     title: "Who Writes It Down: The Relay Between the Block and Your Records",
+    seoTitle: "Who Writes Down Farm Crew Records? | Trazo",
     excerpt:
       "On most farms the first record of the day is a message from someone in the field, retyped into a spreadsheet at night and retyped again at renewal. One federal rule and one state rule decide who has to sign it, and it is not the one usually quoted. What the relay can carry, what it cannot, and the one field that goes wrong every time.",
+    metaDescription:
+      "The day's first record is often a crew message, retyped at night and again at renewal. Who has to sign it under federal and state rules, and what goes wrong.",
     image: "/images/blog-organic-records.jpg",
     content: `
 <p>Ask a grower how yesterday&rsquo;s irrigation got into their records and you rarely hear about software. You hear about a chain. Someone in the block finishes a task and sends a message. A supervisor reads it that evening and types it into a spreadsheet. Months later, at renewal, somebody reads the spreadsheet and types the relevant parts into a plan or a workbook.</p>
@@ -112,9 +125,12 @@ export const posts: BlogPost[] = [
     readTime: "5 min read",
     title:
       "Your Annual Update Starts From Last Year's Plan. Here Is What Usually Changed.",
+    seoTitle: "Organic Annual Update: What Changed Since Last Year | Trazo",
     excerpt:
       "7 CFR 205.406 asks for a summary of what changed since last year's plan — and every renewal starts by copying last year's answers forward. The gap between the two is where filings go stale. A checklist of what to re-read, and why a plan that still says “six parcels” reads badly to a reviewer.",
-    image: "/images/blog-perverse-incentive.jpg",
+    metaDescription:
+      "7 CFR 205.406 asks what changed since last year's plan. A checklist of the answers that go stale when last year's OSP is copied forward.",
+    image: "/images/blog-farmer-reading-plan.jpg",
     content: `
 <p>Every certified operation files a continuation each year. 7 CFR 205.406(a) spells out what goes in it: a summary, supported by documentation, of any deviations from or changes to last year&rsquo;s Organic System Plan; the additions and deletions to the plan intended for the coming year; any changes to the operation&rsquo;s contact and business information; and an update on how any noncompliances your certifier previously identified were corrected. Certifiers call it the annual update, the renewal, or the OSP update, and they open their windows between early November and April depending on who certifies you.</p>
 
@@ -159,6 +175,7 @@ export const posts: BlogPost[] = [
     readTime: "10 min read",
     title:
       "From Planting to Harvest: A Complete Guide to Agricultural Event Documentation",
+    seoTitle: "Planting to Harvest: Farm Event Documentation Guide | Trazo",
     excerpt:
       "A step-by-step guide to documenting every farming event from soil preparation through harvest, so the season is on record when your inspector asks.",
     image: "/images/blog-planting-harvest.jpg",
@@ -255,8 +272,11 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
     title:
       "The Organic Farmer's Guide to Digital Record-Keeping: What NOP Requires and How to Stay Ahead",
+    seoTitle: "Organic Record-Keeping: What NOP Requires | Trazo",
     excerpt:
       "In USDA NASS's 2021 Certified Organic Survey, 55% of organic farms named regulatory problems — excessive paperwork/record keeping and certification costs, in the survey's own words — a major challenge, more than any other. Here's what NOP actually requires, the most common mistakes that risk certification, and how digital documentation closes the gap between annual audits.",
+    metaDescription:
+      "What the National Organic Program requires you to record, the mistakes that put certification at risk, and how to keep records current between inspections.",
     image: "/images/blog-organic-records.jpg",
     content: `
 <p>Ask any organic farmer what the hardest part of maintaining certification is, and the answer is rarely pests, weather, or markets. It is paperwork.</p>
@@ -354,8 +374,11 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
     title:
       "COG Pro Is Shutting Down: A Migration Checklist for Organic Growers",
+    seoTitle: "COG Pro Shutting Down: Migration Checklist | Trazo",
     excerpt:
       "COG Pro has announced it will end service December 31, 2026. Here's the export checklist, the field-mapping guide, and the vendor questions to ask before your organic records disappear along with the software.",
+    metaDescription:
+      "COG Pro ends service December 31, 2026. An export checklist, a field-mapping guide and the questions to ask any vendor before your records go with it.",
     image: "/images/blog-organic-records.jpg",
     content: `
 <p>COG Pro has announced that it will end service on December 31, 2026. If your walnut, almond, citrus, or avocado operation's organic records live in that system, the exact shutdown date matters less than what happens to your history once the software goes dark. Confirm the current timeline and any final export windows directly with the vendor, since shutdown plans can shift.</p>
@@ -428,7 +451,7 @@ export const posts: BlogPost[] = [
 
 <p>None of these are as clean as a full CSV export done ahead of time, which is exactly why the window to act is now, not after the shutdown date passes.</p>
 
-<p>Trazo accepts COG Pro CSV exports directly. Send your field, input, and harvest exports, and the records come in as structured, dated activities tied to your parcels, not a spreadsheet buried in an attachments folder. Trazo's guided modules follow the Common OSP structure, and the Starter plan is free. <a href="https://app.trazo.io/auth/signup" target="_blank" rel="noopener noreferrer">Start a free account</a> to see how your exported records look once they are organized.</p>
+<p>Trazo accepts COG Pro CSV exports directly. Send your field, input, and harvest exports, and the records come in as structured, dated activities tied to your parcels, not a spreadsheet buried in an attachments folder. Trazo's guided modules follow the Common OSP structure, and the Starter plan is free. <a href="https://app.trazo.io/auth/signup" target="_blank" rel="noopener noreferrer">Start a free account</a> to see how your exported records look once they are organized. The <a href="/cog-pro-migration">COG Pro migration page</a> explains how the free import works.</p>
     `,
   },
   {
@@ -439,9 +462,12 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
     title:
       "The Organic Renewal-Season Calendar: Every Deadline From October to April",
+    seoTitle: "Organic Renewal Calendar: October to April Deadlines | Trazo",
     excerpt:
       "Organic renewal isn't one deadline, it's a six-month sequence from postharvest through spring. A month-by-month calendar of what typically falls due, from OCCSP cost-share to certifier annual updates.",
-    image: "/images/blog-premium-pricing.jpg",
+    metaDescription:
+      "Organic renewal is a six-month sequence, not one deadline. A month-by-month calendar from postharvest to spring, from OCCSP cost-share to annual updates.",
+    image: "/images/blog-farm-stand.jpg",
     content: `
 <p>Organic renewal does not happen on a single date. It is a sequence that starts the moment you finish harvest and does not let up until your certifier signs off in spring. Miss one piece of it, and the rest gets harder.</p>
 
@@ -525,8 +551,11 @@ export const posts: BlogPost[] = [
     readTime: "5 min read",
     title:
       "What Your Organic Inspector Actually Checks (And the Records That Answer)",
+    seoTitle: "What Your Organic Inspector Checks | Trazo",
     excerpt:
       "An organic inspection follows a predictable set of questions, not a hidden test. Here's what inspectors actually check, area by area, and the specific record that answers each one.",
+    metaDescription:
+      "An organic inspection follows a predictable set of questions. What inspectors check, area by area, and the record that answers each one.",
     image: "/images/blog-planting-harvest.jpg",
     content: `
 <p>An organic inspection can feel like a test with a syllabus nobody handed you. It is not. Inspectors work through a defined set of questions, area by area, and every one of those questions has a specific kind of record that answers it. Know the questions ahead of time, and the inspection stops being a mystery.</p>

@@ -15,7 +15,7 @@ import { Footer } from "@/components/footer";
  */
 
 export const metadata: Metadata = {
-  title: "About Trazo — who builds this and how",
+  title: "About Trazo: who builds this and how",
   description:
     "Built by a software engineer working directly with organic growers, on the Common OSP structure and a published methodology that names the source of every emission factor.",
   alternates: { canonical: "https://www.trazo.io/about" },
