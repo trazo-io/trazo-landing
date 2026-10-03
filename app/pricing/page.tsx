@@ -219,7 +219,7 @@ const comparisonFeatures: ComparisonRow[] = [
   // are time and labour, not price, so gating the fastest gloves-on input path suppressed
   // exactly the logging that produces the records that produce the upgrade.
   {
-    label: "Organic System Plan authoring (19 guided modules, Common OSP § 11)",
+    label: "Organic System Plan, answered by you (19 guided modules, Common OSP § 11)",
     values: [true, true, true],
   },
   {
