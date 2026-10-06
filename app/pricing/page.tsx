@@ -92,7 +92,7 @@ const plans = [
   // incentive Trazo rejected when it refused carbon-first scoring.
   {
     name: "Starter",
-    description: "Document one season, free",
+    description: "Log every season, free forever",
     monthly: 0,
     yearly: 0,
     priceLabel: "Free",
@@ -183,7 +183,7 @@ const comparisonFeatures: ComparisonRow[] = [
   },
   {
     label: "Farms / Parcels per farm",
-    values: ["1 / Unlimited", "1 / Unlimited", "Unlimited / Unlimited"],
+    values: ["1 / Unlimited", "1 / Unlimited (Extra Farm $149/yr each)", "Unlimited / Unlimited"],
   },
   {
     label: "Productions / year",

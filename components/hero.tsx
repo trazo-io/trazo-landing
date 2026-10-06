@@ -115,6 +115,12 @@ export function Hero() {
             Starter plan free permanently &middot; No credit card &middot; Log a
             whole season, unlimited &middot; Export your records anytime
           </p>
+          {/* Run 8 (R8-20): the hero named neither the customer nor the paid price. */}
+          <p className="mt-2 text-sm text-muted-foreground">
+            Built for certified-organic orchards and berry growers who sell
+            wholesale &middot; Renewal packet, inspection exports and the
+            certifier review link: $249/yr per farm
+          </p>
 
           {/* Hero Image - Real App Screenshot (below fold; lazy + reveal on scroll) */}
           <ScrollReveal delay={0} duration={800} className="w-full">

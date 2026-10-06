@@ -194,7 +194,7 @@ export const posts: BlogPost[] = [
 
 <p><strong>Transparency</strong>: Consumers want to know where and how their food was grown. Documentation is the basis of all transparency and traceability systems.</p>
 
-<p><strong>Premium Positioning</strong>: Traceable produce supports premium positioning. However, "traceable" means you have documentation to support your claims of being transparent. Therefore, you cannot say that you are providing your customers with transparency unless you have documented evidence to support your claims.</p>
+<p><strong>Buyer questions</strong>: Buyers ask where and how produce was grown. "Traceable" means you have documentation to support what you tell them; without records, the claim has nothing behind it.</p>
 
 <p><strong>Decision-Making</strong>: A history of event documentation allows farmers to improve upon their farming practices through time. For example, when did you plant last year? How much water did you use to irrigate? What was your yield? Documentation provides the ability to turn the experience of a farmer into usable data.</p>
 

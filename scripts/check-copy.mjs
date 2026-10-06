@@ -58,10 +58,10 @@ const RULES = [
   {
     name: '"Verified via USDA" without its limit',
     reason:
-      "A 90% fuzzy name match against the Organic Integrity Database. The limit is stated beside the claim, not a page away.",
+      "A cross-reference against the Organic Integrity Database, confirmed by certificate or operation number or a single exact name match in the farm's state (run 8). It is not an inspection, and the limit is stated beside the claim, not a page away.",
     find: (text) =>
       [...text.matchAll(/Verified via USDA Organic Integrity Database/g)]
-        .filter((m) => !/not an inspection/i.test(text.slice(m.index, m.index + 300)))
+        .filter((m) => !/not an inspection/i.test(text.slice(m.index, m.index + 700)))
         .map((m) => m.index),
   },
   // Added 2026-10-02 from a read of the live site against compliance.md and
@@ -106,6 +106,78 @@ const RULES = [
       "The product outcome is the renewal packet and less time at inspection. A farm's transparency, or a transparency record, is the retired framing.",
     find: (text) =>
       [...text.matchAll(/transparency record|farm(&apos;|')s transparency/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  // Added 2026-10-05 from Astra run 8 (R8-01, 02, 16, 19, 21, 22). Each phrase was live on the
+  // site when the review read it.
+  {
+    name: "notification read as permission",
+    reason:
+      "7 CFR 205.400(f)(1) is a duty to notify the certifier immediately about a prohibited application, drift included. It is not permission to apply an unapproved input. Recording an input never authorizes it (run 8, R8-01).",
+    find: (text) =>
+      [...text.matchAll(/provided they notify|may use unapproved inputs/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: "photo grading or verification",
+    reason:
+      "Photos are evidence the farm attaches. Trazo does not grade records by photos or confirm what a photo shows; penalty tiers and a \"photo verification system\" described the retired score (run 8, R8-02).",
+    find: (text) =>
+      [...text.matchAll(/photo verification|penalt(y|ies) without photos|anti-gaming validation|up to \d+% reduction/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: "PASS / REVIEW / FAIL classification",
+    reason:
+      "The snapshot is a documentation check: present, missing or for the certifier's review. A pass or fail reads as a compliance grade (run 8, R8-02).",
+    find: (text) => [...text.matchAll(/PASS\s*\/\s*REVIEW\s*\/\s*FAIL|passes Trazo/gi)].map((m) => m.index),
+    // The legal pages describe what the PDF prints today; their wording waits on the same
+    // Terms-version decision as the "score" rule.
+    allow: ["app/terms-of-service/page.tsx", "app/privacy-policy/page.tsx"],
+    skipComments: true,
+  },
+  {
+    name: "completeness of what happened",
+    reason:
+      "A published page shows what the farm recorded, not everything that happened. \"Nobody can hide\", \"every step tracked\" and \"full traceability\" promise completeness the records cannot establish (run 8, R8-16).",
+    find: (text) =>
+      [...text.matchAll(/nobody can hide|every step tracked|full traceability/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: "demo farm presented as real",
+    reason:
+      "The demo farm is fictional and Trazo has no paying customers yet. \"Real screens\" is true; a real certified operation or \"nothing staged\" is not (run 8, R8-19).",
+    find: (text) =>
+      [...text.matchAll(/nothing staged|real app, on an? [\d.,\s-]*acre certified-organic/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: "Starter limited to one season",
+    reason: "Starter is free forever with unlimited productions. \"One season\" reads as a trial (run 8, R8-21).",
+    find: (text) => [...text.matchAll(/document one season/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: "21 CFR Part 11",
+    reason:
+      "21 CFR Part 11 is an FDA electronic-records rule. It does not govern organic records and Trazo was never assessed against it (run 8, R8-22).",
+    find: (text) => [...text.matchAll(/21\s*CFR\s*Part\s*11\b/gi)].map((m) => m.index),
+    allow: ["app/terms-of-service/page.tsx", "app/privacy-policy/page.tsx"],
+    skipComments: true,
+  },
+  {
+    name: "universal record or retention promise",
+    reason:
+      "What a record carries depends on what the grower entered; anything blank is listed as missing. Retention is enforced for finished seasons only (run 8, R8-22).",
+    find: (text) =>
+      [...text.matchAll(/every input application carries|all event data, photos, and reports retained|every readiness check traced/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: "premium positioning",
+    reason: "A pricing-outcome promise (compliance.md). Trazo sells the renewal packet and less time at inspection.",
+    find: (text) => [...text.matchAll(/premium positioning/gi)].map((m) => m.index),
     skipComments: true,
   },
 ];

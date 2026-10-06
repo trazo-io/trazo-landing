@@ -91,11 +91,12 @@ export default function MethodologyPage() {
                 an input application, a harvest, an irrigation set, a cleanout —
                 whose structured fields follow what 7&nbsp;CFR&nbsp;205.103
                 recordkeeping asks an organic operation to retain: what was
-                done, where, when, with what, by whom. Input applications carry
-                product, rate, area treated, and applicator; harvests carry
+                done, where, when, with what, by whom. Input applications record
+                product, rate, area treated, and applicator; harvests record
                 quantity, how the amount was determined, destination, and
                 buffer-row disposition; equipment shared with conventional
-                ground links to its cleanout log.
+                ground links to its cleanout log. A field left blank is listed
+                as missing, never filled in.
               </p>
               <p className="mt-3 leading-[1.8]">
                 The same records then serve two audiences without re-entry.{" "}
@@ -132,14 +133,17 @@ export default function MethodologyPage() {
               </p>
               <ul className="mt-3 list-disc space-y-3 pl-6 leading-[1.8]">
                 <li>
-                  <strong>USDA Organic verification:</strong> Organic
+                  <strong>USDA Organic certification check:</strong> organic
                   certification claims are cross-referenced against the USDA
-                  Organic Integrity Database (36,000+ operations) using fuzzy
-                  string matching at a 90% confidence threshold. Results display
-                  as &quot;Verified via USDA Organic Integrity Database&quot;
-                  (green badge) or &quot;Self-Reported&quot; (gray badge). A
-                  verified badge is a name match against the database at a 90%
-                  threshold, not an inspection.
+                  Organic Integrity Database (36,000+ operations). A
+                  certification reads &quot;Verified via USDA Organic Integrity
+                  Database&quot; only when the database entry is confirmed for
+                  the farm: its certificate or operation number matches, or a
+                  single entry in its state carries exactly its name. A similar
+                  name alone is shown as a possible match and the certification
+                  stays &quot;Self-Reported&quot;. Either way this is a database
+                  cross-reference, not an inspection. OMRI, WSDA and National
+                  List lookups describe materials and never verify a farm.
                 </li>
                 <li>
                   <strong>Regional irrigation defaults:</strong> Irrigation
@@ -150,15 +154,18 @@ export default function MethodologyPage() {
               </ul>
             </section>
 
-            {/* 4. Photo Verification */}
+            {/* 4. Photos. Run 8 (R8-02): the penalty tiers and the "verification" framing
+                described the retired score; a record either has a photo or it does not. */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                3. Photo Verification System
+                3. Photos on Records
               </h3>
               <p className="mt-3 leading-[1.8]">
-                Photos provide accountability beyond text-only logging. A
-                three-tier penalty structure incentivizes visual documentation
-                for high-stakes events:
+                A record shows whether a photo is attached. Trazo does not
+                grade records by their photos and does not confirm what a
+                photo shows; photos are the farm&apos;s own evidence, for the
+                certifier to weigh. The activity form suggests a photo where
+                an inspector usually asks for one:
               </p>
               <div className="mt-4 overflow-x-auto">
                 <table className="w-full text-sm">
@@ -171,7 +178,7 @@ export default function MethodologyPage() {
                         Events
                       </th>
                       <th className="py-2 text-left font-semibold text-foreground">
-                        Penalty Without Photos
+                        Without a photo
                       </th>
                     </tr>
                   </thead>
@@ -182,7 +189,7 @@ export default function MethodologyPage() {
                         Planting, Harvesting, all chemical applications, Cover
                         cropping, Beneficial insect release, Pest identification
                       </td>
-                      <td className="py-3">Up to 50% reduction</td>
+                      <td className="py-3">The record says no photo is attached</td>
                     </tr>
                     <tr className="border-b border-border/50">
                       <td className="py-3 pr-4 font-medium">Recommended</td>
@@ -190,24 +197,18 @@ export default function MethodologyPage() {
                         Pruning, Transplanting, Cultivation, Soil testing,
                         Composting, Grazing, Scouting, Trap monitoring, IPM
                       </td>
-                      <td className="py-3">Up to 25% reduction</td>
+                      <td className="py-3">The record says no photo is attached</td>
                     </tr>
                     <tr>
-                      <td className="py-3 pr-4 font-medium">No penalty</td>
+                      <td className="py-3 pr-4 font-medium">Not suggested</td>
                       <td className="py-3 pr-4">
                         Weather observations, General notes, Business records
                       </td>
-                      <td className="py-3">None</td>
+                      <td className="py-3">Nothing is flagged</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <p className="mt-4 leading-[1.8]">
-                Photos undergo 5-layer anti-gaming validation: file size checks
-                (10KB–50MB), format verification (magic byte analysis), blank
-                image detection (pixel variance), and timestamp correlation with
-                event dates (within 7 days).
-              </p>
             </section>
 
             {/* 5. Carbon Calculation */}
@@ -678,32 +679,38 @@ export default function MethodologyPage() {
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
-                  <strong>Page-1 Compliance Snapshot:</strong> 13+ row table
+                  <strong>Page-1 Documentation Snapshot:</strong> 13+ row table
                   citing 7 CFR § 205.201 (OSP), § 205.201(a)(2) (OSP narrative
                   vs. registry sync), § 205.103 (records), § 205.103(b)(2) (SOE
                   traceability), § 205.202 (land requirements), § 205.203(c)
                   (compost / raw manure), § 205.206 (pest management), § 205.272
                   (contamination prevention), § 205.307 (lot traceability), §
                   205.400(f)(2) (unapproved-input drift findings), and §
-                  205.201(a)(3) (OFPP). Each row is automatically classified
-                  PASS / REVIEW / FAIL based on the data the farmer has entered.
+                  205.201(a)(3) (OFPP). Each row states whether the record that
+                  section asks for is present in what the farmer entered, is
+                  missing, or needs the certifier&apos;s review. It is a
+                  documentation check, not a compliance finding.
                 </li>
                 <li>
-                  <strong>Producer Attestation</strong> (§ 205.401(d)):
-                  electronic signature block per 21 CFR Part 11
-                  trustworthy-records principles.
+                  <strong>Producer Attestation</strong> (§ 205.401(d)): the
+                  statement the operator signs. When no signature is recorded
+                  in Trazo, the PDF prints it as not signed.
                 </li>
                 <li>
                   <strong>Organic System Plan reference:</strong> active OSP
                   version, status, and § 205.201 narrative.
                 </li>
                 <li>
-                  <strong>Approved Inputs Registry:</strong> OMRI-Listed and
-                  National List substances on file for the operation.
+                  <strong>Inputs list in the plan:</strong> the OMRI-listed and
+                  National List materials the operation&apos;s plan names. A
+                  material on the list is in the plan; approval is the
+                  certifier&apos;s.
                 </li>
                 <li>
-                  <strong>Drift Findings:</strong> per § 205.400(f)(1), inputs
-                  used that are not on the approved registry, with explanation.
+                  <strong>Inputs not matched to the plan:</strong> inputs
+                  recorded that match nothing on the plan&apos;s inputs list,
+                  with the reason, for review with the certifier (a change to
+                  the plan is notified under § 205.400(f)(2)).
                 </li>
                 <li>
                   <strong>Field Events:</strong> chemical applications, soil
@@ -750,33 +757,38 @@ export default function MethodologyPage() {
               <p className="mt-3 leading-[1.8]">
                 When a farmer logs a chemical or soil amendment event, a
                 post-save signal compares the input against the operation&apos;s
-                Approved Inputs Registry using a three-layer cascade:
+                inputs list in its plan using a three-layer cascade:
               </p>
               <ol className="mt-3 list-decimal space-y-2 pl-6 leading-[1.8]">
                 <li>
                   <strong>Foreign-key membership check:</strong> if the event
                   references a specific OMRI Product or National List Substance
-                  by ID, the detector confirms that ID is in the approved set.
+                  by ID, the detector confirms that ID is on the plan&apos;s list.
                 </li>
                 <li>
-                  <strong>Fuzzy name match:</strong> if no FK is set, the
+                  <strong>Name match:</strong> if no FK is set, the
                   free-text commercial name is matched against the OMRI catalog
                   and National List using token-based comparison with brand-
                   anchor constraints. Confidence below the threshold is treated
-                  as unresolved.
+                  as unresolved. A name match is a lookup aid, never a
+                  verification.
                 </li>
                 <li>
-                  <strong>Unresolved &rarr; flagged:</strong> events that match
-                  no approved input are surfaced as drift findings with a §
-                  205.400(f)(1) citation. The detector never blocks a save:
-                  farmers may use unapproved inputs provided they notify their
-                  certifier per § 205.400(f)(1).
+                  <strong>Unresolved &rarr; listed for review:</strong> events
+                  that match nothing on the plan&apos;s list are listed for
+                  review with the certifier. The detector never blocks a save,
+                  because the record has to say what was actually applied.
+                  Recording an input does not authorize it. Applying a
+                  prohibited substance, including by drift, is something the
+                  operation must notify its certifier about immediately (§
+                  205.400(f)(1)); that duty to notify is not permission to use
+                  it.
                 </li>
               </ol>
               <p className="mt-3 leading-[1.8]">
-                Fuzzy matching can produce false positives or false negatives.
-                Drift findings should be treated as advisory and reviewed before
-                sharing the PDF with a certifier.
+                Name matching can produce false positives or false negatives.
+                Treat these findings as a list to review before sharing the PDF
+                with a certifier.
               </p>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
@@ -796,8 +808,8 @@ export default function MethodologyPage() {
                 </li>
                 <li>
                   <strong>It does not guarantee outcomes.</strong> A farmer
-                  whose PDF passes Trazo&apos;s automated snapshot may still
-                  receive a non-compliance finding from their certifier.
+                  whose snapshot lists nothing missing may still receive a
+                  non-compliance finding from their certifier.
                 </li>
                 <li>
                   <strong>

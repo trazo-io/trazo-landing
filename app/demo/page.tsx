@@ -24,12 +24,12 @@ import { Footer } from "@/components/footer";
 export const metadata: Metadata = {
   title: "The four-minute walkthrough | Trazo",
   description:
-    "A spray logged once on the phone becomes the input log and California PUR data for your certifier, and the page your buyer scans. Four minutes, real screens.",
+    "A spray logged once on the phone becomes the input log and California PUR data for your certifier, and the page your buyer scans. Four minutes, real screens, demo farm data.",
   alternates: { canonical: "https://www.trazo.io/demo" },
   openGraph: {
     title: "One entry. Two outputs. Trazo in four minutes.",
     description:
-      "A spray logged once becomes the records your renewal asks for and the page your buyer scans. Real screens, nothing staged.",
+      "A spray logged once becomes the records your renewal asks for and the page your buyer scans. Real screens, on a fictional demo farm.",
     url: "./",
     // Next merges metadata SHALLOWLY: a page-level `openGraph` replaces the root object, so the
     // image has to be restated here or the page shares as a card with no picture.
@@ -53,7 +53,8 @@ export default function DemoPage() {
             You log a spray once, on your phone, in the block. That entry becomes the input log
             under 7&nbsp;CFR&nbsp;205.103, the OSP section, the National List check and the data
             for the California PUR. The same entry becomes the page your buyer scans, without the
-            details that belong to your certifier. Four minutes, real screens, nothing staged.
+            details that belong to your certifier. Four minutes, real screens. The farm in the
+            video is fictional demo data, not a customer.
           </p>
 
           <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card shadow-xl shadow-foreground/5">
