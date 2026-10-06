@@ -121,15 +121,14 @@ export default function MethodologyPage() {
               </p>
             </section>
 
-            {/* 3. Anti-Gaming */}
+            {/* 3. Checks. Run 8: was "Anti-Gaming Protections", which read as verification. */}
             <section>
               <h3 className="text-xl font-bold text-foreground">
-                2. Anti-Gaming Protections
+                2. What Trazo Checks, and What It Does Not
               </h3>
               <p className="mt-3 leading-[1.8]">
-                A record is only as credible as its resistance to manipulation.
-                The following rules were implemented after a comprehensive gaming
-                vector audit (March 2026):
+                Trazo checks a few things against public data and states the
+                limit of each check beside it:
               </p>
               <ul className="mt-3 list-disc space-y-3 pl-6 leading-[1.8]">
                 <li>
@@ -858,10 +857,9 @@ export default function MethodologyPage() {
                   the documented practices are good or sustainable.
                 </li>
                 <li>
-                  <strong>Photo content verification:</strong> Photo anti-gaming
-                  validates file integrity and temporal consistency but cannot
-                  verify that the photo depicts the actual event on the actual
-                  farm.
+                  <strong>Photos:</strong> a record shows whether a photo is
+                  attached. Trazo does not check what a photo shows or that it
+                  was taken on the farm on the day recorded.
                 </li>
                 <li>
                   <strong>Carbon scope:</strong> Carbon calculations cover
@@ -1072,8 +1070,8 @@ export default function MethodologyPage() {
               </h3>
               <p className="mt-3 leading-[1.8]">
                 This page summarizes the key elements. The complete methodology
-                document (with all emission factors, anti-gaming implementation
-                details, crop-specific expected event counts, and regulatory
+                document (with all emission factors, crop-specific expected
+                event counts, and regulatory
                 analysis) is available for download:
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">

@@ -121,9 +121,9 @@ const RULES = [
   {
     name: "photo grading or verification",
     reason:
-      "Photos are evidence the farm attaches. Trazo does not grade records by photos or confirm what a photo shows; penalty tiers and a \"photo verification system\" described the retired score (run 8, R8-02).",
+      "Photos are evidence the farm attaches. Trazo does not grade records by photos or confirm what a photo shows; penalty tiers, a \"photo verification system\" and \"anti-gaming\" validation described the retired score (run 8, R8-02; widened after the review of landing #22 found \"Photo content verification ... anti-gaming validates\" still live).",
     find: (text) =>
-      [...text.matchAll(/photo verification|penalt(y|ies) without photos|anti-gaming validation|up to \d+% reduction/gi)].map((m) => m.index),
+      [...text.matchAll(/photo[\w\s-]{0,20}verification|anti-gaming|penalt(y|ies) without photos|up to \d+% reduction/gi)].map((m) => m.index),
     skipComments: true,
   },
   {
