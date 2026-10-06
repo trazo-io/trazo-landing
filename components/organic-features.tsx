@@ -76,7 +76,10 @@ const organicFeatures = [
     description:
       // Five years IS the NOP minimum (7 CFR 205.103(b)(4)) — claiming to exceed it
       // was a wrong compliance claim on the block a certifier-literate reader trusts most.
-      "All event data, photos, and reports retained for 5 years, matching the NOP retention requirement at 7 CFR 205.103(b)(4) and aligned with USDA audit windows.",
+      // Run 8 (R8-22): the old line promised retention of everything. What the code does: a
+      // finished season cannot be deleted until five years after its latest record (back #113);
+      // an open season can still be deleted by the farm.
+      "A finished season cannot be deleted for five years after it closed or after its latest record was added, whichever is later: the NOP retention period at 7 CFR 205.103(b)(4). A season still open can be deleted by the farm.",
   },
 ];
 

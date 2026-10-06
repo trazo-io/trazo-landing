@@ -100,7 +100,9 @@ const BUYER_PAGE_CONTROLS: Array<{
     // and no farm can edit it — the argument now written into ToS §8 and Privacy §4.2.
     icon: ShieldCheck,
     title: "Same rules for every farm",
-    body: "What a published page shows is set by one policy, identical for every farm — nobody can hide an awkward record or quietly drop a field from a published season. Your choice is the season: publish it whole, or keep it private, reversibly. That is why a buyer can take the page at face value: an absence means the same thing on every Trazo page.",
+    // Run 8 (R8-16): "nobody can hide an awkward record" promised completeness of what
+    // happened. The page can only promise how what was recorded is published.
+    body: "What a published page shows is set by one policy, identical for every farm: no farm can hide a field or a recorded activity from a season it publishes. Your choice is the season: publish it whole, or keep it private, reversibly. The page shows what the farm recorded for that lot, not everything that happened, and the same rules apply on every Trazo page.",
   },
   {
     // The in-season surface (2026-08-25). Publish-on-finish is the shopper's consent

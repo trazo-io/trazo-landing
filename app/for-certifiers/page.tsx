@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Trazo for organic certifiers and reviewers",
     description:
-      "How Trazo compiles a grower's records into reviewable artifacts, with every readiness check traced to its CFR section.",
+      "How Trazo compiles a grower's records into reviewable artifacts, with each readiness check citing the CFR section it relates to.",
     url: "./",
     // Next merges metadata SHALLOWLY: a page-level `openGraph` REPLACES the
     // root object rather than extending it, so omitting this dropped og:image
@@ -88,8 +88,9 @@ export default function ForCertifiersPage() {
                   Records that answer the follow-up question
                 </h2>
                 <p className="mt-1 text-muted-foreground">
-                  Every input application carries product, rate, area, and
-                  applicator; harvests carry quantity and destination; equipment
+                  Input applications record product, rate, area, and applicator,
+                  and a field the grower left blank is listed as missing;
+                  harvests record quantity and destination; equipment
                   shared with conventional ground links to the cleaning that
                   preceded the pass. The trail from lot to field is a click, not
                   a phone call.

@@ -137,8 +137,8 @@ export function ProductTour() {
             </h2>
             <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
               Three screens, one chain: the season you logged, the plan your
-              answers compile into, and the paperwork that comes out. Real app, on a 27.9-acre
-              certified-organic walnut operation.
+              answers compile into, and the paperwork that comes out. Real app, on a
+              fictional 27.9-acre organic walnut operation (demo data).
             </p>
           </div>
         </ScrollReveal>
