@@ -24,7 +24,7 @@ import { Footer } from "@/components/footer";
 export const metadata: Metadata = {
   title: "The four-minute walkthrough | Trazo",
   description:
-    "A spray logged once on the phone becomes the input log and California PUR data for your certifier, and the page your buyer scans. Four minutes, real screens, demo farm data.",
+    "A spray logged once on the phone becomes your certifier's input log, California PUR data and your buyer's page. Four minutes of real screens, demo farm data.",
   alternates: { canonical: "https://www.trazo.io/demo" },
   openGraph: {
     title: "One entry. Two outputs. Trazo in four minutes.",
