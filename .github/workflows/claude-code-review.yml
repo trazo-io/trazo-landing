@@ -33,6 +33,17 @@ jobs:
         with:
           fetch-depth: 1
 
+      # ALLOWLIST WIDENED (2026-10-08). Measured over the last 40 trazo-back review runs: 38 hit
+      # `Error: This command requires approval` at least once. The denied commands were all reads
+      # the review skill makes on its own: `gh api .../issues/<n>/comments` (has it already
+      # commented?), `gh api .../contents/<file>?ref=<sha>` (a file at a ref), and
+      # `python3 /tmp/parse_diff.py` (its own helper, writable through `--add-dir /tmp` but not
+      # runnable), sometimes behind a `cd <workspace> &&`. Most runs recovered after a few wasted
+      # turns; the 1-2 minute ones gave up and the check went GREEN with no comment, which reads
+      # as "reviewed" to anyone counting colours. `Bash(gh api:*)` is broader than the three
+      # reads, deliberately: the skill quotes the path (`gh api "repos/..."`), which a
+      # path-prefix pattern cannot match. The ceiling is the job token above: contents read,
+      # pull-requests write, which the inline-comment tool already has.
       - uses: anthropics/claude-code-action@4169884de317bc1b4cb1b47f4476d76fed92b384 # v1
         env:
           # The review skill delegates its gating checks and its 5 parallel reviewers to
@@ -64,4 +75,4 @@ jobs:
           # not need listing; only `Skill` and the comment-posting MCP tool do.
           claude_args: >-
             --model claude-sonnet-5
-            --allowedTools "Skill,mcp__github_inline_comment__create_inline_comment"
+            --allowedTools "Skill,mcp__github_inline_comment__create_inline_comment,Bash(gh pr diff:*),Bash(gh pr view:*),Bash(gh api:*),Bash(cd:*),Bash(python3 /tmp/:*)"
