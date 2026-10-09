@@ -26,9 +26,12 @@ import { Footer } from "@/components/footer";
  */
 
 export const metadata: Metadata = {
-  title: "COG Pro is closing: move your organic records | Trazo",
+  // 2026-10-08: leads with "COG Pro Alternative", the phrase a displaced subscriber types.
+  // COG Pro still ranks #2 for "organic certification software"; its searchers need a
+  // landing place before Dec 31.
+  title: "COG Pro Alternative: Move Your Records by Dec 31 | Trazo",
   description:
-    "COG Pro stops service on December 31, 2026. How to export your records before the deadline, and how Trazo imports them for you, free.",
+    "COG Pro stops service December 31, 2026. Export your records before the deadline, compare COG Pro alternatives, and let Trazo import your data free.",
   alternates: { canonical: "https://www.trazo.io/cog-pro-migration" },
   openGraph: {
     title: "COG Pro is closing December 31, 2026",
@@ -206,7 +209,7 @@ export default function CogProMigrationPage() {
             {/* Choosing */}
             <section>
               <h2 className="text-2xl font-bold text-foreground">
-                Choosing a replacement
+                Choosing a COG Pro alternative
               </h2>
               <p className="mt-3 leading-[1.8]">
                 Be honest about which COG Pro modules you actually used, because

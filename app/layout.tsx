@@ -23,7 +23,12 @@ export const metadata: Metadata = {
   // nobody searches it ("trazo" is also a common Spanish word, and a competitor owns
   // trazo.ag). Keep title <= 60 chars and description <= 160: past ~160 Google drops the
   // description and quotes page text instead, which is what the homepage was getting.
-  title: "Organic Recordkeeping Software for US Farms | Trazo",
+  // 2026-10-08: "Recordkeeping" -> "Certification". Page 1 for "organic certification
+  // software" (US) was QO, COG Pro and five small vendors whose titles carry that exact
+  // phrase; Trazo never said it, so Google had nothing to match. NEVER: imply Trazo
+  // certifies anyone ("Certified by Trazo" is UNSAFE in compliance.md). It is software
+  // FOR the certification process: the records and the renewal packet.
+  title: "Organic Certification Software for US Farms | Trazo",
   // ⛔ NEVER write that Trazo "drafts"/"fills"/"writes" the Organic System Plan. This string,
   // the og: description below, and both JSON-LD blocks all said it. MEASURED: 14 of 215 OSP
   // questions declare a `Prefill` at all, and even those return a SUGGESTION that is never
@@ -32,8 +37,10 @@ export const metadata: Metadata = {
   // The generated artifacts are real and may be claimed by name: the list is the docstring of
   // `subscriptions/gating.py`. The OSP itself is something Trazo brings evidence TO.
   description:
-    "Log the season once. Trazo assembles your renewal packet and audit exports and backs your OSP answers with your own records. Free Starter plan, $249/farm/yr.",
+    "Organic certification software for US farms. Log the season once; Trazo assembles your renewal packet and audit exports from it. Free Starter, $249/farm/yr.",
   keywords: [
+    "organic certification software",
+    "COG Pro alternative",
     "organic system plan",
     "OSP software",
     "organic certification renewal",

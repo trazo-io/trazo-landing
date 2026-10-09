@@ -36,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: "https://www.trazo.io/cog-pro-migration",
+      lastModified: new Date("2026-10-08"),
       changeFrequency: "weekly",
       priority: 0.9,
     },
