@@ -93,7 +93,7 @@ export function OrganicFeatures() {
               For Organic Farms
             </p>
             <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              Organic audit readiness, built in
+              Organic certification software, built on your records
             </h2>
             <p className="mt-4 text-base text-muted-foreground">
               Designed to meet NOP recordkeeping requirements (7 CFR 205.103).

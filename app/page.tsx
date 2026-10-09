@@ -27,7 +27,7 @@ const softwareAppJsonLd = {
   // `Prefill`, and a prefill is a SUGGESTION the operator must accept, never a written answer
   // (7 CFR 205.201(a) makes the producer the author). Full note: app/layout.tsx `description`.
   description:
-    "Organic recordkeeping software for US farms. Log the season once and Trazo assembles your renewal packet and NOP audit exports (7 CFR 205.103), backs your Organic System Plan answers with the records behind them, lists what changed since you last wrote them, and builds a buyer-facing QR page from the same log.",
+    "Organic certification software for US farms, built on recordkeeping. Log the season once and Trazo assembles your renewal packet and NOP audit exports (7 CFR 205.103), backs your Organic System Plan answers with the records behind them, lists what changed since you last wrote them, and builds a buyer-facing QR page from the same log.",
   offers: {
     "@type": "AggregateOffer",
     lowPrice: "0",
