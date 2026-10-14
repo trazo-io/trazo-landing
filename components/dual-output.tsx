@@ -240,8 +240,8 @@ export function DualOutput() {
                     to fill the frame. That intermediate state renders as a wildly zoomed,
                     cropped screenshot. */}
                 <Image
-                  src="/images/dual-output-consumer-v6.png"
-                  alt="The same spray on the public Trazo page: Entrust SC, pest control, August 7 2025, performed by the farm team, a plain-language line about the treatment, a National List section 205.601 badge for the product, and a Self Reported label."
+                  src="/images/dual-output-consumer-v7.png"
+                  alt="The same spray on the public Trazo page: Entrust SC, pest control, August 7 2025, performed by the farm team, a plain-language line about the treatment, a Recorded by the farm as allowed for organic use label, and the details opened: why it is recorded, 12.5 acres treated, navel orangeworm as the target, air blast application."
                   width={750}
                   height={1800}
                   quality={95}
@@ -259,10 +259,10 @@ export function DualOutput() {
                   The same spray, in plain words
                 </h3>
                 <p className="mx-auto mt-1 max-w-[280px] text-sm text-muted-foreground">
-                  What was applied, what it protects against, and which public
-                  list the product appears on. A listing match does not mean
-                  this application was approved. No login, no acronyms to look
-                  up.
+                  What was applied, what it protects against, and the organic
+                  basis the farm recorded for it. That basis is the farm&apos;s
+                  record, not an approval of this application. No login, no
+                  acronyms to look up.
                 </p>
               </div>
             </div>
