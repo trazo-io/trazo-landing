@@ -31,13 +31,13 @@ export function CertifierLogPreview() {
         <button
           type="button"
           className="group relative block h-[520px] w-full overflow-hidden rounded-sm border border-border bg-white text-left shadow-xl shadow-foreground/5 transition-shadow hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 md:h-[560px]"
-          aria-label="Expand the full Input Application Log from the audit export"
+          aria-label="Expand the full Input Material Application Records table from the audit export"
         >
           <Image
-            src="/images/dual-output-certifier-v8.png"
-            alt="A page of the Trazo NOP audit export for Blue Oak Orchards: an Input Application Log listing five applications with date, product, type, concentration, amount and per-acre rate, area, method, target, organic status, re-entry and pre-harvest intervals, followed by Input Purchase Traceability under 7 CFR 205.103 showing supplier, purchase date, invoice, lot, quantity purchased and applicator."
+            src="/images/dual-output-certifier-v9.png"
+            alt="A page of the Trazo NOP audit export for Blue Oak Orchards, sample data: Input Material Application Records listing two copper applications, a fertigation and the Entrust SC hull-split spray with date, product, type, concentration, amount and per-acre rate, area, method, target and organic status, followed by Input Purchase Traceability under 7 CFR 205.103 showing supplier, purchase date, invoice, lot and quantity purchased."
             width={800}
-            height={1770}
+            height={1244}
             quality={95}
             className="h-full w-full object-cover object-top"
           />
@@ -61,7 +61,7 @@ export function CertifierLogPreview() {
           desktop that has room for it. */}
       <DialogContent className="w-[96vw] max-w-[96vw] p-4 sm:max-w-[min(96vw,1240px)] sm:p-6">
         <DialogTitle className="pr-8 text-base">
-          Input Application Log: NOP audit export
+          Input Material Application Records: NOP audit export
         </DialogTitle>
         <DialogDescription className="text-sm">
           Every column your certifier receives for each application, cited to 7
@@ -71,10 +71,10 @@ export function CertifierLogPreview() {
         {/* Horizontal scrolling belongs here — inside a view the reader chose to open. */}
         <div className="mt-2 overflow-x-auto rounded-md border border-border bg-white">
           <Image
-            src="/images/dual-output-certifier-full-v8.png"
-            alt="The complete Input Application Log table: Date, Product, Type, NPK or concentration, Amount and rate, Area, Method, Target or purpose, Organic Status, REI hours, PHI days, Buffer, EPA registration number and restricted-use flag, across two fertigations, two copper applications and the Entrust SC hull-split spray."
-            width={1290}
-            height={430}
+            src="/images/dual-output-certifier-full-v9.png"
+            alt="The complete Input Material Application Records table: Date, Product, Type, NPK or concentration, Amount and rate, Area, Method, Target or purpose, Organic Status, REI hours, PHI days, Buffer, EPA registration number and restricted-use flag, across two copper applications, a fertigation and the Entrust SC hull-split spray. The organic status column reads OMRI Listed, grower-selected, no listing on file."
+            width={1130}
+            height={628}
             quality={95}
             className="h-auto max-w-none"
             style={{ width: "1160px" }}
