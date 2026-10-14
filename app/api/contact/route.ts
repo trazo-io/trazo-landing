@@ -1,33 +1,19 @@
 import { NextResponse } from "next/server"
 
+import { submitContact } from "@/lib/contact-email"
 import { sendEmail } from "@/lib/email"
 
 export async function POST(request: Request) {
-  const { firstName, lastName, email, subject, message } = await request.json()
+  const body = await request.json()
+  // Fields are HTML-escaped inside buildContactEmail (Run 8b, X1).
+  const outcome = await submitContact(body, sendEmail)
 
-  if (!firstName || !lastName || !email || !subject || !message) {
+  if (outcome.kind === "invalid") {
     return NextResponse.json({ error: "All fields are required" }, { status: 400 })
   }
 
-  const result = await sendEmail({
-    to: "info@trazo.io",
-    // Not info@ -> info@: Workspace treats mail claiming to be from its own
-    // domain but arriving via an outside server as spoofing. reply_to still
-    // carries the submitter, so hitting reply answers the person.
-    from: "Trazo <noreply@trazo.io>",
-    replyTo: email,
-    subject: `Contact Form: ${subject}`,
-    text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`,
-    html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
-        <hr />
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, "<br />")}</p>
-      `,
-  })
+  const result = outcome.result
+  const { email } = body as { email: string }
 
   if (!result.ok) {
     console.error("Contact form send failed:", result.reason)
