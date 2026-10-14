@@ -227,8 +227,10 @@ export default function PrivacyPolicyPage() {
                 <li>
                   <strong>Documentation Snapshot:</strong> The page-1 snapshot
                   lists documentation checks computed from the data you have
-                  entered, each marked documented, gap (a record is missing),
-                  review (for you and your certifier to look at), N/A or FYI.
+                  entered. The PDF marks each row DOCUMENTED, GAP (a record is
+                  missing), REVIEW (for you and your certifier to look at), N/A
+                  (there was nothing to check) or FYI (reported for information
+                  only).
                   It is generated automatically; Trazo does not independently
                   verify the underlying records, and the snapshot is not a
                   determination of compliance.

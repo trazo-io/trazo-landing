@@ -241,8 +241,9 @@ export default function TermsOfServicePage() {
                 The NOP Audit PDF (also called the &quot;Compliance Report&quot;)
                 is generated from the production data, photos, and event logs you
                 submit to the Platform. It includes a Documentation Snapshot
-                (documentation checks computed from your records, each marked
-                documented, gap, review, N/A or FYI),
+                (documentation checks computed from your records; the PDF marks
+                each row DOCUMENTED, GAP, REVIEW, N/A when there was nothing to
+                check, or FYI when it is reported for information only),
                 citations to 7 CFR 205.x, drift detection against OMRI and
                 National List databases, photo galleries with EXIF/GPS captions,
                 Strengthening Organic Enforcement (SOE) attestations, and a 5-year change
