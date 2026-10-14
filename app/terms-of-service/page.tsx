@@ -22,7 +22,7 @@ export default function TermsOfServicePage() {
               Terms and conditions governing use of the Trazo platform.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Last updated: September 27, 2026
+              Last updated: October 14, 2026
             </p>
           </header>
 
@@ -66,10 +66,11 @@ export default function TermsOfServicePage() {
                   Create QR codes for consumer-facing transparency profiles
                 </li>
                 <li>
-                  {/* "carbon footprint" implies a full LCA; the methodology is
-                      direct operational emissions only. Safe form per compliance.md. */}
-                  Estimate direct operational emissions using EPA/USDA-sourced
-                  emission factors
+                  {/* "carbon footprint" implies a full LCA. The boundary is stated in both
+                      halves, and factor sources per input class (methodology v2.2). */}
+                  Estimate emissions: the operation&apos;s own emissions plus the
+                  manufacturing of the fertilizer and chemicals it buys, with
+                  each emission factor&apos;s source stated per input class
                 </li>
                 <li>
                   Track consumer engagement through QR code analytics
@@ -81,10 +82,12 @@ export default function TermsOfServicePage() {
                   saves an answer on the producer&apos;s behalf
                 </li>
                 <li>
-                  Generate certifier-facing exports from logged records,
-                  including the renewal packet (annual update, change notices,
-                  module PDFs, parcel applications) and NOP audit
-                  documentation, on paid plans
+                  Generate certifier-facing exports from logged records on
+                  paid plans, including renewal drafts the producer reviews,
+                  completes and signs (the records section, a draft change
+                  summary for the annual update, change notices, module PDFs,
+                  parcel applications and acreage workbooks) and NOP audit
+                  documentation
                 </li>
                 <li>
                   Review a list of what changed in their records since their
@@ -131,8 +134,9 @@ export default function TermsOfServicePage() {
                   account.
                 </li>
                 <li>
-                  <strong>Billing Cycle:</strong> Paid plans are billed annually
-                  per farm. There is no monthly billing option.
+                  <strong>Billing Cycle:</strong> Paid plans are billed annually:
+                  the Compliance plan per farm, the Operation plan per
+                  operation. There is no monthly billing option.
                 </li>
                 <li>
                   <strong>Price Changes:</strong> We may update pricing with 30
@@ -204,11 +208,23 @@ export default function TermsOfServicePage() {
                 6.1 Carbon Calculations
               </h4>
               <p className="mt-3 leading-[1.8]">
-                Trazo provides direct operational emission estimates using published
-                emission factors from the EPA (40 CFR Part 98) and USDA sources.
-                These calculations use Direct Operational Emissions methodology
-                (Scope 1 only) and do not constitute a full lifecycle assessment
-                under ISO 14067 or any other recognized standard.
+                Trazo provides emission estimates covering the operation&apos;s
+                own emissions plus the manufacturing of the fertilizer and
+                chemicals it buys. Emission factor sources differ by input
+                class, and each factor states its own source: fuel and
+                electricity factors are EPA-published, the nitrogen factor
+                combines EPA and IPCC guideline values, crop-protection
+                manufacturing factors come from peer-reviewed LCA literature,
+                and the phosphorus (P2O5) and potassium (K2O) factors are
+                Trazo&apos;s own estimates. These calculations are not a full
+                lifecycle assessment under ISO 14067 or any other recognized
+                standard: fertilizer transport, equipment manufacturing,
+                infrastructure, distribution, retail and end-of-life are
+                excluded. The method is published on our{" "}
+                <a href="/methodology" className="text-primary hover:underline">
+                  Methodology
+                </a>{" "}
+                page.
               </p>
               <p className="mt-3 leading-[1.8]">
                 These estimates are provided for informational and transparency
@@ -224,7 +240,10 @@ export default function TermsOfServicePage() {
               <p className="mt-3 leading-[1.8]">
                 The NOP Audit PDF (also called the &quot;Compliance Report&quot;)
                 is generated from the production data, photos, and event logs you
-                submit to the Platform. It includes a Compliance Snapshot,
+                submit to the Platform. It includes a Documentation Snapshot
+                (documentation checks computed from your records; the PDF marks
+                each row DOCUMENTED, GAP, REVIEW, N/A when there was nothing to
+                check, or FYI when it is reported for information only),
                 citations to 7 CFR 205.x, drift detection against OMRI and
                 National List databases, photo galleries with EXIF/GPS captions,
                 Strengthening Organic Enforcement (SOE) attestations, and a 5-year change
@@ -248,7 +267,7 @@ export default function TermsOfServicePage() {
                 against the OMRI Listed Products database and the USDA National
                 List) operate on the text and metadata you submit; matches and
                 mismatches are advisory and may include false positives or
-                false negatives. The Compliance Snapshot, drift findings, and
+                false negatives. The Documentation Snapshot, drift findings, and
                 attestation rows in the PDF reflect the data you have entered
                 and the automated checks the Platform applied to that data, nothing more.
               </p>
@@ -336,9 +355,9 @@ export default function TermsOfServicePage() {
                 Trazo to display the associated production data and farming
                 events to anyone who scans the code. Productions are not published
                 until you explicitly finalize them, and a published season can
-                be unpublished at any time. Trazo shows no score, grade, tier or
-                badge of its own on consumer-facing pages: documented practices
-                are counted, never graded.
+                be unpublished at any time. Consumer-facing pages show counts of
+                documented practices and the records behind them; Trazo assigns
+                no grade, rating, tier or badge of its own.
               </p>
               <p className="mt-3 leading-[1.8]">
                 What a public page shows is governed by a uniform withholding

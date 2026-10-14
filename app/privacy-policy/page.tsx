@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
               How Trazo collects, uses, and protects your personal information.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Last updated: September 8, 2026
+              Last updated: October 14, 2026
             </p>
           </header>
 
@@ -111,8 +111,9 @@ export default function PrivacyPolicyPage() {
                 </li>
                 <li>
                   <strong>Records & Carbon Data:</strong> Record-completeness
-                  checks, emission factors, direct operational emission
-                  estimates
+                  checks, emission factors, and emission estimates (the
+                  operation&apos;s own emissions plus the manufacturing of the
+                  fertilizer and chemicals it buys)
                 </li>
                 <li>
                   <strong>Production Events:</strong> Agricultural timelines,
@@ -224,10 +225,15 @@ export default function PrivacyPolicyPage() {
                   positives or false negatives.
                 </li>
                 <li>
-                  <strong>Compliance Snapshot:</strong> The page-1 snapshot
-                  derives PASS / REVIEW / FAIL outcomes from the data you have
-                  entered. It is generated automatically; Trazo does not
-                  independently verify the underlying records.
+                  <strong>Documentation Snapshot:</strong> The page-1 snapshot
+                  lists documentation checks computed from the data you have
+                  entered. The PDF marks each row DOCUMENTED, GAP (a record is
+                  missing), REVIEW (for you and your certifier to look at), N/A
+                  (there was nothing to check) or FYI (reported for information
+                  only).
+                  It is generated automatically; Trazo does not independently
+                  verify the underlying records, and the snapshot is not a
+                  determination of compliance.
                 </li>
               </ul>
             </section>
@@ -243,8 +249,10 @@ export default function PrivacyPolicyPage() {
               </h4>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
-                  Provide record-completeness checks and direct operational
-                  emission estimates using published EPA/USDA emission factors
+                  Provide record-completeness checks and emission estimates (the
+                  operation&apos;s own emissions plus the manufacturing of the
+                  fertilizer and chemicals it buys), using emission factors
+                  whose source is stated per input class
                 </li>
                 <li>
                   Generate and manage QR codes for consumer transparency access
@@ -404,7 +412,7 @@ export default function PrivacyPolicyPage() {
                     </tr>
                     <tr>
                       <td className="py-2 pr-4">
-                        Drift detection and compliance snapshot (automatic
+                        Drift detection and documentation snapshot (automatic
                         checks against OMRI / National List on event save)
                       </td>
                       <td className="py-2">
@@ -502,12 +510,14 @@ export default function PrivacyPolicyPage() {
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
                   Documented farming practices with dates, photos, and
-                  certification status. No score, grade, tier or badge of
-                  Trazo&apos;s own is shown to consumers &mdash; practices are
-                  counted, not graded
+                  certification status, shown as counts and records. Trazo
+                  assigns no grade, rating, tier or badge of its own
                 </li>
                 <li>
-                  Direct operational emission estimates, in expandable sections
+                  An estimate of the season&apos;s emissions (the
+                  operation&apos;s own emissions plus the manufacturing of the
+                  fertilizer and chemicals it buys), in a collapsed, labelled
+                  section
                 </li>
                 <li>
                   Farm location at the precision level the producer selects
@@ -575,7 +585,7 @@ export default function PrivacyPolicyPage() {
                 MyCCOF or emailing it directly). Once you share the PDF, the
                 recipient will have access to the data described in Section 2.6,
                 including photo EXIF/GPS metadata, change-history attribution,
-                drift findings, and the compliance snapshot.
+                drift findings, and the documentation snapshot.
               </p>
               <p className="mt-2 leading-[1.8]">
                 Trazo is a documentation platform and is not a USDA-accredited

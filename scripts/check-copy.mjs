@@ -36,9 +36,6 @@ const RULES = [
     reason:
       "The transparency and carbon scores are retired concepts, not hidden ones. Naming them, even to deny or to say they were removed, keeps them alive on the site. Say what Trazo shows (counts, documents), or use grade/rating for the denial.",
     find: (text) => [...text.matchAll(/\bscor(e|es|ed|ing)\b/gi)].map((m) => m.index),
-    // The legal pages' "no score, grade, tier or badge" lists wait on a Terms-version decision
-    // (the backend records terms_version at sign-up). Remove these once that wording changes.
-    allow: ["app/terms-of-service/page.tsx", "app/privacy-policy/page.tsx"],
     // Code comments explaining a removal are for maintainers and never render.
     skipComments: true,
   },
@@ -65,15 +62,13 @@ const RULES = [
         .map((m) => m.index),
   },
   // Added 2026-10-02 from a read of the live site against compliance.md and
-  // carbon-methodology.md. The legal pages are allowed because their wording waits on the same
-  // Terms-version decision as the "score" rule above.
+  // carbon-methodology.md.
   {
     name: '"direct" emissions',
     reason:
       "The estimate includes the manufacturing of purchased fertilizer and chemicals, which happens off the farm. Calling it direct, operational or on-farm states half the boundary. Say: the operation's own emissions plus the manufacturing of the fertilizer and chemicals it buys.",
     find: (text) =>
       [...text.matchAll(/\bdirect (operational|farm|on-farm) emissions?\b/gi)].map((m) => m.index),
-    allow: ["app/terms-of-service/page.tsx", "app/privacy-policy/page.tsx"],
     skipComments: true,
   },
   {
@@ -82,7 +77,6 @@ const RULES = [
       "Factor provenance differs per input class: EPA for fuel, electricity and nitrogen, academic LCA for pesticides, Trazo's own estimate for P2O5 and K2O. A blanket EPA/USDA attribution credits an agency with Trazo's numbers (compliance.md).",
     find: (text) =>
       [...text.matchAll(/EPA\s*\/\s*USDA|EPA and USDA (factors|sources|data|publications)|EPA \([^)]*\) and USDA/gi)].map((m) => m.index),
-    allow: ["app/terms-of-service/page.tsx", "app/privacy-policy/page.tsx"],
     skipComments: true,
   },
   {
@@ -131,9 +125,6 @@ const RULES = [
     reason:
       "The snapshot is a documentation check: present, missing or for the certifier's review. A pass or fail reads as a compliance grade (run 8, R8-02).",
     find: (text) => [...text.matchAll(/PASS\s*\/\s*REVIEW\s*\/\s*FAIL|passes Trazo/gi)].map((m) => m.index),
-    // The legal pages describe what the PDF prints today; their wording waits on the same
-    // Terms-version decision as the "score" rule.
-    allow: ["app/terms-of-service/page.tsx", "app/privacy-policy/page.tsx"],
     skipComments: true,
   },
   {
@@ -163,7 +154,6 @@ const RULES = [
     reason:
       "21 CFR Part 11 is an FDA electronic-records rule. It does not govern organic records and Trazo was never assessed against it (run 8, R8-22).",
     find: (text) => [...text.matchAll(/21\s*CFR\s*Part\s*11\b/gi)].map((m) => m.index),
-    allow: ["app/terms-of-service/page.tsx", "app/privacy-policy/page.tsx"],
     skipComments: true,
   },
   {
