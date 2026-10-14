@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "Can I take my records with me?",
     answer:
-      "Yes, on every plan including the free one. One click in Documents downloads a ZIP of plain CSV files: every activity record with all its fields, your productions, parcels, sales and photo references. Your records are your records \u2014 7 CFR 205.103 makes you keep them for five years, and a tool you might someday leave should never be the place they are trapped. The certifier-ready packet and audit exports are a paid feature; the raw data never is.",
+      "Yes, on every plan including the free one. One click in Documents downloads a ZIP of plain CSV files: every activity record with all its fields, your productions, parcels, sales and photo references. Your records are your records \u2014 7 CFR 205.103 makes you keep them for five years, and a tool you might someday leave should never be the place they are trapped. The certifier packet and audit exports are a paid feature; the raw data never is.",
   },
   {
     question: "Can I cancel anytime?",

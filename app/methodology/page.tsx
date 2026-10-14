@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "Methodology: records and readiness checks | Trazo",
   description:
-    "How Trazo turns activity logs into certifier-ready records, runs documentation readiness checks and estimates emissions. CC BY 4.0.",
+    "How Trazo organizes activity logs into records for the certifier's file, runs documentation readiness checks and estimates emissions. CC BY 4.0.",
   openGraph: {
     title: "How Trazo's records and readiness checks work",
     description:
@@ -33,13 +33,14 @@ export default function MethodologyPage() {
               How Trazo&apos;s Records and Calculations Work
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
-              How field activity logs become certifier-ready records, how
-              documentation readiness checks are computed, and how emissions
+              How field activity logs are organized into records for the
+              certifier&apos;s file, how documentation readiness checks are
+              computed, and how emissions
               are estimated, published openly for
               scrutiny and reproducibility.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Version 2.1 &middot; September 2026 &middot; License: CC BY 4.0
+              Version 2.2 &middot; October 2026 &middot; License: CC BY 4.0
             </p>
           </header>
 
@@ -51,8 +52,8 @@ export default function MethodologyPage() {
                 This document describes how Trazo works, in three parts. First,
                 the <strong>records model</strong>: dated, parcel-linked
                 activity records whose required fields follow 7&nbsp;CFR
-                205.103, assembled into Organic System Plan modules that follow
-                the Common OSP structure — authored and confirmed by the
+                205.103, brought to Organic System Plan modules that follow
+                the Common OSP structure, where every answer is authored and confirmed by the
                 operator, as § 205.201(a) requires. Second,{" "}
                 <strong>readiness checks</strong>: completeness measurements
                 computed over those records — each one naming a specific
@@ -61,8 +62,10 @@ export default function MethodologyPage() {
                 <strong>emission calculations</strong>: emissions from the
                 operation&apos;s own activity — the fuel and electricity it burns
                 — plus the manufacturing of the fertiliser and crop-protection
-                products it buys, kept as background data for business reporting
-                and not a consumer-facing claim. Factor sources differ by input
+                products it buys, used for business reporting. On the buyer
+                page it appears only as a collapsed, labelled estimate with its
+                boundary stated, never as a grade or a headline number. Factor
+                sources differ by input
                 and each one is stated with its own: fuel and electricity are
                 EPA-published, nitrogen combines EPA and IPCC guideline values,
                 crop-protection manufacturing comes from peer-reviewed LCA
@@ -100,7 +103,7 @@ export default function MethodologyPage() {
               </p>
               <p className="mt-3 leading-[1.8]">
                 The same records then serve two audiences without re-entry.{" "}
-                <strong>For the certifier:</strong> records assemble into
+                <strong>For the certifier:</strong> records feed
                 Organic System Plan modules that follow the Common OSP structure
                 (§&nbsp;205.201(a)), per-parcel applications (§&nbsp;205.202),
                 an audit PDF with inline Part&nbsp;205 citations, and a renewal
@@ -386,9 +389,14 @@ export default function MethodologyPage() {
                 5. Emission Factor Sources
               </h3>
               <p className="mt-3 leading-[1.8]">
-                All emission factors are sourced from government publications
-                and peer-reviewed literature. Each factor includes a confidence
-                level (0.0–1.0) representing source evidence strength.
+                Each factor states its own source, and the sources are not all
+                of one kind: fuel and electricity come from EPA publications,
+                nitrogen combines EPA and IPCC guideline values, crop-protection
+                manufacturing comes from peer-reviewed LCA literature, and the
+                phosphorus (P&#8322;O&#8325;) and potassium (K&#8322;O) figures
+                are Trazo estimates, not agency or published values. Each factor
+                includes a confidence level (0.0–1.0) representing source
+                evidence strength.
               </p>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
@@ -755,21 +763,29 @@ export default function MethodologyPage() {
               </h4>
               <p className="mt-3 leading-[1.8]">
                 When a farmer logs a chemical or soil amendment event, a
-                post-save signal compares the input against the operation&apos;s
-                inputs list in its plan using a three-layer cascade:
+                post-save signal compares the input against the materials list
+                on the operation&apos;s plan (the active plan, or the newest
+                draft, in which case the finding is marked provisional). It
+                works in three steps:
               </p>
               <ol className="mt-3 list-decimal space-y-2 pl-6 leading-[1.8]">
                 <li>
-                  <strong>Foreign-key membership check:</strong> if the event
-                  references a specific OMRI Product or National List Substance
-                  by ID, the detector confirms that ID is on the plan&apos;s list.
+                  <strong>Catalog reference:</strong> if the event references
+                  a specific OMRI product or National List substance by ID, the
+                  detector checks that the ID is on the plan&apos;s list.
                 </li>
                 <li>
-                  <strong>Name match:</strong> if no FK is set, the
-                  free-text commercial name is matched against the OMRI catalog
-                  and National List using token-based comparison with brand-
-                  anchor constraints. Confidence below the threshold is treated
-                  as unresolved. A name match is a lookup aid, never a
+                  <strong>Exact name match:</strong> otherwise, a commercial
+                  name counts only when it matches exactly, ignoring case and
+                  extra spaces, either an entry in the OMRI, WSDA or National
+                  List catalogs that is on the plan&apos;s list, or a material
+                  the operator entered on the plan&apos;s own materials list.
+                  For the National List, a hand-checked alias table also counts
+                  (for example &quot;Sulfur&quot; for the listed &quot;Elemental
+                  sulfur&quot;); a term that could mean more than one listing is
+                  never resolved automatically. A partial match on a word or a
+                  brand name is shown as a possible match, not confirmed, and
+                  decides nothing. A name match is a lookup aid, never a
                   verification.
                 </li>
                 <li>
@@ -777,7 +793,7 @@ export default function MethodologyPage() {
                   that match nothing on the plan&apos;s list are listed for
                   review with the certifier. The detector never blocks a save,
                   because the record has to say what was actually applied.
-                  Recording an input does not authorize it. Applying a
+                  Recording an input never authorizes using it. Applying a
                   prohibited substance, including by drift, is something the
                   operation must notify its certifier about immediately (§
                   205.400(f)(1)); that duty to notify is not permission to use
@@ -785,8 +801,8 @@ export default function MethodologyPage() {
                 </li>
               </ol>
               <p className="mt-3 leading-[1.8]">
-                Name matching can produce false positives or false negatives.
-                Treat these findings as a list to review before sharing the PDF
+                Exact matching misses a name spelled differently from the
+                catalog; that input shows as unresolved. Treat these findings as a list to review before sharing the PDF
                 with a certifier.
               </p>
 
@@ -863,10 +879,9 @@ export default function MethodologyPage() {
                 </li>
                 <li>
                   <strong>Carbon scope:</strong> Carbon calculations cover
-                  the operation&apos;s direct emissions plus the upstream
-                  manufacturing of the fertiliser and crop-protection products it
-                  purchases — so mostly Scope 1, with that one Scope 3 category
-                  included because it is the largest number a grower can actually
+                  the operation&apos;s own emissions plus the manufacturing of
+                  the fertilizer and chemicals it buys. That is mostly Scope 1,
+                  with that one Scope 3 category included because it is the largest number a grower can actually
                   change. It is deliberately narrower than a full Life Cycle
                   Assessment per ISO 14067: transport to the farm, packaging,
                   equipment manufacturing, distribution and retail are all
@@ -885,7 +900,9 @@ export default function MethodologyPage() {
                   self-created sustainability label. Trazo therefore assigns no
                   grade or rating of any kind: there is no number to publish or
                   withhold. Consumers see the documented practices and
-                  third-party certifications directly. Full EU substantiation may
+                  third-party certifications directly. Carbon is shown to buyers
+                  only as a collapsed, labelled estimate with its boundary
+                  stated, never as a grade or a headline number. Full EU substantiation may
                   still require external methodology audit.
                 </li>
               </ul>
@@ -914,8 +931,10 @@ export default function MethodologyPage() {
                     </a>
                     :
                   </strong>{" "}
-                  No implied third-party endorsement. All emission factors cite
-                  specific government publications. Blockchain described as
+                  No implied third-party endorsement. Each emission factor names
+                  its own source: a government publication, peer-reviewed
+                  literature, or, for P&#8322;O&#8325; and K&#8322;O, a Trazo
+                  estimate (section 5). Blockchain described as
                   &quot;blockchain-recorded&quot; (immutability), never
                   &quot;blockchain-verified.&quot;
                 </li>
@@ -933,9 +952,10 @@ export default function MethodologyPage() {
                 <li>
                   <strong>ISO 14067:2018</strong> (Carbon Footprint of
                   Products): Carbon calculations reference ISO 14067 principles
-                  for emission factor selection, though {"Trazo's"} direct
-                  operational scope is narrower than a full product carbon
-                  footprint.
+                  for emission factor selection, though {"Trazo's"} scope (the
+                  operation&apos;s own emissions plus the manufacturing of the
+                  fertilizer and chemicals it buys) is narrower than a full
+                  product carbon footprint.
                 </li>
               </ul>
             </section>
@@ -1083,7 +1103,7 @@ export default function MethodologyPage() {
                   with attribution
                 </li>
                 <li>
-                  <strong>Version:</strong> 2.1 (September 2026)
+                  <strong>Version:</strong> 2.2 (October 2026)
                 </li>
               </ul>
               <p className="mt-4 leading-[1.8]">
@@ -1131,6 +1151,18 @@ export default function MethodologyPage() {
                       </tr>
                     </thead>
                     <tbody>
+                      <tr className="border-b border-border/50">
+                        <td className="py-1 pr-4">2.2</td>
+                        <td className="py-1 pr-4">October 2026</td>
+                        <td className="py-1">
+                          Each emission factor&apos;s source stated per input
+                          class (P2O5 and K2O named as Trazo estimates); how
+                          carbon appears to buyers stated; carbon boundary
+                          wording aligned; input matching (section 7.2)
+                          rewritten to match the code: exact catalog or alias
+                          matches only, partial matches shown as possible
+                        </td>
+                      </tr>
                       <tr className="border-b border-border/50">
                         <td className="py-1 pr-4">2.1</td>
                         <td className="py-1 pr-4">September 2026</td>

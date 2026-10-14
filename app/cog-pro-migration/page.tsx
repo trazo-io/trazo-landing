@@ -4,6 +4,7 @@ import { AlertTriangle, ArrowRight, Check, Download, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { CogProMigrationSteps } from "@/components/cog-pro-migration-steps";
 
 /**
  * COG Pro migration guide.
@@ -328,6 +329,7 @@ export default function CogProMigrationPage() {
                 OSP renewal packet, PUR export) are the part that is
                 Compliance.
               </p>
+              <CogProMigrationSteps className="mt-6" />
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg">
                   <Link href="/contact?topic=cog-pro-migration">

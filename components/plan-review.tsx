@@ -29,7 +29,7 @@ const checks = [
   },
   {
     what: "Materials added or removed",
-    why: "Every input on the approved list that was not there when the materials module was last answered.",
+    why: "Every input on your plan's materials list that was not there when the materials module was last answered.",
   },
   {
     what: "Affidavits and contamination incidents",

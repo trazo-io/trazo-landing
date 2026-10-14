@@ -58,12 +58,16 @@ export function Hero() {
           {/* Subheading */}
           <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
             Your annual update is due between January 1 and April 1, depending
-            on your certifier. Log the season on your phone as you go — in
-            English or Spanish — and Trazo assembles the records section, the
-            attachment forms, the annual update and your inspection packet from
-            what you entered, and lists what changed in your records since you
-            last wrote your plan. You review and sign. The same records also
-            produce a page your buyer can scan.
+            on your certifier. Log the season on your phone as you go, in
+            English or Spanish. From what you entered, Trazo prepares the
+            records section, a draft change summary for your annual update,
+            the acreage and Common OSP workbooks and your inspection packet,
+            and lists what changed in your records since you last wrote your
+            plan. You review and sign. Your certifier&apos;s other
+            requirements are yours to supply. The bigger gain is next season:
+            log as you go, and your next inspection starts from records you
+            already have. The same records also produce a page your buyer can
+            scan.
           </p>
 
           {/* CTA Buttons */}

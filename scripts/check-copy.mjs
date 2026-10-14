@@ -180,6 +180,65 @@ const RULES = [
     find: (text) => [...text.matchAll(/premium positioning/gi)].map((m) => m.index),
     skipComments: true,
   },
+  // Added 2026-10-13 from Astra run 8b (8b-05, 8b-06, 8b-08). Each phrase was live on the site
+  // when the review read it. Narrow on purpose: "approved" alone stays legal, because "your
+  // record of your certifier's written approval" is a true sentence.
+  {
+    name: "annual update that assembles itself",
+    reason:
+      "Trazo prepares a draft change summary for the annual update from the records the grower entered. The grower reviews, completes and signs it, and the certifier's other requirements are the grower's to supply (run 8b, 8b-05).",
+    find: (text) => [...text.matchAll(/annual update (itself )?assembl/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: "records back every OSP answer",
+    reason:
+      "Records sit behind some plan answers, not all of them; many answers are the grower's own description. Say Trazo shows the records next to the answers (run 8b, 8b-05).",
+    find: (text) => [...text.matchAll(/every answer in your/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: '"nothing is missing"',
+    reason:
+      "Trazo cannot know everything a certifier will ask for. It shows which questions are open and which records exist; the rest is the grower's to supply (run 8b, 8b-05).",
+    find: (text) => [...text.matchAll(/nothing is missing/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: '"renewal-ready"',
+    reason:
+      "Readiness for renewal is the certifier's call and depends on documents Trazo does not hold. Name the outputs instead: records section, change-summary draft, workbooks, inspection packet (run 8b, 8b-05).",
+    find: (text) => [...text.matchAll(/renewal[- ]ready/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: '"certifier-ready"',
+    reason:
+      "Implies the certifier will accept what Trazo produces. Trazo organizes the grower's records for the certifier's file; acceptance is the certifier's (run 8b, 8b-05).",
+    find: (text) => [...text.matchAll(/certifier[- ]ready/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: "every emission factor credited to one kind of source",
+    reason:
+      "Factor sources differ per input class, and P2O5 and K2O are Trazo estimates. A sentence that says all factors are government or peer-reviewed, or all cite government publications, contradicts the methodology's own table (run 8b, 8b-08).",
+    find: (text) => [...text.matchAll(/all emission factors (are|cite)/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: '"approved for organic growing"',
+    reason:
+      "A listing match or a farm's recorded basis does not show that a product, or this application of it, was approved. Describe what is recorded and its source (run 8b, 8b-06).",
+    find: (text) => [...text.matchAll(/approved for organic growing/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: '"approved materials list"',
+    reason:
+      "The list is the materials list on the grower's plan, written by the operator. Calling it approved states a certifier decision Trazo cannot see (run 8b, 8b-06).",
+    find: (text) => [...text.matchAll(/approved materials list/gi)].map((m) => m.index),
+    skipComments: true,
+  },
 ];
 
 /** True when raw[index] sits inside a // line comment or a /* block comment *\/. */

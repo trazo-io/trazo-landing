@@ -20,16 +20,16 @@ const steps = [
     label: "STEP 2",
     title: "Document Your Practices",
     description:
-      "Log every farming event fast with voice recording, photo capture, or simple forms — and Trazo flags any certifier-required detail still missing while you can still remember it.",
+      "Log every farming event fast with voice recording, photo capture, or simple forms. Trazo flags record details still missing while you can still remember them.",
     image: "/images/step-document.jpg",
     alt: "Farmer documenting agricultural practices with Trazo",
   },
   {
     number: "03",
     label: "STEP 3",
-    title: "Walk Into Renewal Ready",
+    title: "Bring Your Records to Renewal",
     description:
-      "Your records compile into your renewal packet and audit exports and back every answer in your Organic System Plan — and before you file, Trazo lists what changed in your records since you last wrote those answers, so you catch anything stale before your certifier does. When you finish a harvest, Trazo can build a buyer page from the same season. Publishing it is optional and reversible: one switch turns a season on, the same switch turns it off.",
+      "Your records become the records section of your renewal packet and your audit exports, and Trazo shows them next to your Organic System Plan answers for you to check. Before you file, Trazo lists what changed in your records since you last wrote those answers, so you catch anything stale before your certifier does. You review and sign; your certifier's other requirements are yours to supply. When you finish a harvest, Trazo can build a buyer page from the same season. Publishing it is optional and reversible: one switch turns a season on, the same switch turns it off.",
     // TODO(step-3 art): interim. Wants a photograph of the RENEWAL MOMENT — see the brief in
     // `docs/step-3-photo-brief.md`. `farm-field.jpg` is on-register and on-brand but it is a
     // landscape: the copy carries the meaning, the image only sets the mood.
@@ -73,7 +73,7 @@ export function HowItWorks() {
                 {/* Was "to consumer trust", which is pre-pivot: the shopper is no longer the
                     climax of the farmer's story. Step 3 ends at renewal, and the QR buyer page
                     is a by-product of finishing a harvest, not the goal. */}
-                From sign-up to renewal-ready
+                From sign-up to renewal season
                 <br className="hidden lg:block" /> in three steps
               </h2>
             </div>

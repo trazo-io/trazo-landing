@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   // The generated artifacts are real and may be claimed by name: the list is the docstring of
   // `subscriptions/gating.py`. The OSP itself is something Trazo brings evidence TO.
   description:
-    "Organic certification software for US farms. Log the season once; Trazo assembles your renewal packet and audit exports from it. Free Starter, $249/farm/yr.",
+    "Organic certification software for US farms. Log the season once; Trazo prepares your renewal records and audit exports. Free Starter, $249/farm/yr.",
   keywords: [
     "organic certification software",
     "COG Pro alternative",
@@ -56,11 +56,11 @@ export const metadata: Metadata = {
   // canonicalise the whole site to "/". Pages may still override.
   alternates: { canonical: "./" },
   openGraph: {
-    title: "Trazo - Organic Recordkeeping & Renewal Readiness",
+    title: "Trazo - Organic Recordkeeping for Renewal Season",
     // See the OSP-authoring note on `description` above. "It becomes" is the honest verb: the
     // packet, the dossier and the buyer page ARE generated from the entry; the plan is not.
     description:
-      "Log each activity once. It becomes your renewal packet, your audit dossier, and the page your buyer can see.",
+      "Log each activity once. It becomes the records in your renewal packet, your audit dossier, and the page your buyer can see.",
     // No hardcoded `url`. It was emitting og:url=https://www.trazo.io on EVERY
     // page, so a certifier pasting /cog-pro-migration into a newsletter got the
     // homepage card and told the platform that page was the homepage.
@@ -119,7 +119,7 @@ const jsonLd = {
   // Structured data, so this is what Google is handed directly — the OSP-authoring claim was
   // worse here than in the prose. See the note on `metadata.description` above.
   description:
-    "Organic recordkeeping software for US farms. Trazo assembles the renewal packet and NOP audit exports from a farm's own activity log, brings that log to the farm's Organic System Plan answers and lists what changed since they were written, and builds a buyer-facing QR page from the same records.",
+    "Organic recordkeeping software for US farms. From a farm's own activity log, Trazo prepares the records section of the renewal packet, a draft change summary for the annual update, Common OSP workbooks and NOP audit exports, shows that log next to the farm's Organic System Plan answers, lists what changed since they were written, and builds a buyer-facing QR page from the same records. The grower reviews and signs.",
   foundingDate: "2025",
   founder: {
     "@type": "Person",
@@ -157,7 +157,7 @@ const webSiteJsonLd = {
   name: "Trazo",
   url: "https://www.trazo.io",
   description:
-    "Organic recordkeeping and renewal readiness for US specialty crop farms. One entry becomes both your certifier's records and your buyer's page.",
+    "Organic recordkeeping for US specialty crop farms, built for renewal season. One entry becomes both your certifier's records and your buyer's page.",
   publisher: { "@type": "Organization", name: "Trazo" },
   // "en" only until Spanish PAGES exist. The app is bilingual and support is
   // bilingual (see contactPoint.availableLanguage above), but this field describes
