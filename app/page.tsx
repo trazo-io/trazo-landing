@@ -27,7 +27,7 @@ const softwareAppJsonLd = {
   // `Prefill`, and a prefill is a SUGGESTION the operator must accept, never a written answer
   // (7 CFR 205.201(a) makes the producer the author). Full note: app/layout.tsx `description`.
   description:
-    "Organic certification software for US farms, built on recordkeeping. Log the season once and Trazo assembles your renewal packet and NOP audit exports (7 CFR 205.103), backs your Organic System Plan answers with the records behind them, lists what changed since you last wrote them, and builds a buyer-facing QR page from the same log.",
+    "Organic certification software for US farms, built on recordkeeping. Log the season once and Trazo prepares the records section of your renewal packet, a draft change summary for your annual update and NOP audit exports (7 CFR 205.103), shows the records behind your Organic System Plan answers, lists what changed since you last wrote them, and builds a buyer-facing QR page from the same log. You review and sign.",
   offers: {
     "@type": "AggregateOffer",
     lowPrice: "0",
@@ -41,7 +41,7 @@ const softwareAppJsonLd = {
     "33 US crop templates with USDA-sourced crop timing data",
     "Activity log with voice and template shortcuts, English and Spanish",
     "PDF export of your NOP records (7 CFR 205.103)",
-    "Renewal packet: annual update, change notices, module PDFs, parcel applications, and Common OSP workbooks",
+    "Renewal packet: records section, draft change summary for the annual update, change notices, module PDFs, parcel applications, and Common OSP workbooks",
     "Plan review: what changed in your records since your plan's answers were written",
     "Emission estimates covering the operation's own activity plus the manufacturing of the fertilizer and chemicals it buys, each factor with its source named",
     "QR code generation for buyer-facing product pages",

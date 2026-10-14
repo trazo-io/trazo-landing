@@ -132,7 +132,7 @@ const plans = [
       // two lines here. Both moved INTO Starter with migration 0014, so listing them under
       // "Everything in Starter, plus" claimed as an upgrade two things the free tier already
       // has. What is left is the honest difference, and it is entirely OUTPUTS.
-      "Renewal packet from your records: annual update, change notices, module PDFs, parcel applications, audit dossier",
+      "Renewal packet from your records: annual update draft, change notices, module PDFs, parcel applications, audit dossier",
       "Plan review before you file — what changed in your records since you last wrote each answer",
       "The four required OSP attachment workbooks, filled from your records",
       "Certifier link — your certifier reviews online, with your permission",
@@ -223,7 +223,7 @@ const comparisonFeatures: ComparisonRow[] = [
     values: [true, true, true],
   },
   {
-    label: "Renewal packet & NOP audit exports (annual update, notices, module PDFs, parcel applications, dossier)",
+    label: "Renewal packet & NOP audit exports (annual update draft, notices, module PDFs, parcel applications, dossier)",
     values: [false, true, true],
   },
   { label: "OSP attachment workbooks", values: [false, true, true] },
@@ -307,7 +307,7 @@ const pricingFaqs = [
     // `company/urls.py`, ungated by `history/tests/test_records_export.py`'s
     // `test_no_compliance_gate_in_the_view`, and listed in the compliance-door inventory as
     // "the farm's own raw records — free by design, never a paid artifact".
-    a: "Yes, on every plan including the free one. One click in Documents downloads a ZIP of plain CSV files — every activity record with all its fields, plus your productions, parcels, sales and photo references. What the Compliance plan adds is the certifier-ready paperwork built from those records (OSP renewal packet and workbooks, audit exports, CA PUR export), not access to the records themselves. Coming from COG Pro, we also import your CSV exports at no charge.",
+    a: "Yes, on every plan including the free one. One click in Documents downloads a ZIP of plain CSV files: every activity record with all its fields, plus your productions, parcels, sales and photo references. What the Compliance plan adds is the certifier paperwork built from those records (OSP renewal packet and workbooks, audit exports, CA PUR export), not access to the records themselves. Coming from COG Pro, we also import your CSV exports at no charge.",
   },
   {
     q: "Is my data secure?",

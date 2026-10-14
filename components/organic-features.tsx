@@ -29,7 +29,7 @@ const organicFeatures = [
           prints as "no third-party listing on file", for the certifier to review.
     */
     description:
-      "Every input you log is checked against the National List (7 CFR 205.601–.602) the moment you save it, and recorded with the basis it actually has: OMRI Listed, WSDA Listed, NOP seal on the label, approved by your certifier in writing — or entered by you with no third-party listing, which is exactly how compost, manure and a home-formulated spray reach the list your certifier asks for. A name Trazo cannot match is reported as unmatched, never as unapproved. Once your plan is active, an input that is not on your approved materials list is flagged on the spot, with the OMRI search a click away.",
+      "Every input you log is checked against the National List (7 CFR 205.601–.602) the moment you save it, and recorded with the basis you give it: OMRI Listed, WSDA Listed, NOP seal on the label, your record of your certifier's written approval, or entered by you with no third-party listing, which is exactly how compost, manure and a home-formulated spray reach the list your certifier asks for. A name Trazo cannot match is reported as unmatched, never as unapproved. Once your plan is active, an input that is not on the materials list on your plan is flagged on the spot, with the OMRI search a click away.",
   },
   /* THREE CARDS REMOVED — each was said better elsewhere on the page:
      · "USDA Organic Verification"      the Integrity Database claim ran FOUR times

@@ -123,11 +123,12 @@ export default function CommonOspPage() {
             <p className="mt-3 text-muted-foreground">
               Trazo walks you through each module as a guided questionnaire in
               English or Spanish, suggests answers from the activity records you
-              already keep — with the evidence named, for you to confirm or edit
-              — and assembles the result into one renewal packet: module PDFs,
-              per-parcel applications, workbooks. You review and confirm every
-              answer: the plan is yours, Trazo just makes sure nothing is
-              missing when your certifier asks.
+              already keep (with the evidence named, for you to confirm or
+              edit) and puts what you confirmed into one renewal packet: module
+              PDFs, per-parcel applications, workbooks. You review and confirm
+              every answer: the plan is yours. Trazo shows which questions are
+              still open and which records sit behind the ones you answered.
+              Anything else your certifier asks for is yours to supply.
             </p>
           </section>
 

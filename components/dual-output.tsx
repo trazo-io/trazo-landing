@@ -241,7 +241,7 @@ export function DualOutput() {
                     cropped screenshot. */}
                 <Image
                   src="/images/dual-output-consumer-v6.png"
-                  alt="The same spray on the public Trazo page: Entrust SC, pest control, August 7 2025, performed by the farm team, a plain-language line saying a pest treatment approved for organic growing was applied, a note that products allowed in organic growing are reviewed against a public national list, an Allowed Input badge citing National List section 205.601, and a Self Reported label."
+                  alt="The same spray on the public Trazo page: Entrust SC, pest control, August 7 2025, performed by the farm team, a plain-language line about the treatment, a National List section 205.601 badge for the product, and a Self Reported label."
                   width={750}
                   height={1800}
                   quality={95}
@@ -259,9 +259,10 @@ export function DualOutput() {
                   The same spray, in plain words
                 </h3>
                 <p className="mx-auto mt-1 max-w-[280px] text-sm text-muted-foreground">
-                  What&rsquo;s in it, what it protects against, and that the
-                  product is allowed in organic growing. No login, no acronyms
-                  to look up.
+                  What was applied, what it protects against, and which public
+                  list the product appears on. A listing match does not mean
+                  this application was approved. No login, no acronyms to look
+                  up.
                 </p>
               </div>
             </div>

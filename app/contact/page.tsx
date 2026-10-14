@@ -22,6 +22,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ContactPage() {
-  return <ContactPageContent />;
+// Run 8b, 8b-07: the COG Pro migration page links here with ?topic=cog-pro-migration. The form
+// cannot take attachments, so that topic shows where the CSV files go and that a dry run comes
+// first. Reading searchParams makes this route render per request; plain /contact is unchanged.
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ topic?: string | string[] }>;
+}) {
+  const { topic } = await searchParams;
+  return <ContactPageContent topic={typeof topic === "string" ? topic : undefined} />;
 }

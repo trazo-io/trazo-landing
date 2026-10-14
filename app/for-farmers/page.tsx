@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Renewal without the paperwork pile",
     description:
-      "Log the season on your phone. Trazo assembles your records, the attachment workbooks and your inspection packet.",
+      "Log the season on your phone. From what you log, Trazo prepares your records, the attachment workbooks and your inspection packet. You review and sign.",
     url: "./",
     // Next merges metadata SHALLOWLY: a page-level `openGraph` REPLACES the
     // root object rather than extending it, so omitting this dropped og:image
@@ -90,17 +90,20 @@ export default function ForFarmersPage() {
               <PackageCheck className="mt-1 shrink-0 text-primary" size={22} />
               <div>
                 <h2 className="text-lg font-bold text-foreground">
-                  Renewal becomes an export, not a weekend
+                  Your renewal paperwork starts from your records
                 </h2>
                 <p className="mt-1 text-muted-foreground">
                   Your per-parcel applications, audit PDF, Common OSP
-                  workbooks and the annual update itself assemble from records
-                  you already made, and your plan answers carry forward from
-                  last year. Before you file, Trazo lists what changed in your
-                  records since you wrote each answer &mdash; new ground, a
-                  notice you sent the certifier, a material you added &mdash;
-                  so the plan you send still describes the farm you run. You
-                  review, confirm, and send.
+                  workbooks and a draft change summary for your annual update
+                  are prepared from records you already made, and your plan
+                  answers carry forward from last year for you to re-read.
+                  Before you file, Trazo lists what changed in your records
+                  since you wrote each answer (new ground, a notice you sent
+                  the certifier, a material you added) so the plan you send
+                  still describes the farm you run. You review, sign and send.
+                  Your certifier&apos;s other requirements are yours to
+                  supply. Keep logging, and next season&apos;s inspection
+                  starts from records you already have.
                 </p>
               </div>
             </div>

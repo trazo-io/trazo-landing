@@ -150,7 +150,7 @@ export const posts: BlogPost[] = [
 <li><strong>Ground you began managing.</strong> A lease, a purchase, a field brought back from fallow. It needs its own parcel application &mdash; location, three-year land history, buffers &mdash; a prior-manager affidavit if someone else farmed it inside the window, and an adjoining-land affidavit for any conventional boundary. Your certifier will not inspect it before that paperwork is in (CCOF&rsquo;s own inspection checklist says so in its first item).</li>
 <li><strong>What you actually grew.</strong> The rotation paragraph says what you intended; the closed seasons say what happened. If the plan says brassicas on Bottom Ground A and the records say onions, that is a question at inspection.</li>
 <li><strong>Notices you already filed.</strong> A &sect; 205.400(f) change notification &mdash; a new material, a widened buffer, an added field &mdash; is a change you already told the certifier about. The plan has to catch up with it, not contradict it. If your notice says 45 feet and your buffer record still says 30, the two will be read side by side.</li>
-<li><strong>Materials added or dropped.</strong> Everything that went onto the approved list after the materials module was last answered, and anything you stopped using.</li>
+<li><strong>Materials added or dropped.</strong> Everything that went onto your plan&rsquo;s materials list after the materials module was last answered, and anything you stopped using.</li>
 <li><strong>Affidavits signed and incidents recorded.</strong> Land-history and adjoining-land attestations; any drift or commingling event, with what you did about it and when the certifier was told.</li>
 <li><strong>Fields the plan never names.</strong> The plainest check there is: a field whose name appears nowhere in the plan&rsquo;s text.</li>
 <li><strong>Sections not revisited in a year.</strong> Answered eighteen months ago is not wrong. But it is the first thing a reviewer notices, and it should be a deliberate &ldquo;still holds&rdquo; rather than an accident.</li>
@@ -451,7 +451,7 @@ export const posts: BlogPost[] = [
 
 <p>None of these are as clean as a full CSV export done ahead of time, which is exactly why the window to act is now, not after the shutdown date passes.</p>
 
-<p>Trazo accepts COG Pro CSV exports directly. Send your field, input, and harvest exports, and the records come in as structured, dated activities tied to your parcels, not a spreadsheet buried in an attachments folder. Trazo's guided modules follow the Common OSP structure, and the Starter plan is free. <a href="https://app.trazo.io/auth/signup" target="_blank" rel="noopener noreferrer">Start a free account</a> to see how your exported records look once they are organized. The <a href="/cog-pro-migration">COG Pro migration page</a> explains how the free import works.</p>
+<p>Trazo imports COG Pro CSV exports for you, free. There is no upload button: email your field, input, and harvest CSV files as attachments to <a href="mailto:oscar@trazo.io">oscar@trazo.io</a>. Oscar runs a dry import first and sends you back what would come in and what would be skipped, before anything is written to an account. Records that come in arrive as dated activities tied to your parcels, not a spreadsheet buried in an attachments folder. Trazo's guided modules follow the Common OSP structure, and the Starter plan is free. The <a href="/cog-pro-migration">COG Pro migration page</a> explains the steps.</p>
     `,
   },
   {
@@ -540,7 +540,7 @@ export const posts: BlogPost[] = [
 <li><strong>April:</strong> Oregon Tilth&rsquo;s second cohort falls due April 1. Use this stretch to prepare for on-site inspection scheduling, which usually ramps up through the growing season.</li>
 </ol>
 
-<p>Trazo assembles a renewal packet from the season's logged events. Instead of building the update from scratch every January, the input applications, harvest records, and OSP-relevant events documented through the year are already organized by field and date. The Starter plan is free. <a href="https://app.trazo.io/auth/signup" target="_blank" rel="noopener noreferrer">See how the packet comes together</a> before this year's deadlines hit.</p>
+<p>Trazo prepares the records section of a renewal packet, and a draft change summary for your annual update, from the season's logged events. Instead of digging the records out every January, the input applications, harvest records, and OSP-relevant events documented through the year are already organized by field and date. You still review and sign the update, and your certifier's other requirements are yours to supply. The bigger gain comes the season after: log as you go, and your next inspection starts from records you already have. The Starter plan is free. <a href="https://app.trazo.io/auth/signup" target="_blank" rel="noopener noreferrer">See how the packet comes together</a> before this year's deadlines hit.</p>
     `,
   },
   {

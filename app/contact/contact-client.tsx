@@ -5,6 +5,7 @@ import { ArrowRight, Check, Loader2, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { CogProMigrationSteps } from "@/components/cog-pro-migration-steps"
 import {
   Accordion,
   AccordionContent,
@@ -39,7 +40,8 @@ const contactFaqs = [
   },
 ]
 
-export function ContactPageContent() {
+export function ContactPageContent({ topic }: { topic?: string }) {
+  const isCogProMigration = topic === "cog-pro-migration"
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
   const [errorMsg, setErrorMsg] = useState("")
 
@@ -100,6 +102,12 @@ export function ContactPageContent() {
             Have questions about Trazo? We&apos;d love to hear from you.
           </p>
         </section>
+
+        {isCogProMigration && (
+          <section className="mx-auto mt-10 max-w-3xl px-6 text-left">
+            <CogProMigrationSteps />
+          </section>
+        )}
 
         <div className="mx-auto mt-14 max-w-7xl px-6">
           <div className="grid gap-12 lg:grid-cols-2">
