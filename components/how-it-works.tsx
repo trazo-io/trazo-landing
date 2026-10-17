@@ -20,7 +20,7 @@ const steps = [
     label: "STEP 2",
     title: "Document Your Practices",
     description:
-      "Log every farming event fast with voice recording, photo capture, or simple forms. Trazo flags record details still missing while you can still remember them.",
+      "Log every farming event fast with voice recording, photo capture, or simple forms. Your crew can send what they did straight from the block by WhatsApp, in English or Spanish, with no account to create and no app to install: it arrives as a suggestion someone at the farm reviews and saves under their own name. Trazo flags record details still missing while you can still remember them.",
     image: "/images/step-document.jpg",
     alt: "Farmer documenting agricultural practices with Trazo",
   },

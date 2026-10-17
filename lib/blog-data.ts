@@ -110,6 +110,8 @@ export const posts: BlogPost[] = [
 
 <p>Trazo is where the chain ends: one entry, logged by voice or a short form, in English or Spanish, on a phone in the block or at a desk. The same entry becomes the certifier record, the evidence behind the plan&rsquo;s answers, and, only if you publish the season, the page a buyer can scan. Nothing is retyped to make the next document.</p>
 
+<p>The chain can also end one link earlier, at the person who did the work. The farm adds a crew member&rsquo;s number to a roster, and that person sends what they did to the farm&rsquo;s Trazo number the way they already send it, by WhatsApp message or voice note, in English or Spanish. There is no account to create and no app to install, because the message is the whole interface. It arrives in a queue at the farm with nothing written yet.</p>
+
 <p>Two things it does on purpose. A suggestion is never a record: anything read out of speech or text is offered, and a person picks the activity and the date and saves it under their own name. And the date is never filled in for you on an entry that came from somebody else&rsquo;s words. Those are not features so much as the only defensible way to build the thing.</p>
 
 <h2>The question we are actually asking</h2>
