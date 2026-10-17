@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import {
   ArrowRight,
   CalendarCheck,
+  MessageSquare,
   Mic,
   PackageCheck,
   QrCode,
@@ -66,9 +67,26 @@ export default function ForFarmersPage() {
                 </h2>
                 <p className="mt-1 text-muted-foreground">
                   &ldquo;Applied 200 pounds of zinc sulfate on the north
-                  block.&rdquo; Voice, templates, or a two-minute form — in
+                  block.&rdquo; Voice, templates, or a two-minute form, in
                   English or Spanish, on your phone, with the date, rate, and
                   parcel captured the way an inspector expects.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <MessageSquare className="mt-1 shrink-0 text-primary" size={22} />
+              <div>
+                <h2 className="text-lg font-bold text-foreground">
+                  Or your crew sends it from the block
+                </h2>
+                <p className="mt-1 text-muted-foreground">
+                  You add a crew member&apos;s number once. They message what
+                  they did to your Trazo number over WhatsApp, by text or voice
+                  note, in English or Spanish. There is no account for them to
+                  create and no app to install, because the message is the whole
+                  interface. It arrives in a queue on your side with nothing
+                  written yet: you pick the activity, answer the date, and save
+                  it under your own name.
                 </p>
               </div>
             </div>
