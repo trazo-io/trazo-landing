@@ -43,7 +43,9 @@ without third-party verification · **California Truth in Environmental Advertis
   voice / a crew message over WhatsApp, all live; the fourth since 2026-10-17). ⛔ The crew message
   is the only input where the person who did the work is not the person at a desk, and any copy
   about it carries the confirm clause: it arrives as a SUGGESTION a person at the farm saves under
-  their own name, never a record Trazo wrote (7 CFR 205.201(a)). ⛔ Not a hero or a badge, no
+  their own name, never a record Trazo wrote (**7 CFR 205.103**, which puts the records on the
+  certified operation. ⛔ Not 205.201(a): that makes the producer the author of the PLAN and
+  only requires the plan to DESCRIBE the recordkeeping system). ⛔ Not a hero or a badge, no
   WhatsApp logo or `#25D366`, and say "English or Spanish", never "their own language" (the parser
   serves those families and refuses the rest; a CA crew may speak Mixteco or Punjabi).
 - Blockchain is **not** consumer-facing; the $15/mo add-on is **WITHDRAWN**. Say "recorded",

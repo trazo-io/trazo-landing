@@ -17,7 +17,11 @@ import { Footer } from "@/components/footer";
  *
  * Compliance notes: no premium-price promises ("positioning", never
  * "prices"); paperwork-concern statistic is NASS 2021 (55% of organic farms
- * name recordkeeping/paperwork a top challenge) — sourced, not fabricated.
+ * name recordkeeping/paperwork a top challenge): sourced, not fabricated.
+ *
+ * NOTE: the em dash on the NASS line below is inside a direct quotation of the survey's own
+ * category label. The house rule bans em dashes in Trazo's prose, not in quoted source text:
+ * repunctuating a quotation misquotes it. Every other one in this file is gone.
  */
 
 export const metadata: Metadata = {
@@ -97,9 +101,9 @@ export default function ForFarmersPage() {
                   Know where you stand before your certifier asks
                 </h2>
                 <p className="mt-1 text-muted-foreground">
-                  Readiness checks read your records the way a reviewer would —
+                  Readiness checks read your records the way a reviewer would:
                   missing rates, gaps in land history, buffer questions left
-                  open — and point you at the exact record to fix, with the
+                  open. They point you at the exact record to fix, with the
                   regulation cited.
                 </p>
               </div>
@@ -132,7 +136,7 @@ export default function ForFarmersPage() {
               <QrCode className="mt-1 shrink-0 text-primary" size={22} />
               <div>
                 <h2 className="text-lg font-bold text-foreground">
-                  A page for your buyer &mdash; only if you want one
+                  A page for your buyer, only if you want one
                 </h2>
                 <p className="mt-1 text-muted-foreground">
                   Finish a season and Trazo can build a public page from the
@@ -140,8 +144,8 @@ export default function ForFarmersPage() {
                   practices you documented, and an estimate of that
                   season&apos;s emissions. Print the QR or a sheet
                   of lot tags for your cartons. One switch publishes a season
-                  and the same switch unpublishes it &mdash; and your address
-                  and coordinates never reach the page, which locates a new
+                  and the same switch unpublishes it. Your address and
+                  coordinates never reach the page, which locates a new
                   parcel to about a kilometer rather than drawing your field.
                 </p>
               </div>
