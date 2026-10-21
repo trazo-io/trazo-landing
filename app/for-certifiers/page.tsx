@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, FileCheck, Link2, ShieldCheck } from "lucide-react";
+import { ArrowRight, FileCheck, Link2, Route, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -44,7 +44,7 @@ export default function ForCertifiersPage() {
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">
             When a client keeps records in Trazo, what reaches your desk is
-            dated, parcel-linked, and organized the way your checklist reads —
+            dated, parcel-linked, and organized the way your checklist reads,
             authored and confirmed by the operator, as the rule requires.
           </p>
 
@@ -68,16 +68,40 @@ export default function ForCertifiersPage() {
               <Link2 className="mt-1 shrink-0 text-primary" size={22} />
               <div>
                 <h2 className="text-lg font-bold text-foreground">
-                  A live review link — not an exported snapshot
+                  A live review link, not an exported snapshot
                 </h2>
                 <p className="mt-1 text-muted-foreground">
                   Most tools hand you a document package that was true the day
                   it was exported. Clients on Trazo can share a read-only link
-                  that opens their records in the browser as they stand today —
+                  that opens their records in the browser as they stand today:
                   activity log, inputs with National List and OMRI/WSDA
-                  cross-references, and the documents shelf — no account
+                  cross-references, and the documents shelf. No account is
                   required on your side. Ask a follow-up in March and look at
                   March&apos;s records, not November&apos;s PDF.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <Route className="mt-1 shrink-0 text-primary" size={22} />
+              <div>
+                <h2 className="text-lg font-bold text-foreground">
+                  Run your own trace-back from the review link
+                </h2>
+                {/* 2026-10-21: back #194 / app #169. Scope, logging and file access below are
+                    what the anonymous route enforces (certifications/views.py,
+                    certifier_review_traceback*): this link's farm and period only, every
+                    request on the link's activity, a file only when the link shares source
+                    files. Missing links are facts on this surface, never fix-it advice. */}
+                <p className="mt-1 text-muted-foreground">
+                  Type the invoice, bill of lading or lot code off a sales
+                  document, or draw a recent sale at random, and follow it back
+                  to the harvest picks, the season and every input applied, each
+                  with its supplier, invoice and lot. A link the records do not
+                  carry is stated as a fact. The trace covers only that
+                  farm&apos;s sales inside the link&apos;s period, every
+                  trace shows on the operation&apos;s link activity, and a file
+                  behind a record opens only when the operation chose to share
+                  its source files.
                 </p>
               </div>
             </div>
@@ -101,7 +125,7 @@ export default function ForCertifiersPage() {
 
           <div className="mt-14 rounded-2xl bg-primary/5 p-8 text-center">
             <h2 className="text-xl font-bold text-foreground">
-              Reviewing a Trazo client — or want a walkthrough?
+              Reviewing a Trazo client, or want a walkthrough?
             </h2>
             <p className="mx-auto mt-2 max-w-md text-muted-foreground">
               We will show you exactly what your clients see and what you

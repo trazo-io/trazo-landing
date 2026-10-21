@@ -7,6 +7,7 @@ import {
   Mic,
   PackageCheck,
   QrCode,
+  Route,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/navbar";
@@ -105,6 +106,30 @@ export default function ForFarmersPage() {
                   missing rates, gaps in land history, buffer questions left
                   open. They point you at the exact record to fix, with the
                   regulation cited.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <Route className="mt-1 shrink-0 text-primary" size={22} />
+              <div>
+                <h2 className="text-lg font-bold text-foreground">
+                  When the call does not start with an invoice
+                </h2>
+                {/* 2026-10-21: back #200 / app #170. The packer's receipt is
+                    `handler_document_reference` on a pick; an input's lot or invoice lists the
+                    sales of each season it was applied in (capped at 20 on screen, with a notice,
+                    so "the sales", never "every sale"); the days-to-pick line is arithmetic on
+                    the farm's own dates beside the PHI it recorded, never a verdict. NEVER:
+                    "recall-ready" or "FSMA 204": the 204 sortable spreadsheet is not built. */}
+                <p className="mt-1 text-muted-foreground">
+                  The packer quotes its own receipt number: type it and the sale
+                  opens, walked back to the picks, the field and every input. A
+                  supplier recalls a lot of compost or spray: its lot number
+                  lists the sales from each season it went on, with who bought
+                  how much. A buyer asks about a residue: each spray shows how
+                  many days before the next pick it went on, beside the
+                  pre-harvest interval you recorded. It is the same trace-back
+                  an inspector runs, on every plan, Starter included.
                 </p>
               </div>
             </div>

@@ -42,15 +42,23 @@ const organicFeatures = [
      What is left is the regulatory surface area nothing else on the page carries. */
   {
     icon: Scale,
-    title: "Mass-Balance & Trace-Back Reports",
+    title: "Trace-Back, Before the Inspector Does",
+    /*
+      2026-10-21: was "Mass-Balance & Trace-Back Reports", which described the printed exhibit
+      only. The trace is now a page the operator runs (back #187/#193, app #164/#169): search
+      by invoice, bill of lading, pick lot code, the packer's receipt on a pick, or an input's
+      lot or invoice (back #200). It is NOT a Compliance door (no require_compliance_exports on
+      the routes), so "every plan" is true; the printed exhibit stays in the gated packet.
+      Never "recall-ready" or "FSMA 204": the 204 sortable spreadsheet is not built.
+    */
     description:
-      "Each lot shows what you harvested against what you sold, with the balance printed, and links the sale back to the field, the picks and the inputs you logged. That is the trail an inspector follows at the in/out audit.",
+      "Type the invoice, bill of lading, lot code or the packer's receipt number and Trazo walks it back: the sale, the picks it came from, the field, and every input applied that season with its supplier, invoice and lot, beside what you harvested against what you sold. Each missing link is named where it breaks, with a button to fix it. On screen on every plan, Starter included.",
   },
   {
     icon: History,
     title: "3-Year Field History",
     description:
-      "Per-parcel crop, rotation and input history across seasons — the years you typed at setup plus every year compiled from the seasons you logged, inputs included, each one marked as to where it came from. Always ready when your certifier asks.",
+      "Per-parcel crop, rotation and input history across seasons: the years you typed at setup plus every year compiled from the seasons you logged, inputs included, each one marked as to where it came from. Always ready when your certifier asks.",
   },
   {
     icon: ClipboardCheck,

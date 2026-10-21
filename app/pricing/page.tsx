@@ -111,6 +111,9 @@ const plans = [
       "Event logging with crop templates (33 US crops) and voice",
       "Organic System Plan: 19 guided modules, answer at your pace",
       "Record-completeness checks with the regulation cited",
+      // 2026-10-21: the on-screen trace-back is not a Compliance door (no gate on the routes or
+      // the page); the printed exhibit stays in the Compliance packet.
+      "Trace a sale back to its picks, field and inputs, on screen",
       "QR code and buyer page",
       "Free migration from COG Pro or spreadsheets",
       "10 GB storage",
