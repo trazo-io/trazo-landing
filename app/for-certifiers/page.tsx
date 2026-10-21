@@ -98,7 +98,7 @@ export default function ForCertifiersPage() {
                   to the harvest picks, the season and every input applied, each
                   with its supplier, invoice and lot. A link the records do not
                   carry is stated as a fact. The trace covers only that
-                  operation&apos;s sales inside the link&apos;s period, every
+                  farm&apos;s sales inside the link&apos;s period, every
                   trace shows on the operation&apos;s link activity, and a file
                   behind a record opens only when the operation chose to share
                   its source files.
