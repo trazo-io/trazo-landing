@@ -77,7 +77,7 @@ export default async function BlogDetailPage({
       '@type': 'Organization',
       name: 'Trazo',
       url: 'https://www.trazo.io',
-      logo: { '@type': 'ImageObject', url: 'https://www.trazo.io/images/logo-green.png' },
+      logo: { '@type': 'ImageObject', url: 'https://www.trazo.io/images/logo-mark-512.png', width: 512, height: 512 },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',

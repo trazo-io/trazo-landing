@@ -115,7 +115,9 @@ const jsonLd = {
   legalName: "Oscar Mu\u00f1oz SAS",
   taxID: "219072920010",
   url: "https://www.trazo.io",
-  logo: "https://www.trazo.io/images/logo-green.png",
+  // Square on purpose. Google crops a structured-data logo to a square for result thumbnails, so
+  // the 689x230 wordmark rendered as "tra". The wordmark stays in the navbar and footer.
+  logo: "https://www.trazo.io/images/logo-mark-512.png",
   // Structured data, so this is what Google is handed directly — the OSP-authoring claim was
   // worse here than in the prose. See the note on `metadata.description` above.
   description:
