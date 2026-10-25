@@ -115,7 +115,7 @@ const plans = [
       // the page); the printed exhibit stays in the Compliance packet.
       "Trace a sale back to its picks, field and inputs, on screen",
       "QR code and buyer page",
-      "Free migration from COG Pro or spreadsheets",
+      "Free migration from COG Pro, spreadsheets or binder photos",
       "10 GB storage",
     ],
   },
@@ -235,7 +235,7 @@ const comparisonFeatures: ComparisonRow[] = [
     label: "California PUR export (DPR-PML-017C)",
     values: [false, true, true],
   },
-  { label: "Free migration from COG Pro or spreadsheets", values: [true, true, true] },
+  { label: "Free migration from COG Pro, spreadsheets or binder photos", values: [true, true, true] },
   // "Dedicated onboarding" was true for Enterprise alone, so with that column gone the row
   // would have read false / false / false — a line item that tells the reader nothing.
   {
