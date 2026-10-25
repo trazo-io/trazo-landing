@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "COG Pro is closing December 31, 2026",
     description:
-      "A migration checklist for organic growers, and a free import of your COG Pro CSV export into Trazo.",
+      "A migration checklist for organic growers, and a free import of your COG Pro CSV export, your spreadsheet or your binder photos into Trazo.",
     url: "./",
     // Next merges metadata SHALLOWLY: a page-level `openGraph` REPLACES the
     // root object rather than extending it, so omitting this dropped og:image
@@ -300,11 +300,13 @@ export default function CogProMigrationPage() {
                 We will move your data for you
               </h2>
               <p className="mt-3 leading-[1.8]">
-                Send us your COG Pro CSV export and we will import it into a
-                Trazo account for you, free, and without a card on file. You
-                look at your own records in the new system and decide from
-                there. If you decide against it, you keep the export and we
-                delete the account on request.
+                Send us your COG Pro CSV export, your spreadsheet, or photos of
+                your binder pages, and we will load them into a Trazo account
+                for you, free, and without a card on file. You get a preview of
+                what would be loaded before anything is saved, then you look at
+                your own records in the new system and decide from there. If
+                you decide against it, you keep your files and we delete the
+                account on request.
               </p>
               <p className="mt-3 leading-[1.8]">
                 {/* ⚠️ 2026-09-08. The comment here used to forbid promising an export, on the
@@ -320,8 +322,9 @@ export default function CogProMigrationPage() {
                     the audit dossier, OSP renewal packet and PUR export are Compliance. State
                     both halves, never one. */}
                 The Starter plan is free permanently, not a trial that expires,
-                and you can log a whole season on it. Importing your COG Pro
-                CSVs costs nothing. And leaving is not a favour you have to ask
+                and you can log a whole season on it. Loading your records
+                costs nothing, whatever shape they are in. And leaving is not a
+                favour you have to ask
                 us for: on every plan, including the free one, one click in
                 Documents downloads a ZIP of plain CSV files with every activity
                 record, production, parcel and sale in your account. The
@@ -333,7 +336,7 @@ export default function CogProMigrationPage() {
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg">
                   <Link href="/contact?topic=cog-pro-migration">
-                    Send us your export
+                    Send us your records
                     <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                   </Link>
                 </Button>

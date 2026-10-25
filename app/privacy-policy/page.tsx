@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
               How Trazo collects, uses, and protects your personal information.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Last updated: October 14, 2026
+              Last updated: October 25, 2026
             </p>
           </header>
 
@@ -358,6 +358,18 @@ export default function PrivacyPolicyPage() {
                     </tr>
                     <tr>
                       <td className="py-2 pr-4">
+                        Reading the documents you send us for account setup
+                        (spreadsheets, photos of your records and of product
+                        labels) via Anthropic, to draft records that you review
+                        before anything is saved
+                      </td>
+                      <td className="py-2">
+                        Consent (Art. 6(1)(a)): you send the documents and
+                        approve the preview
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4">
                         Analytics on our public pages (marketing site, consumer
                         QR pages) &mdash; Vercel Analytics, PostHog
                       </td>
@@ -482,6 +494,15 @@ export default function PrivacyPolicyPage() {
                   voice entry, plus text data, for AI-powered field extraction.
                   OpenAI does not receive voice audio (Trazo has opted out of
                   model training; your data is not used to train OpenAI models)
+                </li>
+                <li>
+                  <strong>Anthropic</strong>: The documents you send us when we
+                  set up your account for you (spreadsheets, photos of your
+                  records and of product labels), used to draft records that a
+                  person checks and that you review before anything is saved.
+                  Sent through Anthropic&apos;s API, whose commercial terms
+                  exclude training on customer data. Your original files are
+                  stored by Trazo on AWS, not by Anthropic
                 </li>
                 <li>
                   <strong>Vercel Analytics</strong>: Anonymized page view and

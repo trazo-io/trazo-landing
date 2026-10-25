@@ -235,7 +235,7 @@ const comparisonFeatures: ComparisonRow[] = [
     label: "California PUR export (DPR-PML-017C)",
     values: [false, true, true],
   },
-  { label: "Free migration from COG Pro", values: [true, true, true] },
+  { label: "Free migration from COG Pro or spreadsheets", values: [true, true, true] },
   // "Dedicated onboarding" was true for Enterprise alone, so with that column gone the row
   // would have read false / false / false — a line item that tells the reader nothing.
   {
@@ -310,7 +310,7 @@ const pricingFaqs = [
     // `company/urls.py`, ungated by `history/tests/test_records_export.py`'s
     // `test_no_compliance_gate_in_the_view`, and listed in the compliance-door inventory as
     // "the farm's own raw records — free by design, never a paid artifact".
-    a: "Yes, on every plan including the free one. One click in Documents downloads a ZIP of plain CSV files: every activity record with all its fields, plus your productions, parcels, sales and photo references. What the Compliance plan adds is the certifier paperwork built from those records (OSP renewal packet and workbooks, audit exports, CA PUR export), not access to the records themselves. Coming from COG Pro, we also import your CSV exports at no charge.",
+    a: "Yes, on every plan including the free one. One click in Documents downloads a ZIP of plain CSV files: every activity record with all its fields, plus your productions, parcels, sales and photo references. What the Compliance plan adds is the certifier paperwork built from those records (OSP renewal packet and workbooks, audit exports, CA PUR export), not access to the records themselves. Coming from COG Pro, a spreadsheet or a binder, we also load your existing records at no charge, and you see a preview before anything is saved.",
   },
   {
     q: "Is my data secure?",
@@ -590,8 +590,8 @@ export default function PricingPage() {
                 assembled. Free Starter plan, no credit card required.
               </p>
               <p className="mx-auto mt-3 max-w-2xl text-sm text-primary-foreground/60">
-                Moving from another recordkeeping tool? Send us your export and
-                we will set it up for you, free.
+                Moving from another tool, a spreadsheet or a binder? Send us
+                your records and we will set it up for you, free.
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Button
