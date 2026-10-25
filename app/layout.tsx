@@ -157,6 +157,10 @@ const webSiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Trazo",
+  // Google showed the site name as "trazo.io" while every signal said "Trazo": it falls back to
+  // the domain when a name is ambiguous, and "trazo" is a common Spanish word several companies
+  // use. `alternateName` is the documented fallback it may pick instead of the bare domain.
+  alternateName: ["Trazo Organic Recordkeeping", "Trazo Organic"],
   url: "https://www.trazo.io",
   description:
     "Organic recordkeeping for US specialty crop farms, built for renewal season. One entry becomes both your certifier's records and your buyer's page.",
