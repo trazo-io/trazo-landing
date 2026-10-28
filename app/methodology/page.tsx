@@ -624,10 +624,13 @@ export default function MethodologyPage() {
               </p>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
-                Equipment Operations (USDA ARS)
+                Equipment Operations (Trazo estimates)
               </h4>
               <p className="mt-2 text-sm text-muted-foreground">
-                Per-hectare fuel factors for mechanical operations. When a
+                Per-hectare fuel factors for mechanical operations. These are
+                Trazo&apos;s own estimates, not published agency factors; they
+                apply only when no fuel is recorded, and the figure is then
+                labelled as an estimate from the area. When a
                 farmer documents manual methods, the manual labor factor (0.1 kg
                 CO&#8322;e/acre) is used instead (see Section 5).
               </p>
