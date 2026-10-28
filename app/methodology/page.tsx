@@ -40,7 +40,7 @@ export default function MethodologyPage() {
               scrutiny and reproducibility.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Version 2.2 &middot; October 2026 &middot; License: CC BY 4.0
+              Version 2.3 &middot; October 2026 &middot; License: CC BY 4.0
             </p>
           </header>
 
@@ -227,6 +227,16 @@ export default function MethodologyPage() {
                 equipment manufacturing, infrastructure, distribution, retail
                 and end-of-life are excluded.
               </p>
+              <p className="mt-3 leading-[1.8]">
+                Lime: the estimate includes CO&#8322; from recorded
+                carbonate-lime applications, using IPCC 2006 Tier 1 factors
+                (0.12 for limestone and 0.13 for dolomite, in carbon units) and
+                assigning those emissions to the application year. It is not a
+                measured release on the application date. Quicklime and
+                hydrated lime are not given carbonate factors, and a pH
+                adjustment with no material or amount on the record gets no
+                lime estimate.
+              </p>
 
               <div className="mt-4 overflow-x-auto">
                 <table className="w-full text-sm">
@@ -271,9 +281,19 @@ export default function MethodologyPage() {
                       </td>
                       <td className="py-2">Distribution and retail</td>
                     </tr>
-                    <tr>
+                    <tr className="border-b border-border/50">
                       <td className="py-2 pr-4">Irrigation pumping energy</td>
                       <td className="py-2">Consumer transport, end-of-life</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4">
+                        Carbonate lime (limestone, dolomite), only when the
+                        material and the amount applied are recorded
+                      </td>
+                      <td className="py-2">
+                        Soil-carbon stock change, including any per-pass
+                        tillage charge
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -1103,7 +1123,7 @@ export default function MethodologyPage() {
                   with attribution
                 </li>
                 <li>
-                  <strong>Version:</strong> 2.2 (October 2026)
+                  <strong>Version:</strong> 2.3 (October 2026)
                 </li>
               </ul>
               <p className="mt-4 leading-[1.8]">
@@ -1151,6 +1171,18 @@ export default function MethodologyPage() {
                       </tr>
                     </thead>
                     <tbody>
+                      <tr className="border-b border-border/50">
+                        <td className="py-1 pr-4">2.3</td>
+                        <td className="py-1 pr-4">October 2026</td>
+                        <td className="py-1">
+                          Per-pass tillage soil-CO&#8322; defaults removed (the
+                          cited studies measure a one-day pulse at one site or
+                          multi-year soil-carbon change, not a charge per
+                          pass); carbonate lime stated as included, with its
+                          method; figures built from a per-area default
+                          labelled as such
+                        </td>
+                      </tr>
                       <tr className="border-b border-border/50">
                         <td className="py-1 pr-4">2.2</td>
                         <td className="py-1 pr-4">October 2026</td>
