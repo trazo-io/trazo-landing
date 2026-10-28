@@ -239,10 +239,13 @@ export default function MethodologyPage() {
               </p>
               <p className="mt-3 leading-[1.8]">
                 Tillage: the estimate counts the fuel recorded for the pass.
-                With no fuel recorded it shows an estimate from the area, 1.2
-                kg CO&#8322;e per hectare, labelled as such, and never adds it
-                on top of recorded fuel. No soil-carbon term is added for
-                tillage, and the depth worked does not change the figure.
+                With no fuel recorded it uses the cultivation diesel factor in
+                the per-hectare table below (3.2 gallons per hectare, a Trazo
+                estimate), labelled as an estimate from the area, and never
+                adds it on top of recorded fuel. No soil-carbon term is added
+                for tillage, and the depth worked does not change the figure.
+                A pH adjustment with no fuel and no lime recorded is not
+                estimated.
               </p>
 
               <div className="mt-4 overflow-x-auto">
