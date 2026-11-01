@@ -20,7 +20,12 @@ import { CogProMigrationSteps } from "@/components/cog-pro-migration-steps";
  * more than the page that converts hardest.
  *
  * Compliance notes (.claude/rules/compliance.md):
- *   - Everything said about COG Pro is a direct quote from their own site, with a link.
+ *   - What the page says about COG Pro is quoted from their own site, with a link, with two
+ *     exceptions. Their support team answered two questions by email on 2026-11-01: export keeps
+ *     working through Dec 31, and GAP Pro goes offline at the same time. We asked so we would not
+ *     tell growers anything wrong. Neither fact is on cog-pro.com (checked 2026-11-01), so the
+ *     page attributes both to that email, never to the site. They did NOT say GAP Pro export
+ *     keeps working, so the page says "export or print" for GAP and promises nothing about it.
  *   - No price-outcome promises, no "verified" claims, no implied third-party endorsement.
  *   - Livestock and GAP are conceded explicitly — Trazo does not do them, and a grower who
  *     needs them should not migrate here expecting them.
@@ -107,8 +112,7 @@ export default function CogProMigrationPage() {
               <p className="mt-3 leading-[1.8]">
                 They attribute the closure to actions by their web hosting
                 provider. We are not affiliated with COG Pro and have no inside
-                knowledge of their plans; this page simply reflects what is
-                published on{" "}
+                knowledge of their plans. The quote above is from{" "}
                 <a
                   href="https://cog-pro.com/signup.html"
                   className="font-medium text-primary underline underline-offset-4"
@@ -118,6 +122,14 @@ export default function CogProMigrationPage() {
                   their signup page
                 </a>
                 . Check it yourself before making decisions.
+              </p>
+              <p className="mt-3 leading-[1.8]">
+                We also asked COG Pro two questions directly. Their support team
+                answered by email on November 1, 2026: the export functions keep
+                working through December 31, and GAP Pro, their food-safety
+                recordkeeping, goes offline at the same time. Neither point
+                appears on their website, so read it as their answer to us, not
+                a public notice.
               </p>
             </section>
 
@@ -154,6 +166,12 @@ export default function CogProMigrationPage() {
                       vendor&apos;s. Save the generated PDFs of your past
                       regulatory reports too; they are the version your
                       inspector already saw.
+                    </p>
+                    <p className="mt-2 leading-[1.8]">
+                      COG Pro told us export keeps working through December 31.
+                      Do it now anyway, while there is still time to fix a file
+                      that comes out wrong. If you used GAP Pro, export or print
+                      those records as well: it goes offline the same day.
                     </p>
                   </div>
                 </div>
@@ -229,7 +247,9 @@ export default function CogProMigrationPage() {
                 <li>
                   <strong className="text-foreground">Crops + GAP</strong>: GAP
                   is food safety, not organic certification, and it is a
-                  separate audit. Trazo does not replace a GAP module.
+                  separate audit. Trazo does not replace a GAP module, and GAP
+                  Pro closes on December 31 too, so those records need their own
+                  new home.
                 </li>
               </ul>
               <p className="mt-4 leading-[1.8]">
@@ -350,8 +370,10 @@ export default function CogProMigrationPage() {
               <p className="text-sm leading-[1.8] text-muted-foreground">
                 Trazo is not affiliated with, endorsed by, or connected to COG
                 Pro or Certified Organic Business Solutions. Statements about
-                COG Pro on this page are quoted from their public website as of
-                August 2026 and may change; verify directly with them.
+                COG Pro on this page are quoted from their public website
+                (rechecked November 1, 2026), except the two points their
+                support team gave us by email that day, which are marked as
+                such above. Either may change; verify directly with them.
                 Certifier deadlines are as published by each certifier and can
                 differ for your operation; confirm yours with your certifier.
               </p>

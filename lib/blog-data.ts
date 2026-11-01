@@ -383,7 +383,7 @@ export const posts: BlogPost[] = [
       "COG Pro ends service December 31, 2026. An export checklist, a field-mapping guide and the questions to ask any vendor before your records go with it.",
     image: "/images/blog-organic-records.jpg",
     content: `
-<p>COG Pro has announced that it will end service on December 31, 2026. If your walnut, almond, citrus, or avocado operation's organic records live in that system, the exact shutdown date matters less than what happens to your history once the software goes dark. Confirm the current timeline and any final export windows directly with the vendor, since shutdown plans can shift.</p>
+<p>COG Pro has announced that it will end service on December 31, 2026. If your walnut, almond, citrus, or avocado operation's organic records live in that system, the exact shutdown date matters less than what happens to your history once the software goes dark. When we asked, COG Pro's support team told us by email (November 1, 2026) that export keeps working through December 31 and that GAP Pro goes offline at the same time. Plans can still shift, so check with them before you count on the last week.</p>
 
 <p>This is a migration checklist, not a eulogy. The goal is simple: get every record out, in a form your certifier can still use, before you lose the ability to log in.</p>
 
@@ -404,6 +404,7 @@ export const posts: BlogPost[] = [
 <li><strong>Sales and mass-balance records.</strong> What was sold, to whom, in what quantity, and how it reconciles against what was harvested.</li>
 <li><strong>Organic System Plan documents.</strong> Any OSP sections, land-use history, or buffer documentation stored in the platform.</li>
 <li><strong>Certificates and inspection history.</strong> Prior certificates, inspection reports, and any noncompliance correspondence.</li>
+<li><strong>GAP and food-safety records, if you used GAP Pro.</strong> It goes offline on the same day. These belong to a separate food-safety audit, not to organic certification, but they still need to come out.</li>
 </ul>
 
 <p>If you are not sure whether a record type exists in your account, check every menu. Older or less-visible features sometimes hold data that does not show up on the main dashboard.</p>
