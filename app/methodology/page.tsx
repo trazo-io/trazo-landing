@@ -40,7 +40,7 @@ export default function MethodologyPage() {
               scrutiny and reproducibility.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Version 2.2 &middot; October 2026 &middot; License: CC BY 4.0
+              Version 2.3 &middot; October 2026 &middot; License: CC BY 4.0
             </p>
           </header>
 
@@ -227,6 +227,26 @@ export default function MethodologyPage() {
                 equipment manufacturing, infrastructure, distribution, retail
                 and end-of-life are excluded.
               </p>
+              <p className="mt-3 leading-[1.8]">
+                Lime: the estimate includes CO&#8322; from recorded
+                carbonate-lime applications, using IPCC 2006 Tier 1 factors
+                (0.12 for limestone and 0.13 for dolomite, in carbon units) and
+                assigning those emissions to the application year. It is not a
+                measured release on the application date. Quicklime and
+                hydrated lime are not given carbonate factors, and a pH
+                adjustment with no material or amount on the record gets no
+                lime estimate.
+              </p>
+              <p className="mt-3 leading-[1.8]">
+                Tillage: the estimate counts the fuel recorded for the pass.
+                With no fuel recorded it uses the cultivation diesel factor in
+                the per-hectare table below (3.2 gallons per hectare, a Trazo
+                estimate), labelled as an estimate from the area, and never
+                adds it on top of recorded fuel. No soil-carbon term is added
+                for tillage, and the depth worked does not change the figure.
+                A pH adjustment with no fuel and no lime recorded is not
+                estimated.
+              </p>
 
               <div className="mt-4 overflow-x-auto">
                 <table className="w-full text-sm">
@@ -271,9 +291,19 @@ export default function MethodologyPage() {
                       </td>
                       <td className="py-2">Distribution and retail</td>
                     </tr>
-                    <tr>
+                    <tr className="border-b border-border/50">
                       <td className="py-2 pr-4">Irrigation pumping energy</td>
                       <td className="py-2">Consumer transport, end-of-life</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4">
+                        Carbonate lime (limestone, dolomite), only when the
+                        material and the amount applied are recorded
+                      </td>
+                      <td className="py-2">
+                        Soil-carbon stock change, including any per-pass
+                        tillage charge
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -594,10 +624,13 @@ export default function MethodologyPage() {
               </p>
 
               <h4 className="mt-6 text-lg font-semibold text-foreground">
-                Equipment Operations (USDA ARS)
+                Equipment Operations (Trazo estimates)
               </h4>
               <p className="mt-2 text-sm text-muted-foreground">
-                Per-hectare fuel factors for mechanical operations. When a
+                Per-hectare fuel factors for mechanical operations. These are
+                Trazo&apos;s own estimates, not published agency factors; they
+                apply only when no fuel is recorded, and the figure is then
+                labelled as an estimate from the area. When a
                 farmer documents manual methods, the manual labor factor (0.1 kg
                 CO&#8322;e/acre) is used instead (see Section 5).
               </p>
@@ -1103,7 +1136,7 @@ export default function MethodologyPage() {
                   with attribution
                 </li>
                 <li>
-                  <strong>Version:</strong> 2.2 (October 2026)
+                  <strong>Version:</strong> 2.3 (October 2026)
                 </li>
               </ul>
               <p className="mt-4 leading-[1.8]">
@@ -1151,6 +1184,18 @@ export default function MethodologyPage() {
                       </tr>
                     </thead>
                     <tbody>
+                      <tr className="border-b border-border/50">
+                        <td className="py-1 pr-4">2.3</td>
+                        <td className="py-1 pr-4">October 2026</td>
+                        <td className="py-1">
+                          Per-pass tillage soil-CO&#8322; defaults removed (the
+                          cited studies measure a one-day pulse at one site or
+                          multi-year soil-carbon change, not a charge per
+                          pass); carbonate lime stated as included, with its
+                          method; figures built from a per-area default
+                          labelled as such
+                        </td>
+                      </tr>
                       <tr className="border-b border-border/50">
                         <td className="py-1 pr-4">2.2</td>
                         <td className="py-1 pr-4">October 2026</td>
