@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   // landing place before Dec 31.
   title: "COG Pro Alternative: Move Your Records by Dec 31 | Trazo",
   description:
-    "COG Pro stops service December 31, 2026. Export your records before the deadline, compare COG Pro alternatives, and send Trazo your export to bring in with you, at no cost.",
+    "COG Pro stops service December 31, 2026. Export your records before the deadline, compare alternatives, and bring your export into Trazo with us, at no cost.",
   alternates: { canonical: "https://www.trazo.io/cog-pro-migration" },
   openGraph: {
     title: "COG Pro is closing December 31, 2026",
