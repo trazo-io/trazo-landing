@@ -37,12 +37,12 @@ export const metadata: Metadata = {
   // landing place before Dec 31.
   title: "COG Pro Alternative: Move Your Records by Dec 31 | Trazo",
   description:
-    "COG Pro stops service December 31, 2026. Export your records before the deadline, compare COG Pro alternatives, and let Trazo import your data free.",
+    "COG Pro stops service December 31, 2026. Export your records before the deadline, compare alternatives, and bring your export into Trazo with us, at no cost.",
   alternates: { canonical: "https://www.trazo.io/cog-pro-migration" },
   openGraph: {
     title: "COG Pro is closing December 31, 2026",
     description:
-      "A migration checklist for organic growers, and a free import of your COG Pro CSV export, your spreadsheet or your binder photos into Trazo.",
+      "A migration checklist for organic growers, and a hands-on import of your COG Pro CSV export, your spreadsheet or your binder photos into Trazo, at no cost.",
     url: "./",
     // Next merges metadata SHALLOWLY: a page-level `openGraph` REPLACES the
     // root object rather than extending it, so omitting this dropped og:image
@@ -317,14 +317,15 @@ export default function CogProMigrationPage() {
             {/* The offer */}
             <section>
               <h2 className="text-2xl font-bold text-foreground">
-                We will move your data for you
+                Send us your records and we will bring them in with you
               </h2>
               <p className="mt-3 leading-[1.8]">
                 Send us your COG Pro CSV export, your spreadsheet, or photos of
-                your binder pages, and we will load them into a Trazo account
-                for you, free, and without a card on file. You get a preview of
-                what would be loaded before anything is saved, then you look at
-                your own records in the new system and decide from there. If
+                your binder pages, and we will bring them into a Trazo account
+                with you, at no cost and without a card on file. Each import is
+                done by hand, and you get a reply within two business days. You
+                see what would be loaded before anything is saved, then you look
+                at your own records in the new system and decide from there. If
                 you decide against it, you keep your files and we delete the
                 account on request.
               </p>
