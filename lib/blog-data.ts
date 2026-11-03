@@ -454,7 +454,7 @@ export const posts: BlogPost[] = [
 
 <p>None of these are as clean as a full CSV export done ahead of time, which is exactly why the window to act is now, not after the shutdown date passes.</p>
 
-<p>Trazo imports COG Pro CSV exports for you, free. There is no upload button: email your field, input, and harvest CSV files as attachments to <a href="mailto:oscar@trazo.io">oscar@trazo.io</a>. Oscar runs a dry import first and sends you back what would come in and what would be skipped, before anything is written to an account. Records that come in arrive as dated activities tied to your parcels, not a spreadsheet buried in an attachments folder. Trazo's guided modules follow the Common OSP structure, and the Starter plan is free. The <a href="/cog-pro-migration">COG Pro migration page</a> explains the steps.</p>
+<p>Trazo brings COG Pro CSV exports in with you, at no cost. There is no upload button: email your field, input, and harvest CSV files as attachments to <a href="mailto:oscar@trazo.io">oscar@trazo.io</a>. Oscar runs a dry import first and sends you back what would come in and what would be skipped, before anything is written to an account. Records that come in arrive as dated activities tied to your parcels, not a spreadsheet buried in an attachments folder. Trazo's guided modules follow the Common OSP structure, and the Starter plan is free. The <a href="/cog-pro-migration">COG Pro migration page</a> explains the steps.</p>
     `,
   },
   {
