@@ -340,7 +340,7 @@ export function DualOutput() {
                 equipment and irrigation energy on the farm, plus the
                 manufacturing of the fertilizer and chemicals applied. It is
                 written the way a buyer can hold it: what growing a kilogram of the crop
-                produced, and the same figure as miles driven in an average car.
+                produced, or the season&rsquo;s total when the harvest weight is not recorded.
                 Transport, packaging and retail sit outside that boundary, and
                 the page says so beside the number.
               </p>
