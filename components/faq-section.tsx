@@ -10,9 +10,9 @@ import {
 const faqs = [
   {
     question:
-      "I was certified recently \u2014 or I am applying for 2027. Is this for me?",
+      "I was certified recently, or I am applying for 2027. Is this for me?",
     answer:
-      "That is who it is built for. In your first years the routines are still forming, and the annual update is the moment it shows. If you are applying, your certifier will ask you to describe your recordkeeping system in the OSP itself, and processing runs roughly 8\u201316 weeks \u2014 so a plan submitted around New Year is what gets you certified in time to sell as organic in spring. Starting the system before you apply means the description is something you already do rather than something you promise. Farms in transition can use it the same way: parcels carry a Transitional status and the record builds from day one.",
+      "That is who it is built for. In your first years the routines are still forming, and the annual update is the moment it shows. If you are applying, your certifier will ask you to describe your recordkeeping system in the OSP itself, and processing runs roughly 8\u201316 weeks, so a plan submitted around New Year is what gets you certified in time to sell as organic in spring. Starting the system before you apply means the description is something you already do rather than something you promise. Farms in transition can use it the same way: parcels carry a Transitional status and the record builds from day one.",
   },
   {
     question: "Can Trazo help with organic record-keeping?",
@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "Does Trazo check organic certifications?",
     answer:
-      "It cross-references them. A USDA Organic certificate you enter is checked against the public USDA Organic Integrity Database \u2014 the government\u2019s list of certified operations \u2014 and a match is shown to buyers as \u2018Verified via USDA Organic Integrity Database\u2019. That is a database match, not an inspection: Trazo does not visit farms and does not certify anything. Other certifications (GlobalG.A.P., Fair Trade, Real Organic Project and the rest) are shown as \u2018Reported by Producer\u2019 until a public register we can check exists for them.",
+      "It cross-references them. A USDA Organic certificate you enter is checked against the public USDA Organic Integrity Database (the government\u2019s list of certified operations), and a match is shown to buyers as \u2018Verified via USDA Organic Integrity Database\u2019. That is a database match, not an inspection: Trazo does not visit farms and does not certify anything. Other certifications (GlobalG.A.P., Fair Trade, Real Organic Project and the rest) are shown as \u2018Reported by Producer\u2019 until a public register we can check exists for them.",
   },
   {
     question: "How accurate are the carbon calculations?",
@@ -42,17 +42,17 @@ const faqs = [
   {
     question: "Can I hide a record or a field from the buyer page?",
     answer:
-      "No, and that is deliberate. What a public page shows is decided by one policy that applies identically to every farm: worker-safety and regulatory data, supplier and purchase records entered in their own fields, and certifier-facing record categories never publish \u2014 and everything else in a published season shows for everyone. The certifier-facing categories (a seed commercial-availability search, a buffer-zone harvest, an equipment cleanout) are withheld because they are evidence of correct practice that reads as its own opposite to a reader without the regulation open; they stay in the certifier packet, where they persuade. Your control is the season: publish it whole, or keep it private, reversibly. Trazo tells you as you log (and on every record afterwards) exactly which fields a buyer sees. A page no farm can edit is the reason a buyer can take yours at face value.",
+      "No, and that is deliberate. What a public page shows is decided by one policy that applies identically to every farm: worker-safety and regulatory data, supplier and purchase records entered in their own fields, and certifier-facing record categories never publish, and everything else in a published season shows for everyone. The certifier-facing categories (a seed commercial-availability search, a buffer-zone harvest, an equipment cleanout) are withheld because they are evidence of correct practice that reads as its own opposite to a reader without the regulation open; they stay in the certifier packet, where they persuade. Your control is the season: publish it whole, or keep it private, reversibly. Trazo tells you as you log (and on every record afterwards) exactly which fields a buyer sees. A page no farm can edit is the reason a buyer can take yours at face value.",
   },
   {
     question: "Can a buyer see my records before harvest?",
     answer:
-      "Yes, without publishing anything. On the Compliance plan you can mint a private buyer review link: a read-only page listing your seasons, including the one still in progress, where each season opens the same view a shopper would see: identical information policy, nothing extra. It is a link you send to one buyer, not a public page: you can revoke it at any time, it expires on its own, and every open is logged so you can see whether they looked. Certifier review links are separate and show a different, certifier-grade dossier; one kind of link never opens the other's view. And if a buyer needs certifier-grade depth, that is a different act: answer their documentation request from your Buyer Page, or share the packet yourself \u2014 deeper access is always your explicit decision.",
+      "Yes, without publishing anything. On the Compliance plan you can mint a private buyer review link: a read-only page listing your seasons, including the one still in progress, where each season opens the same view a shopper would see: identical information policy, nothing extra. It is a link you send to one buyer, not a public page: you can revoke it at any time, it expires on its own, and every open is logged so you can see whether they looked. Certifier review links are separate and show a different, certifier-grade dossier; one kind of link never opens the other's view. And if a buyer needs certifier-grade depth, that is a different act: answer their documentation request from your Buyer Page, or share the packet yourself. Deeper access is always your explicit decision.",
   },
   {
     question: "Can I take my records with me?",
     answer:
-      "Yes, on every plan including the free one. One click in Documents downloads a ZIP of plain CSV files: every activity record with all its fields, your productions, parcels, sales and photo references. Your records are your records \u2014 7 CFR 205.103 makes you keep them for five years, and a tool you might someday leave should never be the place they are trapped. The certifier packet and audit exports are a paid feature; the raw data never is.",
+      "Yes, on every plan including the free one. One click in Documents downloads a ZIP of plain CSV files: every activity record with all its fields, your productions, parcels, sales and photo references. Your records are your records: 7 CFR 205.103 makes you keep them for five years, and a tool you might someday leave should never be the place they are trapped. The certifier packet and audit exports are a paid feature; the raw data never is.",
   },
   {
     question: "Can I cancel anytime?",
