@@ -47,7 +47,7 @@ const faqs = [
   {
     question: "Can a buyer see my records before harvest?",
     answer:
-      "Yes, without publishing anything. On the Compliance plan you can mint a private buyer review link: a read-only page listing your seasons, including the one still in progress, where each season opens the same view a shopper would see — identical information policy, nothing extra. It is a link you send to one buyer, not a public page: you can revoke it at any time, it expires on its own, and every open is logged so you can see whether they looked. Certifier review links are separate and show a different, certifier-grade dossier; one kind of link never opens the other's view. And if a buyer needs certifier-grade depth, that is a different act: answer their documentation request from your Buyer Page, or share the packet yourself \u2014 deeper access is always your explicit decision.",
+      "Yes, without publishing anything. On the Compliance plan you can mint a private buyer review link: a read-only page listing your seasons, including the one still in progress, where each season opens the same view a shopper would see: identical information policy, nothing extra. It is a link you send to one buyer, not a public page: you can revoke it at any time, it expires on its own, and every open is logged so you can see whether they looked. Certifier review links are separate and show a different, certifier-grade dossier; one kind of link never opens the other's view. And if a buyer needs certifier-grade depth, that is a different act: answer their documentation request from your Buyer Page, or share the packet yourself \u2014 deeper access is always your explicit decision.",
   },
   {
     question: "Can I take my records with me?",
@@ -57,7 +57,7 @@ const faqs = [
   {
     question: "Can I cancel anytime?",
     answer:
-      "Yes. No long-term contracts, and nothing charges you automatically — paid plans are arranged by invoice, so there is no card on file to forget about. Email info@trazo.io to stop a renewal and you keep access to the end of the period you paid for. Starter stays free after that, so your logged season does not disappear when you stop paying.",
+      "Yes. No long-term contracts, and nothing charges you automatically. Paid plans are arranged by invoice, so there is no card on file to forget about. Email info@trazo.io to stop a renewal and you keep access to the end of the period you paid for. Starter stays free after that, so your logged season does not disappear when you stop paying.",
   },
 ];
 
