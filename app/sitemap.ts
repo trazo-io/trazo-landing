@@ -51,6 +51,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: "https://www.trazo.io/for-orchards",
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
       url: "https://www.trazo.io/for-certifiers",
       changeFrequency: "weekly",
       priority: 0.9,
