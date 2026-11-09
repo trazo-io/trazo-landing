@@ -22,6 +22,7 @@ const footerLinks = {
     { label: "COG Pro Migration", href: "/cog-pro-migration" },
     { label: "Common OSP, explained", href: "/common-osp" },
     { label: "For Farmers", href: "/for-farmers" },
+    { label: "For Orchards", href: "/for-orchards" },
     { label: "For Certifiers", href: "/for-certifiers" },
     { label: "About", href: "/about" },
     { label: "Contact Us", href: "/contact" },
