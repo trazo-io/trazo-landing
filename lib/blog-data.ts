@@ -376,11 +376,11 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
     title:
       "COG Pro Is Shutting Down: A Migration Checklist for Organic Growers",
-    seoTitle: "COG Pro Shutting Down: Migration Checklist | Trazo",
+    seoTitle: "COG Pro Shuts Down Dec 31: Export Your Records | Trazo",
     excerpt:
       "COG Pro has announced it will end service December 31, 2026. Here's the export checklist, the field-mapping guide, and the vendor questions to ask before your organic records disappear along with the software.",
     metaDescription:
-      "COG Pro ends service December 31, 2026. An export checklist, a field-mapping guide and the questions to ask any vendor before your records go with it.",
+      "COG Pro is shutting down December 31, 2026, GAP Pro too. What to export, how far back to go (five years) and what to ask before you pick a replacement.",
     image: "/images/blog-organic-records.jpg",
     content: `
 <p>COG Pro has announced that it will end service on December 31, 2026. If your walnut, almond, citrus, or avocado operation's organic records live in that system, the exact shutdown date matters less than what happens to your history once the software goes dark. When we asked, COG Pro's support team told us by email (November 1, 2026) that export keeps working through December 31 and that GAP Pro goes offline at the same time. Plans can still shift, so check with them before you count on the last week.</p>
