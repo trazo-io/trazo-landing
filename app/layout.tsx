@@ -106,6 +106,11 @@ export const viewport: Viewport = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  // One node id for the company, referenced by WebSite.publisher below and by the homepage's
+  // SoftwareApplication.creator, so the three blocks describe ONE entity. Without it Google sees
+  // three unrelated "Trazo" objects, and "trazo" is shared with trazo.ag (a farm management
+  // platform that holds #1 for the bare word), trazo.co, trazo.pro and a Spanish dictionary entry.
+  "@id": "https://www.trazo.io/#organization",
   name: "Trazo",
   // The REGISTERED entity behind the brand, machine-readable. `name` is the trademark and is not a
   // legal person; `legalName` and `taxID` are the schema.org properties for the company that
@@ -147,6 +152,9 @@ const jsonLd = {
     contactType: "customer support",
     availableLanguage: ["English", "Spanish"],
   },
+  // NEVER add a profile Trazo does not control or that misstates the product. The CB Insights
+  // page (cbinsights.com/company/trazo) is UNCLAIMED and still says Trazo "generates transparency
+  // scores", a retired concept; sameAs would endorse it. Add it only after it is claimed and fixed.
   sameAs: [
     "https://linkedin.com/company/trazo-io",
     "https://instagram.com/trazo.io",
@@ -164,7 +172,8 @@ const webSiteJsonLd = {
   url: "https://www.trazo.io",
   description:
     "Organic recordkeeping for US specialty crop farms, built for renewal season. One entry becomes both your certifier's records and your buyer's page.",
-  publisher: { "@type": "Organization", name: "Trazo" },
+  "@id": "https://www.trazo.io/#website",
+  publisher: { "@id": "https://www.trazo.io/#organization" },
   // "en" only until Spanish PAGES exist. The app is bilingual and support is
   // bilingual (see contactPoint.availableLanguage above), but this field describes
   // the CONTENT of this site, and every page of it is English.
