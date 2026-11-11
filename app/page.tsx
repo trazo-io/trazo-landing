@@ -36,7 +36,10 @@ const softwareAppJsonLd = {
     offerCount: 3,
   },
   featureList: [
-    "Guided Organic System Plan modules mapped to 7 CFR 205.201(a)",
+    // Was "Guided Organic System Plan modules mapped to 7 CFR 205.201(a)". On 2026-11-10 Google's
+    // AI overview for "organic record keeping software" restated it as Trazo "auto-assembles OSPs
+    // mapped to 7 CFR 205.201". Say who answers, so there is no verb left to upgrade.
+    "Organic System Plan modules the grower answers and signs, mapped to 7 CFR 205.201(a), with the grower's own records shown beside each answer",
     "Per-parcel application records (location, land history, buffers, field map)",
     "33 US crop templates with USDA-sourced crop timing data",
     "Activity log with voice and template shortcuts, English and Spanish",
@@ -50,11 +53,8 @@ const softwareAppJsonLd = {
   // Must track the asset the hero actually renders (hero.tsx). v1 was kept alive on
   // the deploy — 1.38MB — by this string alone.
   screenshot: "https://www.trazo.io/images/app-screenshot-full-v2.png",
-  creator: {
-    "@type": "Organization",
-    name: "Trazo",
-    url: "https://www.trazo.io",
-  },
+  // Same node as the Organization block in app/layout.tsx (see its "@id" note).
+  creator: { "@id": "https://www.trazo.io/#organization" },
 };
 
 export default function Home() {

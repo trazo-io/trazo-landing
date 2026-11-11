@@ -69,12 +69,16 @@ export default async function BlogDetailPage({
       url: 'https://www.linkedin.com/in/oscarmunoz',
       worksFor: {
         '@type': 'Organization',
+        '@id': 'https://www.trazo.io/#organization',
         name: 'Trazo',
         url: 'https://www.trazo.io',
       },
     },
     publisher: {
       '@type': 'Organization',
+      // Same node as the Organization block in app/layout.tsx. Name and logo stay inline:
+      // Google's Article guidance reads them from the publisher object itself.
+      '@id': 'https://www.trazo.io/#organization',
       name: 'Trazo',
       url: 'https://www.trazo.io',
       logo: { '@type': 'ImageObject', url: 'https://www.trazo.io/images/logo-mark-512.png', width: 512, height: 512 },
