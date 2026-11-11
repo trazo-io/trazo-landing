@@ -39,7 +39,9 @@ export function CertifierLogPreview() {
             width={786}
             height={977}
             quality={95}
-            className="h-full w-full object-cover object-top"
+            // Anchored top-LEFT: the sheet is narrower than the page, and a centred crop cut
+            // the Date and Product columns off the start of the table (2026-11-11).
+            className="h-full w-full object-cover object-left-top"
           />
 
           {/* The export is wider than this sheet can show. A soft edge says "the page
