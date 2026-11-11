@@ -240,7 +240,7 @@ export function DualOutput() {
                     to fill the frame. That intermediate state renders as a wildly zoomed,
                     cropped screenshot. */}
                 <Image
-                  src="/images/dual-output-consumer-v7.png"
+                  src="/images/dual-output-consumer-v8.png"
                   alt="The same spray on the public Trazo page: Entrust SC, pest control, August 7 2025, performed by the farm team, a plain-language line about the treatment, a Recorded by the farm as allowed for organic use label, and the details opened: why it is recorded, 12.5 acres treated, navel orangeworm as the target, air blast application."
                   width={750}
                   height={1800}
@@ -316,8 +316,8 @@ export function DualOutput() {
                 different device. */}
             <div className="relative h-[520px] w-[260px] shrink-0 overflow-hidden rounded-[2.5rem] border-[8px] border-foreground/10 bg-card shadow-2xl shadow-primary/10 md:h-[560px] md:w-[280px]">
               <Image
-                src="/images/consumer-transparency-v3.png"
-                alt="Trazo buyer page for walnuts from Blue Oak Orchards: Lot BO-2025-EB-01, harvested October 22 2025, 27 practices documented, above the documented growing story and the practices, origin, harvest and records row."
+                src="/images/consumer-transparency-v4.png"
+                alt="Trazo buyer page for walnuts from Blue Oak Orchards, marked Demo farm: Lot BO-2025-EB-01, harvested September 29 2025, 26 practices documented, above the documented growing story and the origin, harvest and records cards, with Lot, Record and Farm tabs at the bottom."
                 width={750}
                 height={1624}
                 quality={95}

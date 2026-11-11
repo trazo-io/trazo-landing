@@ -34,10 +34,10 @@ export function CertifierLogPreview() {
           aria-label="Expand the full Input Material Application Records table from the audit export"
         >
           <Image
-            src="/images/dual-output-certifier-v9.png"
-            alt="A page of the Trazo NOP audit export for Blue Oak Orchards, sample data: Input Material Application Records listing two copper applications, a fertigation and the Entrust SC hull-split spray with date, product, type, concentration, amount and per-acre rate, area, method, target and organic status, followed by Input Purchase Traceability under 7 CFR 205.103 showing supplier, purchase date, invoice, lot and quantity purchased."
-            width={800}
-            height={1244}
+            src="/images/dual-output-certifier-v10.png"
+            alt="A page of the Trazo NOP audit export for Blue Oak Orchards, sample data: Input Material Application Records listing two fish fertigations, two copper applications and the Entrust SC hull-split spray on August 7 2025 with date, product, type, concentration, amount and per-acre rate, area, method, target and organic status, followed by Input Purchase Traceability under 7 CFR 205.103 showing supplier, purchase date, invoice and lot."
+            width={786}
+            height={977}
             quality={95}
             className="h-full w-full object-cover object-top"
           />
@@ -71,10 +71,10 @@ export function CertifierLogPreview() {
         {/* Horizontal scrolling belongs here — inside a view the reader chose to open. */}
         <div className="mt-2 overflow-x-auto rounded-md border border-border bg-white">
           <Image
-            src="/images/dual-output-certifier-full-v9.png"
-            alt="The complete Input Material Application Records table: Date, Product, Type, NPK or concentration, Amount and rate, Area, Method, Target or purpose, Organic Status, REI hours, PHI days, Buffer, EPA registration number and restricted-use flag, across two copper applications, a fertigation and the Entrust SC hull-split spray. The organic status column reads OMRI Listed, grower-selected, no listing on file."
-            width={1130}
-            height={628}
+            src="/images/dual-output-certifier-full-v10.png"
+            alt="The complete Input Material Application Records table: Date, Product, Type, NPK or concentration, Amount and rate, Area, Method, Target or purpose, Organic Status, REI hours, PHI days, Buffer, EPA registration number and restricted-use flag, across two fish fertigations, two copper applications and the Entrust SC hull-split spray. The organic status column reads OMRI Listed, grower-selected, no listing on file."
+            width={1136}
+            height={781}
             quality={95}
             className="h-auto max-w-none"
             style={{ width: "1160px" }}
