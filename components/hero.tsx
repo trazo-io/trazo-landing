@@ -166,10 +166,12 @@ export function Hero() {
                   <picture> so next/image owns each srcset; only one is ever in the layout. */}
               <div className="relative mx-auto max-w-[340px] overflow-hidden rounded-2xl border border-border bg-card shadow-xl shadow-foreground/5 md:hidden">
                 <Image
-                  src="/images/app-screenshot-m-v3.png"
+                  src="/images/app-screenshot-m-v4.png"
                   alt="The Trazo farm home for Blue Oak Orchards on a phone: a Certifier deadlines card listing the 2026 OSP annual update as started but not submitted, the USDA Organic certificate due in 77 days and the CDFA State Organic Program renewal in 62 days, then a card titled Before your certifier packet counting 3 open items, 1 missing and 2 that need attention, starting with 2 logged products that are not on the materials list, Kocide 3000-O and Entrust SC."
-                  width={780}
-                  height={1688}
+                  // 3x (1170px): a 340px frame on a 3x iPhone needs ~1020 device px; the 780px
+                  // v3 was upscaled 1.3x there and read soft (measured on prod 2026-11-11).
+                  width={1170}
+                  height={2532}
                   quality={92}
                   sizes="340px"
                   className="w-full"
