@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
               How Trazo collects, uses, and protects your personal information.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Last updated: October 25, 2026
+              Last updated: November 11, 2026
             </p>
           </header>
 
@@ -653,8 +653,9 @@ export default function PrivacyPolicyPage() {
                   granular user roles
                 </li>
                 <li>
-                  <strong>Rate Limiting:</strong> 100 requests/hour for
-                  anonymous users, 1000/hour for authenticated users
+                  <strong>Rate Limiting:</strong> sign-in, sign-up, password
+                  reset and email verification attempts are limited per network
+                  address
                 </li>
                 <li>
                   <strong>Encryption:</strong> HTTPS for all data transmission,
