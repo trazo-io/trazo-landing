@@ -63,7 +63,7 @@ const PANELS: Panel[] = [
     headline: "The month, as your certifier will read it",
     body: "Irrigation, input applications, scouting and harvest land on the calendar the day the work happens: marked by type, filterable by block, and switchable to a list. Logged from the phone in the cab, in English or Spanish.",
     src: "/images/tour-season-log-v3.png",
-    srcMobile: "/images/tour-m-season-log-v2.png",
+    srcMobile: "/images/tour-m-season-log-v3.png",
     alt: "Trazo activities for August 2026 on a walnut farm, each entry marked by type: pest and scouting on the 1st and 4th, input applications on the 4th and 7th, and irrigation on the 12th and 15th, shown as a month calendar with activity and parcel filters, or as a dated list on a phone.",
   },
   {
@@ -76,7 +76,7 @@ const PANELS: Panel[] = [
     // your records since you last wrote your plan") is visible on screen.
     body: "Your answers compile into the § 205.201(a) plan sections, in your own words. Then Trazo reads your records against the plan you last answered and lists what moved since: seasons finished or started, materials added after the answers, a new certificate, records you keep that the plan does not name yet. Each one is something to confirm before the annual update goes in, not a problem by itself.",
     src: "/images/tour-osp-v3.png",
-    srcMobile: "/images/tour-m-osp-v2.png",
+    srcMobile: "/images/tour-m-osp-v3.png",
     alt: "Trazo Organic System Plan page for Blue Oak Orchards with a card titled Check the plan against your records, listing 8 items to confirm since the plan was last answered on January 17, 2026: one season finished and two started, two materials added to the plan's list after the answers, a new USDA Organic certification record, and storage and post-harvest records kept in Trazo that the plan does not list yet.",
   },
   {
@@ -97,7 +97,7 @@ const PANELS: Panel[] = [
     // Same farm as the other two panels and as the desktop capture: a screenshot from a
     // different establishment would put a second farm name inside one tab, visible only
     // to whichever half of readers is on a phone.
-    srcMobile: "/images/tour-m-documents-v4.png",
+    srcMobile: "/images/tour-m-documents-v5.png",
     // Describes the shelf, not a row order: desktop renders a table and phones render
     // stacked cards, and only one is in the layout at a time, so the alt has to be true
     // of either. Enumerating the table's rows made it wrong for every phone reader.
@@ -208,8 +208,9 @@ export function ProductTour() {
                     <Image
                       src={panel.srcMobile}
                       alt={panel.alt}
-                      width={780}
-                      height={1688}
+                      // 3x captures (1170px): a 320px frame on a 3x phone needs ~960 device px.
+                      width={1170}
+                      height={2532}
                       quality={92}
                       sizes="320px"
                       loading="lazy"
