@@ -832,8 +832,9 @@ export default function PrivacyPolicyPage() {
                 </li>
                 <li>
                   <strong>Payment Records:</strong> Invoices and payment history
-                  are kept as long as tax law requires, also after an account is
-                  closed. Card details are held by Stripe, never by Trazo
+                  are kept in Stripe and in our accounting records as long as tax
+                  law requires, also after an account is closed. Card details are
+                  held by Stripe, never by Trazo
                 </li>
                 <li>
                   <strong>Backups:</strong> Our database backups roll over
