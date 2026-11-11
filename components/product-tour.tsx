@@ -33,7 +33,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
  * Also not here: the one spray record split into a certifier log and a shopper card. `DualOutput`
  * tells that story below with the real artifacts and the redaction list.
  *
- * PANELS ARE ALL THE SAME SIZE (2880x1800, i.e. 1440x900 at 2x). Same intrinsic dimensions on every image means
+ * PANELS ARE ALL THE SAME SIZE (3342x2072, i.e. 1671x1036 at 2x). Same intrinsic dimensions on every image means
  * switching tabs cannot move a single pixel of the page: no layout shift, no CLS.
  *
  * LOADING: only the visible panel's image is fetched (Radix keeps inactive panels mounted but
@@ -61,42 +61,47 @@ const PANELS: Panel[] = [
     label: "The season log",
     icon: ClipboardList,
     headline: "The month, as your certifier will read it",
-    body: "Irrigation, input applications, scouting and harvest land on the calendar the day the work happens — colour-coded by type, filterable by block, and switchable to a list. Logged from the phone in the cab, in English or Spanish.",
-    src: "/images/tour-season-log-v2.png",
-    srcMobile: "/images/tour-m-season-log.png",
-    alt: "Trazo activities calendar for August 2026 on a walnut farm, with colour-coded entries: pest and scouting on the 1st and 4th, input applications on the 4th and 7th, and irrigation on the 12th and 15th, above filters for production, inputs, soil, pest, weather and business.",
+    body: "Irrigation, input applications, scouting and harvest land on the calendar the day the work happens: marked by type, filterable by block, and switchable to a list. Logged from the phone in the cab, in English or Spanish.",
+    src: "/images/tour-season-log-v3.png",
+    srcMobile: "/images/tour-m-season-log-v2.png",
+    alt: "Trazo activities for August 2026 on a walnut farm, each entry marked by type: pest and scouting on the 1st and 4th, input applications on the 4th and 7th, and irrigation on the 12th and 15th, shown as a month calendar with activity and parcel filters, or as a dated list on a phone.",
   },
   {
     value: "plan",
     label: "Your plan",
     icon: FileCheck2,
-    headline: "Every module, mapped to § 205.201(a)",
-    body: "Answer each module once and your answers compile into the plan sections — your own words kept alongside them. Every card carries the CFR sections it answers to, and a module that does not apply is attested Not applicable rather than left blank.",
-    src: "/images/tour-osp-v2.png",
-    srcMobile: "/images/tour-m-osp.png",
-    alt: "Trazo Organic System Plan page showing version 2 active with 17 of 19 farm-wide modules complete, and module cards for Monitoring & Organic Fraud Prevention, Seeds & Planting Stock, Annual Seedlings marked Not applicable, Perennial Planting Stock, Rotation & Soil Management and Compost & Manure, each citing its CFR sections.",
+    headline: "Your plan, checked against what you logged",
+    // 2026-11-11: the panel moved from the module grid to the plan review card. The modules
+    // are rows now, and the review card is where the hero's promise ("lists what changed in
+    // your records since you last wrote your plan") is visible on screen.
+    body: "Your answers compile into the § 205.201(a) plan sections, in your own words. Then Trazo reads your records against the plan you last answered and lists what moved since: seasons finished or started, materials added after the answers, a new certificate, records you keep that the plan does not name yet. Each one is something to confirm before the annual update goes in, not a problem by itself.",
+    src: "/images/tour-osp-v3.png",
+    srcMobile: "/images/tour-m-osp-v2.png",
+    alt: "Trazo Organic System Plan page for Blue Oak Orchards with a card titled Check the plan against your records, listing 8 items to confirm since the plan was last answered on January 17, 2026: one season finished and two started, two materials added to the plan's list after the answers, a new USDA Organic certification record, and storage and post-harvest records kept in Trazo that the plan does not list yet.",
   },
   {
     value: "docs",
     label: "Your documents",
     icon: FolderDown,
     headline: "The paperwork, already written and dated",
-    body: "The audit dossier, the OSP renewal packet and its module PDFs, the Common OSP workbooks, the California PUR export, lot tags — each one built from the records above, filed the moment it is generated. Your own weigh tickets and receipts sit beside them, and a receipt linked to a purchase record travels inside the packet itself.",
-    src: "/images/tour-documents-v2.png",
+    body: "The audit dossier, the OSP renewal packet and its module PDFs, the Common OSP workbooks, the California PUR export, lot tags: each one built from the records above, filed the moment it is generated. Your own weigh tickets and receipts sit beside them, and a receipt linked to a purchase record travels inside the packet itself.",
+    src: "/images/tour-documents-v3.png",
     // v1 predated the Documents mobile fix: the six-column table was crushed to the
     // viewport with "SOURCE" wrapped as a vertical S-O-U-R-C-E stack. v2 caught the
     // stacked-card layout but still had it nested inside an outer card, so ~29% of a
     // 375px screen went to chrome. v3 is the same view after that outer card came off.
+    // v4 (2026-11-11): every title readable (module PDFs carry the module code and name, not a
+    // slug like g5_0_pest; trazo-back #385) and the shelf dated November.
     // Filename bumped every cut because `_next/image` caches by SOURCE URL — replacing
     // bytes under an old name serves the stale render forever.
     // Same farm as the other two panels and as the desktop capture: a screenshot from a
     // different establishment would put a second farm name inside one tab, visible only
     // to whichever half of readers is on a phone.
-    srcMobile: "/images/tour-m-documents-v3.png",
+    srcMobile: "/images/tour-m-documents-v4.png",
     // Describes the shelf, not a row order: desktop renders a table and phones render
     // stacked cards, and only one is in the layout at a time, so the alt has to be true
     // of either. Enumerating the table's rows made it wrong for every phone reader.
-    alt: "Trazo documents page for Blue Oak Orchards, a shelf of generated certifier artifacts filed by folder with source, size and date — audit dossier, California PUR export, OSP renewal packet, OSP module PDFs, Common OSP workbook and lot tags — filterable by Organic System Plan, Exports and Uploads, with the farm's own files uploaded beside them.",
+    alt: "Trazo documents page for Blue Oak Orchards, a shelf of generated certifier documents with source, size and date: the OSP renewal packet, the operation audit dossier, the audit dossier for the 2026 North Block season, OSP module PDFs, Common OSP workbooks, the California PUR export and lot tags, filterable by Organic System Plan and Exports.",
   },
 ];
 
@@ -219,7 +224,7 @@ export function ProductTour() {
                       // shot of a ~1671 CSS px window). Declaring the real dimensions is what
                       // lets next/image build a srcset with detail left on a retina screen; a
                       // 1440-wide first cut was being upscaled ~1.4x on every MacBook.
-                      width={3343}
+                      width={3342}
                       height={2072}
                       quality={92}
                       sizes="(max-width: 1152px) 100vw, 1152px"

@@ -52,7 +52,7 @@ const softwareAppJsonLd = {
   ],
   // Must track the asset the hero actually renders (hero.tsx). v1 was kept alive on
   // the deploy — 1.38MB — by this string alone.
-  screenshot: "https://www.trazo.io/images/app-screenshot-full-v2.png",
+  screenshot: "https://www.trazo.io/images/app-screenshot-full-v3.png",
   // Same node as the Organization block in app/layout.tsx (see its "@id" note).
   creator: { "@id": "https://www.trazo.io/#organization" },
 };
