@@ -150,7 +150,15 @@ export function Hero() {
 
                   Filename is versioned on EVERY re-cut. `_next/image` keys its optimizer cache
                   on the source URL, so replacing bytes under a name that has already been
-                  requested serves the OLD image indefinitely — verified 2026-08-15. */}
+                  requested serves the OLD image indefinitely — verified 2026-08-15.
+
+                  2026-11-11 (v3): the frame now shows what Trazo CATCHES. An all-green card
+                  tells a grower nothing about the product; three findings it computes from the
+                  records do. Shot from `seed_showcase_walnut_farm --with-open-items` (trazo-back):
+                  the shaker came off conventional ground with no cleaning record (§ 205.272),
+                  and two sprays the plan's materials list does not hold. Taller than v2
+                  (1671x1140 CSS px) so the whole readiness card is in frame. The QR count is a
+                  small seeded number (6), not the 97 the August cut showed. */}
               {/* Art-directed. A 1671 CSS px desktop screen inside a 340px phone column is a
                   20% reduction — a grey blur, and the same failure the tour panels already had
                   to solve. Phones get the screen captured AT phone width, where the app's own
@@ -158,8 +166,8 @@ export function Hero() {
                   <picture> so next/image owns each srcset; only one is ever in the layout. */}
               <div className="relative mx-auto max-w-[340px] overflow-hidden rounded-2xl border border-border bg-card shadow-xl shadow-foreground/5 md:hidden">
                 <Image
-                  src="/images/app-screenshot-m-v2.png"
-                  alt="The Trazo farm home on a phone: a Certifier deadlines card listing the 2026 OSP annual update as started but not submitted, the USDA Organic certificate due in 77 days and the CDFA State Organic Program renewal in 62 days, above a card reading 16 record checks on your latest season with two open items."
+                  src="/images/app-screenshot-m-v3.png"
+                  alt="The Trazo farm home for Blue Oak Orchards on a phone: a Certifier deadlines card listing the 2026 OSP annual update as started but not submitted, the USDA Organic certificate due in 77 days and the CDFA State Organic Program renewal in 62 days, then a card titled Before your certifier packet counting 3 open items, 1 missing and 2 that need attention, starting with 2 logged products that are not on the materials list, Kocide 3000-O and Entrust SC."
                   width={780}
                   height={1688}
                   quality={92}
@@ -169,10 +177,10 @@ export function Hero() {
               </div>
               <div className="relative hidden overflow-hidden rounded-2xl border border-border bg-card shadow-xl shadow-foreground/5 md:block">
                 <Image
-                  src="/images/app-screenshot-full-v2.png"
-                  alt="The Trazo farm home for Blue Oak Orchards in Winters, California, with the farm sidebar on the left: a Certifier deadlines card listing the 2026 OSP annual update as started but not submitted, a USDA Organic certificate due in 77 days and a CDFA State Organic Program renewal due in 62 days; below it a card reading Chandler Walnuts 2025, 16 record checks on your latest season, with one open item for documentation depth."
+                  src="/images/app-screenshot-full-v3.png"
+                  alt="The Trazo farm home for Blue Oak Orchards in Winters, California, with the farm sidebar on the left. A Certifier deadlines card lists the 2026 OSP annual update as started but not submitted, the USDA Organic certificate due in 77 days and the CDFA State Organic Program renewal due in 62 days. Below it, Before your certifier packet runs 18 record checks on the Chandler Walnuts 2026 North Block season and counts 3 open items: 2 logged products not on the materials list (Kocide 3000-O and Entrust SC), contamination prevention under § 205.272 marked missing because shared harvest equipment has no cleaning record, and 6 input records not yet confirmed against the plan's inputs list under § 205.400(f)(2)."
                   width={3342}
-                  height={2072}
+                  height={2280}
                   quality={92}
                   sizes="(max-width: 1152px) 100vw, 1152px"
                   className="w-full"
