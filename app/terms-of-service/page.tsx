@@ -22,7 +22,7 @@ export default function TermsOfServicePage() {
               Terms and conditions governing use of the Trazo platform.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Last updated: October 14, 2026
+              Last updated: November 11, 2026
             </p>
           </header>
 
@@ -116,6 +116,24 @@ export default function TermsOfServicePage() {
                 Terms. You agree to notify us immediately of any unauthorized
                 use of your account.
               </p>
+              <p className="mt-3 leading-[1.8]">
+                <strong>Crew messages.</strong> If you give us phone numbers so
+                your crew can report work to your farm&apos;s Trazo number, you
+                confirm that each number belongs to someone who works for your
+                operation and that you may share it with us for this purpose.
+                Trazo sends each new number a notice explaining what happens to
+                their messages and how to stop them, and stops reading a number
+                that replies STOP. A crew message is a suggestion only: nothing
+                becomes a record until a person at your farm saves it under
+                their own name. How crew data is handled is described in our{" "}
+                <a
+                  href="/privacy-policy"
+                  className="text-primary hover:underline"
+                >
+                  Privacy Policy
+                </a>
+                .
+              </p>
             </section>
 
             {/* 4 */}
@@ -185,11 +203,9 @@ export default function TermsOfServicePage() {
                 third-party service providers solely to operate the Platform.
               </p>
               <p className="mt-3 leading-[1.8]">
-                This license survives termination of your account with respect
-                to content already publicly distributed via QR codes, for a
-                period of 90 days after termination, to allow consumers who
-                have previously scanned such codes to continue accessing
-                associated transparency data.
+                This license ends when your account is closed. Consumer pages
+                reached through your QR codes are taken down when you close the
+                account, so a printed code stops showing your records.
               </p>
               <p className="mt-3 leading-[1.8]">
                 You are responsible for the accuracy and legality of all User
@@ -486,16 +502,22 @@ export default function TermsOfServicePage() {
                 with notice.
               </p>
               <p className="mt-3 leading-[1.8]">
-                You may terminate your account at any time from your dashboard.
-                Upon termination, your right to use the Platform ceases, but
-                your data will be retained per our{" "}
+                You may close your account at any time by emailing
+                privacy@trazo.io from the address on the account. We confirm the
+                request with you, send you an export of your records and your
+                uploaded files, take any published consumer pages down straight
+                away, and delete the account and its data within 30 days, as
+                our{" "}
                 <a
                   href="/privacy-policy"
                   className="text-primary hover:underline"
                 >
                   Privacy Policy
                 </a>{" "}
-                data retention schedule.
+                describes. The USDA organic regulations require a certified
+                operation to keep its records for five years (7 CFR
+                205.103(b)(4)); once the account is closed, keeping the export
+                for that period is your operation&apos;s responsibility.
               </p>
             </section>
 

@@ -168,6 +168,15 @@ export default function PrivacyPolicyPage() {
                   model, operating system, IP address
                 </li>
                 <li>
+                  <strong>Error Reports:</strong> When something fails, the
+                  browser and our servers send an error report to Sentry: the
+                  page or request that failed, the browser and device type, and
+                  the steps that led to the error. Web addresses are sent
+                  without their query string, and the private part of a review
+                  or invitation link is removed, so the links that act as a
+                  password never reach Sentry. Your IP address is not included
+                </li>
+                <li>
                   <strong>Educational Engagement:</strong> FAQ views and
                   helpfulness votes, counted in aggregate per article &mdash; we
                   do not track educational progress per user
@@ -212,8 +221,8 @@ export default function PrivacyPolicyPage() {
                   <strong>Record Change History:</strong> Every edit to a
                   production record is logged with timestamp and the responsible
                   user (farmer, field manager, or automated system). Change logs
-                  are retained for 5 years and included in audit PDFs you share
-                  with certifiers.
+                  are kept for 5 years while your account is open and included
+                  in audit PDFs you share with certifiers.
                 </li>
                 <li>
                   <strong>Drift Detector Findings:</strong> Chemical and soil
@@ -236,6 +245,42 @@ export default function PrivacyPolicyPage() {
                   determination of compliance.
                 </li>
               </ul>
+
+              <h4 className="mt-6 text-lg font-semibold text-foreground">
+                2.7 Crew Messages (People Without an Account)
+              </h4>
+              <p className="mt-2 leading-[1.8]">
+                A farm can let its crew report work by sending a WhatsApp
+                message or voice note to the farm&apos;s Trazo number. The
+                people who send these messages do not have a Trazo account. For
+                each of them we hold:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
+                <li>
+                  <strong>Phone number and name:</strong> the number the farm
+                  added to its crew list, and the name the farm gave it
+                </li>
+                <li>
+                  <strong>Messages:</strong> the text of each message, the time
+                  it arrived and, for a voice note, its transcript
+                </li>
+                <li>
+                  <strong>Voice recordings:</strong> kept by Twilio, not by
+                  Trazo, only until someone at the farm has reviewed the note
+                  (see Section 6)
+                </li>
+              </ul>
+              <p className="mt-3 leading-[1.8]">
+                A message never becomes a record by itself. It arrives as a
+                suggestion, and a person at the farm decides what to save,
+                under their own name. The first time a number writes, Trazo
+                answers with a notice saying who reads the messages, which
+                providers handle voice notes, that the recording is deleted
+                after review, and that replying STOP ends it. After STOP, Trazo
+                reads nothing else from that number. The farm is responsible
+                for the crew list it gives us; a crew member can also ask us
+                directly about their data at privacy@trazo.io.
+              </p>
             </section>
 
             {/* 3 */}
@@ -354,6 +399,27 @@ export default function PrivacyPolicyPage() {
                       </td>
                       <td className="py-2">
                         Consent (Art. 6(1)(a)): you initiate each recording
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4">
+                        Crew messages sent to a farm&apos;s Trazo number
+                        (delivery via Twilio and WhatsApp, voice notes
+                        transcribed by Deepgram and read by OpenAI)
+                      </td>
+                      <td className="py-2">
+                        Legitimate interest (Art. 6(1)(f)): the farm keeping
+                        the records of its own work. A crew member can end it
+                        at any time by replying STOP
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4">
+                        Error reports (Sentry)
+                      </td>
+                      <td className="py-2">
+                        Legitimate interest (Art. 6(1)(f)): finding and fixing
+                        what breaks
                       </td>
                     </tr>
                     <tr>
@@ -484,16 +550,47 @@ export default function PrivacyPolicyPage() {
                   documents, and QR codes
                 </li>
                 <li>
-                  <strong>Deepgram</strong>: Voice audio, streamed from your
-                  browser for speech-to-text transcription when you use voice
-                  logging. Audio is sent directly from your device to Deepgram
-                  and is not stored by Trazo
+                  <strong>Deepgram</strong>: Voice audio for speech-to-text
+                  transcription. When you use voice logging, audio is streamed
+                  directly from your browser to Deepgram and is not stored by
+                  Trazo. For a crew voice note (Section 2.7), our server fetches
+                  the recording from Twilio and sends it to Deepgram without
+                  saving it
                 </li>
                 <li>
                   <strong>OpenAI</strong>: The <em>text transcript</em> of a
-                  voice entry, plus text data, for AI-powered field extraction.
-                  OpenAI does not receive voice audio (Trazo has opted out of
-                  model training; your data is not used to train OpenAI models)
+                  voice entry, the text of a crew message, plus text data, for
+                  AI-powered field extraction. OpenAI does not receive voice
+                  audio (Trazo has opted out of model training; your data is not
+                  used to train OpenAI models)
+                </li>
+                <li>
+                  <strong>Twilio and WhatsApp (Meta)</strong>: Crew messages
+                  (Section 2.7): the sender&apos;s phone number, the message,
+                  and voice recordings, which Twilio stores until Trazo deletes
+                  them. Trazo&apos;s replies to crew numbers are sent the same
+                  way
+                </li>
+                <li>
+                  <strong>Resend</strong>: Delivery of the emails Trazo sends:
+                  your email address and the message, such as a verification
+                  code, a password reset link or an invitation
+                </li>
+                <li>
+                  <strong>Sentry</strong>: Error reports from the browser and
+                  our servers, as described in Section 2.4
+                </li>
+                <li>
+                  <strong>Google</strong>: If you sign in with Google, Google
+                  confirms your identity and gives us your name and email
+                  address. When you search for a farm address or view a parcel
+                  map, the address you type and the map area are sent to Google
+                  Maps
+                </li>
+                <li>
+                  <strong>Facebook (Meta)</strong>: If you sign in with
+                  Facebook, Facebook confirms your identity and gives us your
+                  name and email address
                 </li>
                 <li>
                   <strong>Anthropic</strong>: The documents you send us when we
@@ -710,16 +807,38 @@ export default function PrivacyPolicyPage() {
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6 leading-[1.8]">
                 <li>
-                  <strong>Account Information:</strong> Until account deletion +
-                  90 days
+                  <strong>Account Information:</strong> While your account is
+                  open. Deleted within 30 days of a confirmed request to close
+                  the account (Section 7.1)
                 </li>
                 <li>
-                  <strong>Agricultural Data:</strong> 7 years or until deletion
-                  request
+                  <strong>Farm Records:</strong> While your account is open.
+                  Trazo does not delete a season&apos;s records inside the five
+                  years the USDA organic regulations require a certified
+                  operation to keep them (7 CFR 205.103(b)(4)), even if you ask
+                  for one record to be removed. When you close your account, we
+                  send you an export first and then delete the records within
+                  30 days; keeping that copy for the rest of the five years is
+                  then your operation&apos;s responsibility
                 </li>
                 <li>
-                  <strong>Payment Records:</strong> 7 years (tax and financial
-                  compliance)
+                  <strong>Crew Voice Recordings:</strong> Deleted from Twilio
+                  when someone at the farm saves or discards the note. A note
+                  waiting for review keeps its recording until it is reviewed,
+                  because the recording is how the farm checks the transcript.
+                  A note Trazo could not read, or one stuck while being
+                  transcribed, has its recording deleted after 14 days. The
+                  transcript and message text stay with the farm&apos;s records
+                </li>
+                <li>
+                  <strong>Payment Records:</strong> Invoices and payment history
+                  are kept in Stripe and in our accounting records as long as tax
+                  law requires, also after an account is closed. Card details are
+                  held by Stripe, never by Trazo
+                </li>
+                <li>
+                  <strong>Backups:</strong> Our database backups roll over
+                  daily, so deleted data leaves them within 8 days
                 </li>
                 <li>
                   <strong>Product Analytics:</strong> 1 year &mdash; which
@@ -760,8 +879,12 @@ export default function PrivacyPolicyPage() {
                   information
                 </li>
                 <li>
-                  <strong>Deletion:</strong> Request deletion of your personal
-                  information (subject to limitations)
+                  <strong>Deletion:</strong> To close your account and delete
+                  its data, email privacy@trazo.io from the address on the
+                  account. We confirm the request with you, send you an export
+                  of your records and your uploaded files, take any published
+                  consumer pages down straight away, and delete the account and
+                  its data within 30 days
                 </li>
                 <li>
                   <strong>Portability:</strong> Receive your data in a portable
