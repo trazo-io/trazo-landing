@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
               How Trazo collects, uses, and protects your personal information.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Last updated: November 11, 2026
+              Last updated: November 12, 2026
             </p>
           </header>
 
@@ -824,10 +824,11 @@ export default function PrivacyPolicyPage() {
                 <li>
                   <strong>Crew Voice Recordings:</strong> Deleted from Twilio
                   when someone at the farm saves or discards the note. A note
-                  waiting for review keeps its recording until it is reviewed,
-                  because the recording is how the farm checks the transcript.
-                  A note Trazo could not read, or one stuck while being
-                  transcribed, has its recording deleted after 14 days. The
+                  waiting for review keeps its recording while it waits,
+                  because the recording is how the farm checks the transcript,
+                  but never more than 30 days. A note Trazo could not read, or
+                  one stuck while being transcribed, has its recording deleted
+                  after 14 days. The
                   transcript and message text stay with the farm&apos;s records
                 </li>
                 <li>
