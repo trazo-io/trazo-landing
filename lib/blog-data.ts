@@ -24,6 +24,11 @@ export interface BlogPost {
   image: string;
   readTime: string;
   content: string;
+  /**
+   * End-of-post call to action, for a post whose reader has a narrower next step than the
+   * default in app/blog/[slug]/page.tsx. `href` starting with "/" renders as an internal link.
+   */
+  cta?: { heading: string; body: string; href: string; label: string };
 }
 
 export const posts: BlogPost[] = [
@@ -381,6 +386,13 @@ export const posts: BlogPost[] = [
       "COG Pro has announced it will end service December 31, 2026. Here's the export checklist, the field-mapping guide, and the vendor questions to ask before your organic records disappear along with the software.",
     metaDescription:
       "COG Pro is shutting down December 31, 2026, GAP Pro too. What to export, how far back to go (five years) and what to ask before you pick a replacement.",
+    // The offer as /cog-pro-migration states it ("The offer" section). Keep the two in step.
+    cta: {
+      heading: "Moving off COG Pro before December 31?",
+      body: "Send us your COG Pro export, a spreadsheet or photos of your binder pages, and we bring them into a Trazo account with you, at no cost and without a card on file.",
+      href: "/cog-pro-migration",
+      label: "How the move works",
+    },
     image: "/images/blog-organic-records.jpg",
     content: `
 <p>COG Pro has announced that it will end service on December 31, 2026. If your walnut, almond, citrus, or avocado operation's organic records live in that system, the exact shutdown date matters less than what happens to your history once the software goes dark. When we asked, COG Pro's support team told us by email (November 1, 2026) that export keeps working through December 31 and that GAP Pro goes offline at the same time. Plans can still shift, so check with them before you count on the last week.</p>
