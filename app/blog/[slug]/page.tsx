@@ -4,8 +4,18 @@ import { notFound } from "next/navigation"
 import { ArrowLeft, ArrowUpRight, Clock, Calendar } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { posts } from "@/lib/blog-data"
+import { posts, type BlogPost } from "@/lib/blog-data"
 import type { Metadata } from "next"
+
+// It said "Ready to build transparency into your farm? ... earn consumer trust with Trazo" until
+// 2026-11-14: the pre-pivot pitch, on every post, including the COG Pro shutdown post that Search
+// Console shows most. A post whose reader has a narrower next step sets its own `cta`.
+const DEFAULT_CTA: NonNullable<BlogPost["cta"]> = {
+  heading: "Start this season's records",
+  body: "Log each activity once and it is there at renewal and at inspection. The Starter plan is free permanently, with no card and no expiry.",
+  href: "https://app.trazo.io/auth/signup",
+  label: "Start free",
+}
 
 export async function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }))
@@ -52,6 +62,9 @@ export default async function BlogDetailPage({
 
   const currentIdx = posts.findIndex((p) => p.slug === slug)
   const relatedPosts = posts.filter((_, i) => i !== currentIdx).slice(0, 3)
+  const cta = post.cta ?? DEFAULT_CTA
+  const ctaClassName =
+    "mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
 
   const blogJsonLd = {
     '@context': 'https://schema.org',
@@ -161,18 +174,22 @@ export default async function BlogDetailPage({
           {/* CTA */}
           <div className="mt-14 rounded-2xl border border-primary/20 bg-primary/5 p-8 text-center md:p-10">
             <h3 className="text-xl font-bold text-foreground md:text-2xl">
-              Ready to build transparency into your farm?
+              {cta.heading}
             </h3>
             <p className="mx-auto mt-2 max-w-md text-muted-foreground">
-              Start documenting your farming practices and earn consumer trust with Trazo.
+              {cta.body}
             </p>
-            <a
-              href="https://app.trazo.io/auth/signup"
-              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-            >
-              Start free
-              <ArrowUpRight size={14} />
-            </a>
+            {cta.href.startsWith("/") ? (
+              <Link href={cta.href} className={ctaClassName}>
+                {cta.label}
+                <ArrowUpRight size={14} />
+              </Link>
+            ) : (
+              <a href={cta.href} className={ctaClassName}>
+                {cta.label}
+                <ArrowUpRight size={14} />
+              </a>
+            )}
           </div>
 
           {/* Share */}
