@@ -348,13 +348,11 @@ export const posts: BlogPost[] = [
 <li><strong>Voice recording lowers the barrier.</strong> Farmers who find paper logs tedious can speak their event details into a phone while still in the field. The system converts speech to structured data that can be reviewed and completed later.</li>
 </ul>
 
-<h2>The Transparency Advantage</h2>
+<h2>The Same Records, for Your Buyer</h2>
 
-<p>There is an additional benefit to digital organic documentation that goes beyond compliance. The same events that build your inspection record also build consumer trust.</p>
+<p>Buyers ask about some of the same things your certifier does: what went on a block, when, and whether your organic certificate is current. If those records are already kept by lot, answering a buyer means sharing what you have instead of assembling it again.</p>
 
-<p>When a consumer scans a QR code on your product and sees a timeline of documented organic practices, cover crops, OMRI-listed amendments, and certification status checked against the USDA Organic Integrity Database, that is a level of transparency no paper record can provide. It turns record-keeping from a compliance burden into a marketing asset.</p>
-
-<p>The farms doing the most thorough documentation are also the farms that can show the most complete transparency story to their consumers. For organic farms, where consumers already expect higher standards, this alignment between compliance documentation and consumer transparency is particularly valuable.</p>
+<p>In Trazo, the activity log behind your renewal records can also publish a page for a finished season, which a buyer opens from the QR code on your cartons. It shows what the farm recorded for that lot: the practices with their dates, the inputs and the organic basis the farm recorded for each, and your certification status cross-referenced against the USDA Organic Integrity Database (a database lookup, not an inspection). Your workers' names, licence numbers and the other details meant for your certifier are removed before the page is built. Nothing is public until you finish a season and confirm, and a published season can be taken down again at any time.</p>
 
 <h2>Getting Started: What to Document First</h2>
 
@@ -370,7 +368,7 @@ export const posts: BlogPost[] = [
 
 <p>These five record types cover the majority of what inspectors review during organic audits. Once they are consistently documented, adding soil tests, pest monitoring, cover crop management, and business events fills out the complete picture.</p>
 
-<p>The goal is not to create more paperwork. It is to make the documentation you already need serve double duty: compliance readiness and consumer-facing transparency. The farms that achieve this will be the ones that maintain their certification with less stress and build stronger relationships with their buyers.</p>
+<p>The goal is not to create more paperwork. It is to keep the documentation you already need current, so that a scheduled inspection, an unannounced one or a buyer's question is answered from records you already have.</p>
     `,
   },
   {
