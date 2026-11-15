@@ -341,7 +341,7 @@ export const posts: BlogPost[] = [
 <p>This approach addresses the most common documentation failures:</p>
 
 <ul>
-<li><strong>Timestamps prevent backdating.</strong> Events are recorded when they happen, not reconstructed from memory weeks later.</li>
+<li><strong>Same-day entries leave less to reconstruct.</strong> An event logged in the field when it happens does not have to be rebuilt from memory weeks later, and a tool that keeps the time each entry was made shows a late entry as late instead of hiding it.</li>
 <li><strong>Photo evidence supports claims.</strong> A photo of the OMRI label on the fertilizer bag, attached to the application event, is stronger documentation than a handwritten note.</li>
 <li><strong>Structured forms reduce gaps.</strong> When a digital form asks for application rate, method, and reason, those fields are harder to skip than lines on a paper log.</li>
 <li><strong>Export-ready reports save preparation time.</strong> Instead of organizing paper records before an inspection, farmers can generate a filtered report in one step.</li>
