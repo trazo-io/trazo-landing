@@ -146,10 +146,11 @@ export default function ForFarmersPage() {
                   answers carry forward from last year for you to re-read.
                   Before you file, Trazo lists what changed in your records
                   since you wrote each answer (new ground, a notice you sent
-                  the certifier, a material you added) so the plan you send
-                  still describes the farm you run. You review, sign and send.
-                  Your certifier&apos;s other requirements are yours to
-                  supply. Keep logging, and next season&apos;s inspection
+                  the certifier, a material you added) so the plan you file
+                  still describes the farm you run. You review it, then file
+                  on the forms your certifier asks for, copying from what Trazo
+                  prepared. Your certifier&apos;s other requirements are yours
+                  to supply. Keep logging, and next season&apos;s inspection
                   starts from records you already have.
                 </p>
               </div>

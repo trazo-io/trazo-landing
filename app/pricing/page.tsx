@@ -65,7 +65,7 @@ const pricingJsonLd = {
         priceCurrency: "USD",
         billingDuration: "P1Y",
         description:
-          "1 farm, unlimited parcels and productions, OSP records, certifier link, CA PUR export",
+          "1 farm, unlimited parcels and productions, OSP records, certifier link, CA PUR export, WA spray records",
       },
       {
         "@type": "Offer",
@@ -121,7 +121,10 @@ const plans = [
   },
   {
     name: "Compliance",
-    description: "Everything one certified farm needs for renewal season",
+    // Overall review 2026-11 (OV-CLM-C02): this read "Everything one certified farm needs for
+    // renewal season", with no qualifier. The grower still files on the certifier's own forms,
+    // and CCOF has nowhere to hand in a packet, so name what the plan produces instead.
+    description: "Inspection exports and renewal drafts from one farm's records",
     monthly: null,
     yearly: 249,
     priceLabel: null,
@@ -135,11 +138,17 @@ const plans = [
       // two lines here. Both moved INTO Starter with migration 0014, so listing them under
       // "Everything in Starter, plus" claimed as an upgrade two things the free tier already
       // has. What is left is the honest difference, and it is entirely OUTPUTS.
-      "Renewal packet from your records: annual update draft, change notices, module PDFs, parcel applications, audit dossier",
-      "Plan review before you file — what changed in your records since you last wrote each answer",
+      // The audit dossier was listed inside the packet; it is a separate export and the packet
+      // ZIP does not carry it (overall review 2026-11, L7 P4; osp_module_pdf.generate_osp_packet).
+      "Inspection exports: an audit dossier for the farm and an audit export per production (PDF or CSV)",
+      "Renewal packet drafted from your records: annual update draft, change notices, module PDFs, parcel applications",
+      "Plan review before you file: what changed in your records since you last wrote each answer",
       "The four required OSP attachment workbooks, filled from your records",
-      "Certifier link — your certifier reviews online, with your permission",
+      "Certifier link: your certifier reviews online, with your permission",
       "California PUR export (DPR-PML-017C), monthly",
+      // trazo-back history.views wa_spray_records_export, gated with the other certifier
+      // documents in subscriptions/gating.py (back #413, 2026-11-13).
+      "Washington spray records (WAC 16-228-1320), PDF and CSV",
       "25 GB storage",
     ],
   },
@@ -226,13 +235,17 @@ const comparisonFeatures: ComparisonRow[] = [
     values: [true, true, true],
   },
   {
-    label: "Renewal packet & NOP audit exports (annual update draft, notices, module PDFs, parcel applications, dossier)",
+    label: "NOP audit exports (farm dossier, per-production export) and renewal packet drafts (annual update draft, notices, module PDFs, parcel applications)",
     values: [false, true, true],
   },
   { label: "OSP attachment workbooks", values: [false, true, true] },
   { label: "Certifier & buyer review links", values: [false, true, true] },
   {
     label: "California PUR export (DPR-PML-017C)",
+    values: [false, true, true],
+  },
+  {
+    label: "Washington spray records (WAC 16-228-1320)",
     values: [false, true, true],
   },
   { label: "Free migration from COG Pro, spreadsheets or binder photos", values: [true, true, true] },
@@ -376,7 +389,7 @@ export default function PricingPage() {
               >
                 {plan.highlight && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-primary px-4 py-1 text-xs font-semibold text-primary-foreground">
-                    Includes the renewal packet
+                    Includes the certifier documents
                   </div>
                 )}
                 <div>
