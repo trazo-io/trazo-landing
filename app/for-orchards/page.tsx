@@ -39,7 +39,7 @@ import { Footer } from "@/components/footer";
 export const metadata: Metadata = {
   title: "Organic Orchard Recordkeeping Software | Trazo",
   description:
-    "Spray records with REI and PHI, one entry for every block it covered, picks checked against the PHI you recorded, and your WSDA renewal packet built from them.",
+    "Spray records with REI and PHI, one entry for every block it covered, picks checked against the PHI you recorded, and any sale traced back to its sprays on inspection day.",
   alternates: { canonical: "https://www.trazo.io/for-orchards" },
   openGraph: {
     title: "Organic recordkeeping for orchards",
@@ -175,9 +175,9 @@ export default function ForOrchardsPage() {
               What it does not do yet
             </h2>
             <p className="mt-1 text-muted-foreground">
-              Trazo does not keep a per-block table of variety, planting year
-              and bearing status yet, so on the renewal forms that ask for
-              acreage by crop you split it yourself. It is not an orchard
+              The renewal forms that ask for acreage by crop get each
+              parcel's total acres, so where one parcel holds two crops you
+              split it yourself. It is not an orchard
               management system either: no payroll and no yield forecasting. It
               keeps the organic record and prepares the paperwork from it.
             </p>

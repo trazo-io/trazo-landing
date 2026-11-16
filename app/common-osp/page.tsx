@@ -24,7 +24,7 @@ import { Footer } from "@/components/footer";
 export const metadata: Metadata = {
   title: "The Common Organic System Plan, explained | Trazo",
   description:
-    "What the USDA-supported Common OSP is, which certifiers use it, what its grower modules ask, and how to prepare your answers from records you already keep.",
+    "What the USDA-supported Common OSP is, what its grower modules ask, how to ask your certifier whether it accepts them, and how to prepare your answers from records you already keep.",
   alternates: { canonical: "https://www.trazo.io/common-osp" },
   openGraph: {
     title: "The Common Organic System Plan, explained",
@@ -65,8 +65,9 @@ export default function CommonOspPage() {
             Every certified operation must keep an Organic System Plan
             (7&nbsp;CFR&nbsp;205.201). Historically, every certifier asked for it
             on different forms. The USDA-supported <strong>Common OSP</strong>{" "}
-            standardizes those forms, so a grower answers one set of questions
-            regardless of certifier.
+            offers one standard set of forms a certifier can adopt in place of
+            its own. Each certifier decides whether to accept it, so ask yours
+            before you use it.
           </p>
 
           <section className="mt-12">
