@@ -121,7 +121,7 @@ const plans = [
   },
   {
     name: "Compliance",
-    description: "For one certified farm: the records, the inspection exports and the renewal drafts",
+    description: "For one certified farm: the inspection exports and the renewal drafts",
     monthly: null,
     yearly: 249,
     priceLabel: null,
