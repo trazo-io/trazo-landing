@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowRight, BookOpen, FileText, Layers } from "lucide-react";
+import { ArrowRight, BookOpen, Building2, FileText, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -19,12 +19,18 @@ import { Footer } from "@/components/footer";
  *     implied endorsement of Trazo.
  *   - Trazo produces DRAFTS and readiness checks the operator reviews; the
  *     operator authors their OSP (7 CFR 205.201(a)). Never "fills itself".
+ *   - Adoption is certifier by certifier (overall review 2026-11, OV-CLM-C01). Until 2026-11-16
+ *     this page said a grower "answers one set of questions regardless of certifier" and its
+ *     description promised "which certifiers use it" while naming none. Name an adopter only
+ *     from that certifier's own published words, with the link and the date. Checked 2026-11-16:
+ *     CCOF's news post of 2026-07-14 says it is not moving to the Common OSP; WSDA's forms page
+ *     lists its own plan forms and does not mention it. Oregon Tilth: not checked, so not named.
  */
 
 export const metadata: Metadata = {
   title: "The Common Organic System Plan, explained | Trazo",
   description:
-    "What the USDA-supported Common OSP is, which certifiers use it, what its grower modules ask, and how to prepare your answers from records you already keep.",
+    "What the USDA-supported Common OSP is, how to tell whether your certifier uses it, what its grower modules ask, and how to prepare from the records you keep.",
   alternates: { canonical: "https://www.trazo.io/common-osp" },
   openGraph: {
     title: "The Common Organic System Plan, explained",
@@ -65,8 +71,9 @@ export default function CommonOspPage() {
             Every certified operation must keep an Organic System Plan
             (7&nbsp;CFR&nbsp;205.201). Historically, every certifier asked for it
             on different forms. The USDA-supported <strong>Common OSP</strong>{" "}
-            standardizes those forms, so a grower answers one set of questions
-            regardless of certifier.
+            is one shared set of those forms. Each certifier decides whether to
+            use it, so whether one set of answers carries from one certifier to
+            another depends on yours.
           </p>
 
           <section className="mt-12">
@@ -76,11 +83,35 @@ export default function CommonOspPage() {
             </h2>
             <p className="mt-3 text-muted-foreground">
               A shared template for the OSP, developed with accredited
-              certifiers. It splits the plan into lettered grower modules — each
+              certifiers. It splits the plan into lettered grower modules. Each
               one covers a topic the rule requires your plan to describe, from
-              seed sourcing to recordkeeping. Certifiers adopting it accept the
-              same answers, which makes switching certifiers and renewing less
-              painful.
+              seed sourcing to recordkeeping. Where certifiers adopt it, the same
+              answers serve each of them, which makes switching certifiers and
+              renewing less painful.
+            </p>
+          </section>
+
+          <section className="mt-12">
+            <h2 className="flex items-center gap-2 text-xl font-bold text-foreground">
+              <Building2 className="text-primary" size={20} />
+              Does my certifier use it?
+            </h2>
+            <p className="mt-3 text-muted-foreground">
+              Ask your certifier. Adoption is voluntary and decided by each one.
+              Here is what we could check in November 2026. CCOF said in
+              July 2026 that it is not moving to the Common OSP (
+              <a
+                href="https://www.ccof.org/news/ccof-is-streamlining-certification-with-care/"
+                className="text-primary underline underline-offset-2"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                CCOF news, July 14, 2026
+              </a>
+              ). The Washington State Department of Agriculture keeps a living
+              plan on its own forms, updated section by section, and its forms
+              page does not mention the Common OSP. If your certifier has its
+              own forms, those are what you file.
             </p>
           </section>
 
@@ -103,7 +134,7 @@ export default function CommonOspPage() {
             </div>
             <p className="mt-3 text-sm text-muted-foreground">
               Plus required attachments: field and crop information, a product
-              list, a materials list, and a supplier list — published as
+              list, a materials list, and a supplier list, published as
               workbooks you complete.
             </p>
           </section>
@@ -115,7 +146,7 @@ export default function CommonOspPage() {
             </h2>
             <p className="mt-3 text-muted-foreground">
               Trazo&apos;s guided modules follow the Common OSP&apos;s own
-              structure — the G-series section codes, the record-keeping
+              structure: the G-series section codes, the record-keeping
               checklist with its verbatim record types, and the four attachment
               workbooks. The Common OSP is a public USDA template, not anyone&apos;s
               proprietary software, and any tool can and should align to it.
@@ -128,7 +159,9 @@ export default function CommonOspPage() {
               PDFs, per-parcel applications, workbooks. You review and confirm
               every answer: the plan is yours. Trazo shows which questions are
               still open and which records sit behind the ones you answered.
-              Anything else your certifier asks for is yours to supply.
+              Where your certifier files on its own forms, the packet is what you
+              copy from and its forms are what you send. Anything else your
+              certifier asks for is yours to supply.
             </p>
           </section>
 
@@ -137,7 +170,7 @@ export default function CommonOspPage() {
               See your own OSP take shape
             </h2>
             <p className="mx-auto mt-2 max-w-md text-muted-foreground">
-              The Starter plan is free — log a week of work and open the module
+              The Starter plan is free. Log a week of work and open the module
               list.
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">

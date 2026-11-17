@@ -229,6 +229,36 @@ const RULES = [
     find: (text) => [...text.matchAll(/approved materials list/gi)].map((m) => m.index),
     skipComments: true,
   },
+  {
+    name: "Common OSP answers carry across every certifier",
+    reason:
+      "Each certifier decides whether to use the Common OSP. CCOF said on 2026-07-14 that it is not moving to it, and WSDA keeps its own living plan. Name an adopter only from its own published words (overall review 2026-11, OV-CLM-C01).",
+    find: (text) =>
+      [...text.matchAll(/regardless of (the |your |which )?certifier/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: "the packet as what the grower sends",
+    reason:
+      "At CCOF, WSDA and Oregon Tilth the grower files on the agent's own forms; the packet is what they copy from. Say \"review it, then file on your certifier's forms\", never \"sign and send\" (overall review 2026-11, OV-CLM-C02).",
+    find: (text) => [...text.matchAll(/sign and send/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: "a plan that covers everything for renewal",
+    reason:
+      "The plan produces records and drafts; the certifier's other requirements are the grower's. Name the outputs (overall review 2026-11, OV-CLM-C02).",
+    find: (text) =>
+      [...text.matchAll(/everything (one|a|your) (certified )?farm needs/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: '"WSDA renewal packet"',
+    reason:
+      "WSDA takes section updates to the plan it holds and sends each grower its own renewal application, which Trazo has not seen. It told us in writing that the fee form we had mapped is not the one it sends (overall review 2026-11, OV-CLM-C02, OV-PK-W02).",
+    find: (text) => [...text.matchAll(/WSDA renewal packet/gi)].map((m) => m.index),
+    skipComments: true,
+  },
 ];
 
 /** True when raw[index] sits inside a // line comment or a /* block comment *\/. */

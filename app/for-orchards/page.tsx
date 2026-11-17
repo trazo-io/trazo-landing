@@ -32,14 +32,22 @@ import { Footer } from "@/components/footer";
  * - WSDA AGR 2196 workbook: back #294, ships in the renewal packet, which is the Compliance plan.
  * - Crew messages: the confirm clause is mandatory (the person at the desk saves it under their
  *   own name, 7 CFR 205.103). Never "their own language": English or Spanish only.
- * - NEVER claim a per-block variety / planting-year / bearing table: not built (planned).
+ * - Block details: each parcel crop row carries block name, variety, acres, rootstock, year planted
+ *   and bearing status, and the parcel PDF prints them (back #391, app #368, 2026-11-11).
+ * - Spray conditions and applicator contact (back #399), applicator profiles (back #404), tank mix
+ *   (2026-11-13) and the Washington spray record export, PDF and CSV per WA farm and period,
+ *   Compliance plan, acceptance stated as the department's decision (back #413, app #382).
+ * - Overall review 2026-11 (OV-CLM-C02): the description said "your WSDA renewal packet" and the
+ *   renewal section said "You review, sign and send". WSDA keeps a living plan, takes section
+ *   updates and sends each grower its own renewal application; the grower files on the agent's
+ *   forms and copies from the packet. Say that, never that the packet is what gets sent.
  *   NEVER claim restricted-use material handling (WSDA D4-6, H5): biggest open orchard gap.
  */
 
 export const metadata: Metadata = {
   title: "Organic Orchard Recordkeeping Software | Trazo",
   description:
-    "Spray records with REI and PHI, one entry for every block it covered, picks checked against the PHI you recorded, and your WSDA renewal packet built from them.",
+    "Spray records with REI and PHI, one entry per block it covered, picks checked against the recorded PHI, and each WAC 16-228-1320 item labeled for WA farms.",
   alternates: { canonical: "https://www.trazo.io/for-orchards" },
   openGraph: {
     title: "Organic recordkeeping for orchards",
@@ -95,10 +103,17 @@ export default function ForOrchardsPage() {
                 </h2>
                 <p className="mt-1 text-muted-foreground">
                   Product, EPA registration number, rate, target pest, re-entry
-                  and pre-harvest intervals, and who applied it. The material is
-                  checked against the National List (7 CFR 205.601&ndash;.602)
-                  when you save, and recorded with the basis you give it, such
-                  as OMRI Listed or WSDA Listed.
+                  and pre-harvest intervals, wind, air temperature, start and
+                  stop, and who applied it, with the license, address and phone
+                  copied from the applicator you pick. Several products from one
+                  tank are entered together and kept as one record per product.
+                  The material is checked against the National List
+                  (7 CFR 205.601&ndash;.602) when you save, and recorded with the
+                  basis you give it, such as OMRI Listed or WSDA Listed. On the
+                  Compliance plan a Washington farm exports a period&apos;s
+                  sprays as PDF and CSV with each item of WAC 16-228-1320(1)
+                  labeled; whether that meets the rule is the
+                  department&apos;s call.
                 </p>
               </div>
             </div>
@@ -161,10 +176,13 @@ export default function ForOrchardsPage() {
                   WSDA renewals are due March 1. If WSDA certifies you, the
                   renewal packet includes its Input Material List (AGR 2196) as
                   a spreadsheet, filled from your plan and records, along with
-                  the audit PDF and the Common OSP workbooks. In California, the
-                  pesticide use report (PUR) export is compiled from the same
-                  sprays. You review, sign and send. Your certifier&apos;s other
-                  requirements are yours to supply.
+                  the audit-trail exhibit and the Common OSP workbooks. In
+                  California, the pesticide use report (PUR) export is compiled
+                  from the same sprays. You review it, then file on your
+                  certifier&apos;s own forms and copy from the packet: WSDA keeps
+                  the plan you already filed, takes updates section by section
+                  and sends you its renewal application. Your certifier&apos;s
+                  other requirements are yours to supply.
                 </p>
               </div>
             </div>
@@ -175,17 +193,18 @@ export default function ForOrchardsPage() {
               What it does not do yet
             </h2>
             <p className="mt-1 text-muted-foreground">
-              Trazo does not keep a per-block table of variety, planting year
-              and bearing status yet, so on the renewal forms that ask for
-              acreage by crop you split it yourself. It is not an orchard
-              management system either: no payroll and no yield forecasting. It
-              keeps the organic record and prepares the paperwork from it.
+              It is not an orchard management system: no payroll, no yield
+              forecasting and no count of the inputs you have in stock. Block
+              details (variety, rootstock, acres, year planted, bearing) sit on
+              each parcel&apos;s crop rows. It keeps the organic record and
+              prepares the paperwork from it.
             </p>
           </section>
 
           <div className="mt-14 rounded-2xl bg-primary/5 p-8 text-center">
             <h2 className="text-xl font-bold text-foreground">
-              Free to start. $249 per farm per year when you need the packet.
+              Free to start. $249 per farm per year when you need documents for
+              your certifier.
             </h2>
             <p className="mx-auto mt-2 max-w-md text-muted-foreground">
               No card. Running several ranches? The Operation plan is $1,200 a
