@@ -97,8 +97,8 @@ export default function CommonOspPage() {
               Does my certifier use it?
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Ask your certifier. Adoption is voluntary and decided by each one,
-              and what we could check in November 2026 is mixed. CCOF said in
+              Ask your certifier. Adoption is voluntary and decided by each one.
+              Here is what we could check in November 2026. CCOF said in
               July 2026 that it is not moving to the Common OSP (
               <a
                 href="https://www.ccof.org/news/ccof-is-streamlining-certification-with-care/"

@@ -47,7 +47,7 @@ import { Footer } from "@/components/footer";
 export const metadata: Metadata = {
   title: "Organic Orchard Recordkeeping Software | Trazo",
   description:
-    "Spray records with REI and PHI, one entry for every block it covered, picks checked against the PHI you recorded, and a Washington-format spray record.",
+    "Spray records with REI and PHI, one entry per block it covered, picks checked against the recorded PHI, and each WAC 16-228-1320 item labeled for WA farms.",
   alternates: { canonical: "https://www.trazo.io/for-orchards" },
   openGraph: {
     title: "Organic recordkeeping for orchards",
@@ -203,8 +203,8 @@ export default function ForOrchardsPage() {
 
           <div className="mt-14 rounded-2xl bg-primary/5 p-8 text-center">
             <h2 className="text-xl font-bold text-foreground">
-              Free to start. $249 per farm per year when you need the certifier
-              documents.
+              Free to start. $249 per farm per year when you need documents for
+              your certifier.
             </h2>
             <p className="mx-auto mt-2 max-w-md text-muted-foreground">
               No card. Running several ranches? The Operation plan is $1,200 a

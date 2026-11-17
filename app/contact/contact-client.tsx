@@ -16,7 +16,7 @@ import {
 const contactFaqs = [
   {
     q: "Is the Starter plan a trial?",
-    a: "No. Starter is free permanently \u2014 it does not expire and never asks for a card. The Compliance plan adds the certifier documents: the OSP renewal packet and workbooks, the audit exports and the CA PUR export.",
+    a: "No. Starter is free permanently. It does not expire and never asks for a card. The Compliance plan adds the documents for your certifier: the OSP renewal packet and workbooks, the audit exports, the CA PUR export and the Washington spray records.",
   },
   {
     q: "Can I upgrade or downgrade anytime?",

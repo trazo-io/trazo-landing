@@ -74,7 +74,7 @@ const pricingJsonLd = {
         priceCurrency: "USD",
         billingDuration: "P1Y",
         description:
-          "Every farm in one operation: unlimited farms and certifiers, OSP records, certifier link, CA PUR export per site, 100 GB storage",
+          "Every farm in one operation: unlimited farms and certifiers, OSP records, certifier link, CA PUR export per site, WA spray records, 100 GB storage",
       },
     ],
   },
@@ -283,7 +283,7 @@ const pricingFaqs = [
     // contradicting /contact, which had it right. A grower who believed it would discover the
     // gate at renewal with a deadline in hand: the exact ambush the app's own pricing card was
     // rewritten to prevent.
-    a: "Free permanently. It does not expire and never asks for a card. It covers 1 farm with unlimited parcels or blocks, unlimited productions and 10 GB of storage \u2014 enough to log a whole season, every block, with photos and voice. What it does not do is produce the documents you hand to somebody else: the OSP renewal packet and workbooks, the audit exports and the CA PUR export are the Compliance plan. Upgrade when you need the paperwork, not when a clock runs out.",
+    a: "Free permanently. It does not expire and never asks for a card. It covers 1 farm with unlimited parcels or blocks, unlimited productions and 10 GB of storage: enough to log a whole season, every block, with photos and voice. What it does not do is produce the documents you hand to somebody else: the OSP renewal packet and workbooks, the audit exports, the CA PUR export and the Washington spray records are the Compliance plan. Upgrade when you need the paperwork, not when a clock runs out.",
   },
   {
     q: "Can I switch plans?",
@@ -323,7 +323,7 @@ const pricingFaqs = [
     // `company/urls.py`, ungated by `history/tests/test_records_export.py`'s
     // `test_no_compliance_gate_in_the_view`, and listed in the compliance-door inventory as
     // "the farm's own raw records — free by design, never a paid artifact".
-    a: "Yes, on every plan including the free one. One click in Documents downloads a ZIP of plain CSV files: every activity record with all its fields, plus your productions, parcels, sales and photo references. What the Compliance plan adds is the certifier paperwork built from those records (OSP renewal packet and workbooks, audit exports, CA PUR export), not access to the records themselves. Coming from COG Pro, a spreadsheet or a binder, we also load your existing records at no charge, and you see a preview before anything is saved.",
+    a: "Yes, on every plan including the free one. One click in Documents downloads a ZIP of plain CSV files: every activity record with all its fields, plus your productions, parcels, sales and photo references. What the Compliance plan adds is the certifier paperwork built from those records (OSP renewal packet and workbooks, audit exports, CA PUR export, Washington spray records), not access to the records themselves. Coming from COG Pro, a spreadsheet or a binder, we also load your existing records at no charge, and you see a preview before anything is saved.",
   },
   {
     q: "Is my data secure?",
@@ -389,7 +389,7 @@ export default function PricingPage() {
               >
                 {plan.highlight && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-primary px-4 py-1 text-xs font-semibold text-primary-foreground">
-                    Includes the certifier documents
+                    Includes documents for your certifier
                   </div>
                 )}
                 <div>
@@ -599,8 +599,9 @@ export default function PricingPage() {
                 Start documenting this season today
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/80">
-                Log this season once and walk into renewal with the packet
-                assembled. Free Starter plan, no credit card required.
+                Log this season as you go, and renewal and inspection start
+                from records you already have. Free Starter plan, no credit
+                card required.
               </p>
               <p className="mx-auto mt-3 max-w-2xl text-sm text-primary-foreground/60">
                 Moving from another tool, a spreadsheet or a binder? Send us
