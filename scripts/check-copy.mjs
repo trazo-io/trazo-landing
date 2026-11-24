@@ -259,6 +259,51 @@ const RULES = [
     find: (text) => [...text.matchAll(/WSDA renewal packet/gi)].map((m) => m.index),
     skipComments: true,
   },
+  {
+    name: "unsourced comparison with other tools",
+    reason:
+      "\"Most tools ignore them\", \"every tool copies them across\" and \"like other organic software\" had no dated competitor comparison behind them, and Quick Organics and Organic Assistant ship some of what they denied. Say what Trazo does (overall review 2026-11, OV-CLM-C15).",
+    find: (text) =>
+      [...text.matchAll(/\bmost tools\b|\bevery tool\b|like other organic software/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: "attachment workbooks called required",
+    reason:
+      "The four attachments are required only under the USDA Common OSP, which none of the certifiers Trazo supports uses. The Common OSP page may say so because it describes that template (overall review 2026-11, OV-CLM-C08).",
+    find: (text) => [...text.matchAll(/required (OSP )?attachment/gi)].map((m) => m.index),
+    allow: ["app/common-osp/page.tsx"],
+    skipComments: true,
+  },
+  {
+    name: "a count of OSP modules",
+    reason:
+      "The page said 19 while the registry held 20, and which modules a farm sees depends on its certifier. A count drifts with every module added (overall review 2026-11, OV-CLM-C13).",
+    find: (text) => [...text.matchAll(/\b\d+ guided modules\b/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: "the free export carries everything",
+    reason:
+      "The free CSV ZIP leaves out the plan answers and the materials list; they come out in the Compliance packet (trazo-back records_export.py README, overall review 2026-11, OV-CLM-C09).",
+    find: (text) =>
+      [...text.matchAll(/raw data never is|reading and exporting all/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: "crew text translated for filing",
+    reason:
+      "Nothing translates free text: structured fields print in English, a crew note keeps its own words. A crew message is a suggestion someone at the farm saves (overall review 2026-11, OV-CLM-C14).",
+    find: (text) => [...text.matchAll(/you file in english/gi)].map((m) => m.index),
+    skipComments: true,
+  },
+  {
+    name: '"fuzzy" matching',
+    reason:
+      "Input checks match exact names (case and spacing ignored) and a hand-checked alias table; a partial match is only a possible match and decides nothing. The methodology page says so (overall review 2026-11, OV-CLM-C17).",
+    find: (text) => [...text.matchAll(/\bfuzzy\b/gi)].map((m) => m.index),
+    skipComments: true,
+  },
 ];
 
 /** True when raw[index] sits inside a // line comment or a /* block comment *\/. */

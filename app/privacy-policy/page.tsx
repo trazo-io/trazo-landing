@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
               How Trazo collects, uses, and protects your personal information.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Last updated: November 12, 2026
+              Last updated: November 24, 2026
             </p>
           </header>
 
@@ -133,7 +133,7 @@ export default function PrivacyPolicyPage() {
                 <li>
                   <strong>Third-Party Business Records:</strong> Information a
                   producer records about other businesses in order to complete
-                  their organic system plan &mdash; off-farm handlers and
+                  their organic system plan: off-farm handlers and
                   storage facilities (name, address, certifying agent,
                   certificate number and dates), input manufacturers, and
                   suppliers. Certifiers require these on their own forms (for
@@ -151,7 +151,7 @@ export default function PrivacyPolicyPage() {
                 <li>
                   <strong>Platform Usage:</strong> Feature utilization, session
                   duration, user interactions. For accounts signed in to the
-                  application this includes a masked session replay &mdash; a
+                  application this includes a masked session replay, a
                   recording of the interface layout and where you clicked, with
                   every piece of text and every form field hidden before the
                   recording leaves your browser
@@ -178,7 +178,7 @@ export default function PrivacyPolicyPage() {
                 </li>
                 <li>
                   <strong>Educational Engagement:</strong> FAQ views and
-                  helpfulness votes, counted in aggregate per article &mdash; we
+                  helpfulness votes, counted in aggregate per article; we
                   do not track educational progress per user
                 </li>
               </ul>
@@ -230,8 +230,9 @@ export default function PrivacyPolicyPage() {
                   OMRI Listed Products database and the USDA National List of
                   Allowed and Prohibited Substances. Mismatches and unresolved
                   inputs are surfaced in the audit PDF as drift findings. These
-                  matches use fuzzy text comparison and may produce false
-                  positives or false negatives.
+                  matches use exact names, ignoring case and spacing, and a
+                  hand-checked alias table; a partial match is shown only as a
+                  possible match and decides nothing.
                 </li>
                 <li>
                   <strong>Documentation Snapshot:</strong> The page-1 snapshot
@@ -437,7 +438,7 @@ export default function PrivacyPolicyPage() {
                     <tr>
                       <td className="py-2 pr-4">
                         Analytics on our public pages (marketing site, consumer
-                        QR pages) &mdash; Vercel Analytics, PostHog
+                        QR pages): Vercel Analytics, PostHog
                       </td>
                       <td className="py-2">
                         Consent (Art. 6(1)(a)): via cookie banner
@@ -452,7 +453,7 @@ export default function PrivacyPolicyPage() {
                         Legitimate interest (Art. 6(1)(f)): understanding how
                         the product is used so we can fix what does not work.
                         Limited to account holders who have accepted our Terms.
-                        You can object at any time &mdash; see Section 7
+                        You can object at any time (see Section 7)
                       </td>
                     </tr>
                     <tr>
@@ -607,13 +608,13 @@ export default function PrivacyPolicyPage() {
                 </li>
                 <li>
                   <strong>PostHog</strong>: Product analytics for the signed-in
-                  application &mdash; which screens are opened, which actions
+                  application: which screens are opened, which actions
                   are taken, and a session replay of the interface. Replay is
                   recorded with all text and all form input masked, so it shows
                   the layout you saw and where you clicked, never the words on
                   screen: no worker names, no parcel locations, no figures and
                   nothing you typed. The only account information sent is your
-                  numeric user ID &mdash; never your name or email address
+                  numeric user ID, never your name or email address
                 </li>
               </ul>
 
@@ -657,7 +658,7 @@ export default function PrivacyPolicyPage() {
                 logistics, buffer-strip disposition, and equipment-cleanout
                 logs). Because the policy is uniform, producers cannot
                 selectively hide individual practice records or field values
-                from published seasons &mdash; what a consumer page shows means
+                from published seasons: what a consumer page shows means
                 the same thing for every farm.
               </p>
               <p className="mt-3 leading-[1.8]">
@@ -732,8 +733,9 @@ export default function PrivacyPolicyPage() {
                   and QR codes
                 </li>
                 <li>
-                  <strong>Security Logs:</strong> Rotating log files with
-                  limited retention
+                  <strong>Security Logs:</strong> Written to our hosting
+                  provider&apos;s runtime log (DigitalOcean App Platform);
+                  Trazo keeps no separate copy
                 </li>
               </ul>
 
@@ -842,17 +844,18 @@ export default function PrivacyPolicyPage() {
                   daily, so deleted data leaves them within 8 days
                 </li>
                 <li>
-                  <strong>Product Analytics:</strong> 1 year &mdash; which
+                  <strong>Product Analytics:</strong> 1 year, covering which
                   screens were opened and which actions were taken, held by
                   PostHog
                 </li>
                 <li>
-                  <strong>Session Replay:</strong> 30 days &mdash; masked
+                  <strong>Session Replay:</strong> 30 days for masked
                   recordings, deleted automatically by PostHog once the period
                   ends
                 </li>
                 <li>
-                  <strong>Security Logs:</strong> 1 year
+                  <strong>Security Logs:</strong> As long as DigitalOcean App
+                  Platform keeps runtime logs; Trazo keeps no separate copy
                 </li>
               </ul>
             </section>
@@ -982,8 +985,8 @@ export default function PrivacyPolicyPage() {
                 </li>
                 <li>
                   <strong>Analytics Cookies:</strong> Help us understand how the
-                  Platform is used. On our public pages &mdash; the marketing
-                  site and consumer QR pages &mdash; these are opt-in only, set
+                  Platform is used. On our public pages (the marketing
+                  site and consumer QR pages) these are opt-in only, set
                   after you accept the cookie banner. Inside the signed-in
                   application they are set for account holders under legitimate
                   interest, as described in Section 3

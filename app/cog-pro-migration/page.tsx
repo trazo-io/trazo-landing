@@ -56,7 +56,7 @@ const trazoDoes = [
   "NOP audit PDF with inline 7 CFR Part 205 citations",
   "A link your certifier opens to review records online, with your permission",
   "Organic System Plan (7 CFR 205.201), including the Common OSP § 11 records section and its " +
-    "four required attachment forms as Excel workbooks, filled in from your records",
+    "four attachment forms as Excel workbooks, filled in from your records",
   "Input checks against OMRI, WSDA, CDFA OIM and the National List",
   "California Pesticide Use Report data, compiled from the events you already logged",
   "Phone-first logging with voice entry, in English and Spanish",
