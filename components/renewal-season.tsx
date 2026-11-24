@@ -88,16 +88,16 @@ export function RenewalSeason() {
           </h3>
           <p className="mt-2 leading-[1.8] text-muted-foreground">
             In 2026 the USDA posted a <strong className="text-foreground">Common Organic System
-            Plan</strong> — a standard OSP template set that certifiers may adopt. It is optional,
+            Plan</strong>, a standard OSP template set that certifiers may adopt. It is optional,
             and whether your certifier uses it is their decision, so ask them. If they do, Trazo
             generates its § 11 records section and its four attachment forms as Excel
-            workbooks, filled in from the events you logged. You review, correct and sign them —
+            workbooks, filled in from the events you logged. You review, correct and sign them:
             you are the author of your plan, not us.
           </p>
         </div>
 
         <p className="mt-6 text-center text-sm text-muted-foreground">
-          Dates are as published by each certifier and can differ for your operation —{" "}
+          Dates are as published by each certifier and can differ for your operation:{" "}
           <Link href="/contact" className="underline underline-offset-4">
             confirm yours with your certifier
           </Link>

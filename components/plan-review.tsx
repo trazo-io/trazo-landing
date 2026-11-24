@@ -25,7 +25,7 @@ const checks = [
   },
   {
     what: "§ 205.400(f) notices you filed",
-    why: "A change you already told the certifier about, that the plan has not caught up with — and when a notice names a field, it prints on that field's application.",
+    why: "A change you already told the certifier about, that the plan has not caught up with. When a notice names a field, it prints on that field's application.",
   },
   {
     what: "Materials added or removed",
@@ -41,7 +41,7 @@ const checks = [
   },
   {
     what: "Modules not revisited in a year",
-    why: "Answered eighteen months ago is not wrong — but it is the first thing a reviewer notices.",
+    why: "Answered eighteen months ago is not wrong, but it is the first thing a reviewer notices.",
   },
 ]
 
@@ -61,7 +61,7 @@ export function PlanReview() {
             Every renewal starts from last year&rsquo;s answers, carried
             across. A plan that still says &ldquo;six parcels&rdquo; when the seventh was leased
             in January reads, to a certifier, like a plan nobody re-read. Trazo lists what your
-            records did after each answer was written &mdash; so the plan you send describes the
+            records did after each answer was written, so the plan you send describes the
             farm you run.
           </p>
         </div>
@@ -85,7 +85,7 @@ export function PlanReview() {
         <div className="mt-10 rounded-xl border border-border bg-secondary/30 p-6">
           <h3 className="font-semibold text-foreground">A list, not a verdict</h3>
           <p className="mt-2 leading-[1.8] text-muted-foreground">
-            The review is compiled from dated records only &mdash; it does not read your prose and
+            The review is compiled from dated records only: it does not read your prose and
             it never says an answer is wrong. You may well have re-read a section and decided it
             still holds, so it never blocks the Submit button. It sits under your plan on the
             screen, prints on the first page of your renewal packet, and on an active plan it is
