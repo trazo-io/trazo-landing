@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
               How Trazo collects, uses, and protects your personal information.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Last updated: November 12, 2026
+              Last updated: November 24, 2026
             </p>
           </header>
 
@@ -230,8 +230,9 @@ export default function PrivacyPolicyPage() {
                   OMRI Listed Products database and the USDA National List of
                   Allowed and Prohibited Substances. Mismatches and unresolved
                   inputs are surfaced in the audit PDF as drift findings. These
-                  matches use fuzzy text comparison and may produce false
-                  positives or false negatives.
+                  matches use exact names, ignoring case and spacing, and a
+                  hand-checked alias table; a partial match is shown only as a
+                  possible match and decides nothing.
                 </li>
                 <li>
                   <strong>Documentation Snapshot:</strong> The page-1 snapshot
@@ -732,8 +733,9 @@ export default function PrivacyPolicyPage() {
                   and QR codes
                 </li>
                 <li>
-                  <strong>Security Logs:</strong> Rotating log files with
-                  limited retention
+                  <strong>Security Logs:</strong> Written to our hosting
+                  provider&apos;s runtime log (DigitalOcean App Platform);
+                  Trazo keeps no separate copy
                 </li>
               </ul>
 
@@ -852,7 +854,8 @@ export default function PrivacyPolicyPage() {
                   ends
                 </li>
                 <li>
-                  <strong>Security Logs:</strong> 1 year
+                  <strong>Security Logs:</strong> As long as DigitalOcean App
+                  Platform keeps runtime logs; Trazo keeps no separate copy
                 </li>
               </ul>
             </section>

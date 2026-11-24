@@ -20,7 +20,9 @@ export const metadata: Metadata = {
   // would type, and with the number that beats a revenue-banded competitor.
   title: "Organic Recordkeeping Pricing: $249/yr | Trazo",
   description:
-    "Free Starter plan, no card and no expiry. Compliance is $249 per farm per year, flat — not banded by your revenue like other organic software.",
+    // Overall review 2026-11 (OV-CLM-C15): this ended "not banded by your revenue like other
+    // organic software", a comparison with no dated source behind it. Say what Trazo charges.
+    "Free Starter plan, no card and no expiry. Compliance is $249 per farm per year, flat: the price does not change with your revenue.",
   alternates: { canonical: "/pricing" },
   openGraph: {
     title: "Pricing — $249 per farm, per year, flat",
@@ -109,7 +111,14 @@ const plans = [
       // sold a demo; the tier that ships is a working free product.
       "Unlimited productions per year",
       "Event logging with crop templates (33 US crops) and voice",
-      "Organic System Plan: 19 guided modules, answer at your pace",
+      // Overall review 2026-11 (OV-CLM-C13): this said "19 guided modules" while the registry held
+      // 20, and which modules a farm sees depends on its certifier. A count here drifts with every
+      // module added, so the line names the thing, not the number.
+      "Organic System Plan in guided modules, answered at your pace",
+      // OV-CLM-C16: plan review was listed as a Compliance addition, but neither the review
+      // endpoint (trazo-back certifications/views.py `review`) nor the app panel
+      // (OSPPlanReviewPanel) checks the plan. The printed copy is on the packet's first page.
+      "Plan review: what changed in your records since you last wrote each answer",
       "Record-completeness checks with the regulation cited",
       // 2026-10-21: the on-screen trace-back is not a Compliance door (no gate on the routes or
       // the page); the printed exhibit stays in the Compliance packet.
@@ -142,8 +151,10 @@ const plans = [
       // ZIP does not carry it (overall review 2026-11, L7 P4; osp_module_pdf.generate_osp_packet).
       "Inspection exports: an audit dossier for the farm and an audit export per production (PDF or CSV)",
       "Renewal packet drafted from your records: annual update draft, change notices, module PDFs, parcel applications",
-      "Plan review before you file: what changed in your records since you last wrote each answer",
-      "The four required OSP attachment workbooks, filled from your records",
+      // OV-CLM-C08: "required" holds only under the USDA Common OSP, which none of the certifiers
+      // Trazo supports uses. Every packet carries the four Common OSP sheets, plus FACT-04 for
+      // Oregon Tilth and AGR 2196 for WSDA (trazo-back common_osp_workbooks.workbooks_for).
+      "OSP attachment workbooks filled from your records: the four USDA Common OSP sheets, plus Oregon Tilth's FACT-04 or WSDA's AGR 2196",
       "Certifier link: your certifier reviews online, with your permission",
       "California PUR export (DPR-PML-017C), monthly",
       // trazo-back history.views wa_spray_records_export, gated with the other certifier
@@ -231,7 +242,7 @@ const comparisonFeatures: ComparisonRow[] = [
   // are time and labour, not price, so gating the fastest gloves-on input path suppressed
   // exactly the logging that produces the records that produce the upgrade.
   {
-    label: "Organic System Plan, answered by you (19 guided modules, Common OSP § 11)",
+    label: "Organic System Plan, answered by you (guided modules, Common OSP § 11)",
     values: [true, true, true],
   },
   {
@@ -287,7 +298,10 @@ const pricingFaqs = [
   },
   {
     q: "Can I switch plans?",
-    a: "Yes, in either direction, and your records are never held hostage. Downgrading to Starter keeps every event, photo and document you have logged \u2014 you keep reading and exporting all of it; the Starter limits only apply to what you create next.",
+    // Overall review 2026-11 (OV-CLM-C09): this said "you keep reading and exporting all of it".
+    // The free CSV ZIP leaves out the plan answers and the materials list, which come out in the
+    // Compliance packet (trazo-back records_export.py, its README's "Not in this export").
+    a: "Yes, in either direction, and your records are never held hostage. Downgrading to Starter keeps every event, photo and document you have logged. You keep reading all of it, downloading your documents and exporting your activity records as CSV. Your plan answers and materials list come out in the renewal packet, which is part of Compliance. The Starter limits only apply to what you create next.",
   },
   {
     q: 'What counts as a "production"?',

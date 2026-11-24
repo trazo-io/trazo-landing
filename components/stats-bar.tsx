@@ -16,10 +16,11 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 const stats = [
   { icon: Layers, value: "1 entry", label: "Feeds Your Renewal Packet and Audit Exports" },
   { icon: DollarSign, value: "$249 flat", label: "Per Farm, Per Year, Not Revenue-Banded" },
-  // Absorbed from the retired FieldFeatures section, whose one non-duplicated line
-  // this is: the crew logs in Spanish, you read the certifier packet in English, and
-  // it is the same record. Quick Organics has no Spanish marketing at all.
-  { icon: Languages, value: "EN + ES", label: "Crew Logs in Spanish, You File in English" },
+  // Overall review 2026-11 (OV-CLM-C14): this read "Crew Logs in Spanish, You File in English".
+  // Nothing translates free text: structured fields print in English, a crew note keeps the
+  // words it was written in. A crew message arrives as a suggestion that someone at the farm
+  // saves under their own name, so the line carries that clause.
+  { icon: Languages, value: "EN + ES", label: "Crew Messages in English or Spanish, Confirmed at the Farm" },
   { icon: Sprout, value: "33", label: "US Crop Templates" },
 ];
 

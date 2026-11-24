@@ -71,8 +71,8 @@ export default function ForCertifiersPage() {
                   A live review link, not an exported snapshot
                 </h2>
                 <p className="mt-1 text-muted-foreground">
-                  Most tools hand you a document package that was true the day
-                  it was exported. Clients on Trazo can share a read-only link
+                  An exported document package is true the day it was
+                  exported. Clients on Trazo can share a read-only link
                   that opens their records in the browser as they stand today:
                   activity log, inputs with National List and OMRI/WSDA
                   cross-references, and the documents shelf. No account is

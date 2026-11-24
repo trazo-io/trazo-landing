@@ -58,7 +58,7 @@ export function PlanReview() {
             Last year&rsquo;s plan, re-read against this year&rsquo;s records.
           </h2>
           <p className="mt-4 text-pretty leading-[1.8] text-muted-foreground">
-            Every renewal starts from last year&rsquo;s answers, and every tool copies them
+            Every renewal starts from last year&rsquo;s answers, carried
             across. A plan that still says &ldquo;six parcels&rdquo; when the seventh was leased
             in January reads, to a certifier, like a plan nobody re-read. Trazo lists what your
             records did after each answer was written &mdash; so the plan you send describes the
